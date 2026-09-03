@@ -1,0 +1,65 @@
+/* ========================================================================
+   reset.css — Modern, minimal side-effect reset
+   - 안전한 기본값으로 브라우저 기본 스타일 차이를 제거합니다.
+   - 디자인 시스템/프로젝트 스타일은 이 파일 아래에서 작성하세요.
+   ======================================================================== */
+
+/* 박스 모델 통일 */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+    :root{ color-scheme: light; }
+    html, body{ background:#fff; }
+    
+
+/* 기본값 정리 */
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  tab-size: 2;
+  /* 지원 브라우저에서 다크/라이트 둘 다 허용 */
+  color-scheme: light dark;
+}
+
+/* 문서 기본 */
+body {
+  margin: 0;
+  min-height: 100svh; /* 모바일 환경 안전 뷰포트 */
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+/* details/summary 일관성 */
+details {
+  display: block;
+}
+summary {
+  cursor: pointer;
+}
+
+/* 포커스: 마우스 포커스 링 제거, 키보드 포커스는 유지 */
+:focus:not(:focus-visible) {
+  outline: none;
+}
+:focus-visible {
+  outline: 3px solid Highlight;
+  outline-offset: 2px;
+}
+/* 고대비 모드 대응 */
+@media (forced-colors: active) {
+  :focus-visible {
+    outline: 2px solid CanvasText;
+  }
+}
+
+/* 모션 최소화 환경 존중 */
+@media (prefers-reduced-motion: reduce) {
+  *:not([data-allow-motion]) {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

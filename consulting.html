@@ -1,0 +1,3763 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+
+ <!-- 소유권 인증(각 도메인별 값으로 교체) -->
+<meta name="naver-site-verification" content="" />
+  <meta name="google-site-verification" content="구글_인증코드_여기에" />
+
+   <!-- Canonical (대표 URL로 고정) -->
+  <link rel="canonical" href="https://nanuri.co.kr" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="./img/favicon.png" sizes="any">
+  <link rel="shortcut icon" href="./img/favicon.png" type="image/x-icon">
+  <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./img/favicon.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="./img/favicon.png">
+
+  <meta name="robots" content="index,follow" />
+  <meta name="subject" content="나누리사회적협동조합" />
+  <meta name="title" content="나누리사회적협동조합" />
+  <meta name="author" content="나누리사회적협동조합">
+  <meta name="description" content="나누리사회적협동조합 — 복지의 사각지대 | 고령화 시대 주거·돌봄의 문제를 해결합니다." />
+
+  <meta name="keywords"
+    content="나누리사회적협동조합, 나누리사회적협동조합, Healthy Beauty, Well-aging, Beauty Health Industry, 글로벌 뷰티 헬스 기업, 건강한 아름다움, 뷰티 산업, 헬스 산업, 웰에이징 산업, 뷰티 헬스 비즈니스, 글로벌 네트워크, 뷰티 교육, 헬스 교육, 뷰티 전문가, 건강 산업, 라이프스타일 산업, 글로벌 비즈니스 플랫폼, HTU 브랜드" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:rich_attachment" content="true" />
+  <meta property="og:site_name" content="나누리사회적협동조합" />
+  <meta property="og:title" content="나누리사회적협동조합" />
+  <meta property="og:description" content="나누리사회적협동조합 — 복지의 사각지대 | 고령화 시대 주거·돌봄의 문제를 해결합니다." />
+  <meta property="og:image" content="./video/na-01.png" />
+  <meta property="og:url" content="https://nanuri.co.kr" />
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="나누리사회적협동조합" />
+  <meta name="twitter:description" content="나누리사회적협동조합 — 복지의 사각지대 | 고령화 시대 주거·돌봄의 문제를 해결합니다." />
+  <meta name="twitter:image" content="./video/na-01.png" />
+
+  <meta itemprop="name" content="나누리사회적협동조합" />
+  <meta itemprop="description" content="나누리사회적협동조합 — 복지의 사각지대 | 고령화 시대 주거·돌봄의 문제를 해결합니다." />
+  <meta itemprop="image" content="./video/na-01.png" />
+
+  <title>나누리사회적협동조합</title>
+  
+  <link href="./css/reset.css" rel="stylesheet" type="text/css" />
+   <link href="./css/style.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <div id="menu_navi"></div>
+
+<script src="./menu3.js"></script>
+
+
+
+  <style>
+    /* ── RESET & LAYOUT ── */
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:'Pretendard',sans-serif;background:#111;color:#fff;overflow-x:hidden}
+    .container{display:flex}
+    #main{flex:1;position:relative;overflow:hidden}
+    #visualTransWrap{position:absolute;inset:0;pointer-events:none;z-index:5}
+
+    /* ── SWIPER & BG ── */
+    .mv_container{width:100%;height:90vh;position:relative}
+    .swiper-container,.swiper-wrapper,.swiper-slide{width:100%;height:100%}
+    .bg{position:absolute;inset:0;background-size:cover;background-position:center;transition:transform 6s ease;filter:brightness(0.5)}
+    .swiper-slide-active .bg{transform:scale(1.12)}
+    .bg1{background-image:url('./img/intro-1.jpg')}
+    .bg2{background-image:url('./img/intro-2.jpg')}
+    .bg3{background-image:url('./img/page-3.jpg')}
+    .bg4{background-image:url('./img/repair.jpg')}
+
+    /* ── TEXT & BUTTON ── */
+    .mv_txt_box{position:absolute;top:20%;left:5%;max-width:640px;z-index:2}
+    .mv_cate{font-size:18px;font-weight:600;margin-bottom:14px;color:#ffeb55;display:inline-block}
+    .mv_tit{font-size:43px;line-height:1.4;margin:0 0 12px}
+    @media screen and (max-width:620px){ .mv_tit{font-size:34px !important;} }
+    @media screen and (max-width:500px){ .mv_tit{font-size:26px !important;} }
+    .mv_txt{font-size:18px;line-height:1.6;font-weight:300}
+    .mv_btn{
+      display:inline-block;margin-top:30px;padding:14px 36px;
+      border:2px solid #fff;border-radius:40px;
+      background:transparent;color:#fff;font-weight:600;letter-spacing:.3px;
+      opacity:0;pointer-events:none;
+      transition:opacity .6s,background .35s,box-shadow .35s,color .35s,transform .35s;
+      position:relative;overflow:hidden;text-decoration:none;
+    }
+    .swiper-slide-active .mv_btn{opacity:1;pointer-events:auto}
+    .mv_btn::after{
+      content:'';position:absolute;inset:0;background:rgba(255,255,255,.15);
+      transform:translateX(-100%);transition:transform .4s;
+    }
+    .mv_btn:hover::after{transform:translateX(0)}
+    .mv_btn:hover{
+      background:#fff;color:#111;box-shadow:0 8px 24px rgba(0,0,0,.25);
+      transform:translateY(-2px);
+    }
+
+    /* ── WAVE ANIMATION ── */
+    .wave_anim .wave{display:inline-block;opacity:0;animation:wave 1.1s ease-out forwards}
+    @keyframes wave{0%{transform:translateY(25px);opacity:0}100%{transform:translateY(0);opacity:1}}
+    .wave_anim.custom .wave:nth-child(1){animation-delay:.15s}
+    .wave_anim.custom .wave:nth-child(2){animation-delay:.3s}
+    .wave_anim.custom .wave:nth-child(3){animation-delay:.45s}
+
+    /* ── PROGRESS BAR ── */
+    .progress-container{position:absolute;bottom:80px;left:5%;right:5%;height:4px;display:flex;gap:10px;z-index:3;width:150px;}
+    .progress-segment{flex:1;background:rgba(255,255,255,.25);border-radius:2px;overflow:hidden;cursor:pointer}
+    .progress-fill{width:0;height:100%;background:#fff;display:block}
+
+    .wheel_down{position:absolute;bottom:14px;left:50%;transform:translateX(-50%);width:24px;opacity:.7;z-index:3;animation: wheel-bounce 2s ease-in-out infinite;}
+    .wheel_down .wheel {animation: wheel-fade 2s ease-in-out infinite;}
+    @keyframes wheel-fade {
+      0%{opacity:1;transform:translateY(0)}
+      80%{opacity:.2;transform:translateY(10px)}
+      100%{opacity:0;transform:translateY(14px)}
+    }
+    #sidebar{display:none}
+  </style>
+
+  <style>
+    /* ──────────────────────────────────────────
+          #visual-section 전용 스타일
+      ─────────────────────────────────────────── */
+    #visual-section{position:relative;width:100%;height:100vh;overflow:hidden}
+    #visual-section .video_wrap{position:absolute;inset:0;z-index:0}
+    #visual-section .video_wrap video{width:100%;height:100%;object-fit:cover;object-position:center}
+    #visual-section .overlay{position:absolute;inset:0;background:rgba(0,0,0,0.5)}
+    #visual-section .txt_container{
+      position:absolute;inset:0;z-index:2;
+      display:flex;flex-direction:column;
+      justify-content:space-evenly;align-items:center;
+      text-align:center;pointer-events:none
+    }
+    @keyframes fadeInUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+    #visual-section .company,#visual-section .logo,#visual-section .exp{opacity:0}
+    #visual-section.animate .company{
+      color:#fff;font-size:2.5rem;font-weight:500;margin-bottom:.5em;
+      animation:fadeInUp 1s ease-out forwards;animation-delay:.2s
+    }
+    #visual-section.animate .logo{animation:fadeInUp 1s ease-out forwards;animation-delay:.7s}
+    #visual-section .logo .m_logo{
+      width:800px;height:130px;
+      background:url("../img/sm-logo.png") no-repeat center/contain;
+      margin-bottom:.5em
+    }
+    #visual-section.animate .exp{
+      color:#fff;font-size:1.25rem;line-height:1.6;max-width:80%;
+      animation:fadeInUp 1s ease-out forwards;animation-delay:1s
+    }
+    #visual-section .highlight{color:#e6d3a3;font-weight:600}
+    @media (max-width:768px){
+      #visual-section .company{font-size:2rem !important}
+      #visual-section .logo .m_logo{
+        background:url("../img/sm-font.png") no-repeat center/contain;
+        width:400px;height:300px
+      }
+      #visual-section .exp{font-size:1rem}
+      #visual-section .video_wrap video{object-position:right center}
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- 메뉴(외부 로드) -->
+<div id="menu"></div>
+
+<section id="debtEmergencyHero" aria-label="비즈니스 혁신 연구소 히어로 슬라이더">
+  <style>
+    /* ===============================
+       Scope: #debtEmergencyHero ONLY
+       - 외부 코드 영향 최소화
+       - html, body, * 전역 금지
+       =============================== */
+    #debtEmergencyHero{
+      --bg:#111;
+      --ink:#fff;
+      --dim:rgba(0,0,0,.1);
+      --accent:#ffeb55;
+      --btn:#fff;
+      --btn-ink:#111;
+      --muted:rgba(255,255,255,.78);
+
+      --max:1200px;
+      --padX:clamp(24px, 10vw, 64px);
+      --padY:clamp(18px, 3.6vw, 36px);
+
+      --title:clamp(26px, 10vw, 43px);
+      --title-sm:clamp(32px, 10vw, 42px);
+      --title-xs:clamp(26px, 10vw, 32px);
+
+      --delay:5000ms;
+      --speed:1000ms;
+
+      font-family:Pretendard,"Noto Sans KR",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+      background:var(--bg);
+      color:var(--ink);
+      position:relative;
+      overflow:hidden;
+      -webkit-font-smoothing:antialiased;
+      text-rendering:optimizeLegibility;
+    }
+    #debtEmergencyHero *{box-sizing:border-box;}
+
+    /* ====== Frame ====== */
+    #debtEmergencyHero .deh-shell{position:relative; width:100%; height:100%;}
+    #debtEmergencyHero .deh-stage{
+      width:100%;
+      height:min(90vh, 900px);
+      min-height:520px;
+      position:relative;
+      overflow:hidden;
+      /* 드래그 UX (마우스/손가락 좌우 드래그를 JS로 처리) */
+      touch-action:pan-y;
+      user-select:none;
+      -webkit-user-select:none;
+      cursor:grab;
+    }
+    #debtEmergencyHero .deh-stage:active{cursor:grabbing;}
+    @media (max-width: 560px){
+      #debtEmergencyHero .deh-stage{min-height:520px; height:90vh;}
+    }
+
+    /* ====== Slides (fade) ====== */
+    #debtEmergencyHero .deh-slides{position:relative; width:100%; height:100%;}
+    #debtEmergencyHero .deh-slide{
+      position:absolute;
+      inset:0;
+      opacity:0;
+      transition:opacity var(--speed) ease;
+      pointer-events:none;
+    }
+    #debtEmergencyHero .deh-slide.is-active{opacity:1; pointer-events:auto;}
+
+    /* 드래그 중에는 두 장이 동시에 보이며, JS가 opacity를 실시간 제어 */
+    #debtEmergencyHero.is-dragging .deh-slide{transition:none !important;}
+    #debtEmergencyHero .deh-slide.is-peek{opacity:0; pointer-events:none;}
+
+    /* BG zoom (Ken Burns) */
+    #debtEmergencyHero .deh-bg{
+      position:absolute;
+      inset:0;
+      background-size:cover;
+      background-position:center;
+      transform:scale(1);
+      transition:transform 6000ms ease;
+      filter:brightness(.5);
+      will-change:transform;
+    }
+    #debtEmergencyHero .deh-slide.is-active .deh-bg{transform:scale(1.12);} 
+
+    /* Dim overlay (추가 안정감) */
+    #debtEmergencyHero .deh-dim{position:absolute; inset:0; background:var(--dim);}
+
+    /* ====== Text Box ====== */
+    #debtEmergencyHero .deh-txt{
+      position:absolute;
+      top:20%;
+      left:var(--padX);
+      right:var(--padX);
+      max-width:640px;
+      z-index:2;
+      pointer-events:auto;
+    }
+
+    @media (min-width:600px) {
+
+    }
+
+    #debtEmergencyHero .deh-cate{
+      display:inline-block;
+      font-size:18px;
+      font-weight:600;
+      margin-bottom:14px;
+      color:var(--accent);
+    }
+
+    #debtEmergencyHero .deh-title{
+      font-size:var(--title);
+      line-height:1.4;
+      margin:0 0 12px;
+      letter-spacing:-0.2px;
+    }
+    #debtEmergencyHero .deh-title p{margin:0;}
+
+    @media (max-width:620px){
+      #debtEmergencyHero .deh-title{font-size:var(--title-sm);} 
+    }
+    @media (max-width:500px){
+      #debtEmergencyHero .deh-title{font-size:var(--title-xs);} 
+    }
+
+    #debtEmergencyHero .deh-desc{
+      font-size:23px;
+      line-height:1.6;
+      font-weight:500;
+      color:#fff;
+    }
+
+    @media (max-width:500px){
+     #debtEmergencyHero .deh-desc{
+      font-size:18px;
+      line-height:1.6;
+      font-weight:500;
+      color:#fff;
+    }
+    }
+
+    /* ====== CTA Button ====== */
+    #debtEmergencyHero .deh-btn{
+      display:inline-block;
+      margin-top:30px;
+      padding:18px 40px;
+      border:2px solid #fff;
+      border-radius:40px;
+      background:transparent;
+      color:#fff;
+      font-weight:600;
+      letter-spacing:.3px;
+      text-decoration:none;
+      font-size:20px;
+      opacity:0;
+      pointer-events:none;
+      transform:translateY(0);
+
+      transition:opacity .6s ease, background .35s ease, box-shadow .35s ease, color .35s ease, transform .35s ease;
+      position:relative;
+      overflow:hidden;
+    }
+    #debtEmergencyHero .deh-slide.is-active .deh-btn{opacity:1; pointer-events:auto;}
+
+    #debtEmergencyHero .deh-btn::after{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:rgba(255,255,255,.15);
+      transform:translateX(-100%);
+      transition:transform .4s ease;
+    }
+    #debtEmergencyHero .deh-btn:hover::after{transform:translateX(0);} 
+    #debtEmergencyHero .deh-btn:hover{
+      background:var(--btn);
+      color:var(--btn-ink);
+      box-shadow:0 8px 24px rgba(0,0,0,.25);
+      transform:translateY(-2px);
+    }
+
+    /* ====== Wave animation (텍스트 등장) ====== */
+    #debtEmergencyHero .wave_anim .wave{
+      display:inline-block;
+      opacity:0;
+      transform:translateY(25px);
+      will-change:transform, opacity;
+    }
+    #debtEmergencyHero .deh-slide.is-active .wave_anim .wave{animation: deh-wave 1.1s ease-out forwards;}
+    @keyframes deh-wave{0%{transform:translateY(25px);opacity:0}100%{transform:translateY(0);opacity:1}}
+
+    /* 원본처럼 3개까지만 지연(필요하면 더 늘려도 됨) */
+    #debtEmergencyHero .deh-slide.is-active .wave_anim.custom .wave:nth-child(1){animation-delay:.15s}
+    #debtEmergencyHero .deh-slide.is-active .wave_anim.custom .wave:nth-child(2){animation-delay:.3s}
+    #debtEmergencyHero .deh-slide.is-active .wave_anim.custom .wave:nth-child(3){animation-delay:.45s}
+    #debtEmergencyHero .deh-slide.is-active .wave_anim.custom .wave:nth-child(4){animation-delay:.6s}
+    #debtEmergencyHero .deh-slide.is-active .wave_anim.custom .wave:nth-child(5){animation-delay:.75s}
+
+    /* ====== Progress ====== */
+    #debtEmergencyHero .deh-progress{
+      position:absolute;
+      bottom:80px;
+      left:var(--padX);
+      right:var(--padX);
+      z-index:3;
+      height:4px;
+      display:flex;
+      gap:10px;
+      width:150px;
+      max-width:calc(100% - (var(--padX) * 2));
+    }
+    #debtEmergencyHero .deh-seg{
+      flex:1;
+      background:rgba(255,255,255,.25);
+      border-radius:2px;
+      overflow:hidden;
+      cursor:pointer;
+      border:0;
+      padding:0;
+      appearance:none;
+      -webkit-appearance:none;
+    }
+    #debtEmergencyHero .deh-fill{display:block; width:0%; height:100%; background:#fff;}
+
+    /* ====== Wheel down ====== */
+    #debtEmergencyHero .deh-wheel{
+      position:absolute;
+      bottom:14px;
+      left:50%;
+      transform:translateX(-50%);
+      width:24px;
+      opacity:.7;
+      z-index:3;
+      pointer-events:none;
+    }
+    #debtEmergencyHero .deh-wheel .wheel{
+      animation: deh-wheel-fade 2s ease-in-out infinite;
+      transform-origin:center;
+    }
+    @keyframes deh-wheel-fade{
+      0%{opacity:1; transform:translateY(0)}
+      80%{opacity:.2; transform:translateY(10px)}
+      100%{opacity:0; transform:translateY(14px)}
+    }
+
+    /* ====== Viewport fadeInUp (요청: 화면 밖->재진입 시 반복) ====== */
+    #debtEmergencyHero [data-deh-reveal]{
+      opacity:0;
+      transform:translateY(16px);
+      transition:opacity .8s ease, transform .8s ease;
+      will-change:opacity, transform;
+    }
+    #debtEmergencyHero .is-revealed[data-deh-reveal]{
+      opacity:1;
+      transform:translateY(0);
+    }
+
+    /* 접근성: 모션 최소화 */
+    @media (prefers-reduced-motion: reduce){
+      #debtEmergencyHero .deh-bg,
+      #debtEmergencyHero .deh-slide,
+      #debtEmergencyHero .deh-btn,
+      #debtEmergencyHero [data-deh-reveal],
+      #debtEmergencyHero .deh-wheel .wheel{
+        transition:none !important;
+        animation:none !important;
+        transform:none !important;
+      }
+      #debtEmergencyHero .deh-slide{opacity:1 !important; position:relative;}
+      #debtEmergencyHero .deh-slides{display:block;}
+      #debtEmergencyHero .deh-btn{opacity:1 !important; pointer-events:auto !important;}
+      #debtEmergencyHero .wave_anim .wave{opacity:1 !important;}
+      #debtEmergencyHero .deh-progress{display:none;}
+    }
+  </style>
+
+  <div class="deh-shell">
+    <div class="deh-stage" role="region" aria-roledescription="carousel" aria-label="비즈니스 혁신 연구소 슬라이더" tabindex="0">
+      <div class="deh-slides" data-deh-slides>
+
+        <!-- Slide 1 -->
+        <article class="deh-slide is-active" data-deh-slide aria-label="1 / 5">
+          <div class="deh-bg" style="background-image:url('./img/bg-2.png');"></div>
+          <div class="deh-dim" aria-hidden="true"></div>
+          <div class="deh-txt" data-deh-reveal>
+            <span class="deh-cate wave_anim custom"><span class="wave">비즈니스 혁신 연구소</span></span>
+            <h2 class="deh-title wave_anim custom">
+              <p class="wave">예전 방식으로는<br>이젠 더 이상<br>통하지 않는다면?
+            </h2>
+            <p class="deh-desc wave_anim custom">
+              <span class="wave">문제의 본질을 재정의하고<br>전환 중심 구조로 재설계하여<br>매출이 흐르는 구조를 만들어드립니다.</span></span>
+            </p>
+            <a class="deh-btn" href="#consult">오프라인 혁신 강의 신청</a>
+          </div>
+        </article>
+
+        <!-- Slide 2 -->
+        <article class="deh-slide" data-deh-slide aria-label="2 / 5">
+          <div class="deh-bg" style="background-image:url('./img/column1-1.jpg');"></div>
+          <div class="deh-dim" aria-hidden="true"></div>
+          <div class="deh-txt" data-deh-reveal>
+            <span class="deh-cate wave_anim custom"><span class="wave">비즈니스 혁신 연구소</span></span>
+            <h2 class="deh-title wave_anim custom">
+              <p class="wave">혁신은 하고 싶은데<br>어떻게 해야할지<br>감이 안잡힌다면?
+            </h2>
+            <p class="deh-desc wave_anim custom">
+              <span class="wave">전략 부재, 포지셔닝 혼란,<br>고객 메시지 왜곡을 점검하여<br>사업의 성장 레버리지를 설계합니다.</span></span>
+            </p>
+            <a class="deh-btn" href="#consult">오프라인 혁신 강의 신청</a>
+          </div>
+        </article>
+
+        <!-- Slide 3 -->
+        <article class="deh-slide" data-deh-slide aria-label="3 / 5">
+          <div class="deh-bg" style="background-image:url('./img/3.jpg');"></div>
+          <div class="deh-dim" aria-hidden="true"></div>
+          <div class="deh-txt" data-deh-reveal>
+            <span class="deh-cate wave_anim custom"><span class="wave">비즈니스 혁신 연구소</span></span>
+            <h2 class="deh-title wave_anim custom">
+              <p class="wave">경쟁사는 변화하는데<br>내 사업은 그대로라면?
+            </h2>
+            <p class="deh-desc wave_anim custom">
+              <span class="wave">AI 시대에 맞는<br>차별화 전략과 구조 혁신으로<br>시장 내 존재 이유를 다시 세웁니다.</span></span>
+            </p>
+           <a class="deh-btn" href="#consult">오프라인 혁신 강의 신청</a>
+          </div>
+        </article>
+
+  
+
+        <!-- Slide 5 -->
+        <article class="deh-slide" data-deh-slide aria-label="5 / 5">
+          <div class="deh-bg" style="background-image:url('./img/5.jpg');"></div>
+          <div class="deh-dim" aria-hidden="true"></div>
+          <div class="deh-txt" data-deh-reveal>
+            <span class="deh-cate wave_anim custom"><span class="wave">비즈니스 혁신 연구소</span></span>
+            <h2 class="deh-title wave_anim custom">
+              <p class="wave">AI가 확산되는 시대<br>사업이 대체될 것 같다면?
+            </h2>
+            <p class="deh-desc wave_anim custom">
+              <span class="wave">위기를 기회로 바꾸는<br>비즈니스 모델 혁신을 통해<br>새로운 수익 구조를 설계합니다.</span></span>
+            </p>
+           <a class="deh-btn" href="#consult">오프라인 혁신 강의 신청</a>
+          </div>
+        </article>
+
+      </div>
+
+      <!-- Progress Bar (JS로 자동 생성) -->
+      <div class="deh-progress" data-deh-progress aria-label="슬라이드 진행 표시"></div>
+
+      <!-- Scroll Down Icon -->
+      <span class="deh-wheel" aria-hidden="true">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 30" width="24" height="36" focusable="false">
+          <path fill="#fff" d="M10,0C4.5,0,0,4.5,0,10v10c0,5.5,4.5,10,10,10s10-4.5,10-10V10C20,4.5,15.5,0,10,0z M19,20c0,5-4,9-9,9
+                              s-9-4-9-9V10c0-5,4-9,9-9s9,4,9,9V20z"></path>
+          <path class="wheel" fill="#fff" d="M10,5L10,5c0.6,0,1,0.4,1,1v4c0,0.6-0.4,1-1,1l0,0c-0.6,0-1-0.4-1-1V6C9,5.4,9.4,5,10,5z"></path>
+        </svg>
+      </span>
+    </div>
+  </div>
+
+  <script>
+    /* ===============================
+       Scope: #debtEmergencyHero ONLY
+       - Swiper 없이 동일 기능(페이드, 자동재생, 클릭 이동, 터치 스와이프)
+       - 텍스트/wave 애니메이션 재트리거
+       - 화면 밖 -> 재진입 시 fadeInUp 재실행
+       =============================== */
+    (function(){
+      const root = document.getElementById('debtEmergencyHero');
+      if(!root) return;
+
+      const stage = root.querySelector('.deh-stage');
+      const slides = Array.from(root.querySelectorAll('[data-deh-slide]'));
+      const progress = root.querySelector('[data-deh-progress]');
+
+      const prefersReduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      const DELAY = prefersReduce ? 999999999 : parseInt(getComputedStyle(root).getPropertyValue('--delay')) || 5000;
+      const SPEED = prefersReduce ? 0 : parseInt(getComputedStyle(root).getPropertyValue('--speed')) || 1000;
+
+      if(!slides.length || !progress) return;
+
+      let idx = 0;
+      let timer = 0;
+      let startedAt = 0;
+      let remaining = 0; // 드래그/상호작용 시 남은 자동재생 시간
+
+      // ---- Progress segments ----
+      const fills = [];
+      slides.forEach((_, i) => {
+        const btn = document.createElement('button');
+        btn.type = 'button';
+        btn.className = 'deh-seg';
+        btn.setAttribute('aria-label', `슬라이드 ${i+1}로 이동`);
+
+        const fill = document.createElement('span');
+        fill.className = 'deh-fill';
+        btn.appendChild(fill);
+
+        btn.addEventListener('click', () => goTo(i, true));
+        progress.appendChild(btn);
+        fills.push(fill);
+      });
+
+      function resetFill(el){
+        el.style.transition = 'none';
+        el.style.width = '0%';
+        // reflow
+        void el.offsetWidth;
+      }
+
+      function animateFill(i){
+        fills.forEach((f, j) => {
+          f.style.transition = 'none';
+          f.style.width = (j < i) ? '100%' : '0%';
+        });
+        const active = fills[i];
+        if(!active) return;
+        void active.offsetWidth;
+        active.style.transition = `width ${DELAY}ms linear`;
+        active.style.width = '100%';
+      }
+
+      function setFillProgress(i, p){
+        const active = fills[i];
+        if(!active) return;
+        active.style.transition = 'none';
+        active.style.width = `${Math.max(0, Math.min(1, p)) * 100}%`;
+        void active.offsetWidth;
+      }
+
+      function resumeFill(i, remainMs){
+        const active = fills[i];
+        if(!active) return;
+        const ms = Math.max(0, remainMs|0);
+        active.style.transition = 'none';
+        // 현재 width 유지
+        const cur = active.style.width || '0%';
+        active.style.width = cur;
+        void active.offsetWidth;
+        active.style.transition = `width ${ms}ms linear`;
+        active.style.width = '100%';
+      }
+
+      // ---- Wave animation retrigger ----
+      function retriggerWave(slide){
+        // wave 요소를 순간적으로 숨겼다가 다시 보여서 keyframes 재실행
+        const waves = slide.querySelectorAll('.wave_anim .wave');
+        waves.forEach(w => {
+          w.style.animation = 'none';
+        });
+        // reflow
+        void slide.offsetWidth;
+        waves.forEach(w => {
+          w.style.animation = '';
+        });
+      }
+
+      // ---- Slide activation ----
+      function setActive(i){
+        slides.forEach((s, j) => {
+          if(j === i) s.classList.add('is-active');
+          else s.classList.remove('is-active');
+        });
+
+        // 접근성: aria-label 업데이트
+        slides.forEach((s, j) => {
+          s.setAttribute('aria-hidden', j === i ? 'false' : 'true');
+        });
+
+        // wave 재트리거
+        retriggerWave(slides[i]);
+
+        // progress
+        animateFill(i);
+      }
+
+      function clearTimer(){
+        if(timer) window.clearTimeout(timer);
+        timer = 0;
+      }
+
+      function scheduleNext(){
+        clearTimer();
+        startedAt = performance.now();
+        remaining = DELAY;
+        timer = window.setTimeout(() => {
+          goTo((idx + 1) % slides.length, false);
+        }, remaining);
+      }
+
+      function pauseAutoplay(){
+        if(prefersReduce) return;
+        const now = performance.now();
+        const elapsed = Math.max(0, now - (startedAt || now));
+        const p = (DELAY > 0) ? Math.max(0, Math.min(1, elapsed / DELAY)) : 0;
+        remaining = Math.max(0, DELAY - elapsed);
+        clearTimer();
+        // 진행바를 현재 위치에서 멈춤
+        setFillProgress(idx, p);
+      }
+
+      function resumeAutoplay(){
+        if(prefersReduce) return;
+        clearTimer();
+        startedAt = performance.now();
+        // 진행바를 남은 시간만큼 이어서 채움
+        resumeFill(idx, remaining);
+        timer = window.setTimeout(() => {
+          goTo((idx + 1) % slides.length, false);
+        }, remaining);
+      }
+
+      function goTo(next, byUser){
+        if(next === idx) {
+          // 사용자가 다시 클릭했을 때도 애니메이션/프로그레스 리셋
+          resetFill(fills[idx]);
+          setActive(idx);
+          if(!prefersReduce) scheduleNext();
+          return;
+        }
+        idx = (next + slides.length) % slides.length;
+        setActive(idx);
+        if(!prefersReduce) scheduleNext();
+      }
+
+      // ---- Unified drag (PointerEvents: mouse + touch) ----
+      let psx = 0, psy = 0;
+      let pdx = 0;
+      let dragging = false;
+      let dragDir = 0; // -1 prev, +1 next
+      let dragRAF = 0;
+      let pointerActive = false;
+      let activePointerId = null;
+      const TH = 8;
+      const SNAP = 0.20; // 20% 이상 드래그하면 전환
+
+      function clamp(v, a, b){ return Math.max(a, Math.min(b, v)); }
+
+      function ensurePeek(dir){
+        const peekIndex = (idx + dir + slides.length) % slides.length;
+        slides.forEach((s, j) => {
+          if(j === peekIndex) s.classList.add('is-peek');
+          else s.classList.remove('is-peek');
+        });
+        return peekIndex;
+      }
+
+      function applyDragVisual(p, dir){
+        const peekIndex = ensurePeek(dir);
+        const cur = slides[idx];
+        const peek = slides[peekIndex];
+
+        // 드래그 시 두 장만 보이도록
+        slides.forEach((s, j) => {
+          if(j !== idx && j !== peekIndex){
+            s.style.opacity = '0';
+          }
+        });
+
+        // fade 느낌 유지(부드럽게)
+        cur.style.opacity = String(1 - (p * 0.9));
+        peek.style.opacity = String(p);
+      }
+
+      function clearInlineOpacity(){
+        slides.forEach(s => { s.style.opacity = ''; });
+      }
+
+      function endDrag(commit){
+        root.classList.remove('is-dragging');
+        dragging = false;
+        pointerActive = false;
+        activePointerId = null;
+        if(dragRAF){ cancelAnimationFrame(dragRAF); dragRAF = 0; }
+
+        slides.forEach(s => s.classList.remove('is-peek'));
+        clearInlineOpacity();
+
+        if(commit){
+          goTo((idx + dragDir + slides.length) % slides.length, true);
+        }else{
+          // ✅ 살짝 드래그했다가 놓을 때: 현재 슬라이드는 유지하고
+          //    wave/프로그레스가 "처음부터" 재시작되는 현상 방지
+          //    -> 진행바/타이머를 남은 시간만큼 그대로 이어서 재개
+          resumeAutoplay();
+        }
+      }
+
+      function onPointerDown(e){
+        if(prefersReduce) return;
+        if(e.pointerType === 'mouse' && e.button !== 0) return;
+
+        pointerActive = true;
+        activePointerId = e.pointerId;
+        psx = e.clientX;
+        psy = e.clientY;
+        pdx = 0;
+        dragging = false;
+        dragDir = 0;
+
+        // ✅ 드래그 시작 시 자동재생/진행바를 '현재 위치'에서 일시정지
+        pauseAutoplay();
+        try{ stage.setPointerCapture(e.pointerId); }catch(_){ }
+      }
+
+      function onPointerMove(e){
+        if(!pointerActive || e.pointerId !== activePointerId) return;
+        pdx = e.clientX - psx;
+        const pdy = e.clientY - psy;
+
+        if(!dragging){
+          if(Math.abs(pdx) > Math.abs(pdy) + 6 && Math.abs(pdx) > TH){
+            dragging = true;
+            root.classList.add('is-dragging');
+          }else{
+            return;
+          }
+        }
+
+        // 가로 드래그 중에는 기본 스크롤 방지
+        e.preventDefault();
+
+        const w = Math.max(1, stage.clientWidth);
+        const p = clamp(Math.abs(pdx) / w, 0, 1);
+        dragDir = (pdx < 0) ? +1 : -1;
+
+        if(!dragRAF){
+          dragRAF = requestAnimationFrame(() => {
+            dragRAF = 0;
+            applyDragVisual(p, dragDir);
+          });
+        }
+      }
+
+      function onPointerUp(e){
+        if(!pointerActive || e.pointerId !== activePointerId) return;
+
+        const w = Math.max(1, stage.clientWidth);
+        const p = clamp(Math.abs(pdx) / w, 0, 1);
+
+        if(!dragging){
+          pointerActive = false;
+          activePointerId = null;
+          // ✅ 실제 드래그가 아니면 그대로 재개(리셋 금지)
+          resumeAutoplay();
+          return;
+        }
+
+        const commit = p >= SNAP;
+        endDrag(commit);
+      }
+
+      function onPointerCancel(e){
+        if(!pointerActive || e.pointerId !== activePointerId) return;
+        if(dragging) endDrag(false);
+        else{
+          pointerActive = false;
+          activePointerId = null;
+          // ✅ 취소 시에도 리셋하지 않고 이어서 재개
+          resumeAutoplay();
+        }
+      }
+
+      stage.addEventListener('pointerdown', onPointerDown, {passive:false});
+      stage.addEventListener('pointermove', onPointerMove, {passive:false});
+      stage.addEventListener('pointerup', onPointerUp, {passive:true});
+      stage.addEventListener('pointercancel', onPointerCancel, {passive:true});
+
+      // ---- Keyboard (좌우) ----
+      function onKeydown(e){
+        if(e.key === 'ArrowRight') goTo(idx + 1, true);
+        if(e.key === 'ArrowLeft') goTo(idx - 1, true);
+      }
+      stage.addEventListener('keydown', onKeydown);
+
+      // ---- Viewport reveal (재진입 시 반복) ----
+      const revealEls = Array.from(root.querySelectorAll('[data-deh-reveal]'));
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach(ent => {
+          if(ent.isIntersecting){
+            ent.target.classList.add('is-revealed');
+          }else{
+            // 화면 밖으로 나가면 제거 -> 재진입 시 다시 애니메이션
+            ent.target.classList.remove('is-revealed');
+          }
+        });
+      }, {root:null, threshold:0.35});
+      revealEls.forEach(el => io.observe(el));
+
+      // ---- Pause on tab hidden ----
+      document.addEventListener('visibilitychange', () => {
+        if(prefersReduce) return;
+        if(document.hidden){
+          clearTimer();
+        }else{
+          // 남은 시간 계산 없이 깔끔하게 다시 시작
+          resetFill(fills[idx]);
+          setActive(idx);
+          scheduleNext();
+        }
+      });
+
+      // init
+      setActive(0);
+      if(!prefersReduce) scheduleNext();
+    })();
+  </script>
+</section>
+
+
+<section id="energyHL" aria-label="하이라이트 질문 시퀀스 (JS 누적 점등 · 밝기 조절 가능)"
+  data-step="650" data-hold="1300" data-dark="600" data-dim="0.18" data-bright="1">
+ 
+  <style>
+    #energyHL{
+      --maxW:800px;
+      --hRow:168px;
+      --padX:26px;
+      --dim:.18;
+      --bright:1;
+      --txtDim:.28;
+      --yellow:#ffb400;
+      --gapShade:rgba(0,0,0,.85);
+      font-family:"Pretendard","Noto Sans KR",system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
+      width:100%;max-width:var(--maxW);margin:0 auto;overflow:hidden;position:relative;
+      background:#000;
+
+      box-shadow:0 0 0 100vmax #000;
+      clip-path:inset(0 -100vmax);
+      padding-top:80px;
+    }
+
+    #energyHL .row{
+      position:relative;height:var(--hRow);
+      display:flex;align-items:center;justify-content:flex-start;
+      overflow:hidden;
+    }
+
+    #energyHL .bg{
+      position:absolute;inset:0;
+      background-size:cover;background-repeat:no-repeat;background-color:#000;
+      filter:brightness(var(--dim));
+      transition:none;
+      z-index:0;
+    }
+
+    #energyHL .left .bg{background-position:left center;}
+    #energyHL .right .bg{background-position:right center;}
+
+    #energyHL .shade{
+      position:absolute;inset:0;
+      background:rgba(0,0,0,.62);
+      opacity:1;
+      pointer-events:none;
+      z-index:1;
+    }
+
+    #energyHL .txt{
+      position:relative;z-index:2;
+      color:#fff;line-height:1.42;font-weight:800;
+      font-size:1.58rem;letter-spacing:-.2px;
+      margin:0;padding:0 var(--padX);text-align:left;
+      opacity:var(--txtDim);
+    }
+    #energyHL .hl{color:var(--yellow);font-weight:900;}
+
+    #energyHL .row::after{content:"";position:absolute;inset:auto 0 -10px 0;height:10px;background:var(--gapShade);} 
+    #energyHL .row:first-child::before{content:"";position:absolute;inset:-10px 0 auto 0;height:10px;background:var(--gapShade);} 
+
+    @media (max-width:600px){
+      #energyHL{--hRow:138px;--padX:18px;}
+      #energyHL .txt{font-size:1.36rem;}
+    }
+
+    #energyHL .r1 .bg{background-image:url('./img/3.jpg');}
+    #energyHL .r2 .bg{background-image:url('./img/1.jpg');}
+    #energyHL .r3 .bg{background-image:url('./img/5.jpg');}
+    
+
+
+  </style>
+  <div class="row r1 right" data-bright="0.4" data-dim="0.18">
+    <div class="bg"></div>
+    <i class="shade"></i>
+    <p class="txt">AI발 일자리 한파에<br><span class="hl">법률·회계·세무·의료·서비스 …<br>1년새 10만개 줄었다</span></p>
+  </div>
+  <div class="row r2 right" data-bright="0.5" data-dim="0.18">
+    <div class="bg"></div>
+    <i class="shade"></i>
+    <p class="txt"><span class="hl">전세계 일자리 60% 위협</span><br>IMF 총리 경고</p>
+  </div>
+  <div class="row r3 left" data-bright="0.5" data-dim="0.18">
+    <div class="bg"></div>
+    <i class="shade"></i>
+    <p class="txt"><span class="hl">100만 폐업 도미노…</span><br>5년 만에 최대폭 증가</p>
+  </div>
+
+
+</section>
+
+
+
+<section id="albuminWarn" aria-label="중장년 건강관리 경고 톤">
+
+  <div class="wrap">
+    <div class="head">
+      <div class="icon" aria-hidden="true"><i>!</i></div>
+      <div class="t1" style="line-height:140%;"><span style="color:#fff">급변하는 AI 시대 속</span></div>
+      <div class="t2">당신의 사업을 어떻게<br>준비하고 계신가요?</div>
+      <img src="./img/cause.jpg" style="width:90%;max-width:500px;padding:30px 0;margin: 0 auto;" alt="">
+      <hr style="margin:30px auto;padding:80px 0;width:0px;">
+      <div class="t2" style="margin:40px 0 80px;"><span class="em">사업의 모든<br>규칙이 달라지는<br>시대의 격변 속에서</span></div>
+    </div>
+
+   <section id="withcareFeatureBanners" aria-label="한국위드케어협회 특징 배너 3종 (각 카드별 배경 이미지 교체 가능)">
+
+
+  <!-- Card 1 -->
+  <div class="card c1" style="--bg:url('https://cdn.ekoreanews.co.kr/news/photo/202303/65774_76459_313.jpg');object-position: top;">
+    <i class="bg" aria-hidden="true"></i>
+    <i class="shade" aria-hidden="true"></i>
+    <div class="txt">
+      <span class="line">AI는 불/전기에 비견될 만큼</span>
+      <span class="line block" style="margin-top:6px;">거대한 시대의 변곡점 입니다.</span>
+      <span>* 구글 CEO 순다르 피차이</span>
+    </div>
+  </div>
+
+
+
+  <!-- Card 3 -->
+  <div class="card c3" style="--bg:url('https://img.hankyung.com/photo/202409/AD.37933078.1.jpg');">
+    <i class="bg" aria-hidden="true"></i>
+    <i class="shade" aria-hidden="true"></i>
+    <div class="txt">
+      <span class="line">AI 급속한 발전으로</span>
+      <span class="line hl" style="margin-top:.25em;">거의 모든 산업을 바꾸고 있다.</span>
+         <span>* 엔비디아 CEO 젠슨황</span>
+    </div>
+  </div>
+</section>
+
+    <div class="head" style="margin:80px 0;">
+      <!-- <div class="t1" style="line-height:140%;">
+        <span style="color:#fff">사업의 모든 규칙이 달라지는<br>시대의 격변 속에서</span><br><br>
+      </div> -->
+      <div class="t2" style="line-height:120%;">
+        예전 성공 방식은<br>이제는 더 이상<br>통하지 않는 만큼
+      </div>
+
+      <!-- ✅ 이 hr의 바로 아래부터 배경이 화이트로 그라데이션 전환됨 -->
+      <hr id="whiteStartHR" style="margin:30px auto;padding:120px 0;width:0px;border:1.5px solid #fff;border-radius:6px;">
+
+      <!-- ✅ on-white 톤 전환 + SPIN: P → I 자연스러운 문구 -->
+      <div class="onWhiteArea" style="margin: 26px 0 0px;">
+        <!-- Lead (I로 넘어가는 전환 헤드라인) -->
+        <div class="lead">
+          <span class="em-soft">혁신은 선택이 아니라<br>생존이 되고 있습니다</span>
+        </div>
+        <!-- Sub copy (Implication을 구체화: 건강·생활·비용의 파급) -->
+        <!-- <p class="sub">
+          수질이 나빠질수록<br>피부 자극·아토피 악화<br>가능성은 높아지고<br>
+          </span>
+        </p> -->
+        <!-- 작은 신뢰·긴급성 칩 -->
+        <!-- <span class="chip" aria-hidden="true">지금 점검이, 나중 공사비를 줄입니다</span> -->
+      </div>
+
+<section id="withcareFeatureCards" aria-label="한국위드케어협회 특징 배너 3종 (각 카드별 배경 이미지 교체 가능)">
+  <style>
+    /* ================= Scope: #withcareFeatureCards only ================= */
+    #withcareFeatureCards { 
+      --ink:#111; 
+      --white:#fff; 
+      --blue:#0b5ed7; 
+      --bg:#0f0f10; 
+      --cardRadius:26px; 
+      --gap:28px; 
+      --shadow:0 14px 40px rgba(0,0,0,.5);
+      --maxW:980px; 
+      font-family:"Pretendard","Noto Sans KR",system-ui,-apple-system,Segoe UI,Roboto,sans-serif; 
+      background:#fff; 
+      padding:76px 18px; 
+      display:grid; 
+      place-items:center; 
+      row-gap:var(--gap);
+    }
+
+    #withcareFeatureCards .card {
+      position:relative; 
+      width:100%; 
+      max-width:var(--maxW); 
+      height:272px; 
+      border-radius:var(--cardRadius); 
+      overflow:hidden; 
+      box-shadow:var(--shadow);
+      display:grid; 
+      grid-template-columns:1fr; 
+      grid-template-rows:1fr; 
+      isolation:isolate; 
+    }
+
+    /* ✅ 각 카드별 배경 이미지를 var(--bg)로 쉽게 교체 가능 */
+    #withcareFeatureCards .bg {
+      position:absolute; inset:0; 
+      background-image:var(--bg);
+      background-position:center; 
+      background-size:cover; 
+      transform:scale(1); 
+      transition:transform .55s ease; 
+    }
+    #withcareFeatureCards .card:hover .bg { transform:scale(1.03); }
+
+    /* 공통 어둡기 (개별 카드에서 shade 조절 가능) */
+    #withcareFeatureCards .shade { 
+      position:absolute; inset:0; z-index:1; 
+      background:rgba(0,0,0,.25); 
+    }
+
+    /* 공통 문구 박스 */
+    #withcareFeatureCards .txt {
+      position:relative; z-index:3; 
+      color:var(--white); 
+      line-height:1.38; 
+      font-weight:800; 
+      letter-spacing:-.3px;
+      display:grid; gap:.24em; 
+    }
+
+    #withcareFeatureCards .line { font-size:26px; }
+
+    /* 파란 강조 배지 */
+    #withcareFeatureCards .hl {
+      background:#d78e0b94; 
+      padding:8px 14px; 
+      border-radius:10px; 
+      display:inline-block; 
+    }
+
+    /* ====== 카드 1 (왼쪽 정렬) ====== */
+    #withcareFeatureCards .c1 .txt {
+      justify-self:start; align-self:center; 
+      margin-left:36px; text-align:left;
+    }
+    #withcareFeatureCards .c1 .block {  
+      display:inline-block; 
+      background:#d78e0b94; 
+      padding:10px 16px; 
+      border-radius:12px; 
+    }
+
+    /* ====== 카드 2 (우측 정렬 + 베이지 자격증 톤) ====== */
+    #withcareFeatureCards .c2::before {
+      content:""; position:absolute; z-index:2; 
+      left:22px; right:52%; top:22px; bottom:22px; 
+      border-radius:20px; 
+    }
+    #withcareFeatureCards .c2 .txt { 
+      justify-self:end; align-self:center; 
+      margin-right:32px; 
+      text-align:right; 
+    }
+
+    /* ====== 카드 3 (좌측 문구 + 대각 분할 톤) ====== */
+    #withcareFeatureCards .c3::before {
+      content:""; position:absolute; inset:0; z-index:2; pointer-events:none; 
+      mix-blend-mode:screen;
+    }
+    #withcareFeatureCards .c3 .txt { 
+      justify-self:start; align-self:center; 
+      margin-left:36px; text-align:left; 
+      text-shadow:0 2px 10px rgba(0,0,0,.35);
+    }
+
+    /* ====== 카드 4 (가운데 정렬) ====== */
+    #withcareFeatureCards .c4::before {
+      content:""; position:absolute; inset:0; z-index:2; pointer-events:none; 
+      mix-blend-mode:screen;
+    }
+    #withcareFeatureCards .c4 .txt { 
+      justify-self:center; align-self:center; 
+      text-align:center; 
+      text-shadow:0 2px 10px rgba(0,0,0,.35);
+    }
+    
+    /* 반응형 */
+    @media (max-width:980px){
+      #withcareFeatureCards .card{ height:260px; }
+      #withcareFeatureCards .line{ font-size:24px; }
+    }
+    @media (max-width:720px){
+      #withcareFeatureCards{ padding:60px 14px; row-gap:18px; }
+      #withcareFeatureCards .card{ height:220px; border-radius:20px; }
+      #withcareFeatureCards .line{ font-size:19px; }
+      #withcareFeatureCards .c2::before{ left:16px; top:16px; bottom:16px; right:52%; border-radius:16px; }
+      #withcareFeatureCards .c2 .txt{ margin-right:20px; }
+      #withcareFeatureCards .c3 .txt{ margin-left:20px; }
+      #withcareFeatureCards .c1 .txt{ margin-left:20px; }
+    }
+  </style>
+
+  <!-- Card 1 -->
+  <div class="card c1" style="--bg:url('https://img.hankyung.com/photo/202410/ZA.38168417.1.jpg');">
+    <i class="bg" aria-hidden="true"></i>
+    <i class="shade" aria-hidden="true"></i>
+    <div class="txt">
+      <span class="line">시대 변화 속 혁신을 선택하지 않으면,</span>
+      <span class="line block" style="margin-top:6px;">시장이 우리를 선택에서 제외한다.</span>
+       <span>* 테슬라 CEO 일론 머스크</span>
+    </div>
+  </div>
+
+  <!-- Card 2 -->
+  <div class="card c2" style="--bg:url('https://nimage.g-enews.com/phpwas/restmb_allidxmake.php?idx=5&simg=2025032419453801269fbbec65dfb1161228193.jpg');background-position: top;">
+    <i class="bg" aria-hidden="true"></i>
+    <i class="shade" aria-hidden="true"></i>
+    <div class="txt">
+      <span class="line" style="margin-top:.25em;">지금 변화 국면에서 그대로 있으면</span>
+      <span class="line hl">회복할 수 없을 정도로 뒤쳐질 것이다.</span>
+      <span>* 소프트뱅크 회장 손정의</span>
+    </div>
+  </div>
+
+  <!-- Card 3 -->
+  <div class="card c3" style="--bg:url('https://image.kmib.co.kr/online_image/2023/0113/2023011220550577120_1673524505_0924282734.jpg');">
+    <i class="bg" aria-hidden="true"></i>
+    <i class="shade" aria-hidden="true"></i>
+    <div class="txt">
+      <span class="line">현재 시대의 흐름 속</span>
+      <span class="line hl" style="margin-top:.25em;">10년을 ‘생존+성장’하려면<br>근본적 전환이 필요</span>
+        <span>* WEF (World Economic Forum)</span>
+    </div>
+  </div>
+
+
+   
+
+
+</section>
+
+  <!-- ✅ on-white 톤 전환 + SPIN: P → I 자연스러운 문구 -->
+      <div class="onWhiteArea" style="margin: 26px 0 0px;">
+        <!-- Lead (I로 넘어가는 전환 헤드라인) -->
+        <div class="lead">
+          <span class="em-soft">혁신의 필요성은<br>크게 느끼고 있지만<br>어떻게 해야할지 모르겠다면?</span>
+        </div>
+        <!-- Sub copy (Implication을 구체화: 건강·생활·비용의 파급) -->
+        <!-- <p class="sub">
+          수질이 나빠질수록<br>피부 자극·아토피 악화<br>가능성은 높아지고<br>
+          </span>
+        </p> -->
+        <!-- 작은 신뢰·긴급성 칩 -->
+        <!-- <span class="chip" aria-hidden="true">지금 점검이, 나중 공사비를 줄입니다</span> -->
+      </div>
+
+
+    </div>
+  </div>
+
+  
+</section>
+
+
+
+<section id="lgStylerHero" style="--bg-brightness:0.3">
+  <style>
+    /* ================= Scope: #lgStylerHero only ================= */
+    /* ✅ body 검정이 비치지 않게: 섹션 자체를 흰 "캔버스"로 만든다 */
+    #lgStylerHero{
+      background:#fff;               /* body의 #000을 덮음 */
+      padding: clamp(14px, 3.2vw, 26px);  /* 카드 밖 흰 여백 */
+      margin: 0 auto;
+    }
+
+    /* ✅ 실제 히어로 카드(기존 스타일을 여기로 이동) */
+    #lgStylerHero .lg-card{
+      --ink:#ffffff;
+      --muted:#e7eaee;
+      --brand-red:#023e8e;
+      --brand-red-2:#023e8e;
+      --brand-black:#0e1115;
+      --glass:rgba(15,17,21,.70);
+      --glass-line:rgba(255,255,255,.14);
+      --shadow:0 10px 30px rgba(0,0,0,.35);
+      --radius:16px;
+      --max:1200px;
+      --padX: clamp(16px, 4vw, 36px);
+      --padY: clamp(16px, 5vw, 48px);
+
+      /* ⏱ 타이밍 */
+      --slide-duration: 3600ms; /* 확대(kenburns) 시간 */
+      --fade-duration: 900ms;   /* 교차 페이드 시간 */
+      --interval: 3800ms;       /* 다음 이미지로 바뀌는 간격(3~4초) */
+
+      position:relative; color:var(--ink);
+      font-family:Pretendard, "Noto Sans KR", system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+      margin:0 auto; max-width:var(--max); min-height:600px; overflow:hidden;
+      border-radius:20px; background:var(--brand-black);
+      isolation:isolate;
+
+      /* 하단 로고 티커 영역 여백 확보 */
+      padding-bottom:84px;
+    }
+
+    /* ::before 는 사용 안함 */
+    #lgStylerHero .lg-card::before{ content:""; display:none !important; }
+
+    /* 은은한 하이라이트 오버레이 */
+    #lgStylerHero .lg-card::after{
+      content:""; position:absolute; inset:0; z-index:-1;
+      background:radial-gradient(60% 70% at 25% 55%, rgba(255,255,255,.22), rgba(0,0,0,0) 60%);
+      pointer-events:none;
+    }
+
+    /* ====== 배경 슬라이드 ====== */
+    #lgStylerHero .bg-deck{
+      position:absolute; inset:0; z-index:-2; overflow:hidden;
+    }
+    #lgStylerHero .bg-slide{
+      position:absolute; inset:0;
+      background-size:cover; background-position:center;
+      filter: brightness(var(--bg-brightness, 1));
+      transform: scale(1);
+      opacity:0;
+      z-index:0;
+      transition: opacity var(--fade-duration) ease;
+      will-change: transform, opacity;
+    }
+    /* 들어오는 슬라이드: 페이드인 + 확대 시작(동시) */
+    #lgStylerHero .bg-slide.active{
+      z-index:2;
+      opacity:1;
+      animation: kenburns var(--slide-duration) ease-in-out forwards;
+    }
+    /* 나가는 슬라이드: '확대 상태' 유지한 채 페이드아웃만 */
+    #lgStylerHero .bg-slide.leaving{
+      z-index:1;
+      opacity:0;
+      /* transform 은 JS가 현재값을 고정시켜줌(축소로 복귀 금지) */
+    }
+    @keyframes kenburns{
+      from{ transform: scale(1);   }
+      to  { transform: scale(1.08);}
+    }
+
+    /* ===== 레이아웃 ===== */
+    #lgStylerHero .inner{
+      position:relative; display:grid;
+      grid-template-rows: 1fr 1fr; grid-template-columns: 1fr 1fr;
+      min-height:600px; padding: var(--padY) var(--padX);
+    }
+
+    /* 제목/카피(고정) */
+    #lgStylerHero .copy{ grid-column:1 / 2; grid-row:1 / 2; align-self:center; justify-self:start; text-align:left; }
+    #lgStylerHero .eyebrow{
+      display:inline-block; padding:8px 14px; border-radius:999px;
+      background:#023e8e;
+      color:#fff; font-size:clamp(13px, 1.5vw, 16px); font-weight:800; letter-spacing:.2px;
+      margin-bottom:12px;
+    }
+    #lgStylerHero .blink{ animation: blink 1.5s infinite; }
+    @keyframes blink { 0%, 49%, 100% { opacity: 1; } 50%, 70% { opacity: 0; } }
+
+    #lgStylerHero .title{
+      line-height:1.02; font-weight:900; font-size:50px;
+      margin:0 0 14px 0; text-shadow:0 6px 18px rgba(0,0,0,.35);
+    }
+    @media screen and (max-width:530px) { #lgStylerHero .title{ font-size:45px; } }
+    @media screen and (max-width:420px) { #lgStylerHero .title{ font-size:35px; } }
+
+    /* 리스트(고정) */
+    #lgStylerHero .feature-list{
+      grid-row:2 / 3;
+      display:flex; flex-direction:column; gap:12px; width:min(420px, 92%);
+    }
+    #lgStylerHero .feature{
+      position:relative; background:var(--glass);
+      border:1px solid rgba(255,255,255,.14);
+      border-radius:14px; padding:16px 22px; text-align:center;
+      font-size:clamp(15px, 1.8vw, 18px); font-weight:800; letter-spacing:-.2px;
+      box-shadow:var(--shadow);
+    }
+    #lgStylerHero .feature::before{
+      content:""; position:absolute; left:10px; top:50%; transform:translateY(-50%);
+      width:6px; height:70%; border-radius:6px; background:linear-gradient(180deg, var(--brand-red-2), var(--brand-red));
+      box-shadow:0 0 0 1px rgba(255,255,255,.16) inset, 0 6px 16px rgba(230,0,18,.35);
+    }
+
+    /* 뱃지 */
+    #lgStylerHero .badge{
+      position:absolute; top:20px; right:20px; z-index:5;
+      background:var(--brand-red);
+      color:#fff; font-weight:900; font-size:clamp(14px, 2vw, 18px);
+      padding:16px 20px; border-radius:50%; text-align:center; line-height:1.2;
+      box-shadow:0 6px 16px rgba(0,0,0,.3);
+    }
+
+    /* 카운트 숫자 강조(선택사항) */
+    #lgStylerHero .count{
+      display:inline-block; min-width:1ch;
+      text-shadow:0 4px 14px rgba(0,0,0,.35);
+    }
+
+    /* ===== 하단 브랜드 로고 티커 ===== */
+    #lgStylerHero .brand-ticker{
+      position:absolute; left:0; right:0; bottom:0; height:72px;
+      z-index:3;
+      background:#ffffff67;
+      border-top:1px solid rgba(255,255,255,.10);
+      display:flex; align-items:center; overflow:hidden;
+      pointer-events:auto;
+    }
+    #lgStylerHero .brand-ticker .track{
+      display:flex; align-items:center; gap:36px;
+      padding-inline:24px;
+      will-change: transform;
+      animation: ticker-move 28s linear infinite;
+      animation-play-state: running !important;
+    }
+    @keyframes ticker-move{
+      from { transform: translateX(-50%); }
+      to   { transform: translateX(0%); }
+    }
+    #lgStylerHero .brand-ticker:hover .track,
+    #lgStylerHero .brand-ticker:active .track,
+    #lgStylerHero .brand-ticker:focus-within .track{
+      animation-play-state: running !important;
+    }
+    #lgStylerHero .brand-ticker img{
+      height:34px; width:auto; opacity:.92; filter:drop-shadow(0 2px 6px rgba(0,0,0,.35));
+      object-fit:contain; user-select:none; -webkit-user-drag:none;
+      pointer-events:none;
+    }
+
+    /* 반응형 */
+    @media (max-width: 900px){
+      #lgStylerHero .inner{ grid-template-columns:1fr; grid-template-rows:auto auto; text-align:center; }
+      #lgStylerHero .copy{ grid-column:1; grid-row:1; justify-self:center; align-self:center; text-align:center; }
+      #lgStylerHero .feature-list{ grid-column:1; grid-row:2; justify-self:center; align-self:center; width:min(520px, 95%); }
+      #lgStylerHero .feature::before{ left:14px; }
+      #lgStylerHero .badge{ top:10px; right:10px; font-size:14px; padding:12px 14px; }
+      #lgStylerHero .lg-card{ padding-bottom:76px; }
+      #lgStylerHero .brand-ticker{ height:64px; }
+      #lgStylerHero .brand-ticker img{ height:28px; }
+      #lgStylerHero .brand-ticker .track{ gap:24px; }
+    }
+    @media (max-width: 530px){
+      #lgStylerHero .badge{ top:10px; right:10px; font-size:11px; padding:12px 14px; }
+    }
+
+    /* 모션 최소화 환경 */
+    @media (prefers-reduced-motion: reduce){
+      #lgStylerHero .bg-slide{ transition:none; animation:none; transform:none; }
+      #lgStylerHero .brand-ticker .track{ animation:none; transform:translateX(-25%); }
+    }
+  </style>
+
+  <!-- ✅ 카드 래퍼 추가(섹션은 흰 배경, 카드가 실제 히어로) -->
+  <div class="lg-card">
+    <!-- 배경 덱 -->
+    <div class="bg-deck" aria-hidden="true"></div>
+
+    <div class="inner">
+      <div class="copy">
+        <div class="eyebrow"><b class="blink">월 10명 선착순 한정!</b></div>
+        <h2 class="title" style="line-height:120%;">현장 혁신을 이뤄주는<br><b style="color:#ffdaa9">혁신 마인드<br>오프라인 강의</b></h2>
+      </div>
+      <div class="feature-list" role="list">
+        <div class="feature" role="listitem">혁신을 현실에 적용하는 실전 이론 제공</div>
+        <div class="feature" role="listitem">성공하는 혁신의 사례 및 원리 전달</div>
+        <div class="feature" role="listitem"><b style="color:#ffdaa9">현장 혁신을 위한 생각 1% 커뮤니티 참여 제공</b></div>
+      </div>
+    </div>
+
+    <!-- ===== 하단 브랜드 로고 티커 ===== -->
+    <div class="brand-ticker" aria-label="협력 브랜드 로고">
+      <div class="track" role="list">
+        <img src="./img/logo-1.png" alt="LG" role="listitem">
+        <img src="./img/logo-10.png" alt="Samsung" role="listitem">
+        <img src="./img/logo-11.png" alt="Apple" role="listitem">
+        <img src="./img/logo-12.png" alt="Bodyfriend" role="listitem">
+        <img src="./img/logo-13.png" alt="Cuckoo" role="listitem">
+        <img src="./img/logo-14.png" alt="Ceragem" role="listitem">
+        <img src="./img/logo-15.png" alt="아츠아크" role="listitem">
+        <img src="./img/logo-16.png" alt="소노시즌" role="listitem">
+        <img src="./img/logo-17.png" alt="SK매직" role="listitem">
+        <img src="./img/logo-18.png" alt="SK매직" role="listitem">
+        <img src="./img/logo-19.png" alt="SK매직" role="listitem">
+        <img src="./img/logo-20.png" alt="SK매직" role="listitem">
+        <img src="./img/logo-1.png" alt="LG" role="listitem" aria-hidden="true">
+        <img src="./img/logo-10.png" alt="Samsung" role="listitem" aria-hidden="true">
+        <img src="./img/logo-11.png" alt="Apple" role="listitem" aria-hidden="true">
+        <img src="./img/logo-12.png" alt="Bodyfriend" role="listitem" aria-hidden="true">
+        <img src="./img/logo-13.png" alt="Cuckoo" role="listitem" aria-hidden="true">
+        <img src="./img/logo-14.png" alt="Ceragem" role="listitem" aria-hidden="true">
+        <img src="./img/logo-15.png" alt="아츠아크" role="listitem" aria-hidden="true">
+        <img src="./img/logo-16.png" alt="소노시즌" role="listitem" aria-hidden="true">
+        <img src="./img/logo-17.png" alt="SK매직" role="listitem" aria-hidden="true">
+        <img src="./img/logo-18.png" alt="SK매직" role="listitem" aria-hidden="true">
+        <img src="./img/logo-19.png" alt="SK매직" role="listitem" aria-hidden="true">
+        <img src="./img/logo-20.png" alt="SK매직" role="listitem" aria-hidden="true">
+      </div>
+    </div>
+
+    <!-- 배경 슬라이더 스크립트 -->
+    <script>
+      (function(){
+        const hero = document.currentScript.closest('#lgStylerHero');
+        const card = hero.querySelector('.lg-card');
+        const deck = card.querySelector('.bg-deck');
+
+        const images = [
+          './img/column3-1.jpg',
+          './img/world.jpg',
+          './img/lab1.jpg'
+        ];
+
+        const css = getComputedStyle(card);
+        const interval = parseInt(css.getPropertyValue('--interval')) || 3800;
+        const fade = parseInt(css.getPropertyValue('--fade-duration')) || 900;
+
+        const slides = images.map(src => {
+          const el = document.createElement('div');
+          el.className = 'bg-slide';
+          el.style.backgroundImage = `url('${src}')`;
+          deck.appendChild(el);
+          return el;
+        });
+
+        let curr = 0;
+        slides[curr].classList.add('active');
+
+        function crossfade(next){
+          if(next === curr) return;
+
+          const prevEl = slides[curr];
+          const nextEl = slides[next];
+
+          if (prevEl){
+            const computed = getComputedStyle(prevEl).transform;
+            prevEl.style.transform = (computed && computed !== 'none') ? computed : 'scale(1.08)';
+            prevEl.style.animation = 'none';
+            prevEl.classList.remove('active');
+            prevEl.classList.add('leaving');
+            setTimeout(()=>{
+              prevEl.classList.remove('leaving');
+              prevEl.style.transform = '';
+              prevEl.style.animation = '';
+            }, fade + 50);
+          }
+
+          nextEl.classList.remove('leaving');
+          void nextEl.offsetWidth;
+          nextEl.classList.add('active');
+
+          curr = next;
+        }
+
+        setInterval(()=>{
+          const next = (curr + 1) % slides.length;
+          crossfade(next);
+        }, interval);
+
+        images.forEach(src => { const img = new Image(); img.src = src; });
+      })();
+    </script>
+
+    <!-- ✅ 숫자 카운팅 + 재실행(스크롤 재등장 시) 스크립트 -->
+    <script>
+      (function(){
+        const root = document.currentScript.closest('#lgStylerHero');
+        const counters = Array.from(root.querySelectorAll('.count'));
+        const prefersReduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+        function formatNumber(n, mode){
+          if(mode === 'compact'){
+            if(n >= 10000){
+              const man = Math.round(n / 10000);
+              return man + '만';
+            }
+            return n.toLocaleString();
+          }
+          return n.toLocaleString();
+        }
+        function easeOutCubic(t){ return 1 - Math.pow(1 - t, 3); }
+
+        function runCount(el){
+          const target = parseInt(el.dataset.target, 10) || 0;
+          const dur = parseInt(el.dataset.duration, 10) || 1200;
+          const mode = el.dataset.format || 'plain';
+
+          if(prefersReduce){
+            el.textContent = formatNumber(target, mode);
+            return;
+          }
+
+          const start = performance.now();
+          const startVal = 0;
+
+          function tick(now){
+            const t = Math.min(1, (now - start) / dur);
+            const eased = easeOutCubic(t);
+            const curr = Math.round(startVal + (target - startVal) * eased);
+            el.textContent = formatNumber(curr, mode);
+            if(t < 1) requestAnimationFrame(tick);
+          }
+          requestAnimationFrame(tick);
+        }
+
+        function resetCount(el){
+          const mode = el.dataset.format || 'plain';
+          el.textContent = formatNumber(0, mode);
+        }
+
+        let ran = false;
+
+        const io = new IntersectionObserver((entries)=>{
+          entries.forEach(entry=>{
+            if(entry.target !== root) return;
+            if(entry.isIntersecting){
+              counters.forEach(runCount);
+              ran = true;
+            }else if(ran){
+              counters.forEach(resetCount);
+              ran = false;
+            }
+          });
+        }, { threshold:[0, 0.35, 0.6] });
+
+        io.observe(root);
+      })();
+    </script>
+  </div>
+</section>
+
+
+
+
+<section id="aiRobotHero" aria-label="AI 로봇 솔루션 히어로 섹션">
+  <style>
+    /* ===============================
+       Scope: #aiRobotHero ONLY
+       =============================== */
+    #aiRobotHero{
+      --bg:#ffffff;
+      --ink:#0b0d12;
+      --muted:#5b6472;
+      --max:1120px;
+      --padX:20px;
+
+      --titleSize:clamp(20px, 3.2vw, 37px);
+      --subSize:clamp(15px, 1.3vw, 21px);
+
+      --radius:18px;
+      --shadow:0 18px 55px rgba(15, 23, 42, .14);
+      --line:rgba(15, 23, 42, .10);
+
+      font-family:Pretendard,"Noto Sans KR",system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+      background:var(--bg);
+      color:var(--ink);
+      padding:clamp(34px, 5.5vw, 56px) 0 clamp(36px, 6vw, 72px);
+    }
+
+    #aiRobotHero .arh-wrap{max-width:var(--max); margin:0 auto; padding:0 var(--padX);}
+
+    #aiRobotHero .arh-head{ text-align:center; }
+    #aiRobotHero .arh-title{
+      margin:0;
+      font-size:var(--titleSize);
+      line-height:1.25;
+      font-weight:850;
+    }
+    #aiRobotHero .arh-sub{
+      margin:22px auto;
+      max-width:60ch;
+      font-size:var(--subSize);
+      line-height:1.6;
+      color:var(--muted);
+      font-weight:500;
+    }
+
+    #aiRobotHero .arh-media{
+      margin:clamp(22px, 3.6vw, 34px) auto 0;
+      border-radius:var(--radius);
+      overflow:hidden;
+      box-shadow:var(--shadow);
+      background:#eef2f7;
+      border:1px solid var(--line);
+    }
+
+    #aiRobotHero .arh-frame{
+      position:relative;
+      width:100%;
+      aspect-ratio:16/9;
+      min-height:260px;
+      max-height:520px;
+    }
+
+    #aiRobotHero .arh-img{
+      position:absolute;
+      inset:0;
+      width:100%;
+      height:100%;
+      object-fit:cover;
+    }
+
+    #aiRobotHero .arh-overlay{
+      position:absolute;
+      inset:0;
+      background:
+        linear-gradient(180deg, rgba(0,0,0,.55) 0%, rgba(0,0,0,.28) 45%, rgba(0,0,0,.15) 100%);
+      pointer-events:none;
+    }
+
+    /* ✅ 중앙 정렬 텍스트 박스 */
+    #aiRobotHero .arh-textbox{
+      position:absolute;
+      inset:0;
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      justify-content:center;
+      text-align:center;
+      padding:clamp(18px, 3vw, 48px);
+      color:#fff;
+      z-index:2;
+    }
+
+    #aiRobotHero .arh-imgtitle{
+      margin:0;
+      font-size:clamp(18px, 2.4vw, 34px);
+      line-height:1.45;
+      font-weight:850;
+      text-shadow:0 12px 32px rgba(0,0,0,.45);
+    }
+
+    #aiRobotHero .arh-imgdesc{
+      margin-top:14px;
+      font-size:clamp(14px, 1.5vw, 18px);
+      line-height:1.6;
+      color:rgba(255,255,255,.95);
+      text-shadow:0 10px 24px rgba(0,0,0,.4);
+    }
+
+    #aiRobotHero .arh-badge{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      margin-top:18px;
+      padding:8px 14px;
+      border-radius:999px;
+      background:rgba(0,0,0,.28);
+      color:#fff;
+      font-size:12px;
+      backdrop-filter: blur(6px);
+    }
+
+    #aiRobotHero .arh-dot{
+      width:7px;height:7px;border-radius:99px;
+      background:#fff;
+      box-shadow:0 0 0 6px rgba(255,255,255,.25)
+    }
+
+    #aiRobotHero [contenteditable="true"]{
+      outline:none;
+      border-radius:12px;
+      padding:6px 12px;
+      background:rgba(0,0,0,0);
+      transition:.15s ease;
+    }
+
+    #aiRobotHero [contenteditable="true"]:focus{
+      background:rgba(0,0,0,.25);
+      box-shadow:0 0 0 2px rgba(255,255,255,.6);
+    }
+  </style>
+
+  <div class="arh-wrap">
+    <header class="arh-head">
+      <h1 class="arh-title">
+        급변하는 AI 시대<br>
+        변하지 않으면 생존하기 힘든 위기를<br>
+        기회로 바꾸는 혁신의 길을 전달합니다.
+      </h1>
+      <p class="arh-sub">
+        트렌드를 쫓는 것이 아니라 시대의 바람을 읽고<br>
+        새로운 비즈니스 흐름에 맞는 혁신의 길을 제시합니다.
+      </p>
+    </header>
+
+    <figure class="arh-media">
+      <div class="arh-frame">
+        <img class="arh-img" src="./img/business.jpg" alt="혁신 배경 이미지">
+
+        <div class="arh-textbox">
+          <h2 class="arh-imgtitle" contenteditable="true">
+           달라진 세상을 먼저 느끼고<br>비즈니스의 흐름과 판도를 바꾸는<br>생각 1% 사업자를 위한 혁신의 공간
+          </h2>
+
+        </div>
+
+        <div class="arh-overlay"></div>
+      </div>
+    </figure>
+  </div>
+
+  <script>
+    (function(){
+      const root = document.getElementById('aiRobotHero');
+      if(!root) return;
+
+      const editables = root.querySelectorAll('[contenteditable="true"]');
+
+      editables.forEach(el => {
+        el.addEventListener('paste', e => {
+          e.preventDefault();
+          const text = (e.clipboardData || window.clipboardData).getData('text/plain');
+          document.execCommand('insertText', false, text);
+        });
+
+        el.addEventListener('keydown', e => {
+          if(e.key === 'Enter' && el.tagName === 'H2'){
+            e.preventDefault();
+          }
+        });
+      });
+    })();
+  </script>
+</section>
+
+
+<section id="business-expansion-section">
+  <div class="biz-overlay"></div>
+  <div class="biz-container">
+    <h2 class="biz-main-title">
+      말로는 혁신을 외치지만<br>
+      어떻게 해야할지?<br>무엇을 해야할지 모르겠다면?<br><br>
+트렌드와 사례, 기술만 소비하다<br>다시 제자리로 돌아오는 반복을<br>이젠 끊고 싶은 1% 사업자를 위한 솔루션
+    </h2>
+
+    <div class="biz-card-wrapper">
+      <div class="biz-card">
+        <div class="biz-card-top">
+          <span class="biz-number">01</span>
+        </div>
+        <div class="biz-card-body">
+          <h3 class="biz-card-title">변화와 혁신의 필요성 인식</h3>
+          <p class="biz-card-desc">
+          혁신의 필요성을 인식하고 실제로 이해할 수 있는 교육을 제공
+          </p>
+        </div>
+      </div>
+
+      <div class="biz-card">
+        <div class="biz-card-top">
+          <span class="biz-number">02</span>
+        </div>
+        <div class="biz-card-body">
+          <h3 class="biz-card-title">혁신의 이해 및 실전 로드맵</h3>
+          <p class="biz-card-desc">
+            실제 현장의 혁신을 이룩할 수 있는 이해와 실전 방법을 통해 비즈니스에 직접 적용 가능하도록 도움
+          </p>
+        </div>
+      </div>
+
+      <div class="biz-card">
+        <div class="biz-card-top">
+          <span class="biz-number">03</span>
+        </div>
+        <div class="biz-card-body">
+          <h3 class="biz-card-title">실제 적용 및 성공사례</h3>
+          <p class="biz-card-desc">
+           국내 뿐만 아니라 전세계적인 혁신 성공 사례를 연구. 핵심 패턴을 전달하여, 시장에 통하는 비즈니스 혁신을 도와드립니다.
+          </p>
+        </div>
+      </div>
+
+         <div class="biz-card">
+        <div class="biz-card-top">
+          <span class="biz-number">04</span>
+        </div>
+        <div class="biz-card-body">
+          <h3 class="biz-card-title">함께 성장하는 혁신 환경 제공</h3>
+          <p class="biz-card-desc">
+           혼자서는 끝까지 하기 힘든 현장 혁신을 이룰 수 있도록 커뮤니티, 멘토 & 자문 지원, 실제 프로젝트 참여 기회를 제공 
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <style>
+    #business-expansion-section {
+      position: relative;
+      font-family: 'Pretendard', -apple-system, sans-serif;
+      padding: 100px 20px;
+      min-height: 600px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-image: url('./img/city.jpg');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      color: #ffffff;
+      overflow: hidden;
+    }
+
+    #business-expansion-section .biz-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.4);
+      z-index: 1;
+    }
+
+    #business-expansion-section .biz-container {
+      position: relative;
+      z-index: 2;
+      max-width: 1500px;
+      width: 100%;
+      margin: 0 auto;
+    }
+
+    #business-expansion-section .biz-main-title {
+      font-size: 34px;
+      font-weight: 700;
+      line-height: 1.4;
+      margin-bottom: 60px;
+      letter-spacing: -0.03em;
+      text-align: left;
+    }
+
+    #business-expansion-section .biz-card-wrapper {
+      display: flex;
+      gap: 24px;
+      justify-content: space-between;
+    }
+
+    #business-expansion-section .biz-card {
+      background-color: rgba(255, 255, 255, 0.886);
+      border-radius: 20px;
+      padding: 40px 30px;
+      flex: 1;
+      min-height: 380px;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+
+    #business-expansion-section .biz-card:hover {
+      transform: translateY(-10px);
+    }
+
+    #business-expansion-section .biz-number {
+      font-size: 36px;
+      font-weight: 800;
+      color: #1a2b6d; /* 진한 네이비 */
+      display: block;
+      margin-bottom: 40px;
+    }
+
+    #business-expansion-section .biz-card-title {
+      font-size: 26px;
+      font-weight: 700;
+      color: #111111;
+      margin-bottom: 20px;
+      letter-spacing: -0.02em;
+    }
+
+    #business-expansion-section .biz-card-desc {
+      font-size: 18px;
+      line-height: 1.6;
+      color: #555555;
+      word-break: keep-all;
+    }
+
+    @media (max-width: 1350px) {
+      #business-expansion-section .biz-card-wrapper {
+        flex-direction: column;
+        gap: 20px;
+      }
+      
+      #business-expansion-section .biz-main-title {
+        font-size: 26px;
+        margin-bottom: 40px;
+      }
+
+      #business-expansion-section .biz-card {
+        min-height: auto;
+        padding: 30px;
+      }
+      
+      #business-expansion-section .biz-number {
+        margin-bottom: 20px;
+      }
+    }
+
+       @media (max-width: 500px) {
+      
+      #business-expansion-section .biz-main-title {
+        font-size: 20px;
+        margin-bottom: 40px;
+      }
+
+    }
+  </style>
+</section>
+
+<section id="industryLineupSection" aria-label="업계 최다 라인업 및 솔루션">
+
+
+  <h1>혁신을 현실로 이루기 위한<br>모든 환경을 제공합니다.</h1>
+
+  <div class="wrap">
+    <div class="grid">
+      <!-- LEFT CONTENT -->
+      <div class="left">
+        <h2>1. 생각 1% 커뮤니티</h2>
+        <p class="desc">
+         <br>
+          혁신이라는 낯설고 어려운 결단을 하려는 다양한 업종의 사람들이 모여,<br>
+          이업종 간의 융복합과 혁신을 지속할 수 있는 힘을 제공합니다.  
+        </p>
+
+        <!-- ✅ 각 장점마다 data-img로 오른쪽 이미지 연결 -->
+        <ul class="benefits" role="list" aria-label="핵심 장점">
+          <li class="benefit" tabindex="0" role="button" aria-pressed="false"
+              data-img="./img/solution-1-2.jpg" data-alt="업계 최다 제품 라인업">
+            <span class="dot" aria-hidden="true"></span>
+            <div class="txt">
+              <strong>다양한 업종별 생각의 1% 선별</strong>
+              <p>기존 시장에서 벗어나 시대의 흐름에 맞는 용기와 결단으로 혁신을 진행하려는 사업자 대표들만을 선별</p>
+            </div>
+          </li>
+          <li class="benefit" tabindex="0" role="button" aria-pressed="false"
+              data-img="./img/solution-1-3.jpg" data-alt="환경 맞춤형 적용 가능">
+            <span class="dot" aria-hidden="true"></span>
+            <div class="txt">
+              <strong>다른 업종간의 융복합을 할 기회 제공</strong>
+              <p>혁신의 핵심 요소인 새로운 업종간의 결합할 기회를 제공하여, 기존 비즈니스를 바꿀 수 있는 기회 제공</p>
+            </div>
+          </li>
+          <!-- <li class="benefit" tabindex="0" role="button" aria-pressed="false"
+              data-img="./img/world.jpg" data-alt="고객 니즈 최적화 솔루션">
+            <span class="dot" aria-hidden="true"></span>
+            <div class="txt">
+              <strong>혁신의 본질과 기본 마인드 제공</strong>
+              <p>혁신을 이룰 수 있는 본질적인 원리과 마인드를 제공하여 실제 현장에 적용할 수 있도록 학습 제공</p>
+            </div>
+          </li> -->
+        </ul>
+      </div>
+
+      <!-- RIGHT MEDIA CARD -->
+      <div class="media" aria-label="라인업 대표 이미지">
+        <figure class="card" role="group" aria-label="제품 이미지 카드">
+          <div class="card-bg" aria-hidden="true"></div>
+
+          <!-- ✅ A/B 이미지 레이어로 부드러운 크로스페이드 -->
+          <img class="card-photo photo-a is-on" alt="" decoding="async" loading="eager" />
+          <img class="card-photo photo-b" alt="" decoding="async" loading="eager" />
+
+          <div class="card-inner" aria-hidden="true"></div>
+        </figure>
+      </div>
+    </div>
+  </div>
+
+
+</section>
+
+
+<section id="industryLineupSection" aria-label="업계 최다 라인업 및 솔루션">
+
+
+  <div class="wrap">
+    <div class="grid">
+      <!-- LEFT CONTENT -->
+      <div class="left">
+        <h2>2. 상담 및 지원</h2>
+     <p class="desc">
+      혁신 아이디어가 실제 성과로 이어질 수 있도록,<br>
+      현장 적용까지 고려한 맞춤 솔루션을 지원합니다.
+    </p>
+
+        <!-- ✅ 각 장점마다 data-img로 오른쪽 이미지 연결 -->
+        <ul class="benefits" role="list" aria-label="핵심 장점">
+          <li class="benefit" tabindex="0" role="button" aria-pressed="false"
+              data-img="./img/solution-2-1.jpg" data-alt="업계 최다 제품 라인업">
+            <span class="dot" aria-hidden="true"></span>
+            <div class="txt">
+            <strong>1:1 사업 맞춤 상담</strong>
+            <p>
+              업종·사업 단계·고민을 종합적으로 분석해<br>
+              지금 상황에 가장 현실적인 혁신 방향을 함께 설계합니다.
+            </p>
+          </div>
+          </li>
+          <li class="benefit" tabindex="0" role="button" aria-pressed="false"
+              data-img="./img/solution-2-2.jpg" data-alt="환경 맞춤형 적용 가능">
+            <span class="dot" aria-hidden="true"></span>
+            <div class="txt">
+          <strong>멘토 & 자문 지원</strong>
+          <p>
+            현장에서 뛰어난 결과를 내고 있는 자문 위원을 바탕으로,<br>
+            지금 단계에 필요한 조언과 전략을 제공합니다.
+          </p>
+            </div>
+          </li>
+          <li class="benefit" tabindex="0" role="button" aria-pressed="false"
+              data-img="./img/ceo-pic.jpg" data-alt="고객 니즈 최적화 솔루션">
+            <span class="dot" aria-hidden="true"></span>
+            <div class="txt">
+            <strong>매스컴 및 언론사 지원</strong>
+            <p>
+              언론 보도와 미디어 노출을 통해<br>
+              사업의 신뢰도를 높이고 상품 노출을 지원합니다.
+            </p>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <!-- RIGHT MEDIA CARD -->
+      <div class="media" aria-label="라인업 대표 이미지">
+        <figure class="card" role="group" aria-label="제품 이미지 카드">
+          <div class="card-bg" aria-hidden="true"></div>
+
+          <!-- ✅ A/B 이미지 레이어로 부드러운 크로스페이드 -->
+          <img class="card-photo photo-a is-on" alt="" decoding="async" loading="eager" />
+          <img class="card-photo photo-b" alt="" decoding="async" loading="eager" />
+
+          <div class="card-inner" aria-hidden="true"></div>
+        </figure>
+      </div>
+    </div>
+  </div>
+
+
+</section>
+
+
+
+
+<section id="industryLineupSection" aria-label="업계 최다 라인업 및 솔루션">
+
+
+  <div class="wrap">
+    <div class="grid">
+      <!-- LEFT CONTENT -->
+      <div class="left">
+        <h2>3. 혁신 비즈니스 프로젝트 참여</h2>
+        <p class="desc">
+          진행 중이 혁신 비즈니스에 참여하여<br>
+          본업에 바로 적용하여 함께 성장할 수 있는 기반 제공 
+        </p>
+
+        <!-- ✅ 각 장점마다 data-img로 오른쪽 이미지 연결 -->
+       <ul class="benefits" role="list" aria-label="핵심 장점">
+
+  <li class="benefit" tabindex="0" role="button" aria-pressed="false"
+      data-img="./img/solution-3-1.jpg" data-alt="실행 중인 혁신 프로젝트 참여">
+    <span class="dot" aria-hidden="true"></span>
+    <div class="txt">
+      <strong>실행 중인 혁신 비즈니스 직접 참여</strong>
+      <p>
+        이미 시장에서 검증 중인 혁신 프로젝트에 직접 참여합니다.
+      </p>
+    </div>
+  </li>
+
+  <li class="benefit" tabindex="0" role="button" aria-pressed="false"
+      data-img="./img/solution-3-2.jpg" data-alt="본업 즉시 적용 가능">
+    <span class="dot" aria-hidden="true"></span>
+    <div class="txt">
+      <strong>본업에 바로 적용 가능한 구조</strong>
+      <p>
+        다양한 프로젝트 중에 적합한 모델을 찾아<br>
+        각자의 사업에 즉시 적용할 수 있도록 설계
+      </p>
+    </div>
+  </li>
+
+  <li class="benefit" tabindex="0" role="button" aria-pressed="false"
+      data-img="./img/solution-3-3.jpg" data-alt="함께 성장하는 협업 구조">
+    <span class="dot" aria-hidden="true"></span>
+    <div class="txt">
+      <strong>혼자가 아닌, 함께 성장하는 협업</strong>
+      <p>
+        각자의 전문성과 경험이 연결되어<br>
+        혼자서는 만들 수 없는 성과를 함께 만들어갑니다.
+      </p>
+    </div>
+  </li>
+
+</ul>
+
+      </div>
+
+      <!-- RIGHT MEDIA CARD -->
+      <div class="media" aria-label="라인업 대표 이미지">
+        <figure class="card" role="group" aria-label="제품 이미지 카드">
+          <div class="card-bg" aria-hidden="true"></div>
+
+          <!-- ✅ A/B 이미지 레이어로 부드러운 크로스페이드 -->
+          <img class="card-photo photo-a is-on" alt="" decoding="async" loading="eager" />
+          <img class="card-photo photo-b" alt="" decoding="async" loading="eager" />
+
+          <div class="card-inner" aria-hidden="true"></div>
+        </figure>
+      </div>
+    </div>
+  </div>
+
+
+</section>
+
+
+<section id="industryLineupSection" aria-label="업계 최다 라인업 및 솔루션">
+  <style>
+    /* ===============================
+       Scope: #industryLineupSection ONLY
+       =============================== */
+    #industryLineupSection{
+      --bg:#f3f4f6;
+      --panel:#ffffff;
+      --ink:#111827;
+      --muted:#6b7280;
+      --stroke:rgba(15,23,42,.10);
+      --stroke2:rgba(15,23,42,.12);
+      --shadow:0 18px 60px rgba(15,23,42,.08);
+      --radius:26px;
+      --radius-card:18px;
+      --max:1320px;
+
+      font-family:Pretendard,"Noto Sans KR",system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+      color:var(--ink);
+      background:var(--bg);
+      padding:44px 22px;
+      -webkit-font-smoothing:antialiased;
+      text-rendering:optimizeLegibility;
+    }
+    #industryLineupSection *{box-sizing:border-box;}
+
+      #industryLineupSection h1{
+      text-align:center;
+      margin:30px 0 40px;
+    }
+
+
+
+    #industryLineupSection .wrap{
+      max-width:var(--max);
+      margin:0 auto;
+      background:rgba(255,255,255,.55);
+      border:1px solid rgba(255,255,255,.7);
+      border-radius:34px;
+      padding:54px 56px;
+      box-shadow:0 12px 34px rgba(15,23,42,.06);
+    }
+
+    #industryLineupSection .grid{
+      display:grid;
+      grid-template-columns:1.05fr 1.15fr;
+      gap:56px;
+      align-items:center;
+    }
+
+    /* Left */
+    #industryLineupSection h2{
+      margin:0 0 14px;
+      font-size:34px;
+      line-height:1.22;
+      letter-spacing:-.03em;
+      font-weight:900;
+    }
+    #industryLineupSection .desc{
+      margin:0 0 26px;
+      font-size:16px;
+      line-height:1.75;
+      color:#374151;
+      max-width:520px;
+      letter-spacing:-.01em;
+    }
+
+    /* Left benefits */
+    #industryLineupSection .benefits{
+      list-style:none;
+      margin:0;
+      padding:0;
+      display:flex;
+      flex-direction:column;
+      gap:16px;
+      max-width:520px;
+    }
+
+    #industryLineupSection .benefit{
+      display:flex;
+      gap:14px;
+      align-items:flex-start;
+      background:rgba(255,255,255,.9);
+      border:1px solid var(--stroke2);
+      border-radius:16px;
+      padding:18px 18px;
+      box-shadow:0 10px 22px rgba(15,23,42,.06);
+      cursor:pointer;
+      position:relative;
+      transition:transform .18s ease, box-shadow .18s ease, border-color .18s ease, background .18s ease;
+      outline:none;
+    }
+
+    #industryLineupSection .benefit::after{
+      content:"";
+      position:absolute;
+      inset:-1px;
+      border-radius:17px;
+      pointer-events:none;
+      opacity:0;
+      transition:opacity .18s ease;
+      background:linear-gradient(135deg, rgba(59,130,246,.0), rgba(59,130,246,.22), rgba(29,78,216,.16));
+      mix-blend-mode:multiply;
+    }
+
+    #industryLineupSection .benefit .dot{
+      width:10px;
+      height:10px;
+      border-radius:999px;
+      background:linear-gradient(135deg,#3b82f6,#1d4ed8);
+      margin-top:6px;
+      flex:0 0 auto;
+      box-shadow:0 0 0 rgba(59,130,246,0);
+      transition:transform .18s ease, box-shadow .18s ease;
+    }
+
+    #industryLineupSection .benefit strong{
+      font-size:16px;
+      font-weight:900;
+      letter-spacing:-.02em;
+      display:block;
+      margin-bottom:4px;
+    }
+    #industryLineupSection .benefit p{
+      margin:0;
+      font-size:14.5px;
+      line-height:1.6;
+      color:#374151;
+    }
+
+    /* Hover / Active */
+    #industryLineupSection .benefit:hover{
+      transform:translateY(-2px);
+      box-shadow:0 18px 40px rgba(15,23,42,.10);
+      border-color:rgba(15,23,42,.20);
+      background:#fff;
+    }
+    #industryLineupSection .benefit:hover::after{opacity:1;}
+    #industryLineupSection .benefit:hover .dot{
+      transform:scale(1.08);
+      box-shadow:0 0 0 6px rgba(59,130,246,.10);
+    }
+
+    #industryLineupSection .benefit.is-active{
+      border-color:rgba(59,130,246,.35);
+      box-shadow:0 0 0 4px rgba(59,130,246,.14), 0 18px 40px rgba(15,23,42,.10);
+      background:#fff;
+      transform:translateY(-1px);
+    }
+    #industryLineupSection .benefit.is-active::after{opacity:1;}
+    #industryLineupSection .benefit.is-active .dot{
+      box-shadow:0 0 0 7px rgba(59,130,246,.14);
+      transform:scale(1.12);
+    }
+
+    #industryLineupSection .benefit:focus-visible{
+      box-shadow:0 0 0 4px rgba(59,130,246,.18), 0 18px 40px rgba(15,23,42,.10);
+      border-color:rgba(59,130,246,.40);
+    }
+
+    /* Right media card */
+    #industryLineupSection .media{display:flex;justify-content:flex-end;}
+
+    #industryLineupSection .card{
+      width:min(820px, 100%);
+      border-radius:20px;
+      overflow:hidden;
+      background:#0b1220;
+      box-shadow:var(--shadow);
+      border:0px solid rgba(255,255,255,.08);
+      position:relative;
+      min-height:360px;
+      isolation:isolate;
+    }
+
+    /* ✅ Crossfade image layers (A/B) */
+    #industryLineupSection .card-photo{
+      position:absolute;
+      inset:0;
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      opacity:0;
+      transform:scale(1.04);
+      transition:
+        opacity .8s cubic-bezier(.22,1,.36,1),
+        transform 1.2s cubic-bezier(.22,1,.36,1);
+      will-change:opacity, transform;
+      z-index:1;
+    }
+    #industryLineupSection .card-photo.is-on{
+      opacity:1;
+      transform:scale(1);
+      z-index:2;
+    }
+
+    /* fallback soft gradient (behind images) */
+    #industryLineupSection .card-bg{
+      position:absolute;
+      inset:0;
+      z-index:0;
+      background:
+        linear-gradient(90deg, rgba(8,12,20,.55) 0%, rgba(8,12,20,.15) 55%, rgba(8,12,20,.55) 100%),
+        radial-gradient(70% 120% at 65% 55%, rgba(58,107,255,.22) 0%, rgba(0,0,0,0) 55%),
+        radial-gradient(70% 120% at 30% 40%, rgba(255,255,255,.08) 0%, rgba(0,0,0,0) 55%);
+    }
+
+    /* subtle blue scanlines */
+    #industryLineupSection .card::after{
+      content:"";
+      position:absolute;
+      inset:0;
+      pointer-events:none;
+      background:
+        linear-gradient(180deg, rgba(56,120,255,.22), rgba(0,0,0,0) 34%),
+        linear-gradient(180deg, rgba(59,130,246,.22) 0 1px, rgba(0,0,0,0) 1px 72px);
+      opacity:.22;
+      mix-blend-mode:screen;
+      z-index:3;
+    }
+
+    #industryLineupSection .card-inner{
+      position:relative;
+      z-index:4;
+      height:100%;
+      padding:26px 26px 18px;
+      display:flex;
+      flex-direction:column;
+      justify-content:space-between;
+      gap:18px;
+    }
+
+    /* Responsive */
+    @media (max-width: 1020px){
+      #industryLineupSection .wrap{padding:38px 24px;}
+      #industryLineupSection .grid{grid-template-columns:1fr; gap:26px;}
+      #industryLineupSection .media{justify-content:center;}
+      #industryLineupSection .desc{max-width:unset;}
+      #industryLineupSection .benefits{max-width:unset;}
+    }
+
+    @media (max-width: 520px){
+      #industryLineupSection{padding:26px 14px;}
+      #industryLineupSection .wrap{padding:22px 16px; border-radius:26px;}
+      #industryLineupSection h2{font-size:26px;}
+      #industryLineupSection .desc{font-size:15px;}
+      #industryLineupSection .card{min-height:300px; border-radius:16px;}
+      #industryLineupSection .card-inner{padding:18px 16px 14px;}
+      #industryLineupSection .benefit{padding:16px 16px;}
+    }
+
+    /* Reduced motion */
+    @media (prefers-reduced-motion: reduce){
+      #industryLineupSection .benefit,
+      #industryLineupSection .benefit .dot,
+      #industryLineupSection .benefit::after,
+      #industryLineupSection .card-photo{transition:none !important; transform:none !important;}
+      #industryLineupSection .card-photo{opacity:1 !important;}
+    }
+  </style>
+
+  <div class="wrap">
+    <div class="grid">
+      <!-- LEFT CONTENT -->
+      <div class="left">
+      <h2>4. 혁신몰</h2>
+    <p class="desc">
+      혁신으로 탄생한 상품과 서비스를<br>
+      자체 유통 채널을 통해 시장에 빠르게 진입할 수 있는 기회 제공 
+    </p>
+
+        <!-- ✅ 각 장점마다 data-img로 오른쪽 이미지 연결 -->
+       <ul class="benefits" role="list" aria-label="핵심 장점">
+
+ <li class="benefit" tabindex="0" role="button" aria-pressed="false"
+    data-img="./img/solution-4-1.jpg" data-alt="빠른 시장 안착 구조">
+  <span class="dot" aria-hidden="true"></span>
+  <div class="txt">
+    <strong>혁신 상품의 빠른 시장 안착</strong>
+    <p>
+      혁신을 통해 만들어진 상품이<br>
+      시행착오를 최소화하고 시장에 빠르게 자리 잡을 수 있도록 돕습니다.
+    </p>
+  </div>
+</li>
+
+
+<li class="benefit" tabindex="0" role="button" aria-pressed="false"
+    data-img="./img/solution-4-2.jpg" data-alt="빠른 성장 확장 설계">
+  <span class="dot" aria-hidden="true"></span>
+  <div class="txt">
+    <strong>성장을 가속하는 유통·확장 구조</strong>
+    <p>
+      검증된 반응을 기반으로 유통과 확장을 연결해<br>
+      짧은 시간 안에 성과와 성장을 동시에 만들어냅니다.
+    </p>
+  </div>
+</li>
+
+
+
+
+</ul>
+
+      </div>
+
+      <!-- RIGHT MEDIA CARD -->
+      <div class="media" aria-label="라인업 대표 이미지">
+        <figure class="card" role="group" aria-label="제품 이미지 카드">
+          <div class="card-bg" aria-hidden="true"></div>
+
+          <!-- ✅ A/B 이미지 레이어로 부드러운 크로스페이드 -->
+          <img class="card-photo photo-a is-on" alt="" decoding="async" loading="eager" />
+          <img class="card-photo photo-b" alt="" decoding="async" loading="eager" />
+
+          <div class="card-inner" aria-hidden="true"></div>
+        </figure>
+      </div>
+    </div>
+  </div>
+
+      <script>
+    (function(){
+      // ✅ 여러 개 복사 사용 대비: 동일 id 섹션을 모두 초기화
+      const sections = document.querySelectorAll('section[id="industryLineupSection"]');
+      if(!sections.length) return;
+
+      sections.forEach((root)=>{
+        const items = Array.from(root.querySelectorAll('.benefit'));
+        const photoA = root.querySelector('.photo-a');
+        const photoB = root.querySelector('.photo-b');
+        if(!items.length || !photoA || !photoB) return;
+
+        let active = 0;
+        let current = 0; // 0 => A, 1 => B (현재 is-on)
+        let timer = null;
+        let paused = false;
+        let started = false;
+        let token = 0; // ✅ 최신 전환만 유효하게 만드는 토큰
+
+        // ✅ preload (초기 렌더에 영향 없이 캐시 적재)
+        items.forEach((el)=>{
+          const u = (el.dataset.img || '').trim();
+          if(!u) return;
+          const img = new Image();
+          img.decoding = 'async';
+          img.src = u;
+        });
+
+        function applyActive(index){
+          items.forEach((el,i)=>{
+            const on = i === index;
+            el.classList.toggle('is-active', on);
+            el.setAttribute('aria-pressed', on ? 'true' : 'false');
+          });
+        }
+
+        function swapTo(url, alt){
+          // 이미 다른 레이어에 로드된 상태면 즉시 스왑
+          const onEl  = current === 0 ? photoA : photoB;
+          const offEl = current === 0 ? photoB : photoA;
+
+          if(offEl.dataset.current === url && offEl.complete && offEl.naturalWidth > 0){
+            offEl.alt = alt || '';
+            offEl.classList.add('is-on');
+            onEl.classList.remove('is-on');
+            current = current === 0 ? 1 : 0;
+            return true;
+          }
+          // 이미 현재 레이어가 같은 이미지면 스왑 불필요
+          if(onEl.dataset.current === url && onEl.classList.contains('is-on')) return true;
+          return false;
+        }
+
+        function setImage(index){
+          const item = items[index];
+          if(!item) return;
+          const url = (item.dataset.img || '').trim();
+          const alt = (item.dataset.alt || '').trim();
+          if(!url) return;
+
+          applyActive(index);
+
+          // ✅ 즉시 스왑 가능하면 끝
+          if(swapTo(url, alt)) return;
+
+          // ✅ 최신 요청만 반영
+          const my = ++token;
+
+          // 다음에 보여줄 레이어(현재 반대)
+          const next = (current + 1) % 2;
+          const showEl = next === 0 ? photoA : photoB;
+          const hideEl = next === 0 ? photoB : photoA;
+
+          // 이전 로드 핸들러 제거(레이스 방지)
+          showEl.onload = null;
+
+          // 같은 url을 로딩 중이었다면 그대로 두고 최신 토큰만 갱신
+          if(showEl.dataset.pending !== url){
+            showEl.dataset.pending = url;
+            showEl.src = url;
+          }
+          showEl.alt = alt;
+
+          const commit = ()=>{
+            if(my !== token) return; // 최신 요청이 아니면 무시
+            showEl.dataset.current = url;
+            showEl.dataset.pending = '';
+            requestAnimationFrame(()=>{
+              showEl.classList.add('is-on');
+              hideEl.classList.remove('is-on');
+              current = next;
+            });
+          };
+
+          // 캐시 히트면 즉시
+          if(showEl.complete && showEl.naturalWidth > 0){
+            commit();
+          } else {
+            showEl.onload = commit;
+          }
+        }
+
+        function go(index, byUser){
+          active = (index + items.length) % items.length;
+          setImage(active);
+          if(byUser) restart();
+        }
+
+        function next(){
+          if(paused) return;
+          go(active + 1, false);
+        }
+
+        function restart(){
+          stop();
+          timer = setInterval(next, 4200);
+        }
+
+        function stop(){
+          if(timer) clearInterval(timer);
+          timer = null;
+        }
+
+        // ✅ 빠르게 왔다 갔다 해도 바로 반응하도록 pointerenter 사용
+        items.forEach((el, i)=>{
+          el.addEventListener('pointerenter', ()=>{ paused = true; go(i, true); });
+          el.addEventListener('pointerleave', ()=>{ paused = false; });
+          el.addEventListener('focus', ()=>{ paused = true; go(i, true); });
+          el.addEventListener('blur', ()=>{ paused = false; });
+          el.addEventListener('click', ()=>{ paused = true; go(i, true); });
+
+          // 키보드 이동(옵션)
+          el.addEventListener('keydown', (e)=>{
+            if(e.key === 'Enter' || e.key === ' '){
+              e.preventDefault();
+              paused = true;
+              go(i, true);
+            }
+            if(e.key === 'ArrowDown' || e.key === 'ArrowRight'){
+              e.preventDefault();
+              paused = true;
+              go(active + 1, true);
+              items[active].focus({preventScroll:true});
+            }
+            if(e.key === 'ArrowUp' || e.key === 'ArrowLeft'){
+              e.preventDefault();
+              paused = true;
+              go(active - 1, true);
+              items[active].focus({preventScroll:true});
+            }
+          });
+        });
+
+        // 화면에 보일 때만 자동 재생
+        const io = new IntersectionObserver((entries)=>{
+          entries.forEach((entry)=>{
+            if(entry.isIntersecting){
+              if(!started){
+                started = true;
+                go(0, false);
+              }
+              restart();
+            } else {
+              stop();
+            }
+          });
+        },{threshold:0.2});
+        io.observe(root);
+
+        // 초기 표시
+        go(0, false);
+      });
+    })();
+  </script>
+</section>
+
+
+<section id="h-energy-info-section">
+  <div class="container1">
+    <h2 class="main-title">비즈니스 혁신 연구소는<br>실제 혁신을 이끌어갑니다.</h2>
+    
+    <div class="grid-container">
+      <div class="card card-large">
+        <div class="card-header">
+          <span class="category">기술 및 경영 혁신</span>
+          <span class="icon">🎖️</span>
+        </div>
+        <h3 class="card-title">동탑산업훈장 수상</h3>
+        <p class="card-desc">국가 산업 발전에 기여한 공로를 인정받았어요.</p>
+      </div>
+
+      <div class="card card-large">
+        <div class="card-header">
+          <span class="category">에너지 혁신</span>
+          <span class="icon">🏆</span>
+        </div>
+        <h3 class="card-title">기후에너지혁신상 수상</h3>
+        <p class="card-desc">친환경 기술 혁신성을 정부로부터 인정받았어요.</p>
+      </div>
+
+      <div class="card card-small">
+        <div class="card-header">
+          <span class="category">기술적 신뢰</span>
+          <span class="icon">📍</span>
+        </div>
+        <h3 class="card-title">기후테크 기업 선정</h3>
+        <p class="card-desc">기술력과 혁신성을 공식적으로 인정 받았어요.</p>
+      </div>
+
+      <div class="card card-small">
+        <div class="card-header">
+          <span class="category">에너지기술평가원 평가등급</span>
+          <span class="icon">🌐</span>
+        </div>
+        <h3 class="card-title">AA 등급</h3>
+        <p class="card-desc">국가 공인 기술력으로 안전하고 효율적으로 투자해요.</p>
+      </div>
+
+      <div class="card card-small">
+        <div class="card-header">
+          <span class="category">재무적 신뢰</span>
+          <span class="icon">📊</span>
+        </div>
+        <h3 class="card-title">BBB+ 등급</h3>
+        <p class="card-desc">기업신용등급평가에서 안정성과 신뢰도를 증명해요.</p>
+      </div>
+
+      <div class="card card-small">
+        <div class="card-header">
+          <span class="category">환경적 신뢰</span>
+          <span class="icon">🍃</span>
+        </div>
+        <h3 class="card-title">ISO 14001 인증</h3>
+        <p class="card-desc">국제 표준화 기구에서 친환경 운영 역량을 인증했어요.</p>
+      </div>
+
+      <div class="card card-small">
+        <div class="card-header">
+          <span class="category">운영 중인 누적 발전소</span>
+          <span class="icon">🏢</span>
+        </div>
+        <h3 class="card-title">5,000개 +</h3>
+        <p class="card-desc">다양한 유형의 발전소 운영 노하우를 제공해요.</p>
+      </div>
+
+      <div class="card card-small">
+        <div class="card-header">
+          <span class="category">누적 전기 생산량</span>
+          <span class="icon">⚡</span>
+        </div>
+        <h3 class="card-title">100,000 kW +</h3>
+        <p class="card-desc">수 많은 사용자의 비즈니스와 일상을 밝히고 있어요.</p>
+      </div>
+    </div>
+  </div>
+
+  <style>
+    /* Section Scoped CSS */
+    #h-energy-info-section {
+      background-color: #ffffff;
+      padding: 80px 20px;
+      font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif;
+      color: #1a1a1a;
+      display: flex;
+      justify-content: center;
+    }
+
+    #h-energy-info-section .container1 {
+      max-width: 1100px;
+      width: 100%;
+    }
+
+    #h-energy-info-section .main-title {
+      font-size: 36px;
+      font-weight: 800;
+      text-align: center;
+      line-height: 1.4;
+      margin-bottom: 60px;
+      letter-spacing: -0.5px;
+    }
+
+    #h-energy-info-section .grid-container {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr); /* 6컬럼 그리드로 유연한 배치 */
+      gap: 20px;
+    }
+
+    #h-energy-info-section .card {
+      background-color: #f4f6fa;
+      border-radius: 20px;
+      padding: 30px;
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.2s ease;
+    }
+
+    /* Row 1: 2 Cards (3 columns each) */
+    #h-energy-info-section .card-large {
+      grid-column: span 3;
+      min-height: 180px;
+    }
+
+    /* Row 2 & 3: 3 Cards (2 columns each) */
+    #h-energy-info-section .card-small {
+      grid-column: span 2;
+      min-height: 200px;
+    }
+
+    #h-energy-info-section .card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 15px;
+    }
+
+    #h-energy-info-section .category {
+      font-size: 14px;
+      font-weight: 600;
+      color: #555;
+    }
+
+    #h-energy-info-section .icon {
+      font-size: 24px;
+      opacity: 0.3; /* 이미지의 연한 아이콘 느낌 재현 */
+      filter: grayscale(1);
+    }
+
+    #h-energy-info-section .card-title {
+      font-size: 24px;
+      font-weight: 700;
+      color: #001d6c; /* 진한 네이비 톤 */
+      margin: 0 0 15px 0;
+    }
+
+    #h-energy-info-section .card-desc {
+      font-size: 15px;
+      color: #666;
+      line-height: 1.5;
+      margin: 0;
+      word-break: keep-all;
+    }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      #h-energy-info-section .card-large,
+      #h-energy-info-section .card-small {
+        grid-column: span 6;
+      }
+    }
+  </style>
+</section>
+
+
+<section id="partner-logo-slider-section" aria-label="파트너 로고 슬라이더 섹션">
+  <div class="pls-wrap">
+    <h2 class="pls-title">
+      또한 많은 비즈니스의 혁신을<br>
+      함께 만들어가고 있습니다.
+    </h2>
+
+    <!-- =======================
+         1) 움직이는 무한 롤링 슬라이드
+         ======================= -->
+    <div class="pls-rolling" aria-label="협력사 로고 무한 롤링">
+      <div class="pls-viewport">
+        <div class="pls-track track-left" aria-hidden="true">
+          <div class="pls-group">
+            <!-- ✅ 로고 이미지로 교체: src만 바꿔서 쓰세요 -->
+            <div class="pls-card">
+              <img class="pls-logo" src="./img/logo-20.png" alt="CHEIL TECH 로고" loading="lazy" decoding="async">
+            </div>
+            <div class="pls-card">
+              <img class="pls-logo" src="./img/logo-10.png" alt="KB Investment 로고" loading="lazy" decoding="async">
+            </div>
+            <div class="pls-card">
+              <img class="pls-logo" src="./img/logo-11.png" alt="posco 로고" loading="lazy" decoding="async">
+            </div>
+            <div class="pls-card">
+              <img class="pls-logo" src="./img/logo-12.png" alt="화성도시공사 로고" loading="lazy" decoding="async">
+            </div>
+            <div class="pls-card">
+              <img class="pls-logo" src="./img/logo-14.png" alt="Qcells 로고" loading="lazy" decoding="async">
+            </div>
+              <div class="pls-card">
+              <img class="pls-logo" src="./img/logo-ccn.png" alt="Qcells 로고" loading="lazy" decoding="async">
+            </div>
+          </div>
+
+          <!-- ✅ 동일 그룹 복제(무한 롤링용) -->
+        <div class="pls-group">
+            <!-- ✅ 로고 이미지로 교체: src만 바꿔서 쓰세요 -->
+            <div class="pls-card">
+              <img class="pls-logo" src="./img/logo-15.png" alt="CHEIL TECH 로고" loading="lazy" decoding="async">
+            </div>
+            <div class="pls-card">
+              <img class="pls-logo" src="./img/logo-16.png" alt="KB Investment 로고" loading="lazy" decoding="async">
+            </div>
+            <div class="pls-card">
+              <img class="pls-logo" src="./img/logo-17.png" alt="posco 로고" loading="lazy" decoding="async">
+            </div>
+            <div class="pls-card">
+              <img class="pls-logo" src="./img/logo-18.png" alt="화성도시공사 로고" loading="lazy" decoding="async">
+            </div>
+            <div class="pls-card">
+              <img class="pls-logo" src="./img/logo-19.png" alt="Qcells 로고" loading="lazy" decoding="async">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- =======================
+         2) 고정 로고 그리드
+         - PC: 4열 → 2줄이면 최대 8개 “한 번에”
+         - Mobile: 2열 → 4줄이면 최대 8개 “한 번에”
+         ======================= -->
+    <div class="pls-fixed" aria-label="협력사 로고 고정 바">
+      <div class="pls-fixed-grid">
+        <!-- ✅ 최대 8개: src/alt만 교체해서 사용 -->
+        <div class="pls-card is-fixed">
+          <img class="pls-logo" src="./img/logo-1.png" alt="CHEIL TECH 로고" loading="lazy" decoding="async">
+        </div>
+        <div class="pls-card is-fixed">
+          <img class="pls-logo" src="./img/logo-9.png" alt="KB Investment 로고" loading="lazy" decoding="async">
+        </div>
+        <div class="pls-card is-fixed">
+          <img class="pls-logo" src="./img/logo-3.png" alt="posco 로고" loading="lazy" decoding="async">
+        </div>
+        <div class="pls-card is-fixed">
+          <img class="pls-logo" src="./img/logo-4.png" alt="화성도시공사 로고" loading="lazy" decoding="async">
+        </div>
+
+        <div class="pls-card is-fixed">
+          <img class="pls-logo" src="./img/logo-5.png" alt="Qcells 로고" loading="lazy" decoding="async">
+        </div>
+        <div class="pls-card is-fixed">
+          <img class="pls-logo" src="./img/logo-6.png" alt="POSTECH 로고" loading="lazy" decoding="async">
+        </div>
+        <div class="pls-card is-fixed">
+          <img class="pls-logo" src="./img/logo-13.png" alt="한국전력공사 로고" loading="lazy" decoding="async">
+        </div>
+        <div class="pls-card is-fixed">
+          <img class="pls-logo" src="./img/logo-8.png" alt="STIC 로고" loading="lazy" decoding="async">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <style>
+    /* =========================================================
+       Scope: #partner-logo-slider-section ONLY
+       ========================================================= */
+    #partner-logo-slider-section{
+      --bg:#ffffff;
+      --ink:#0b1220;
+
+      /* 카드/라인 */
+      --card:#f7f8f9;
+      --card2:#ffffff;
+      --line:rgba(15,23,42,.10);
+      --shadow:0 10px 28px rgba(15,23,42,.08);
+
+      /* 사이즈 */
+      --rolling-card-w:250px;
+      --rolling-card-h:140px;
+
+      --fixed-card-h:140px;
+      --fixed-gap:14px;
+
+      padding:100px 0;
+      background:var(--bg);
+      font-family:'Pretendard', -apple-system, system-ui, Segoe UI, Roboto, sans-serif;
+      overflow:hidden;
+    }
+
+    #partner-logo-slider-section *{ box-sizing:border-box; }
+
+    #partner-logo-slider-section .pls-wrap{
+      width:min(1200px, calc(100% - 40px));
+      margin:0 auto;
+    }
+
+    #partner-logo-slider-section .pls-title{
+      text-align:center;
+      font-size:32px;
+      font-weight:800;
+      line-height:1.4;
+      margin:0 0 60px;
+      color:var(--ink);
+      letter-spacing:-0.02em;
+    }
+
+    /* ======================
+       1) Rolling slider
+       ====================== */
+    #partner-logo-slider-section .pls-rolling{
+      margin-bottom:22px;
+    }
+
+    #partner-logo-slider-section .pls-viewport{
+      display:flex;
+      flex-direction:column;
+      gap:20px;
+    }
+
+    #partner-logo-slider-section .pls-track{
+      display:flex;
+      width:fit-content;
+      will-change:transform;
+      transform:translateZ(0);
+    }
+
+    #partner-logo-slider-section .pls-group{
+      display:flex;
+      gap:20px;
+      padding-right:20px;
+    }
+
+    #partner-logo-slider-section .track-left{
+      animation:pls-scroll-left 40s linear infinite;
+    }
+
+    @keyframes pls-scroll-left{
+      0%{ transform:translateX(0); }
+      100%{ transform:translateX(-50%); }
+    }
+
+    #partner-logo-slider-section .pls-track:hover{
+      animation-play-state:paused;
+    }
+
+    /* ======================
+       Card style (공용)
+       ====================== */
+    #partner-logo-slider-section .pls-card{
+      width:var(--rolling-card-w);
+      height:var(--rolling-card-h);
+      /* background:var(--card); */
+      border-radius:16px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      flex-shrink:0;
+      padding:14px 18px;          /* ✅ 로고 안전 여백 */
+      overflow:hidden;            /* ✅ 로고가 삐져나오지 않게 */
+    }
+
+    /* ✅ 텍스트 제거 → 로고 이미지 공용 스타일 */
+    #partner-logo-slider-section .pls-logo{
+      width:100%;
+      height:100%;
+      object-fit:contain;         /* ✅ 짤림 없이 */
+      object-position:center;
+      display:block;
+      filter:none;
+      user-select:none;
+      -webkit-user-drag:none;
+    }
+
+    /* ======================
+       2) Fixed grid (PC 4 cols / Mobile 2 cols)
+       - 최대 8개가 "한 번에" 보이도록:
+         PC: 4열 → 2줄 = 8개
+         Mobile: 2열 → 4줄 = 8개
+       ====================== */
+    #partner-logo-slider-section .pls-fixed{
+      width:min(1100px, 100%);
+      margin:0 auto;
+      padding:0; /* 요청하신대로 바탕 박스 제거 유지 */
+      overflow:visible;
+    }
+
+    #partner-logo-slider-section .pls-fixed-grid{
+      display:grid;
+      grid-template-columns:repeat(4, minmax(0, 1fr));
+      gap:var(--fixed-gap);
+      align-items:stretch;
+    }
+
+    /* ✅ 고정 그리드 카드: 칸을 꽉 채우고 로고는 contain */
+    #partner-logo-slider-section .pls-fixed-grid .pls-card{
+      width:100%;
+      height:var(--fixed-card-h);
+      /* background:var(--card2); */
+      /* border:1px solid var(--line); */
+      /* box-shadow:var(--shadow); */
+      /* border-radius:16px; */
+      padding:14px 18px;
+    }
+
+    /* ======================
+       Responsive
+       ====================== */
+    @media (max-width: 768px){
+      #partner-logo-slider-section{
+        padding:72px 0;
+
+        /* --rolling-card-w:160px; */
+        --rolling-card-h:120px;
+
+        --fixed-card-h:120px;
+        --fixed-gap:12px;
+      }
+
+      #partner-logo-slider-section .pls-wrap{
+        width:calc(100% - 24px);
+      }
+
+      #partner-logo-slider-section .pls-title{
+        font-size:24px;
+        margin-bottom:34px;
+        padding:0 6px;
+      }
+
+      #partner-logo-slider-section .pls-rolling{
+        margin-bottom:16px;
+      }
+
+      #partner-logo-slider-section .pls-group{
+        gap:14px;
+        padding-right:14px;
+      }
+      #partner-logo-slider-section .pls-viewport{
+        gap:14px;
+      }
+
+      /* ✅ 모바일: 한줄 2개 */
+      #partner-logo-slider-section .pls-fixed-grid{
+        grid-template-columns:repeat(2, minmax(0, 1fr));
+      }
+
+      #partner-logo-slider-section .pls-card{
+        border-radius:14px;
+        padding:12px 14px;
+      }
+      #partner-logo-slider-section .pls-fixed-grid .pls-card{
+        border-radius:14px;
+        padding:12px 14px;
+      }
+    }
+
+    /* ✅ 사용자가 ‘움직임 최소화’ 설정이면 애니메이션 끔 */
+    @media (prefers-reduced-motion: reduce){
+      #partner-logo-slider-section .track-left{
+        animation:none !important;
+        transform:none !important;
+      }
+    }
+  </style>
+</section>
+
+<section id="reviewSection">
+  <style>
+    /* ===== Scope: #reviewSection only ===== */
+    #reviewSection{
+      /* ✅ body 영향과 무관하게 이 섹션은 항상 흰 배경 */
+      background:#fff;
+
+      --ink:#0f172a;
+      --sub:#475569;
+      --brand:#2563eb;   /* 포인트 블루 */
+      --hl:#cfe7ff;      /* 하이라이트 */
+      --line:#e5e7eb;
+      --card:#ffffff;
+      font-family: Pretendard, "Noto Sans KR", "Noto Sans", system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 40px 16px 64px;
+
+      /* ✅ full-bleed(좌우 끝까지) 배경 레이어 안정화 */
+      position:relative;
+      isolation:isolate;
+    }
+
+    /* ✅ 섹션 바깥(좌우)까지 흰색이 깔리도록 “전체폭 배경 레이어” */
+    #reviewSection::before{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:#fff;
+      z-index:-1;
+
+      /* full-bleed trick: 뷰포트 전체폭으로 확장 */
+      left:50%;
+      right:50%;
+      margin-left:-50vw;
+      margin-right:-50vw;
+    }
+
+    /* 제목 */
+    #reviewSection .title{
+      text-align:center;
+      font-weight:900;
+      line-height:1.2;
+      letter-spacing:-.4px;
+      margin: 0 auto 32px;
+    }
+    #reviewSection .title .l1{
+      display:block;
+      font-size:32px;
+      color:#111827;
+    }
+    #reviewSection .title .l2{
+      display:inline-block;
+      font-size:34px;
+      color:var(--brand);
+      background:linear-gradient(transparent 65%, var(--hl) 65% 100%);
+      border-radius:2px;
+      padding:0 .06em;
+    }
+
+    /* 후기 그리드 */
+    #reviewSection .grid{
+      display:grid;
+      gap:20px;
+      grid-template-columns: repeat(auto-fit, minmax(340px,1fr));
+    }
+
+    /* 카드 */
+    #reviewSection .card{
+      background:var(--card);
+      border:1px solid var(--line);
+      border-radius:16px;
+      box-shadow:0 1px 3px rgba(16,24,40,.06);
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      transition: all .25s ease;
+    }
+    #reviewSection .card:hover{ box-shadow:0 6px 20px rgba(0,0,0,.08); transform:translateY(-2px); }
+
+    /* 썸네일 */
+    #reviewSection .thumb{
+      width:100%;
+      aspect-ratio: 16/9;
+      background:#f9fafb;
+      overflow:hidden;
+    }
+    #reviewSection .thumb img{
+      width:100%; height:100%; object-fit:cover; display:block;
+      transition: transform .45s ease;
+    }
+    #reviewSection .card:hover .thumb img{ transform:scale(1.05); }
+
+    /* 내용 */
+    #reviewSection .content{ padding:20px; display:flex; flex-direction:column; gap:12px; }
+
+    #reviewSection .label{
+      font-size:15px; font-weight:700; color:var(--ink);
+    }
+    #reviewSection .highlight{
+      color:var(--brand); font-weight:900; font-size:20px;
+    }
+    #reviewSection .stars{ color:#fbbf24; font-size:18px; letter-spacing:2px; }
+
+    /* 본문 */
+    #reviewSection .text{
+      font-size:15px; line-height:1.6; color:#374151;
+      white-space:pre-line;
+    }
+
+    /* 작성자 */
+    #reviewSection .author{
+      display:flex; align-items:center; gap:12px; margin-top:auto;
+    }
+    #reviewSection .author img{
+      width:46px; height:46px; border-radius:50%; object-fit:cover; border:1px solid #e5e7eb;
+    }
+    #reviewSection .author .info{ display:flex; flex-direction:column; }
+    #reviewSection .author .name{ font-weight:700; color:var(--ink); font-size:15px; }
+    #reviewSection .author .role{ font-size:13px; color:#6b7280; }
+
+    /* 성과 Progress */
+    #reviewSection .progress-wrap{
+      background:#f3f4f6; border-radius:8px; overflow:hidden;
+      font-size:13px; margin-top:8px;
+    }
+    #reviewSection .progress-bar{
+      background:var(--brand); color:#fff; text-align:right;
+      font-weight:600; padding:4px 8px;
+      border-radius:8px; white-space:nowrap;
+      transition:width .6s ease;
+    }
+
+    /* 반응형 */
+    @media (max-width: 420px){
+      #reviewSection{ padding: 34px 14px 54px; }
+      #reviewSection .title .l1{ font-size:28px; }
+      #reviewSection .title .l2{ font-size:30px; }
+      #reviewSection .grid{ grid-template-columns: 1fr; }
+    }
+  </style>
+
+  <!-- 제목 -->
+  <h2 class="title">
+    <span class="l1">실제 후기</span>
+    <!-- <span class="l2">고객들의 생생 후기!</span> -->
+  </h2>
+
+  <div class="grid">
+    <!-- 후기 카드 01 -->
+    <div class="card">
+      <div class="content">
+        <div class="label">본업이 더이상 통하지 않던 대표님 (오프라인/운영형)</div>
+        <div class="highlight">“이제는 ‘뭘 먼저 바꿔야 하는지’가 현장에서 바로 보입니다.”</div>
+        <div class="stars">★★★★★</div>
+        <p class="text">"솔직히 광고비 늘리고 이런 문제가 아니었어요. 예전 방식이 더이상 안 먹히는데, 무엇부터 바꿔야 하는지 기준이 없었습니다.
+여기 와서 좋았던 건 ‘동기부여’가 아니라, 상황을 보면 바로 실행으로 옮길 수 있는 판단 순서(공식)를 알려준다는 점이었습니다.
+
+고객 반응이 왜 달라졌는지,
+어느 지점에서 구매가 멈추는지,
+지금 우리 업에서는 무엇을 먼저 검증해야 하는지
+
+이게 머릿속에 정리되니까, 가게 운영하면서도 바로바로 보이더라고요.
+예전에는 다양한 사람을 만나도 ‘좋은 얘기’로 끝났는데, 지금은 다른 업종 사람들과 대화해도 우리 사업에 적용할 액션이 바로 뽑힙니다.
+그게 제게 가장 큰 혁신이었습니다."</p>
+        <div class="author">
+          <div class="info">
+            <span class="name">김*준 대표님</span>
+            <span class="role">오프라인 기반 운영업 · 9년차</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 후기 카드 02 -->
+    <div class="card">
+      <div class="content">
+        <div class="label">기반 없이 막막했던 대표님 (B2B/서비스형)</div>
+        <div class="highlight">“환경이 바뀌면 ‘다음 수’를 뽑는 패턴이 생겼습니다.”</div>
+        <div class="stars">★★★★★</div>
+        <p class="text">"시장이 바뀐 건 느끼는데, 저는 아무 기반이 없었어요. 뭘 바꿔야 하는지, 뭘 먼저 검증해야 하는지 순서가 없어서 늘 불안했습니다.
+여기서는 ‘이걸 하세요’보다 훨씬 중요한 걸 배웠습니다.
+
+이런 환경이면
+1) 시대의 흐름을 먼저 깊이 파악하고
+2) 고객의 행동 변화를 어떻게 해석하고
+3) 어떻게 다르게 융합해가는지
+
+실전 공식과 패턴으로 알려주니까 이해가 빠르고, 바로 실행이 되더라고요.
+특히 다양한 업종 분들을 만나도 이제 대화가 산만해지지 않습니다.
+우리 사업에 적용하면 ‘첫 번째 실험이 뭔지’가 현장에서 바로 보이고, 팀 회의도 추상이 아니라 실행 설계로 바뀌었습니다.
+막막함이 사라지고 ‘전진하는 방식’을 얻은 느낌입니다."</p>
+        <div class="author">
+          <div class="info">
+            <span class="name">이*현 대표님</span>
+            <span class="role">B2B 서비스 · 프로젝트 수주형</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 후기 카드 03 -->
+    <div class="card">
+      <div class="content">
+        <div class="label">실행은 했지만 헛바퀴였던 대표님 (제조/유통/팀 운영)</div>
+        <div class="highlight">“실행이 ‘노동’이 아니라 ‘학습’으로 바뀌었습니다.”</div>
+        <div class="stars">★★★★★</div>
+        <p class="text">"저는 실행력은 있는 편이었습니다. 그런데 성과가 안 나오면 더 하고, 더 하다 지치고… 결국 헛바퀴였어요.
+문제는 ‘시대가 바뀌었을 때 무엇을 먼저 바꿔야 하는지’가 안 보였다는 겁니다.
+
+여기서는 딱 그걸 잡아줍니다.
+상황을 보면,
+‘지금 무너진 게 상품인지, 채널인지, 제안인지, 운영인지’
+그리고 ‘어떤 순서로 실험을 돌려야 손실이 적고 학습이 빠른지’
+
+이걸 패턴으로 익히니까, 현장에서 바로 적용됩니다.
+다른 업종 사람들과 이야기하다가도 ‘우리 업에선 이걸 먼저 체크해야겠다’가 바로 떠오르고,
+팀원들과도 감정이 아니라 실험 설계로 대화가 바뀌었습니다.
+지금은 한 번에 대박이 아니라, 매주 더 똑똑해지는 방식으로 성과를 만들어가고 있다는 확신이 생겼습니다."</p>
+        <div class="author">
+          <div class="info">
+            <span class="name">박*영 대표님</span>
+            <span class="role">제조/유통 · 팀 운영</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+
+<div id="form_biz"></div>
+
+
+
+<script src="./js/jquery-1.11.0.min.js"></script>
+<script src="./js/validation1.js"> </script>
+<script src="./js/form-row.js"> </script>
+
+ <script>
+$(function(){
+  $('input[name="entry.647140559"]').val('당근');
+});
+</script>
+
+
+
+
+
+
+<section id="footerElite" aria-label="사이트 푸터" >
+  <!-- 아이콘 킷: 유튜브/페북/인스타용 -->
+  <script src="https://kit.fontawesome.com/2d323a629b.js" crossorigin="anonymous"></script>
+
+  <style>
+    /* ================= Scope: #footerElite only ================= */
+    #footerElite{
+      --bg:#0a0a0b;
+      --ink:#e5e7eb;
+      --muted:#9aa1aa;
+      --line:rgba(255,255,255,.08);
+      --glass:rgba(255,255,255,.06);
+      --max:1280px;
+      --radius:16px;
+      --shadow:0 10px 30px rgba(0,0,0,.35);
+
+      font-family:Pretendard,"Noto Sans KR",system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
+      background:var(--bg);
+      color:var(--muted);
+      -webkit-font-smoothing:antialiased;
+      text-rendering:optimizeLegibility;
+    }
+
+    #footerElite .wrap{max-width:var(--max);margin:0 auto;padding:3.5rem 1.25rem 2.25rem}
+
+    /* 상단 네비게이션 영역 */
+    #footerElite .navGrid{
+      display:grid;
+      grid-template-columns:repeat(12,1fr);
+      gap:2.2rem;
+      border-bottom:1px solid var(--line);
+      padding-bottom:2rem;
+    }
+
+    /* 브랜드 컬럼 */
+    #footerElite .brandCol{grid-column:span 4;display:flex;flex-direction:column;gap:.9rem}
+    #footerElite .brandCol .logoRow{
+      display:flex;align-items:center;gap:.75rem;
+      color:#fff;font-weight:900;font-size:1.15rem;letter-spacing:.2px
+    }
+    #footerElite .brandCol .logoImg{
+      width:40px;height:40px;border-radius:10px;overflow:hidden;
+      background:rgba(255,255,255,.06);
+      border:1px solid var(--line);
+      display:flex;align-items:center;justify-content:center;
+      flex:0 0 auto;
+    }
+    #footerElite .brandCol .logoImg img{
+      width:100%;height:100%;
+      object-fit:contain;display:block;
+      padding:6px;
+    }
+    #footerElite .brandCol .brandText{display:flex;flex-direction:column;line-height:1.15}
+    #footerElite .brandCol .brandText strong{font-size:1.05rem}
+    #footerElite .brandCol .brandText span{font-size:.82rem;color:#c6cbd3;font-weight:700;letter-spacing:.2px}
+    #footerElite .brandCol .slogan{font-size:.92rem;line-height:1.55;color:var(--muted);margin:0}
+
+    #footerElite .col{grid-column:span 2}
+    #footerElite h4{margin:.1rem 0 .85rem;font-size:1rem;font-weight:800;color:#fff}
+    #footerElite ul{list-style:none;margin:0;padding:0}
+    #footerElite li{margin:.48rem 0}
+    #footerElite a{color:var(--muted);text-decoration:none;font-size:.92rem;transition:color .25s ease}
+    #footerElite a::after{content:"";position:absolute;left:0;bottom:-3px;height:1px;width:0;background:#ffffff66;transition:width .25s ease}
+    #footerElite a:hover{color:#fff}
+    #footerElite a:hover::after{width:100%}
+
+    /* 하단 바 */
+    #footerElite .footBar{
+      display:flex;
+      align-items:flex-start;
+      justify-content:space-between;
+      gap:1rem;
+      padding:1.15rem 0;
+    }
+    #footerElite .addr{font-size:.86rem;line-height:1.7;min-width:0}
+    #footerElite .policies{display:flex;gap:.9rem;flex-wrap:wrap;margin-top:.35rem;margin:0 auto;}
+    @media screen and (max-width:760px) { #footerElite .policies{justify-content: center;} }
+    #footerElite .policies a{font-size:.86rem}
+
+    /* ✅ 하단 “법인정보 한 줄” (깔끔 정렬) */
+    #footerElite .corpLine{
+      display:flex;
+      align-items:center;
+      flex-wrap:wrap;
+      gap:.45rem .55rem;
+      margin-bottom:.15rem;
+      min-width:0;
+    }
+    #footerElite .corpName{
+      color:var(--ink);
+      font-weight:800;
+      letter-spacing:.1px;
+      white-space:nowrap;
+    }
+    #footerElite .corpMeta{
+      display:flex;
+      align-items:center;
+      flex-wrap:wrap;
+      gap:.35rem .55rem;
+      min-width:0;
+      color:#b9c0cb;
+    }
+    #footerElite .sep{
+      color:rgba(255,255,255,.22);
+      margin:0 .05rem;
+      user-select:none;
+    }
+    #footerElite .meta{
+      color:#b9c0cb;
+      white-space:nowrap;
+    }
+    #footerElite .meta b{
+      color:#d7dde6;
+      font-weight:700;
+    }
+    #footerElite .addrShort{
+      color:#88919c;
+      white-space:normal;
+      word-break:keep-all;
+      overflow-wrap:anywhere;
+    }
+
+    /* SNS */
+    #footerElite .social{
+      display:flex;align-items:center;gap:.65rem;
+      background:var(--glass);
+      border:1px solid var(--line);
+      padding:.5rem .7rem;border-radius:999px;
+      box-shadow:var(--shadow);
+      flex:0 0 auto;
+    }
+    #footerElite .social .tip{font-size:.78rem;color:#c6cbd3;margin-right:.25rem}
+    #footerElite .sns-btn{
+      --size:38px;width:var(--size);height:var(--size);border-radius:999px;
+      display:inline-flex;align-items:center;justify-content:center;color:#d0d4dc;
+      background:transparent;border:1px solid transparent;
+      transition:transform .25s ease, background .25s ease, color .25s ease, border-color .25s ease
+    }
+    #footerElite .sns-btn:hover{transform:translateY(-2px);background:#111318;border-color:#2a2f36;color:#fff}
+    #footerElite .sns-btn i{font-size:18px;line-height:1}
+    #footerElite .sns-btn svg{width:20px;height:20px;display:block;fill:currentColor}
+
+    #footerElite .sns-btn[data-brand="kakao"]:hover{background:#2b241e;color:#ffdf00;border-color:#473a2a}
+    #footerElite .sns-btn[data-brand="naver"]:hover{background:#0a2e13;color:#15c654;border-color:#164f2b}
+    #footerElite .sns-btn[data-brand="youtube"]:hover{background:#2d1111;color:#ff0033;border-color:#4a1c1c}
+    #footerElite .sns-btn[data-brand="facebook"]:hover{background:#0f2239;color:#2d8cff;border-color:#1c3351}
+    #footerElite .sns-btn[data-brand="instagram"]:hover{background:#261530;color:#ff6aa2;border-color:#3b1f4a}
+
+    #footerElite .copy{margin-top:.6rem;font-size:.8rem;color:#88919c}
+
+    /* 반응형 */
+    @media(max-width:1100px){
+      #footerElite .brandCol{grid-column:span 12}
+      #footerElite .col{grid-column:span 4}
+    }
+    @media(max-width:760px){
+      #footerElite .navGrid{grid-template-columns:repeat(6,1fr);gap:1.4rem}
+      #footerElite .brandCol{grid-column:span 6}
+      #footerElite .col{grid-column:span 3}
+      #footerElite .footBar{flex-direction:column;align-items:center;text-align:center;gap:.75rem}
+      #footerElite .social{order:-1}
+      #footerElite .corpLine{justify-content:center}
+      #footerElite .corpMeta{justify-content:center}
+      #footerElite .addr{width:100%}
+    }
+
+    @media (max-width:760px){
+      /* ✅ 6칸 그리드 유지 + 간격 정돈 */
+      #footerElite .navGrid{
+        grid-template-columns:repeat(6,1fr);
+        gap:1.1rem 1.1rem;
+      }
+      /* ✅ 브랜드는 1줄 전체 */
+      #footerElite .brandCol{ grid-column:1 / -1; }
+      /* ✅ 카테고리는 무조건 2열(= 6칸 중 3칸씩) */
+      #footerElite .col{ grid-column:span 3 !important; }
+      /* ✅ 하단바 정렬 */
+      #footerElite .footBar{
+        flex-direction:column;
+        align-items:center;
+        text-align:center;
+        gap:.75rem;
+      }
+      #footerElite .social{ order:-1; }
+      #footerElite .corpLine{ justify-content:center; }
+      #footerElite .corpMeta{ justify-content:center; }
+      #footerElite .addr{ width:100%; }
+    }
+  </style>
+
+  <div class="wrap">
+    <div class="navGrid">
+      <!-- ✅ 브랜드 영역 -->
+      <div class="brandCol">
+        <div class="logoRow" aria-label="비즈니스 혁신 연구소">
+          <img src="../5. 종합본/img/logo-w.png" alt="비즈니스 혁신 연구소 로고" style="width:200px;">
+        </div>
+
+        <p class="slogan">
+          시대의 바람을 읽고, 지속 가능한 성장 구조를 설계합니다.<br>
+        </p>
+      </div>
+
+      <!-- ✅ 메뉴 (헤더 4카테고리와 1:1 일치) -->
+      <div class="col">
+        <h4>연구소</h4>
+        <ul>
+          <li><a href="./introduce.html">연구소 소개</a></li>
+              <li><a href="./ceo.html">대표 인사말</a></li>
+              <li><a href="./vision.html">비전 &amp; 철학</a></li>
+              <li><a href="./history.html">연혁</a></li>
+        </ul>
+      </div>
+
+      <div class="col">
+        <h4>칼럼</h4>
+        <ul>
+          <li><a href="./columns.html">전체 칼럼</a></li>
+          <li><a href="./columns.html?cat=innovation">비즈니스 혁신</a></li>
+          <li><a href="./columns.html?cat=insight">산업 인사이트</a></li>
+          <li><a href="./columns.html?cat=ceo">CEO 인사이트</a></li>
+        </ul>
+      </div>
+
+      <div class="col">
+        <h4>오프라인 상담</h4>
+        <ul>
+          <!-- ✅ 요청대로 “상담신청” 버튼 1개만 -->
+          <li><a href="./consult.html">상담 신청</a></li>
+        </ul>
+      </div>
+
+      <div class="col">
+        <h4>오시는 길</h4>
+        <ul>
+          <li><a href="./location.html">오시는 길</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 하단 바 -->
+    <div class="footBar">
+      <div class="addr">
+        <div class="corpLine"
+             data-corp="[법인명 입력]"
+             data-ceo="[대표자 성함]"
+             data-corpno="[법인등록번호]"
+             data-bizno="[사업자등록번호]"
+             data-addr="[주소 한 줄 요약]">
+
+          <span class="corpName" id="corpName">비즈니스 혁신 연구소</span>
+
+          <span class="corpMeta" aria-label="법인 정보">
+            <span class="sep">·</span>
+            <span class="meta">회사명 : <b id="bizNo">HTU [헬스투유]</b></span>
+            <span class="sep">·</span>
+            <span class="meta">법인 : <b id="corpNo">110-230-129994</b></span>
+            <span class="sep">·</span>
+            <span class="meta">대표 : <b id="corpCEO">강영수</b></span>
+          </span>
+        </div>
+
+        <div class="policies">
+          <a href="#">개인정보처리방침</a>
+          <a href="#">이용약관</a>
+          <a href="#">법적고지</a>
+          <a href="#">사이트맵</a>
+        </div>
+
+        <div class="copy">
+          COPYRIGHT © 2025 BUSINESS INNOVATION LAB<br>ALL RIGHTS RESERVED
+        </div>
+      </div>
+
+      <!-- SNS 클러스터 -->
+      <div class="social" role="group" aria-label="공식 채널 바로가기">
+        <span class="tip">Follow</span>
+
+        <a class="sns-btn" data-brand="kakao" href="#" aria-label="KakaoTalk" rel="noopener">
+          <svg viewBox="0 0 36 36" aria-hidden="true">
+            <path d="M18 5C10.268 5 4 10.1 4 16.5c0 4.4 2.974 8.184 7.45 10.18L9.6 31.3c-.24.76.52 1.44 1.26 1.02l5.76-3.25c.46.05.93.07 1.38.07 7.732 0 14-5.1 14-11.44C32 10.1 25.732 5 18 5Z"/>
+          </svg>
+        </a>
+
+        <a class="sns-btn" data-brand="naver" href="#" aria-label="Naver Blog" rel="noopener">
+          <svg viewBox="0 0 36 36" aria-hidden="true">
+            <path d="M6 8.5C6 6.567 7.567 5 9.5 5h17c1.933 0 3.5 1.567 3.5 3.5v12c0 1.933-1.567 3.5-3.5 3.5H18.8l-4.2 3.1c-.73.55-1.6-.36-1.2-1.14l1.3-1.96H9.5C7.567 24 6 22.433 6 20.5v-12Z"/>
+            <g transform="translate(9 12)">
+              <path d="M2 0h2.2c1.4 0 2.3.8 2.3 2 0 1.1-.9 2-2.1 2H3.8V6H2V0Zm5.3 0H9.8v4.6c0 .9.5 1.4 1.3 1.4.8 0 1.3-.5 1.3-1.4V0h1.5v4.7c0 1.8-1.1 2.9-2.8 2.9s-2.8-1.1-2.8-2.9V0Zm8.5 0c1.7 0 2.8 1.1 2.8 2.9V6h-1.5V4.6c-.3.9-1  1.4-2.1 1.4-1.5 0-2.6-1-2.6-2.5S12.8 0 14.3 0Zm.4 1.4c-.8 0-1.3.5-1.3 1.3s.5 1.3 1.3 1.3 1.3-.5 1.3-1.3-.5-1.3-1.3-1.3ZM7 0h1.6v6H7V0Z"/>
+            </g>
+          </svg>
+        </a>
+
+        <!-- 필요 시 활성화 -->
+        <!--
+        <a class="sns-btn" data-brand="youtube" href="#" aria-label="YouTube" rel="noopener">
+          <i class="fab fa-youtube" aria-hidden="true"></i>
+        </a>
+        <a class="sns-btn" data-brand="instagram" href="#" aria-label="Instagram" rel="noopener">
+          <i class="fab fa-instagram" aria-hidden="true"></i>
+        </a>
+        -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ✅ 값 자동 주입(선택): data-*만 바꾸면 텍스트가 자동 반영됨 -->
+  <script>
+    (function(){
+      const root = document.querySelector('#footerElite .corpLine');
+      if(!root) return;
+
+      const corp   = root.getAttribute('data-corp');
+      const ceo    = root.getAttribute('data-ceo');
+      const corpno = root.getAttribute('data-corpno');
+      const bizno  = root.getAttribute('data-bizno');
+      const addr   = root.getAttribute('data-addr');
+
+      const set = (id, val) => {
+        const el = document.getElementById(id);
+        if(el && val && val.trim() && !val.includes('[')) el.textContent = val.trim();
+      };
+
+      set('corpName', corp);
+      set('corpCEO', ceo);
+      set('corpNo', corpno);
+      set('bizNo', bizno);
+
+      // addrShort는 현재 마크업에 출력 위치가 없어서(요청 코드 그대로 유지) 필요하면 아래처럼 한 줄을 추가해서 쓰면 됩니다.
+      // <div class="addrShort" id="addrShort"></div>
+      // set('addrShort', addr);
+    })();
+  </script>
+</section>
+
+
+    </body>
+    <script src="./js/jquery-1.11.0.min.js"></script>
+<script src="./js/validation1.js"> </script>
+<script src="./js/main.js"> </script>
+  </html>

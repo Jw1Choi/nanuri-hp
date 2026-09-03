@@ -1,0 +1,2099 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+
+
+   <!-- 소유권 인증(각 도메인별 값으로 교체) -->
+<meta name="naver-site-verification" content="" />
+  <meta name="google-site-verification" content="구글_인증코드_여기에" />
+
+   <!-- Canonical (대표 URL로 고정) -->
+  <link rel="canonical" href="https://nanuri.co.kr" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="./img/favicon.png" sizes="any">
+  <link rel="shortcut icon" href="./img/favicon.png" type="image/x-icon">
+  <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./img/favicon.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="./img/favicon.png">
+
+  <meta name="robots" content="index,follow" />
+  <meta name="subject" content="나누리사회적협동조합" />
+  <meta name="title" content="나누리사회적협동조합" />
+  <meta name="author" content="나누리사회적협동조합">
+  <meta name="description" content="나누리사회적협동조합 — 복지의 사각지대 | 고령화 시대 주거·돌봄의 문제를 해결합니다." />
+
+  <meta name="keywords"
+    content="나누리사회적협동조합, 나누리사회적협동조합, Healthy Beauty, Well-aging, Beauty Health Industry, 글로벌 뷰티 헬스 기업, 건강한 아름다움, 뷰티 산업, 헬스 산업, 웰에이징 산업, 뷰티 헬스 비즈니스, 글로벌 네트워크, 뷰티 교육, 헬스 교육, 뷰티 전문가, 건강 산업, 라이프스타일 산업, 글로벌 비즈니스 플랫폼, HTU 브랜드" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:rich_attachment" content="true" />
+  <meta property="og:site_name" content="나누리사회적협동조합" />
+  <meta property="og:title" content="나누리사회적협동조합" />
+  <meta property="og:description" content="나누리사회적협동조합 — 복지의 사각지대 | 고령화 시대 주거·돌봄의 문제를 해결합니다." />
+  <meta property="og:image" content="./video/na-01.png" />
+  <meta property="og:url" content="https://nanuri.co.kr" />
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="나누리사회적협동조합" />
+  <meta name="twitter:description" content="나누리사회적협동조합 — 복지의 사각지대 | 고령화 시대 주거·돌봄의 문제를 해결합니다." />
+  <meta name="twitter:image" content="./video/na-01.png" />
+
+  <meta itemprop="name" content="나누리사회적협동조합" />
+  <meta itemprop="description" content="나누리사회적협동조합 — 복지의 사각지대 | 고령화 시대 주거·돌봄의 문제를 해결합니다." />
+  <meta itemprop="image" content="./video/na-01.png" />
+
+  <title>나누리사회적협동조합</title>
+
+  <link href="./css/reset.css" rel="stylesheet" type="text/css" />
+  <link href="./css/style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <div id="menu_navi"></div>
+
+  <script src="./menu3.js"></script>
+
+
+
+  <style>
+    /* ── RESET & LAYOUT ── */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0
+    }
+
+    body {
+      font-family: 'Pretendard', sans-serif;
+      background: #111;
+      color: #fff;
+      overflow-x: hidden
+    }
+
+    .container {
+      display: flex
+    }
+
+    #main {
+      flex: 1;
+      position: relative;
+      overflow: hidden
+    }
+
+    #visualTransWrap {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      z-index: 5
+    }
+
+    /* ── SWIPER & BG ── */
+    .mv_container {
+      width: 100%;
+      height: 90vh;
+      position: relative
+    }
+
+    .swiper-container,
+    .swiper-wrapper,
+    .swiper-slide {
+      width: 100%;
+      height: 100%
+    }
+
+    .bg {
+      position: absolute;
+      inset: 0;
+      background-size: cover;
+      background-position: center;
+      transition: transform 6s ease;
+      filter: brightness(0.5)
+    }
+
+    .swiper-slide-active .bg {
+      transform: scale(1.12)
+    }
+
+    .bg1 {
+      background-image: url('./img/intro-1.jpg')
+    }
+
+    .bg2 {
+      background-image: url('./img/intro-2.jpg')
+    }
+
+    .bg3 {
+      background-image: url('./img/page-3.jpg')
+    }
+
+    .bg4 {
+      background-image: url('./img/repair.jpg')
+    }
+
+    /* ── TEXT & BUTTON ── */
+    .mv_txt_box {
+      position: absolute;
+      top: 20%;
+      left: 5%;
+      max-width: 640px;
+      z-index: 2
+    }
+
+    .mv_cate {
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 14px;
+      color: #ffeb55;
+      display: inline-block
+    }
+
+    .mv_tit {
+      font-size: 43px;
+      line-height: 1.4;
+      margin: 0 0 12px
+    }
+
+    @media screen and (max-width:620px) {
+      .mv_tit {
+        font-size: 34px !important;
+      }
+    }
+
+    @media screen and (max-width:500px) {
+      .mv_tit {
+        font-size: 26px !important;
+      }
+    }
+
+    .mv_txt {
+      font-size: 18px;
+      line-height: 1.6;
+      font-weight: 300
+    }
+
+    .mv_btn {
+      display: inline-block;
+      margin-top: 30px;
+      padding: 14px 36px;
+      border: 2px solid #fff;
+      border-radius: 40px;
+      background: transparent;
+      color: #fff;
+      font-weight: 600;
+      letter-spacing: .3px;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity .6s, background .35s, box-shadow .35s, color .35s, transform .35s;
+      position: relative;
+      overflow: hidden;
+      text-decoration: none;
+    }
+
+    .swiper-slide-active .mv_btn {
+      opacity: 1;
+      pointer-events: auto
+    }
+
+    .mv_btn::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(255, 255, 255, .15);
+      transform: translateX(-100%);
+      transition: transform .4s;
+    }
+
+    .mv_btn:hover::after {
+      transform: translateX(0)
+    }
+
+    .mv_btn:hover {
+      background: #fff;
+      color: #111;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, .25);
+      transform: translateY(-2px);
+    }
+
+    /* ── WAVE ANIMATION ── */
+    .wave_anim .wave {
+      display: inline-block;
+      opacity: 0;
+      animation: wave 1.1s ease-out forwards
+    }
+
+    @keyframes wave {
+      0% {
+        transform: translateY(25px);
+        opacity: 0
+      }
+
+      100% {
+        transform: translateY(0);
+        opacity: 1
+      }
+    }
+
+    .wave_anim.custom .wave:nth-child(1) {
+      animation-delay: .15s
+    }
+
+    .wave_anim.custom .wave:nth-child(2) {
+      animation-delay: .3s
+    }
+
+    .wave_anim.custom .wave:nth-child(3) {
+      animation-delay: .45s
+    }
+
+    /* ── PROGRESS BAR ── */
+    .progress-container {
+      position: absolute;
+      bottom: 80px;
+      left: 5%;
+      right: 5%;
+      height: 4px;
+      display: flex;
+      gap: 10px;
+      z-index: 3;
+      width: 150px;
+    }
+
+    .progress-segment {
+      flex: 1;
+      background: rgba(255, 255, 255, .25);
+      border-radius: 2px;
+      overflow: hidden;
+      cursor: pointer
+    }
+
+    .progress-fill {
+      width: 0;
+      height: 100%;
+      background: #fff;
+      display: block
+    }
+
+    .wheel_down {
+      position: absolute;
+      bottom: 14px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 24px;
+      opacity: .7;
+      z-index: 3;
+      animation: wheel-bounce 2s ease-in-out infinite;
+    }
+
+    .wheel_down .wheel {
+      animation: wheel-fade 2s ease-in-out infinite;
+    }
+
+    @keyframes wheel-fade {
+      0% {
+        opacity: 1;
+        transform: translateY(0)
+      }
+
+      80% {
+        opacity: .2;
+        transform: translateY(10px)
+      }
+
+      100% {
+        opacity: 0;
+        transform: translateY(14px)
+      }
+    }
+
+    #sidebar {
+      display: none
+    }
+  </style>
+
+  <style>
+    /* ──────────────────────────────────────────
+          #visual-section 전용 스타일
+      ─────────────────────────────────────────── */
+    #visual-section {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      overflow: hidden
+    }
+
+    #visual-section .video_wrap {
+      position: absolute;
+      inset: 0;
+      z-index: 0
+    }
+
+    #visual-section .video_wrap video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center
+    }
+
+    #visual-section .overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.5)
+    }
+
+    #visual-section .txt_container {
+      position: absolute;
+      inset: 0;
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      align-items: center;
+      text-align: center;
+      pointer-events: none
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px)
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0)
+      }
+    }
+
+    #visual-section .company,
+    #visual-section .logo,
+    #visual-section .exp {
+      opacity: 0
+    }
+
+    #visual-section.animate .company {
+      color: #fff;
+      font-size: 2.5rem;
+      font-weight: 500;
+      margin-bottom: .5em;
+      animation: fadeInUp 1s ease-out forwards;
+      animation-delay: .2s
+    }
+
+    #visual-section.animate .logo {
+      animation: fadeInUp 1s ease-out forwards;
+      animation-delay: .7s
+    }
+
+    #visual-section .logo .m_logo {
+      width: 800px;
+      height: 130px;
+      background: url("../img/sm-logo.png") no-repeat center/contain;
+      margin-bottom: .5em
+    }
+
+    #visual-section.animate .exp {
+      color: #fff;
+      font-size: 1.25rem;
+      line-height: 1.6;
+      max-width: 80%;
+      animation: fadeInUp 1s ease-out forwards;
+      animation-delay: 1s
+    }
+
+    #visual-section .highlight {
+      color: #e6d3a3;
+      font-weight: 600
+    }
+
+    @media (max-width:768px) {
+      #visual-section .company {
+        font-size: 2rem !important
+      }
+
+      #visual-section .logo .m_logo {
+        background: url("../img/sm-font.png") no-repeat center/contain;
+        width: 400px;
+        height: 300px
+      }
+
+      #visual-section .exp {
+        font-size: 1rem
+      }
+
+      #visual-section .video_wrap video {
+        object-position: right center
+      }
+    }
+  </style>
+  </head>
+
+  <body>
+
+    <!-- 메뉴(외부 로드) -->
+    <div id="menu"></div>
+
+<section id="bgfScrollWrap" aria-label="회사소개 스크롤 비주얼 (독립형)">
+  <!-- ===============================
+       Scope: #bgfScrollWrap ONLY
+       - 다른 코드와 충돌 방지
+       - 외부 의존: 없음 (순수 Vanilla JS)
+       =============================== -->
+
+  <style>
+    /* ====== Layout ====== */
+    #bgfScrollWrap {
+      --ink: #ffffff;
+      --muted: rgba(255, 255, 255, .86);
+      --dim: rgba(0, 0, 0, .0);
+      --dimStrong: rgba(0, 0, 0, .5);
+      --maxW: 1200px;
+      --padX: clamp(16px, 3.2vw, 46px);
+      --radius: 24px;
+      --shadow: 0 30px 80px rgba(0, 0, 0, .35);
+      font-family: "Pretendard", "Noto Sans KR", system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+      color: var(--ink);
+      width: 100%;
+      position: relative;
+      overflow: clip;
+      background: #000;
+      isolation: isolate;
+    }
+
+    #bgfScrollWrap .bgf-container {
+      width: 100%;
+      position: relative;
+    }
+
+    #bgfScrollWrap .content {
+      width: 100%;
+    }
+
+    /* ====== HERO / VISUAL ====== */
+    #bgfScrollWrap .sec {
+      width: 100%;
+      position: relative;
+    }
+
+    #bgfScrollWrap .sec_visual {
+      min-height: 100vh;
+      position: relative;
+      overflow: hidden;
+      background: #000;
+    }
+
+    #bgfScrollWrap .video_wrap {
+      position: absolute;
+      inset: 0;
+      transform-origin: center;
+      will-change: transform;
+      z-index: 1;
+      overflow: hidden;
+      background: #000;
+    }
+
+    #bgfScrollWrap .video_wrap video,
+    #bgfScrollWrap .video_wrap iframe {
+      width: 100vw;
+      min-width: 177.77vh;
+      height: 100vh;
+      min-height: 56.25vw;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      display: block;
+      background: #000;
+      pointer-events: none;
+    }
+
+    /* ✅ 핵심: 영상은 실제 재생 신호가 오기 전까지 안 보이게 */
+    #bgfScrollWrap .video_wrap iframe {
+      z-index: 1;
+      opacity: 0;
+      transition: opacity 0.9s ease;
+      will-change: opacity;
+    }
+
+    /* ✅ 미리보기는 영상 위에 올려두고, 영상 준비되면 자연스럽게 사라짐 */
+    #bgfScrollWrap .video-placeholder {
+      position: absolute;
+      inset: 0;
+      z-index: 2;
+      background: #000 url('./img/about-page.jpg') center/cover no-repeat;
+      filter: brightness(0.5);
+      opacity: 1;
+      transition: opacity 0.9s ease;
+      will-change: opacity;
+      pointer-events: none;
+    }
+
+    /* 영상 준비 완료 상태 */
+    #bgfScrollWrap .video_wrap.is-video-ready iframe {
+      opacity: 1;
+    }
+
+    #bgfScrollWrap .video_wrap.is-video-ready .video-placeholder {
+      opacity: 0;
+    }
+
+    #bgfScrollWrap .dim {
+      position: absolute;
+      inset: 0;
+      background: var(--dim);
+      z-index: 2;
+      transform-origin: center;
+      will-change: transform, background-color;
+      pointer-events: none;
+    }
+
+    /* ====== Mobile Visual Swiper ====== */
+    #bgfScrollWrap .m_slide_visual {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      top: auto;
+      height: min(48vh, 520px);
+      z-index: 3;
+      pointer-events: none;
+      opacity: 0;
+      transition: opacity 400ms ease;
+    }
+
+    #bgfScrollWrap .m_slide_visual .m_visual_list,
+    #bgfScrollWrap .m_slide_visual .swiper-wrapper,
+    #bgfScrollWrap .m_slide_visual .swiper-slide {
+      height: 100%;
+    }
+
+    #bgfScrollWrap .m_slide_visual .img_wrap {
+      position: absolute;
+      inset: auto 0 0 0;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      padding: 0 14px 22px;
+      transform-origin: center;
+      will-change: transform;
+    }
+
+    #bgfScrollWrap .m_slide_visual img {
+      width: min(92vw, 520px);
+      height: auto;
+      display: block;
+      filter: drop-shadow(0 18px 55px rgba(0, 0, 0, .35));
+      user-select: none;
+      -webkit-user-drag: none;
+    }
+
+    /* ====== Title Wrap ====== */
+    #bgfScrollWrap .title_wrap {
+      position: relative;
+      z-index: 4;
+      width: 100%;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: clamp(44px, 8vh, 96px) var(--padX);
+      will-change: transform, opacity;
+      backface-visibility: hidden;
+      -webkit-font-smoothing: antialiased;
+      transform: translateZ(0);
+    }
+
+    #bgfScrollWrap .title_inner {
+      width: 100%;
+      max-width: var(--maxW);
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-areas: "stack";
+      align-items: center;
+    }
+
+    #bgfScrollWrap .txt_box {
+      grid-area: stack;
+      width: 100%;
+      will-change: transform, opacity;
+      backface-visibility: hidden;
+      transform: translateZ(0);
+    }
+
+    #bgfScrollWrap dl {
+      margin: 0;
+    }
+
+    #bgfScrollWrap .company dt {
+      font-size: clamp(14px, 1.25vw, 18px);
+      letter-spacing: .14em;
+      font-weight: 700;
+      opacity: .9;
+      will-change: transform, opacity;
+      backface-visibility: hidden;
+      transform: translateZ(0);
+    }
+
+    #bgfScrollWrap .company dd {
+      margin: 14px 0 0;
+      font-size: clamp(28px, 3.5vw, 58px);
+      line-height: 1.18;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      text-shadow: 0 20px 70px rgba(0, 0, 0, .55);
+      word-break: keep-all;
+      will-change: transform, opacity;
+      backface-visibility: hidden;
+      transform: translateZ(0);
+    }
+
+    #bgfScrollWrap .box02 {
+      margin: 0;
+      max-width: 980px;
+      font-size: clamp(15px, 1.25vw, 18px);
+      line-height: 1.9;
+      color: var(--muted);
+      opacity: 0;
+      transform: translate3d(0, 24px, 0);
+      text-shadow: 0 16px 55px rgba(0, 0, 0, .35);
+      word-break: keep-all;
+      will-change: transform, opacity;
+      backface-visibility: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    #bgfScrollWrap .vision_box {
+      width: 100%;
+    }
+
+    #bgfScrollWrap .vision_wrap {
+      width: 100%;
+      max-width: var(--maxW);
+      display: grid;
+      grid-template-columns: 1.05fr .95fr;
+      gap: clamp(18px, 5vw, 64px);
+      align-items: center;
+      padding: 0;
+      border-radius: 0;
+      background: transparent;
+      backdrop-filter: none;
+      -webkit-backdrop-filter: none;
+      border: 0;
+      box-shadow: none;
+      opacity: 0;
+      transform: translate3d(0, 26px, 0);
+      position: relative;
+      will-change: transform, opacity;
+      backface-visibility: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    #bgfScrollWrap .vision dt,
+    #bgfScrollWrap .mission dt {
+      font-size: 14px;
+      letter-spacing: .22em;
+      font-weight: 900;
+      opacity: .9;
+      text-shadow: 0 14px 50px rgba(0, 0, 0, .45);
+    }
+
+    #bgfScrollWrap .vision .sub_text01 {
+      margin: 16px 0 0;
+      font-size: clamp(44px, 5.2vw, 86px);
+      line-height: 1.06;
+      font-weight: 900;
+      letter-spacing: -0.03em;
+      text-transform: uppercase;
+      text-shadow: 0 18px 70px rgba(0, 0, 0, .55);
+      will-change: font-size, line-height, margin-bottom, transform, opacity;
+      backface-visibility: hidden;
+      transform: translateZ(0);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    #bgfScrollWrap .mission dd {
+      margin: 18px 0 0;
+      font-size: clamp(20px, 2.15vw, 36px);
+      line-height: 1.28;
+      font-weight: 900;
+      color: rgba(255, 255, 255, .92);
+      word-break: keep-all;
+      text-shadow: 0 18px 70px rgba(0, 0, 0, .55);
+      opacity: 0;
+      transform: translate3d(0, 18px, 0);
+      will-change: transform, opacity;
+      backface-visibility: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    #bgfScrollWrap .empty_box {
+      height: 1px;
+      opacity: 1;
+    }
+
+    /* ====== Scroll Icon ====== */
+    #bgfScrollWrap .scroll_icon {
+      position: absolute;
+      left: 50%;
+      bottom: 22px;
+      transform: translateX(-50%);
+      z-index: 5;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      opacity: 1;
+      pointer-events: none;
+    }
+
+    #bgfScrollWrap .scroll_icon span {
+      font-size: 12px;
+      letter-spacing: .22em;
+      opacity: .8;
+    }
+
+    #bgfScrollWrap .scroll_indicator {
+      width: 2px;
+      height: 26px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, .32);
+      position: relative;
+      overflow: hidden;
+    }
+
+    #bgfScrollWrap .scroll_indicator::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: -30%;
+      width: 100%;
+      height: 40%;
+      background: rgba(255, 255, 255, .9);
+      border-radius: 999px;
+      animation: bgfScrollPulse 1.2s ease-in-out infinite;
+    }
+
+    @keyframes bgfScrollPulse {
+      0% {
+        transform: translateY(0);
+        opacity: .25;
+      }
+
+      60% {
+        opacity: 1;
+      }
+
+      100% {
+        transform: translateY(220%);
+        opacity: .2;
+      }
+    }
+
+    /* ====== Helpers for original <br class="pc_on/pc_none"> ====== */
+    #bgfScrollWrap .pc_on {
+      display: inline;
+    }
+
+    #bgfScrollWrap .pc_none {
+      display: none;
+    }
+
+    /* ====== Section 01 (사업영역) ====== */
+    #bgfScrollWrap .sec01 {
+      position: relative;
+      z-index: 1;
+      background: #fff;
+      color: #101010;
+      padding: clamp(54px, 8vw, 98px) var(--padX);
+    }
+
+    #bgfScrollWrap .title_area {
+      max-width: var(--maxW);
+      margin: 0 auto 34px;
+    }
+
+    #bgfScrollWrap .sec_title {
+      opacity: 0;
+      transform: translateY(24px);
+    }
+
+    #bgfScrollWrap .sec_title h3 {
+      margin: 0;
+      font-size: clamp(22px, 2.3vw, 34px);
+      letter-spacing: -0.02em;
+      font-weight: 850;
+      color: #0b0b0b;
+    }
+
+    #bgfScrollWrap .sec_title p {
+      margin: 12px 0 0;
+      font-size: clamp(15px, 1.15vw, 18px);
+      line-height: 1.75;
+      color: rgba(11, 11, 11, .72);
+      word-break: keep-all;
+    }
+
+    #bgfScrollWrap .contents_inner {
+      max-width: var(--maxW);
+      margin: 0 auto;
+      display: grid;
+      gap: clamp(18px, 2vw, 22px);
+    }
+
+    #bgfScrollWrap .con {
+      display: grid;
+      grid-template-columns: 1.3fr .7fr;
+      gap: clamp(14px, 2vw, 22px);
+      align-items: stretch;
+    }
+
+    #bgfScrollWrap .contents_area {
+      position: relative;
+      border-radius: 22px;
+      overflow: hidden;
+      min-height: 220px;
+    }
+
+    #bgfScrollWrap .cont_link {
+      display: block;
+      width: 100%;
+      height: 100%;
+      position: relative;
+      border-radius: inherit;
+      background: #0b0b0b;
+    }
+
+    #bgfScrollWrap .image_box {
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(800px 360px at 18% 22%, rgba(255, 255, 255, .18), transparent 60%),
+        linear-gradient(135deg, rgba(10, 10, 10, .0), rgba(10, 10, 10, .55));
+      transform: scale(1.02);
+      transition: transform 900ms cubic-bezier(.2, .8, .2, 1);
+    }
+
+    #bgfScrollWrap .sec01 .contents_area {
+      background: #f3f4f6;
+    }
+
+    #bgfScrollWrap .sec01 .image_box {
+      display: none !important;
+    }
+
+    #bgfScrollWrap .sec01 .mask {
+      display: none !important;
+    }
+
+    #bgfScrollWrap .con .image_box.show {
+      transform: scale(1.06);
+    }
+
+    #bgfScrollWrap .mask {
+      position: absolute;
+      inset: 0;
+      background: #0b0b0b;
+      transform: scaleX(1);
+      transform-origin: left;
+      z-index: 2;
+      will-change: transform;
+    }
+
+    #bgfScrollWrap .mask.right {
+      transform-origin: right;
+    }
+
+    #bgfScrollWrap .tit_company {
+      display: flex;
+      align-items: center;
+    }
+
+    #bgfScrollWrap .txt_inner {
+      display: block;
+      width: 100%;
+      padding: 12px 6px;
+      text-decoration: none;
+      transform: translateY(18px);
+      opacity: 0;
+    }
+
+    #bgfScrollWrap .txt_inner strong {
+      display: block;
+      font-size: clamp(18px, 1.8vw, 24px);
+      font-weight: 850;
+      letter-spacing: -0.02em;
+      color: #0b0b0b;
+      line-height: 1.15;
+    }
+
+    #bgfScrollWrap .txt_inner span {
+      display: block;
+      margin-top: 10px;
+      font-size: clamp(13px, 1.05vw, 15px);
+      color: rgba(11, 11, 11, .62);
+      line-height: 1.6;
+      word-break: keep-all;
+    }
+
+    /* ====== Accessible utilities ====== */
+    #bgfScrollWrap .blind {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    /* ====== Responsive ====== */
+    @media (max-width:1024px) {
+      #bgfScrollWrap .pc_on {
+        display: none;
+      }
+
+      #bgfScrollWrap .pc_none {
+        display: inline;
+      }
+
+      #bgfScrollWrap .m_slide_visual {
+        display: none !important;
+      }
+
+      #bgfScrollWrap .title_inner {
+        align-items: center;
+      }
+
+      #bgfScrollWrap .vision_wrap {
+        grid-template-columns: 1fr;
+        gap: 22px;
+      }
+
+      #bgfScrollWrap .mission dd {
+        font-size: clamp(18px, 5.4vw, 28px);
+        line-height: 1.3;
+      }
+
+      #bgfScrollWrap .vision .sub_text01 {
+        font-size: clamp(19px, 6vw, 54px) !important;
+        line-height:140% !important;
+      }
+
+      #bgfScrollWrap .con {
+        grid-template-columns: 1fr;
+      }
+
+      #bgfScrollWrap .contents_area {
+        min-height: 240px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      #bgfScrollWrap .contents_area {
+        min-height: 240px;
+      }
+
+      #bgfScrollWrap .vision_wrap {
+        grid-template-columns: 1fr;
+      }
+
+      #bgfScrollWrap .con {
+        grid-template-columns: 1fr;
+      }
+
+      #bgfScrollWrap .contents_area {
+        min-height: 240px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      #bgfScrollWrap .scroll_indicator::after {
+        animation: none;
+      }
+
+      #bgfScrollWrap .video_wrap iframe,
+      #bgfScrollWrap .video-placeholder {
+        transition: none;
+      }
+    }
+  </style>
+
+  <div class="bgf-container">
+    <div class="content">
+
+      <div class="pin-spacer">
+        <div class="sec sec_visual" data-bgf-hero="">
+          <div class="video_wrap" data-bgf-video="">
+            <div class="video-placeholder" aria-hidden="true"></div>
+
+            <iframe
+              id="bgf-vimeo-iframe"
+              src="https://player.vimeo.com/video/1214923337?background=1&mute=1&muted=1&autoplay=1&loop=1&playsinline=1&autopause=0"
+              allow="autoplay; fullscreen"
+              title="비즈니스 혁신 연구소 2"
+              frameborder="0"></iframe>
+          </div>
+
+          <div class="dim" data-bgf-dim=""></div>
+
+   <div class="title_wrap">
+  <div class="title_inner">
+
+    <div class="txt_box box01" data-bgf-titlewrap="">
+      <dl class="company">
+        <dt>나누리사회적협동조합</dt>
+        <dd>
+          주거환경 개선과 일자리 창출을 통해<br>
+          더 나은 삶을 만들어가는 사회적협동조합
+        </dd>
+      </dl>
+    </div>
+
+    <div class="txt_box">
+      <p class="box02" data-bgf-text02="">
+        복지의 사각지대에 놓인 이웃에게<br>
+        더 안전한 주거와 더 나은 삶의 기회를 제공합니다.<br><br>
+
+        집수리, 청소·수납, 소독 등<br>
+        생활과 밀접한 주거환경 개선 서비스를 제공하고,<br>
+        지속가능한 일자리 창출을 통해<br>
+        지역사회와 함께 성장하는 공익적 가치를 만들어갑니다.
+      </p>
+    </div>
+
+    <div class="txt_box vision_box">
+      <div class="vision_wrap" data-bgf-visionwrap="">
+
+        <dl class="vision" data-bgf-vision="">
+          <dt>VISION</dt>
+          <dd class="sub_text01"
+              data-bgf-visiontext=""
+              style="line-height: 1.6; font-size: 16px; margin-bottom: 0;">
+            주거, 일자리로 희망을 연결하여<br>
+            취약계층의 자립된 삶을 돕는다.
+          </dd>
+        </dl>
+
+        <dl class="mission" data-bgf-mission="">
+          <dt>MISSION</dt>
+          <dd data-bgf-missiondd="">
+            주거환경을 개선하고<br>
+            지속가능한 일자리를 창출하여<br>
+            자립과 지역사회의 상생을 만들어갑니다.
+          </dd>
+        </dl>
+
+        <div class="empty_box" aria-hidden="true"></div>
+
+      </div>
+    </div>
+
+  </div>
+</div>
+
+          <div class="scroll_icon" data-bgf-scrollicon="">
+            <span>Scroll</span>
+            <div class="scroll_indicator"></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      'use strict';
+
+      const root = document.getElementById('bgfScrollWrap');
+      if (!root) return;
+
+      if (root.dataset.bgfVanillaInit === '1') return;
+      root.dataset.bgfVanillaInit = '1';
+
+      const prefersReduce =
+        window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+      const secVisual = root.querySelector('[data-bgf-hero]');
+      if (!secVisual) return;
+
+      const pinSpacer = secVisual.parentElement;
+      const dim = root.querySelector('[data-bgf-dim]');
+      const titleWrap = root.querySelector('[data-bgf-titlewrap]');
+      const mainTitle = root.querySelectorAll('.company dt, .company dd');
+      const mainText02 = root.querySelector('[data-bgf-text02]');
+      const scrollIcon = root.querySelector('[data-bgf-scrollicon]');
+      const visionWrap = root.querySelector('[data-bgf-visionwrap]');
+      const visionBox = root.querySelector('[data-bgf-vision]');
+      const visionText01 = root.querySelector('[data-bgf-visiontext]');
+      const missionDD = root.querySelector('[data-bgf-missiondd]');
+      const videoWrap = root.querySelector('[data-bgf-video]');
+      const titleWrapEl = root.querySelector('.title_wrap');
+
+      function setupPin() {
+        const vh = window.innerHeight;
+        pinSpacer.style.cssText = 'position:relative;height:' + (vh * 4) + 'px;';
+        secVisual.style.cssText =
+          'position:sticky;top:0;width:100%;height:100vh;' +
+          'max-height:none;max-width:none;box-sizing:border-box;overflow:hidden;';
+      }
+
+      function getProgress() {
+        const scrolled = -pinSpacer.getBoundingClientRect().top;
+        return Math.max(0, Math.min(1, scrolled / (window.innerHeight * 3)));
+      }
+
+      function remap(v, i0, i1, o0, o1) {
+        return o0 + (o1 - o0) * Math.max(0, Math.min(1, (v - i0) / (i1 - i0)));
+      }
+
+      function lerp(a, b, t) {
+        return a + (b - a) * t;
+      }
+
+      function getVisionCfg() {
+        const w = window.innerWidth;
+        if (w >= 1367) return { font: 50, line: 70 };
+        if (w >= 1025) return { font: 40, line: 50 };
+        return { font: 30, line: 40 };
+      }
+
+      function revealTitle() {
+        if (prefersReduce) {
+          mainTitle.forEach(function (el) {
+            el.style.opacity = '1';
+            el.style.transform = 'translate3d(0,0,0)';
+          });
+          return;
+        }
+
+        mainTitle.forEach(function (el) {
+          el.style.opacity = '0';
+          el.style.transform = 'translate3d(0,20px,0)';
+        });
+
+        requestAnimationFrame(function () {
+          requestAnimationFrame(function () {
+            mainTitle.forEach(function (el, i) {
+              el.style.transition =
+                'opacity 0.9s ease ' + (i * 0.15) + 's,' +
+                'transform 0.9s cubic-bezier(.22,1,.36,1) ' + (i * 0.15) + 's';
+              el.style.opacity = '1';
+              el.style.transform = 'translate3d(0,0,0)';
+            });
+          });
+        });
+      }
+
+      var animationFrameId = 0;
+      var targetProgress = 0;
+      var smoothProgress = 0;
+      var isAnimating = false;
+
+      function scheduleUpdate() {
+        targetProgress = getProgress();
+        if (!isAnimating) {
+          isAnimating = true;
+          animationFrameId = requestAnimationFrame(animate);
+        }
+      }
+
+      function animate() {
+        var ease = 0.12;
+        smoothProgress = lerp(smoothProgress, targetProgress, ease);
+
+        if (Math.abs(targetProgress - smoothProgress) < 0.0008) {
+          smoothProgress = targetProgress;
+        }
+
+        update(smoothProgress);
+
+        if (Math.abs(targetProgress - smoothProgress) >= 0.0008) {
+          animationFrameId = requestAnimationFrame(animate);
+        } else {
+          isAnimating = false;
+        }
+      }
+
+      function update(progressValue) {
+        if (prefersReduce) return;
+        var p = typeof progressValue === 'number' ? progressValue : getProgress();
+        var cfg = getVisionCfg();
+
+        var bgVal = Math.round(255 * remap(p, 0.55, 0.70, 0, 1));
+        secVisual.style.backgroundColor = 'rgb(' + bgVal + ',' + bgVal + ',' + bgVal + ')';
+
+        if (dim) {
+          var da = remap(p, 0, 0.15, 0, 0.5);
+          var ds = remap(p, 0.55, 0.70, 1, 0.9);
+          dim.style.backgroundColor = 'rgba(0,0,0,' + da.toFixed(3) + ')';
+          dim.style.transform = 'translate3d(0,0,0) scale(' + ds.toFixed(4) + ')';
+        }
+
+        if (titleWrap) {
+          titleWrap.style.opacity = remap(p, 0.15, 0.35, 1, 0).toFixed(3);
+        }
+
+        if (mainText02) {
+          var inO = remap(p, 0.20, 0.38, 0, 1);
+          var outO = remap(p, 0.45, 0.60, 1, 0);
+          var yVal = remap(p, 0.20, 0.38, 24, 0);
+          mainText02.style.opacity = Math.min(inO, outO).toFixed(3);
+          mainText02.style.transform = 'translate3d(0,' + yVal.toFixed(1) + 'px,0)';
+        }
+
+        if (scrollIcon) {
+          scrollIcon.style.opacity = remap(p, 0.35, 0.50, 1, 0).toFixed(3);
+        }
+
+        var vs = remap(p, 0.55, 0.70, 1, 0.9);
+        if (videoWrap) videoWrap.style.transform = 'translate3d(0,0,0) scale(' + vs.toFixed(4) + ')';
+        if (titleWrapEl) titleWrapEl.style.transform = 'translate3d(0,0,0) scale(' + vs.toFixed(4) + ')';
+
+        var imgWraps = root.querySelectorAll('.m_slide_visual .img_wrap');
+        if (imgWraps.length) {
+          var sx = remap(p, 0.55, 0.70, 1, 0.93).toFixed(4);
+          var sy = remap(p, 0.55, 0.70, 1, 0.90).toFixed(4);
+          for (var i = 0; i < imgWraps.length; i++) {
+            imgWraps[i].style.transform = 'translate3d(0,0,0) scale(' + sx + ',' + sy + ')';
+          }
+        }
+
+        if (visionWrap) {
+          var vo = remap(p, 0.60, 0.75, 0, 1);
+          var vy = remap(p, 0.60, 0.75, 26, 0);
+          visionWrap.style.opacity = vo.toFixed(3);
+          visionWrap.style.transform = 'translate3d(0,' + vy.toFixed(1) + 'px,0)';
+        }
+
+        var vtP = remap(p, 0.75, 0.87, 0, 1);
+        if (visionText01) {
+          visionText01.style.fontSize = remap(vtP, 0, 1, 16, cfg.font).toFixed(1) + 'px';
+          visionText01.style.lineHeight = remap(vtP, 0, 1, 20, cfg.line).toFixed(1) + 'px';
+          visionText01.style.marginBottom = remap(vtP, 0, 1, 0, 40).toFixed(1) + 'px';
+        }
+        if (visionBox) {
+          if (vtP > 0.01) visionBox.classList.add('active');
+          else visionBox.classList.remove('active');
+        }
+
+        if (visionWrap) {
+          if (p >= 0.87) visionWrap.classList.add('active');
+          else visionWrap.classList.remove('active');
+        }
+
+        if (missionDD) {
+          var mo = remap(p, 0.90, 1.00, 0, 1);
+          var my = remap(p, 0.90, 1.00, 18, 0);
+          missionDD.style.opacity = mo.toFixed(3);
+          missionDD.style.transform = 'translate3d(0,' + my.toFixed(1) + 'px,0)';
+        }
+      }
+
+      function watchSectionTitle() {
+        var el = root.querySelector('[data-bgf-sectitle]');
+        if (!el) return;
+        if (prefersReduce) {
+          el.style.opacity = '1';
+          el.style.transform = 'none';
+          return;
+        }
+        var io = new IntersectionObserver(function (entries) {
+          if (!entries[0].isIntersecting) return;
+          el.style.transition = 'opacity .9s ease, transform .9s ease';
+          el.style.opacity = '1';
+          el.style.transform = 'none';
+          io.unobserve(el);
+        }, { rootMargin: '0px 0px -20% 0px' });
+        io.observe(el);
+      }
+
+      function watchCards() {
+        var cons = root.querySelectorAll('.contents_inner .con');
+        for (var i = 0; i < cons.length; i++) {
+          (function (item) {
+            var mask = item.querySelector('.mask');
+            var title = item.querySelector('.txt_inner');
+            if (!mask || !title) return;
+
+            if (prefersReduce) {
+              mask.style.transform = 'scaleX(0)';
+              title.style.opacity = '1';
+              title.style.transform = 'none';
+              return;
+            }
+
+            var isMobile = window.innerWidth <= 1024;
+            var maskMargin = isMobile ? '0px 0px -40% 0px' : '0px 0px -50% 0px';
+            var maskIO = new IntersectionObserver(function (entries) {
+              if (!entries[0].isIntersecting) return;
+              mask.style.transition = 'transform 1s cubic-bezier(.16,1,.3,1)';
+              mask.style.transform = 'scaleX(0)';
+              maskIO.unobserve(item);
+            }, { rootMargin: maskMargin });
+
+            var titleMargin = isMobile ? '0px 0px -45% 0px' : '0px 0px -50% 0px';
+            var titleIO = new IntersectionObserver(function (entries) {
+              if (!entries[0].isIntersecting) return;
+              title.style.transition = 'opacity .8s ease, transform .8s ease';
+              title.style.opacity = '1';
+              title.style.transform = 'none';
+              titleIO.unobserve(item);
+            }, { rootMargin: titleMargin });
+
+            maskIO.observe(item);
+            titleIO.observe(item);
+
+            title.addEventListener('mouseenter', function () {
+              var img = item.querySelector('.image_box');
+              if (img) img.classList.add('show');
+            });
+            title.addEventListener('mouseleave', function () {
+              var img = item.querySelector('.image_box');
+              if (img) img.classList.remove('show');
+            });
+          })(cons[i]);
+        }
+      }
+
+      function initSlider() {
+        var sEl = root.querySelector('[data-bgf-swiper]');
+        if (!sEl) return;
+        if (!window.matchMedia('(max-width:1024px)').matches) return;
+
+        var wrap = sEl.querySelector('.swiper-wrapper');
+        if (!wrap) return;
+        var slides = wrap.querySelectorAll('.swiper-slide');
+        if (slides.length < 2) return;
+
+        wrap.style.cssText = 'position:relative;width:100%;height:100%;';
+        for (var i = 0; i < slides.length; i++) {
+          slides[i].style.cssText =
+            'position:absolute;inset:0;width:100%;height:100%;' +
+            'opacity:' + (i === 0 ? '1' : '0') + ';' +
+            'transition:opacity 2.5s ease;';
+        }
+
+        var cur = 0;
+        setInterval(function () {
+          slides[cur].style.opacity = '0';
+          cur = (cur + 1) % slides.length;
+          slides[cur].style.opacity = '1';
+        }, 3000);
+      }
+
+      /* ✅ 블랙아웃 없는 미리보기 → 영상 전환 */
+      function initVideoPlaceholder() {
+        var iframe = root.querySelector('.video_wrap iframe');
+        var wrap = root.querySelector('.video_wrap');
+        if (!iframe || !wrap) return;
+
+        var script = document.createElement('script');
+        script.src = 'https://player.vimeo.com/api/player.js';
+        script.onload = function () {
+          if (!window.Vimeo) return;
+
+          var player = new Vimeo.Player(iframe);
+          var hasSwitched = false;
+
+          function revealVideo() {
+            if (hasSwitched) return;
+            hasSwitched = true;
+            wrap.classList.add('is-video-ready');
+
+            var placeholder = wrap.querySelector('.video-placeholder');
+            if (placeholder) {
+              setTimeout(function () {
+                placeholder.style.display = 'none';
+              }, 950);
+            }
+          }
+
+          player.ready().then(function () {
+            player.play().catch(function () {});
+          }).catch(function () {});
+
+          player.on('playing', function () {
+            revealVideo();
+          });
+
+          player.on('timeupdate', function (data) {
+            if (data && data.seconds >= 0.08) {
+              revealVideo();
+            }
+          });
+
+          // 혹시 playing 이벤트가 늦거나 누락될 때 대비한 보조 처리
+          setTimeout(function () {
+            player.getCurrentTime().then(function (sec) {
+              if (sec > 0) revealVideo();
+            }).catch(function () {});
+          }, 1800);
+        };
+
+        document.body.appendChild(script);
+      }
+
+      function boot() {
+        setupPin();
+        revealTitle();
+        watchSectionTitle();
+        watchCards();
+        initSlider();
+        initVideoPlaceholder();
+        targetProgress = getProgress();
+        smoothProgress = targetProgress;
+        update(smoothProgress);
+      }
+
+      if (document.readyState === 'loading') {
+        window.addEventListener('DOMContentLoaded', boot, { once: true });
+      } else {
+        boot();
+      }
+
+      window.addEventListener('scroll', scheduleUpdate, { passive: true });
+
+      var resizeRaf = 0;
+      window.addEventListener('resize', function () {
+        cancelAnimationFrame(resizeRaf);
+        resizeRaf = requestAnimationFrame(function () {
+          setupPin();
+          targetProgress = getProgress();
+          if (!isAnimating) {
+            smoothProgress = targetProgress;
+            update(smoothProgress);
+          }
+        });
+      });
+
+    })();
+  </script>
+</section>
+
+<section id="rdOverviewSection" aria-label="프로그램 소개 섹션">
+  <style>
+    #rdOverviewSection {
+      /* =========================
+         COLOR SYSTEM
+      ========================= */
+      --rd-bg: #ffffff;
+      --rd-card-max: 1018px;
+
+      --rd-text: #111111;
+      --rd-muted: #555555;
+      --rd-line: rgba(0, 0, 0, 0.14);
+
+      --rd-accent: #78c850;
+      --rd-navy: #18335a;
+
+      /* =========================
+         SIZE SYSTEM
+         - 세로(높이)에 영향을 주는 값은 vw 를 쓰지 않고
+           breakpoint 별 고정값으로 고정 → 스크롤 중 높이 변동 없음
+      ========================= */
+      --rd-img-radius: 0px;
+
+      --rd-sec-pad-top: 32px;
+      --rd-sec-pad-bottom: 84px;
+
+      --rd-content-gap-top: 66px;
+      --rd-item-pad-top: 14px;
+      --rd-item-pad-bottom: 58px;
+
+      --rd-title-size: 42px;
+      --rd-label-size: 21px;
+      --rd-body-size: 16px;
+
+      --rd-move: 28px;
+
+      position: relative;
+      width: 100%;
+      background: var(--rd-bg);
+
+      padding: var(--rd-sec-pad-top) 0 var(--rd-sec-pad-bottom);
+
+      overflow: hidden;
+      box-sizing: border-box;
+
+      /* 레이아웃 변화가 바깥으로 전파되지 않도록 격리 */
+      contain: layout style;
+
+      font-family:
+        "Pretendard",
+        "Apple SD Gothic Neo",
+        "Noto Sans KR",
+        sans-serif;
+
+      color: var(--rd-text);
+    }
+
+    /* =========================
+       BOX SIZING
+    ========================= */
+    #rdOverviewSection,
+    #rdOverviewSection::before,
+    #rdOverviewSection::after,
+    #rdOverviewSection section,
+    #rdOverviewSection div,
+    #rdOverviewSection img,
+    #rdOverviewSection h2,
+    #rdOverviewSection h3,
+    #rdOverviewSection p,
+    #rdOverviewSection svg,
+    #rdOverviewSection span {
+      box-sizing: border-box;
+    }
+
+    /* =========================
+       SHELL
+    ========================= */
+    #rdOverviewSection .rd-shell {
+      width: min(calc(100% - 48px), calc(var(--rd-card-max) + 72px));
+      margin: 0 auto;
+    }
+
+    /* =========================
+       TOP IMAGE
+       - aspect-ratio 만으로 높이 확정 (min-height 제거)
+       - 이미지 로드 전/후 높이가 동일하므로 로드 시 밀림 없음
+    ========================= */
+    #rdOverviewSection .rd-visual {
+      position: relative;
+
+      width: 100%;
+      aspect-ratio: 1018 / 447;
+
+      overflow: hidden;
+
+      border-radius: var(--rd-img-radius);
+
+      background: #f1f1f1;
+    }
+
+    #rdOverviewSection .rd-visual img {
+      width: 100%;
+      height: 100%;
+
+      display: block;
+
+      object-fit: cover;
+      object-position: center;
+
+      transform: scale(1.01);
+    }
+
+    /* =========================
+       CONTENT
+    ========================= */
+    #rdOverviewSection .rd-content {
+      display: grid;
+
+      grid-template-columns: 220px minmax(0, 1fr);
+
+      gap: 48px;
+
+      align-items: start;
+
+      margin-top: var(--rd-content-gap-top);
+    }
+
+    /* =========================
+       LEFT TITLE
+    ========================= */
+    #rdOverviewSection .rd-side {
+      display: flex;
+
+      align-items: center;
+
+      gap: 16px;
+
+      padding-left: 8px;
+    }
+
+    #rdOverviewSection .rd-side-icon {
+      width: 54px;
+      height: 54px;
+
+      flex: 0 0 auto;
+    }
+
+    #rdOverviewSection .rd-side-title {
+      margin: 0;
+
+      font-size: var(--rd-title-size);
+
+      line-height: 1;
+
+      font-weight: 800;
+
+      letter-spacing: -0.04em;
+
+      color: #111111;
+    }
+
+    /* =========================
+       LIST
+    ========================= */
+    #rdOverviewSection .rd-list {
+      min-width: 0;
+    }
+
+    #rdOverviewSection .rd-item {
+      position: relative;
+
+      display: grid;
+
+      grid-template-columns: 152px minmax(0, 1fr);
+
+      gap: 40px;
+
+      padding: var(--rd-item-pad-top) 0 var(--rd-item-pad-bottom);
+
+      border-top: 1px solid var(--rd-line);
+
+      /* 항목 내부 변화가 형제 요소 높이에 영향 주지 않도록 */
+      contain: layout style;
+    }
+
+    #rdOverviewSection .rd-item:first-child {
+      border-top: none;
+      padding-top: 0;
+    }
+
+    /* =========================
+       ITEM TITLE
+    ========================= */
+    #rdOverviewSection .rd-label {
+      margin: 0;
+
+      font-size: var(--rd-label-size);
+
+      line-height: 1.35;
+
+      font-weight: 800;
+
+      letter-spacing: -0.04em;
+
+      color: #111111;
+
+      word-break: keep-all;
+    }
+
+    /* =========================
+       ITEM DESCRIPTION
+    ========================= */
+    #rdOverviewSection .rd-desc {
+      margin: 0;
+
+      font-size: var(--rd-body-size);
+
+      line-height: 1.7;
+
+      font-weight: 500;
+
+      letter-spacing: -0.02em;
+
+      color: rgba(17, 17, 17, 0.72);
+
+      word-break: keep-all;
+    }
+
+    /* =========================
+       ANIMATION
+       - transform / opacity 만 사용 (레이아웃 미발생)
+       - will-change 는 등장 전에만 적용, 등장 후 해제
+    ========================= */
+    #rdOverviewSection .rd-anim {
+      opacity: 0;
+
+      backface-visibility: hidden;
+
+      transition:
+        opacity 0.7s ease,
+        transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    #rdOverviewSection .rd-anim:not(.is-inview) {
+      will-change: transform, opacity;
+    }
+
+    #rdOverviewSection .rd-anim.is-inview {
+      opacity: 1;
+
+      transform: translate3d(0, 0, 0);
+
+      will-change: auto;
+    }
+
+    #rdOverviewSection .fadeInup {
+      transform: translate3d(0, var(--rd-move), 0);
+    }
+
+    #rdOverviewSection .fadeInleft {
+      transform: translate3d(calc(var(--rd-move) * -1), 0, 0);
+    }
+
+    #rdOverviewSection .fadeInright {
+      transform: translate3d(var(--rd-move), 0, 0);
+    }
+
+    /* =========================
+       ANIMATION DELAY
+    ========================= */
+    #rdOverviewSection .rd-item:nth-child(2) .rd-anim {
+      transition-delay: 0.06s;
+    }
+
+    #rdOverviewSection .rd-item:nth-child(3) .rd-anim {
+      transition-delay: 0.12s;
+    }
+
+    #rdOverviewSection .rd-item:nth-child(4) .rd-anim {
+      transition-delay: 0.18s;
+    }
+
+    #rdOverviewSection .rd-item:nth-child(5) .rd-anim {
+      transition-delay: 0.24s;
+    }
+
+    /* =========================
+       DESKTOP DOWN
+    ========================= */
+    @media (max-width: 1100px) {
+
+      #rdOverviewSection {
+        --rd-title-size: 36px;
+        --rd-content-gap-top: 56px;
+        --rd-item-pad-bottom: 52px;
+      }
+
+      #rdOverviewSection .rd-content {
+        grid-template-columns: 200px minmax(0, 1fr);
+        gap: 36px;
+      }
+
+      #rdOverviewSection .rd-item {
+        grid-template-columns: 140px minmax(0, 1fr);
+        gap: 30px;
+      }
+    }
+
+    /* =========================
+       TABLET
+    ========================= */
+    @media (max-width: 900px) {
+
+      #rdOverviewSection {
+        --rd-content-gap-top: 46px;
+        --rd-item-pad-bottom: 46px;
+        --rd-title-size: 34px;
+      }
+
+      #rdOverviewSection .rd-content {
+        grid-template-columns: 1fr;
+
+        gap: 26px;
+      }
+
+      #rdOverviewSection .rd-side {
+        padding-left: 0;
+      }
+
+      #rdOverviewSection .rd-list {
+        width: 100%;
+      }
+
+      #rdOverviewSection .rd-item {
+        grid-template-columns: 130px minmax(0, 1fr);
+        gap: 24px;
+      }
+    }
+
+    /* =========================
+       MOBILE
+    ========================= */
+    @media (max-width: 640px) {
+
+      #rdOverviewSection {
+        --rd-sec-pad-top: 18px;
+        --rd-sec-pad-bottom: 44px;
+
+        --rd-content-gap-top: 34px;
+        --rd-item-pad-top: 12px;
+        --rd-item-pad-bottom: 28px;
+
+        --rd-title-size: 30px;
+        --rd-label-size: 16px;
+        --rd-body-size: 14px;
+
+        /* 모바일은 이동거리를 줄여 스크롤 중 프레임 드랍 방지 */
+        --rd-move: 16px;
+      }
+
+      #rdOverviewSection .rd-shell {
+        width: min(calc(100% - 28px), calc(var(--rd-card-max) + 72px));
+      }
+
+      #rdOverviewSection .rd-visual {
+        aspect-ratio: 16 / 10.4;
+      }
+
+      #rdOverviewSection .rd-side {
+        gap: 12px;
+      }
+
+      #rdOverviewSection .rd-item {
+        grid-template-columns: 1fr;
+
+        gap: 12px;
+      }
+
+      #rdOverviewSection .rd-desc {
+        line-height: 1.65;
+      }
+
+      /* 좌우 이동은 모바일에서 가로 흔들림 원인 → 세로 이동으로 통일 */
+      #rdOverviewSection .fadeInleft,
+      #rdOverviewSection .fadeInright {
+        transform: translate3d(0, var(--rd-move), 0);
+      }
+    }
+
+    /* =========================
+       REDUCED MOTION
+    ========================= */
+    @media (prefers-reduced-motion: reduce) {
+
+      #rdOverviewSection .rd-anim {
+        opacity: 1 !important;
+
+        transform: none !important;
+
+        transition: none !important;
+
+        will-change: auto !important;
+      }
+    }
+  </style>
+
+
+  <!-- =========================
+       CONTENT
+  ========================== -->
+  <div class="rd-shell">
+
+    <!-- IMAGE -->
+    <div class="rd-visual rd-anim fadeInup">
+
+      <img
+        src="https://cdn.imweb.me/thumbnail/20200918/ab32e72376d26.jpg"
+        alt="프로그램 브랜드 비주얼"
+        width="1018"
+        height="447"
+        decoding="async"
+      >
+
+    </div>
+
+
+    <!-- CONTENT -->
+    <div class="rd-content">
+
+      <!-- LEFT -->
+      <div class="rd-side rd-anim fadeInleft">
+
+        <h2 class="rd-side-title">
+          사업 형태
+        </h2>
+
+      </div>
+
+
+      <!-- RIGHT -->
+      <div class="rd-list">
+
+
+        <!-- 01 -->
+        <div class="rd-item">
+
+          <h3 class="rd-label rd-anim fadeInup">
+            가사관리 서비스
+          </h3>
+
+          <p class="rd-desc rd-anim fadeInright">
+            몸이 불편하거나 일상 유지가 어려운 분들에게<br>
+            청소, 세탁, 식사 준비 등 생활 전반의 가사를 지원합니다.<br>
+            혼자 감당하기 힘든 하루를 함께 나눕니다.
+          </p>
+
+        </div>
+
+
+        <!-- 02 -->
+        <div class="rd-item">
+
+          <h3 class="rd-label rd-anim fadeInup">
+            청소 &amp; 소독
+          </h3>
+
+          <p class="rd-desc rd-anim fadeInright">
+            스스로 관리가 어려워 방치된 주거 공간을<br>
+            묵은 오염 제거부터 살균 · 방역까지 한 번에 처리합니다.<br>
+            위생이 무너진 공간에서 다시 일상을 시작할 수 있도록 돕습니다.
+          </p>
+
+        </div>
+
+
+        <!-- 03 -->
+        <div class="rd-item">
+
+          <h3 class="rd-label rd-anim fadeInup">
+            정리수납
+          </h3>
+
+          <p class="rd-desc rd-anim fadeInright">
+            물건이 쌓여 공간을 제대로 쓰지 못하는 집을<br>
+            쓰임에 맞게 비우고, 나누고, 제자리를 만들어 드립니다.<br>
+            정돈된 공간은 다시 어지럽혀지지 않도록 설계합니다.
+          </p>
+
+        </div>
+
+
+        <!-- 04 -->
+        <div class="rd-item">
+
+          <h3 class="rd-label rd-anim fadeInup">
+            집수리 &amp; 인테리어
+          </h3>
+
+          <p class="rd-desc rd-anim fadeInright">
+            낡고 불편해진 주거 환경을 개선합니다.<br>
+            가사관리 · 청소소독 · 정리수납 · 집수리를 한 번에 연결해<br>
+            삶의 공간이 계속 나아지는 변화를 만들어 갑니다.
+          </p>
+
+        </div>
+
+
+        <!-- 05 -->
+        <div class="rd-item">
+
+          <h3 class="rd-label rd-anim fadeInup">
+            취업 연계 자격증 교육
+          </h3>
+
+          <p class="rd-desc rd-anim fadeInright">
+            취약 계층의 자립된 삶을 위해<br>
+            자격증 취득을 돕고 취업을 통해서<br>
+            안정적 수익과 사회에 기여할 수 있도록 교육과 취업을 돕습니다.
+          </p>
+
+        </div>
+
+
+      </div>
+    </div>
+
+  </div>
+
+
+  <!-- =========================
+       SCRIPT
+  ========================== -->
+  <script>
+    (function () {
+
+      var section = document.getElementById('rdOverviewSection');
+
+      if (!section) return;
+
+      var targets = Array.prototype.slice.call(
+        section.querySelectorAll('.rd-anim')
+      );
+
+      if (!targets.length) return;
+
+
+      function reveal(el) {
+        el.classList.add('is-inview');
+      }
+
+      function revealAll() {
+        targets.forEach(reveal);
+      }
+
+
+      /* 모션 최소화 설정 또는 IO 미지원 → 즉시 표시 */
+      var reduce =
+        window.matchMedia &&
+        window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+      if (reduce || !('IntersectionObserver' in window)) {
+        revealAll();
+        return;
+      }
+
+
+      var io = new IntersectionObserver(
+
+        function (entries, observer) {
+
+          entries.forEach(function (entry) {
+
+            if (!entry.isIntersecting) return;
+
+            /* 한 번만 실행하고 관찰 해제 → 재진입 시 재애니메이션(튕김) 없음 */
+            reveal(entry.target);
+            observer.unobserve(entry.target);
+
+          });
+
+        },
+        {
+          threshold: 0.1,
+          rootMargin: '0px 0px -5% 0px'
+        }
+      );
+
+
+      targets.forEach(function (el) {
+        io.observe(el);
+      });
+
+
+      /* 안전장치: 어떤 이유로든 관찰이 동작하지 않아도 내용이 숨겨진 채 남지 않도록 */
+      setTimeout(function () {
+        revealAll();
+        io.disconnect();
+      }, 4000);
+
+    })();
+  </script>
+</section>
+
+
+
+
+
+
+    <div id="footer_template"></div>
+
+
+
+  </body>
+  <script src="./js/jquery-1.11.0.min.js"></script>
+  <script src="./js/validation1.js"> </script>
+  <script src="./js/main.js"> </script>
+  <script src="./js/footer.js"></script>
+
+</html>

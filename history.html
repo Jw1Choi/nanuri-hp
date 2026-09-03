@@ -1,0 +1,1266 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+
+ 
+  <!-- 소유권 인증(각 도메인별 값으로 교체) -->
+<meta name="naver-site-verification" content="" />
+  <meta name="google-site-verification" content="구글_인증코드_여기에" />
+
+   <!-- Canonical (대표 URL로 고정) -->
+  <link rel="canonical" href="https://nanuri.co.kr" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="./img/favicon.png" sizes="any">
+  <link rel="shortcut icon" href="./img/favicon.png" type="image/x-icon">
+  <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./img/favicon.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="./img/favicon.png">
+
+  <meta name="robots" content="index,follow" />
+  <meta name="subject" content="나누리사회적협동조합" />
+  <meta name="title" content="나누리사회적협동조합" />
+  <meta name="author" content="나누리사회적협동조합">
+  <meta name="description" content="나누리사회적협동조합 — 복지의 사각지대 | 고령화 시대 주거·돌봄의 문제를 해결합니다." />
+
+  <meta name="keywords"
+    content="나누리사회적협동조합, 나누리사회적협동조합, Healthy Beauty, Well-aging, Beauty Health Industry, 글로벌 뷰티 헬스 기업, 건강한 아름다움, 뷰티 산업, 헬스 산업, 웰에이징 산업, 뷰티 헬스 비즈니스, 글로벌 네트워크, 뷰티 교육, 헬스 교육, 뷰티 전문가, 건강 산업, 라이프스타일 산업, 글로벌 비즈니스 플랫폼, HTU 브랜드" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:rich_attachment" content="true" />
+  <meta property="og:site_name" content="나누리사회적협동조합" />
+  <meta property="og:title" content="나누리사회적협동조합" />
+  <meta property="og:description" content="나누리사회적협동조합 — 복지의 사각지대 | 고령화 시대 주거·돌봄의 문제를 해결합니다." />
+  <meta property="og:image" content="./video/na-01.png" />
+  <meta property="og:url" content="https://nanuri.co.kr" />
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="나누리사회적협동조합" />
+  <meta name="twitter:description" content="나누리사회적협동조합 — 복지의 사각지대 | 고령화 시대 주거·돌봄의 문제를 해결합니다." />
+  <meta name="twitter:image" content="./video/na-01.png" />
+
+  <meta itemprop="name" content="나누리사회적협동조합" />
+  <meta itemprop="description" content="나누리사회적협동조합 — 복지의 사각지대 | 고령화 시대 주거·돌봄의 문제를 해결합니다." />
+  <meta itemprop="image" content="./video/na-01.png" />
+
+  <title>나누리사회적협동조합</title>
+  
+  <link href="./css/reset.css" rel="stylesheet" type="text/css" />
+   <link href="./css/style.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <div id="menu_navi"></div>
+
+<script src="./menu3.js"></script>
+
+
+
+  <style>
+    /* ── RESET & LAYOUT ── */
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:'Pretendard',sans-serif;background:#111;color:#fff;overflow-x:hidden}
+    .container{display:flex}
+    #main{flex:1;position:relative;overflow:hidden}
+    #visualTransWrap{position:absolute;inset:0;pointer-events:none;z-index:5}
+
+    /* ── SWIPER & BG ── */
+    .mv_container{width:100%;height:90vh;position:relative}
+    .swiper-container,.swiper-wrapper,.swiper-slide{width:100%;height:100%}
+    .bg{position:absolute;inset:0;background-size:cover;background-position:center;transition:transform 6s ease;filter:brightness(0.5)}
+    .swiper-slide-active .bg{transform:scale(1.12)}
+    .bg1{background-image:url('./img/intro-1.jpg')}
+    .bg2{background-image:url('./img/intro-2.jpg')}
+    .bg3{background-image:url('./img/page-3.jpg')}
+    .bg4{background-image:url('./img/repair.jpg')}
+
+    /* ── TEXT & BUTTON ── */
+    .mv_txt_box{position:absolute;top:20%;left:5%;max-width:640px;z-index:2}
+    .mv_cate{font-size:18px;font-weight:600;margin-bottom:14px;color:#ffeb55;display:inline-block}
+    .mv_tit{font-size:43px;line-height:1.4;margin:0 0 12px}
+    @media screen and (max-width:620px){ .mv_tit{font-size:34px !important;} }
+    @media screen and (max-width:500px){ .mv_tit{font-size:26px !important;} }
+    .mv_txt{font-size:18px;line-height:1.6;font-weight:300}
+    .mv_btn{
+      display:inline-block;margin-top:30px;padding:14px 36px;
+      border:2px solid #fff;border-radius:40px;
+      background:transparent;color:#fff;font-weight:600;letter-spacing:.3px;
+      opacity:0;pointer-events:none;
+      transition:opacity .6s,background .35s,box-shadow .35s,color .35s,transform .35s;
+      position:relative;overflow:hidden;text-decoration:none;
+    }
+    .swiper-slide-active .mv_btn{opacity:1;pointer-events:auto}
+    .mv_btn::after{
+      content:'';position:absolute;inset:0;background:rgba(255,255,255,.15);
+      transform:translateX(-100%);transition:transform .4s;
+    }
+    .mv_btn:hover::after{transform:translateX(0)}
+    .mv_btn:hover{
+      background:#fff;color:#111;box-shadow:0 8px 24px rgba(0,0,0,.25);
+      transform:translateY(-2px);
+    }
+
+    /* ── WAVE ANIMATION ── */
+    .wave_anim .wave{display:inline-block;opacity:0;animation:wave 1.1s ease-out forwards}
+    @keyframes wave{0%{transform:translateY(25px);opacity:0}100%{transform:translateY(0);opacity:1}}
+    .wave_anim.custom .wave:nth-child(1){animation-delay:.15s}
+    .wave_anim.custom .wave:nth-child(2){animation-delay:.3s}
+    .wave_anim.custom .wave:nth-child(3){animation-delay:.45s}
+
+    /* ── PROGRESS BAR ── */
+    .progress-container{position:absolute;bottom:80px;left:5%;right:5%;height:4px;display:flex;gap:10px;z-index:3;width:150px;}
+    .progress-segment{flex:1;background:rgba(255,255,255,.25);border-radius:2px;overflow:hidden;cursor:pointer}
+    .progress-fill{width:0;height:100%;background:#fff;display:block}
+
+    .wheel_down{position:absolute;bottom:14px;left:50%;transform:translateX(-50%);width:24px;opacity:.7;z-index:3;animation: wheel-bounce 2s ease-in-out infinite;}
+    .wheel_down .wheel {animation: wheel-fade 2s ease-in-out infinite;}
+    @keyframes wheel-fade {
+      0%{opacity:1;transform:translateY(0)}
+      80%{opacity:.2;transform:translateY(10px)}
+      100%{opacity:0;transform:translateY(14px)}
+    }
+    #sidebar{display:none}
+  </style>
+
+  <style>
+    /* ──────────────────────────────────────────
+          #visual-section 전용 스타일
+      ─────────────────────────────────────────── */
+    #visual-section{position:relative;width:100%;height:100vh;overflow:hidden}
+    #visual-section .video_wrap{position:absolute;inset:0;z-index:0}
+    #visual-section .video_wrap video{width:100%;height:100%;object-fit:cover;object-position:center}
+    #visual-section .overlay{position:absolute;inset:0;background:rgba(0,0,0,0.5)}
+    #visual-section .txt_container{
+      position:absolute;inset:0;z-index:2;
+      display:flex;flex-direction:column;
+      justify-content:space-evenly;align-items:center;
+      text-align:center;pointer-events:none
+    }
+    @keyframes fadeInUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+    #visual-section .company,#visual-section .logo,#visual-section .exp{opacity:0}
+    #visual-section.animate .company{
+      color:#fff;font-size:2.5rem;font-weight:500;margin-bottom:.5em;
+      animation:fadeInUp 1s ease-out forwards;animation-delay:.2s
+    }
+    #visual-section.animate .logo{animation:fadeInUp 1s ease-out forwards;animation-delay:.7s}
+    #visual-section .logo .m_logo{
+      width:800px;height:130px;
+      background:url("../img/sm-logo.png") no-repeat center/contain;
+      margin-bottom:.5em
+    }
+    #visual-section.animate .exp{
+      color:#fff;font-size:1.25rem;line-height:1.6;max-width:80%;
+      animation:fadeInUp 1s ease-out forwards;animation-delay:1s
+    }
+    #visual-section .highlight{color:#e6d3a3;font-weight:600}
+    @media (max-width:768px){
+      #visual-section .company{font-size:2rem !important}
+      #visual-section .logo .m_logo{
+        background:url("../img/sm-font.png") no-repeat center/contain;
+        width:400px;height:300px
+      }
+      #visual-section .exp{font-size:1rem}
+      #visual-section .video_wrap video{object-position:right center}
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- 메뉴(외부 로드) -->
+<div id="menu"></div>
+
+<style>
+  /* ───────────────────────────────────────────────
+     공통 · 레이아웃
+  ───────────────────────────────────────────────*/
+  .sub-visual__wrap{
+    position:relative; z-index:2;
+    height:80vh; width:100%;
+    background-size:cover!important; background-position:center top!important;
+    overflow:hidden; perspective:900px;
+    --reveal-dur: 900ms;
+  }
+  .sub-visual__wrap.visual-01{
+    background:url(https://cdn.imweb.me/thumbnail/20250514/346eb708a2de8.jpg) no-repeat center top;
+  }
+  .sub-visual__wrap[class*="visual"]::before{
+    z-index:1; content:''; position:absolute; inset:0;
+    background:linear-gradient(110deg,rgba(18,22,34,.56)45%,rgba(28,33,54,.34)100%);
+    pointer-events:none; transition:background .8s;
+  }
+
+  /* ▼ 중앙에서 바깥쪽으로 '열리며' 배경이 나타나는 리빌 패널 */
+  .sub-visual__wrap .reveal{
+    position:absolute; top:0; bottom:0; width:50%;
+    background:#0b0d12;
+    z-index:0;
+    transform:translateX(0);
+    will-change:transform;
+  }
+  .sub-visual__wrap .reveal.l{ left:0; }
+  .sub-visual__wrap .reveal.r{ right:0; }
+  .sub-visual__wrap.play .reveal.l{ animation:revealOutL var(--reveal-dur) cubic-bezier(.22,.8,.18,1) forwards; }
+  .sub-visual__wrap.play .reveal.r{ animation:revealOutR var(--reveal-dur) cubic-bezier(.22,.8,.18,1) forwards; }
+  @keyframes revealOutL{ to{ transform:translateX(-100%); } }
+  @keyframes revealOutR{ to{ transform:translateX(100%); } }
+  @media (prefers-reduced-motion:reduce){
+    .sub-visual__wrap.play .reveal.l{ animation:none; transform:translateX(-100%); }
+    .sub-visual__wrap.play .reveal.r{ animation:none; transform:translateX(100%); }
+  }
+
+  /* ───── 브레드크럼 ───── */
+  .breadcrumb-nav{
+    position:absolute;
+    left:50%; transform:translateX(-50%) translateY(-18px);
+    width:100%;
+    top:20%; max-width:1440px;
+    margin:0 40px;
+    bottom:210px;
+    z-index:10;
+    font-family:'Pretendard','Noto Sans KR',sans-serif;
+    opacity:0;
+    transition:opacity .9s cubic-bezier(.22,.9,.39,1.01),
+               transform 1.05s cubic-bezier(.22,.9,.39,1.01);
+  }
+  .breadcrumb-nav.in{opacity:1; transform:translateX(-50%) translateY(0);}
+  .breadcrumb-nav ol{
+    display:flex; gap:10px; align-items:center; margin:0; padding:0;
+    font-size:1.04rem; color:#fff; opacity:.92; list-style:none;
+  }
+  .breadcrumb-nav li{display:flex; align-items:center;}
+  .breadcrumb-nav li:not(:last-child)::after{
+    content:"›"; margin:0 7px; color:#fff; opacity:.48; font-size:.92em; font-weight:600;
+  }
+  .breadcrumb-nav a{color:#fff; opacity:.83; text-decoration:none; transition:opacity .17s;}
+  .breadcrumb-nav a:hover,.breadcrumb-nav a:focus{opacity:1; text-decoration:underline;}
+  .breadcrumb-nav .current{color:#fff; font-weight:700; opacity:1;}
+
+  /* ───── 타이틀 · 설명 ───── */
+  .sub-visual__area{
+    position:absolute; bottom:110px; left:50%; transform:translateX(-50%);
+    width:100%; max-width:1440px; margin:0 40px; z-index:2;
+  }
+  .sub-visual__title{
+    color:#fff; text-align:left; width:100%;
+    filter:drop-shadow(0 8px 32px rgba(0,0,0,.11));
+  }
+
+  /* ✅ H1/H2/H3/H4 정리: 인사말 페이지의 메인 타이틀은 h1 */
+  .sub-visual__title .title{
+    font-size:56px; font-weight:700; line-height:1.28; letter-spacing:-1px;
+    opacity:0; transform:translateY(60px) scale(.96) skewY(4deg) rotateX(15deg);
+    filter:blur(4px) brightness(1.4);
+    transition:all 1.1s cubic-bezier(.24,.8,.26,1.01);
+    margin:0;
+  }
+  .sub-visual__title .desc{
+    font-size:26px; margin-top:26px; opacity:0;
+    transform:translateY(50px) scale(.97) skewY(2deg) rotateX(10deg);
+    filter:blur(7px) brightness(1.3);
+    min-height:28px; font-weight:400; letter-spacing:-.3px; line-height:1.4;
+    transition:all 1.25s cubic-bezier(.22,.78,.21,1.02) .14s;
+    margin:0;
+  }
+  .sub-visual__title.in .title{ opacity:1; filter:blur(0) brightness(1); transform:none; }
+  .sub-visual__title.in .desc{  opacity:1; filter:blur(0) brightness(1); transform:none; }
+
+  /* ───── 반응형 ───── */
+  @media(max-width:950px){
+    .sub-visual__wrap{height:440px;}
+    .sub-visual__area{bottom:52px; margin:0 16px;}
+    .breadcrumb-nav{margin:0 16px; bottom:112px;}
+    .sub-visual__title .title{font-size:2rem;}
+    .sub-visual__title .desc{font-size:1.02rem;}
+    .breadcrumb-nav ol{font-size:.92rem;}
+  }
+</style>
+
+<!-- ▣ 비주얼 영역 -->
+<div class="sub-visual__wrap visual-01">
+  <div class="reveal l" aria-hidden="true"></div>
+  <div class="reveal r" aria-hidden="true"></div>
+
+  <!-- 브레드크럼 -->
+  <nav class="breadcrumb-nav" aria-label="breadcrumb">
+    <ol>
+      <li><a href="#">홈</a></li>
+      <li><a href="#">나누리 소개</a></li>
+      <li><a href="#">사업연혁</a></li>
+    </ol>
+  </nav>
+
+  <!-- 타이틀·설명 -->
+  <div class="sub-visual__area">
+    <header class="sub-visual__title">
+      <!-- ✅ 기존 strong → h1으로 교체 -->
+      <h1 class="title">사업 연혁</h1>
+     
+    </header>
+  </div>
+</div>
+
+<script>
+  /* ───── 애니메이션 + 패럴럭스 + 브레드크럼 정렬 ───── */
+  document.addEventListener('DOMContentLoaded',()=>{
+    const titleBox   = document.querySelector('.sub-visual__title');
+    const breadcrumb = document.querySelector('.breadcrumb-nav');
+    const visual     = document.querySelector('.sub-visual__wrap.visual-01');
+
+    // ① 배경 양갈래 리빌 시작(중앙 → 바깥)
+    visual.classList.add('play');
+
+    // 리빌 길이( CSS 변수 --reveal-dur )를 읽어서 동기화
+    const dur = parseInt(getComputedStyle(visual).getPropertyValue('--reveal-dur')) || 900;
+
+    // ② 리빌 종료 후 텍스트 등장
+    setTimeout(()=>{
+      titleBox.classList.add('in');
+      breadcrumb.classList.add('in');
+      alignBreadcrumb();
+    }, dur + 40);
+
+    // ③ 스크롤 패럴럭스
+    window.addEventListener('scroll',()=>{
+      const scrolled=window.scrollY||window.pageYOffset;
+      if(visual){
+        visual.style.backgroundPosition=`center ${Math.max(0,-scrolled*0.15)}px`;
+      }
+    });
+
+    // ④ 브레드크럼을 타이틀 바로 위에 놓음
+    function alignBreadcrumb(){
+      const areaRect = document.querySelector('.sub-visual__area').getBoundingClientRect();
+      const wrapRect = visual.getBoundingClientRect();
+      const nav      = breadcrumb;
+      const gap      = 12;
+      nav.style.bottom = (wrapRect.bottom - areaRect.top + gap * -1) + 'px';
+    }
+    window.addEventListener('resize',alignBreadcrumb);
+  });
+</script>
+
+
+
+<section id="forestHistory">
+  <style>
+    #forestHistory {
+      --green-dark: #2f5d3a;
+      --green: #5f8f63;
+      --green-light: #b3d4a0;
+      --bg: #f6faf5;
+      --ink: #1c1c1c;
+
+      font-family: "Pretendard","Noto Sans KR",sans-serif;
+      background: #6a8b2e;
+      padding: 80px 0;
+      color: var(--ink);
+      position: relative;
+    }
+
+    /* dim background */
+    #forestHistory::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(255,255,255,0.78);
+      backdrop-filter: blur(2px);
+    }
+
+    #forestHistory .inner {
+      position: relative;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* 타이틀 */
+    #forestHistory .titleWrap {
+      text-align: center;
+      margin-bottom: 60px;
+    }
+    #forestHistory .titleWrap h2 {
+      font-size: 42px;
+      font-weight: 800;
+      color: var(--green-dark);
+      letter-spacing: -1px;
+    }
+    #forestHistory .titleWrap p {
+      margin-top: 10px;
+      color: var(--green);
+      font-size: 18px;
+    }
+
+    /* layout */
+    #forestHistory .history-row {
+      display: grid;
+      grid-template-columns: 220px 1fr;
+      gap: 40px;
+      margin-bottom: 120px;
+      position: relative;
+    }
+
+    /* 연도 sticky */
+    #forestHistory .year {
+      font-size: 40px;
+      font-weight: 800;
+      color: var(--green-dark);
+      position: sticky;
+      top: 120px;
+      height: max-content;
+    }
+
+    /* 활동 내역 */
+    #forestHistory .content-box {
+      border-left: 6px solid var(--green);
+      padding: 24px 28px;
+    }
+    #forestHistory .content-box ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    #forestHistory .content-box li {
+      padding: 10px 0;
+      line-height: 1.6;
+      font-size: 17px;
+      position: relative;
+      padding-left: 18px;
+    }
+    #forestHistory .content-box li::before {
+      content: "•";
+      color: var(--green-dark);
+      font-weight: 800;
+      position: absolute;
+      left: 0;
+      top: 8px;
+    }
+
+    /* Mobile */
+    @media (max-width: 768px) {
+      #forestHistory {
+        padding: 50px 0;
+      }
+      #forestHistory .history-row {
+        grid-template-columns: 1fr;
+        gap: 10px;
+        margin-bottom: 60px;
+      }
+      #forestHistory .year {
+        position: relative;
+        top: 0;
+        font-size: 32px;
+        color: var(--green-dark);
+        margin-bottom: 10px;
+      }
+      #forestHistory .content-box {
+        padding: 20px;
+      }
+      #forestHistory .content-box li {
+        font-size: 16px;
+      }
+    }
+  </style>
+
+  <div class="inner">
+    <div class="titleWrap">
+      <h2>연혁</h2>
+      <p>SINCE 2018</p>
+    </div>
+
+    <!-- =============== 연혁 시작 (2018 → 2026) =============== -->
+
+    <!-- 2018 -->
+    <div class="history-row">
+      <div class="year">2018</div>
+      <div class="content-box">
+        <ul>
+          <li><span class="fh-mo">09월</span>나누리사회적협동조합 창립총회</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 2019 -->
+    <div class="history-row">
+      <div class="year">2019</div>
+      <div class="content-box">
+        <ul>
+          <li><span class="fh-mo">03월</span>설립인가 <em>고용노동부 제2019-1492-SO-5623호</em></li>
+          <li><span class="fh-mo">05월</span>사업자등록 완료 <em>법인번호 270151-031555</em></li>
+            <li><span class="fh-mo">10월</span>건물관리 및 유지보수사업 등록 </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 2020 -->
+    <div class="history-row">
+      <div class="year">2020</div>
+      <div class="content-box">
+        <ul>
+          <li><span class="fh-mo">05월</span>고용노동부 지역형 예비 사회적기업 지정</li>
+          
+          <li><span class="fh-mo">08월</span>서울시 청년 일자리지원 뉴딜사업</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 2021 -->
+    <div class="history-row">
+      <div class="year">2021</div>
+      <div class="content-box">
+        <ul>
+          <li><span class="fh-mo">03월</span>서울시 안전한 골목길 구축사업 <em>컨소시엄 사업 진행</em></li>
+          <li><span class="fh-mo">05월</span>서울시 어르신 여가지원사업 진행</li>
+         
+          <li><span class="fh-mo">09월</span>국제로타리 3650지구 주거환경개선사업 50가구 진행</li>
+          <li><span class="fh-mo">09월</span>보건복지부 시니어 인턴십 일자리 수행기관 선정 <em>어르신 일자리 30여 명 창출</em></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 2022 -->
+    <div class="history-row">
+      <div class="year">2022</div>
+      <div class="content-box">
+        <ul>
+          <li>국제로타리 3650지구 주거환경개선사업 50가구 진행</li>
+           <li><span class="fh-mo">구로구</span>구로 침수피해가구 집수리 용역<em>5천만원 규모</em></li>
+           <li><span class="fh-mo">마포구</span>자원순환도전단 선정<em>5천만원 규모</em></li>
+        </ul>
+      </div>
+    </div>
+
+
+      <div class="history-row">
+      <div class="year">2023</div>
+      <div class="content-box">
+        <ul>
+          <li><span class="fh-mo">서울시</span>서울형 가사서비스 제공기관 선정</li>
+          <li>국제로타리 3650지구 지원 독거어르신 집수리 사업 수행</li>
+           <li><span class="fh-mo">한국노인인력개발원</span>낙상예방 안전관리사업 수행 <em>4천만 원 규모</em></li>
+             <li><span class="fh-mo">한국사회적기업진흥원</span>업종지역네트워크지원사업 수행 <em>1천만 원 규모</em></li>
+           
+<li><span class="fh-mo">마포구</span>임산부 가사지원 서비스 선정 기관<em>5천만원 규모</em></li>
+        </ul>
+      </div>
+    </div>
+
+
+      <div class="history-row">
+      <div class="year">2024</div>
+      <div class="content-box">
+        <ul>
+          <li><span class="fh-mo">서울시</span>세대공감을 위한 디지털 소통학교 및 매직스쿨</li>
+            <li><span class="fh-mo">서울시</span>서울시 희망의 집수리 사업 수행</li>
+          <li><span class="fh-mo">서울시</span>서대문구 도심형 스마트팜 조성공사</li>
+          <li><span class="fh-mo">보건복지부</span>영케어러 함께 돌봄사업 가사서비스</li>
+          
+        </ul>
+      </div>
+    </div>
+
+    <!-- 2023 ~ 2025 -->
+    <div class="history-row">
+      <div class="year">2025</div>
+      <div class="content-box">
+        <ul>
+          <li><span class="fh-mo">2023~2025</span>서울시 안심 집수리 사업 수행 <em>누적 500가구 · 5억 원 규모</em></li>
+          <li><span class="fh-mo">2023~2025</span>국제로타리 3650지구 지원 독거어르신 집수리 사업 수행 <em>100가구 · 1억 원 규모</em></li>
+          <li><span class="fh-mo">바오로교실</span>장애인 시설 보수 공사<em> 2천만 원 규모</em></li>
+           <li>연 매출 5.8억 달성</li>
+        </ul>
+      </div>
+    </div> 
+
+    <!-- 2026 -->
+    <div class="history-row">
+      <div class="year">2026</div>
+      <div class="content-box">
+        <ul>
+          <li>서울시 안전 집수리 사업 수행 <em>2억 원 규모</em></li>
+         <li>서울형 가사서비스 사업 수행 <em>연간 1,000가구 · 총 7억 7천만 원 규모 (최근 4년간)</em></li>
+          <li>사회적기업 창업지원사업 선정 (인증 전환형) <em>전 세대 맞춤형 고기능 주거환경 개선 서비스 · 최종 선정 시 최대 3천만 원</em></li>
+          
+          <li>마포형 돌봄 통합 특화서비스(가사·이동) 제공기관 선정 <em>각 1천만 원 · 총 2천만 원 규모</em></li>
+           <li>국제로타리 3650지구 주최 보훈청 유공자 대상 간편집수리 사업 <em>3,600만 원 규모</em></li>
+        
+        </ul>
+      </div>
+    </div>
+
+  </div>
+
+
+  <!-- ══════════════════════════════════════════════════════════
+       ▼ 디자인 보강 레이어 (추가 전용)
+       위 코드는 한 줄도 수정하지 않았습니다.
+       이 블록만 </section> 앞에 붙여넣으면 적용됩니다.
+
+       ■ 연혁 항목 작성법
+         월 표기  :  <span class="fh-mo">09월</span>내용
+         부가 설명:  내용 <em>규모 · 근거 등</em>   ← 회색 작은 글씨로 줄바꿈되어 표시
+         연도 대신 글자 라벨:  <div class="year fh-label">상시<br>사업</div>
+
+       ■ 이미지 넣는 법 — <img> 태그만 넣으면 위치별로 자동 정렬됩니다.
+         1) 내용 아래       :  </ul> 뒤에  <img src="..." alt="">
+         2) 특정 항목 아래  :  <li>텍스트<img src="..." alt=""></li>
+         3) 내용 칼럼 전체  :  </div>(content-box) 뒤에 <img src="..." alt="">
+         4) 여러 장 나란히  :  <div class="fh-gallery"><img><img><img></div>
+         5) 설명 붙이기     :  <figure><img src="..." alt=""><figcaption>설명</figcaption></figure>
+         비율 바꾸기: class="fh-wide"(21:9) / "fh-square" / "fh-portrait" / "fh-free"(원본 비율)
+       ══════════════════════════════════════════════════════════ -->
+  <style>
+    #forestHistory {
+      --fh-ink: #16211a;
+      --fh-deep: #24402f;
+      --fh-moss: #4a7355;
+      --fh-soft: #8fae8c;
+      --fh-hair: rgba(36, 64, 47, .13);
+
+      --fh-col: 176px;
+      --fh-gap: clamp(28px, 4vw, 56px);
+      --fh-line-x: calc(var(--fh-col) + var(--fh-gap) / 2);
+      --fh-row-gap: clamp(56px, 6vw, 92px);
+      --fh-radius: 16px;
+      --fh-year-size: clamp(30px, 4vw, 46px);
+
+      isolation: isolate;
+      padding: clamp(72px, 8vw, 128px) 0;
+      color: var(--fh-ink);
+      background: #eef3ea;
+    }
+
+    /* 기존 흰색 dim 오버레이 → 미스트 그라디언트로 교체 */
+    #forestHistory::before {
+      z-index: 0;
+      backdrop-filter: none;
+      background:
+        radial-gradient(1100px 560px at 6% -10%, rgba(143, 174, 140, .28), transparent 60%),
+        radial-gradient(900px 620px at 102% 16%, rgba(36, 64, 47, .12), transparent 58%),
+        linear-gradient(180deg, #fbfcf9 0%, #f4f7f1 52%, #edf2e9 100%);
+    }
+
+    /* 종이 질감 */
+    #forestHistory::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+      pointer-events: none;
+      opacity: .42;
+      mix-blend-mode: multiply;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)' opacity='.14'/%3E%3C/svg%3E");
+    }
+
+    #forestHistory .inner {
+      z-index: 1;
+      max-width: 1120px;
+      padding: 0 clamp(20px, 5vw, 40px);
+    }
+
+    /* ── 타이틀 ── */
+    #forestHistory .titleWrap {
+      margin-bottom: clamp(56px, 7vw, 100px);
+    }
+    #forestHistory .titleWrap::before {
+      content: "HISTORY";
+      display: block;
+      margin-bottom: 18px;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: .36em;
+      text-indent: .36em;
+      color: var(--fh-moss);
+    }
+    #forestHistory .titleWrap h2 {
+      margin: 0;
+      font-size: clamp(34px, 5vw, 54px);
+      line-height: 1.12;
+      letter-spacing: -.035em;
+      color: var(--fh-deep);
+    }
+    #forestHistory .titleWrap p {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      margin-top: 18px;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: .22em;
+      text-indent: .22em;
+      color: rgba(22, 33, 26, .45);
+    }
+    #forestHistory .titleWrap p::before,
+    #forestHistory .titleWrap p::after {
+      content: "";
+      width: 30px;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--fh-soft));
+    }
+    #forestHistory .titleWrap p::after { transform: scaleX(-1); }
+
+    /* ── 행 & 타임라인 세로선 (선 1줄만) ── */
+    #forestHistory .history-row {
+      grid-template-columns: var(--fh-col) minmax(0, 1fr);
+      gap: 0 var(--fh-gap);
+      margin-bottom: var(--fh-row-gap);
+    }
+    #forestHistory .history-row:last-child { margin-bottom: 0; }
+
+    #forestHistory .history-row::before {
+      content: "";
+      position: absolute;
+      left: var(--fh-line-x);
+      top: 10px;
+      bottom: calc(-1 * var(--fh-row-gap));
+      width: 1px;
+      transform: translateX(-50%);
+      background: var(--fh-hair);
+    }
+    #forestHistory .history-row:last-child::before {
+      bottom: auto;
+      height: 100%;
+      -webkit-mask-image: linear-gradient(180deg, #000 25%, transparent);
+      mask-image: linear-gradient(180deg, #000 25%, transparent);
+    }
+
+    /* ── 화면을 따라 움직이는 단 하나의 dot ── */
+    #forestHistory .fh-dot {
+      display: block;
+      position: sticky;
+      top: calc(120px + .42em);
+      z-index: 3;
+      height: 0;
+      font-size: var(--fh-year-size);
+      pointer-events: none;
+    }
+    #forestHistory .fh-dot::before {
+      content: "";
+      position: absolute;
+      left: var(--fh-line-x);
+      top: 0;
+      width: 11px;
+      height: 11px;
+      border-radius: 50%;
+      transform: translate(-50%, -50%);
+      background: var(--fh-moss);
+      box-shadow:
+        0 0 0 4px #f4f7f1,
+        0 0 0 9px rgba(74, 115, 85, .13);
+    }
+
+    /* ── 연도 (sticky 그대로, dot 없음) ── */
+    #forestHistory .year {
+      z-index: 2;
+      font-size: var(--fh-year-size);
+      line-height: 1;
+      letter-spacing: -.04em;
+      font-variant-numeric: tabular-nums;
+      color: var(--fh-deep);
+      transition: opacity .55s ease;
+    }
+    /* 숫자 대신 글자 라벨을 쓰는 행 */
+    #forestHistory .year.fh-label {
+      font-size: clamp(21px, 2.4vw, 28px);
+      line-height: 1.22;
+      letter-spacing: -.02em;
+      padding-top: .18em;
+    }
+
+    /* ── 내용: 배경·테두리 없이 텍스트만 ── */
+    #forestHistory .content-box {
+      padding: 0;
+      border: 0;
+      border-radius: 0;
+      background: none;
+      backdrop-filter: none;
+      -webkit-backdrop-filter: none;
+      box-shadow: none;
+    }
+
+    #forestHistory .content-box li {
+      padding: 13px 0 13px 22px;
+      margin: 0;
+      border-radius: 0;
+      font-size: clamp(15px, 1.5vw, 17px);
+      line-height: 1.66;
+      color: rgba(22, 33, 26, .82);
+      transition: color .3s ease;
+    }
+    #forestHistory .content-box > ul > li:first-child { padding-top: 2px; }
+    #forestHistory .content-box li:hover { color: var(--fh-deep); }
+    #forestHistory .content-box li + li { border-top: 1px solid rgba(36, 64, 47, .08); }
+
+    /* 월 표기 */
+    #forestHistory .fh-mo {
+      display: inline-block;
+      min-width: 3.6em;
+      margin-right: 10px;
+      font-size: .85em;
+      font-weight: 700;
+      letter-spacing: .01em;
+      font-variant-numeric: tabular-nums;
+      color: var(--fh-moss);
+    }
+
+    /* 부가 설명 (규모·근거) */
+    #forestHistory .content-box li em {
+      display: block;
+      margin-top: 3px;
+      padding-left: 0;
+      font-style: normal;
+      font-size: .86em;
+      line-height: 1.6;
+      letter-spacing: .01em;
+      color: rgba(22, 33, 26, .48);
+    }
+
+    /* 불릿 • → 잎 모양 마커 */
+    #forestHistory .content-box li::before {
+      content: "";
+      left: 2px;
+      top: 1.16em;
+      width: 6px;
+      height: 6px;
+      border-radius: 60% 0 60% 0;
+      transform: rotate(10deg);
+      background: linear-gradient(140deg, var(--fh-soft), var(--fh-deep));
+    }
+    #forestHistory .content-box > ul > li:first-child::before { top: .95em; }
+
+    /* ══════════ 이미지: 어디에 넣어도 정돈되게 ══════════ */
+    #forestHistory img {
+      display: block;
+      width: 100%;
+      height: auto;
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
+      border-radius: 13px;
+      background: #e7eee2;
+      box-shadow: 0 16px 32px -28px rgba(22, 33, 26, .7);
+      transition: transform .5s cubic-bezier(.22, 1, .36, 1), box-shadow .45s ease;
+    }
+    #forestHistory img:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 26px 44px -26px rgba(22, 33, 26, .5);
+    }
+
+    /* 비율 옵션 */
+    #forestHistory .fh-wide { aspect-ratio: 21 / 9; }
+    #forestHistory .fh-square { aspect-ratio: 1 / 1; }
+    #forestHistory .fh-portrait { aspect-ratio: 3 / 4; }
+    #forestHistory .fh-free { aspect-ratio: auto; object-fit: contain; }
+
+    /* 1) 내용 아래 (ul 뒤) */
+    #forestHistory .content-box > img,
+    #forestHistory .content-box > figure {
+      margin-top: 22px;
+      border-radius: var(--fh-radius);
+    }
+    #forestHistory .content-box > img:first-child,
+    #forestHistory .content-box > figure:first-child { margin-top: 0; }
+    #forestHistory .content-box > img + img { margin-top: 12px; }
+
+    /* 2) 리스트 항목 안 */
+    #forestHistory .content-box li img {
+      margin-top: 12px;
+      border-radius: 11px;
+    }
+    #forestHistory .content-box li figure { margin: 12px 0 0; }
+
+    /* 3) 내용 칼럼 전체 폭 */
+    #forestHistory .history-row > img,
+    #forestHistory .history-row > figure {
+      grid-column: 2 / -1;
+      margin: 20px 0 0;
+      border-radius: var(--fh-radius);
+    }
+
+    /* 4) 여러 장 나란히 */
+    #forestHistory .fh-gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 12px;
+      margin-top: 22px;
+    }
+    #forestHistory .fh-gallery img { margin: 0; }
+    #forestHistory .history-row > .fh-gallery { grid-column: 2 / -1; }
+
+    /* 5) 설명 캡션 */
+    #forestHistory figure { margin: 22px 0 0; }
+    #forestHistory figcaption {
+      margin-top: 10px;
+      padding-left: 2px;
+      font-size: 13px;
+      line-height: 1.6;
+      letter-spacing: .01em;
+      color: rgba(22, 33, 26, .5);
+    }
+
+    /* 타이틀 영역에 넣는 경우 */
+    #forestHistory .titleWrap img {
+      max-width: 620px;
+      margin: 30px auto 0;
+      border-radius: var(--fh-radius);
+    }
+
+    /* ── 스크롤 인터랙션 (JS가 .fh-x를 붙였을 때만) ── */
+    #forestHistory.fh-x .year { opacity: .32; }
+    #forestHistory.fh-x .history-row.is-active .year { opacity: 1; }
+
+    #forestHistory.fh-x .content-box,
+    #forestHistory.fh-x .history-row > img,
+    #forestHistory.fh-x .history-row > figure,
+    #forestHistory.fh-x .history-row > .fh-gallery {
+      opacity: 0;
+      transform: translateY(18px);
+      transition: opacity .75s ease, transform .75s cubic-bezier(.22, 1, .36, 1);
+    }
+    #forestHistory.fh-x .history-row.is-in .content-box,
+    #forestHistory.fh-x .history-row.is-in > img,
+    #forestHistory.fh-x .history-row.is-in > figure,
+    #forestHistory.fh-x .history-row.is-in > .fh-gallery {
+      opacity: 1;
+      transform: none;
+    }
+    #forestHistory.fh-x .history-row.is-in > img { transition-delay: .12s; }
+
+    #forestHistory.fh-x .content-box li {
+      opacity: 0;
+      transform: translateY(8px);
+      transition: opacity .55s ease, transform .55s cubic-bezier(.22, 1, .36, 1), color .3s ease;
+      transition-delay: calc(var(--fh-i, 0) * .07s + .16s);
+    }
+    #forestHistory.fh-x .history-row.is-in .content-box li {
+      opacity: 1;
+      transform: none;
+    }
+
+    /* ── Mobile (원본 768px 브레이크포인트 유지) ── */
+    @media (max-width: 768px) {
+      #forestHistory {
+        --fh-line-x: 6px;
+        --fh-row-gap: 42px;
+        --fh-year-size: 28px;
+        padding: clamp(52px, 12vw, 72px) 0;
+      }
+      #forestHistory .history-row {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 12px;
+        padding-left: 28px;
+      }
+      #forestHistory .year { font-size: var(--fh-year-size); margin-bottom: 0; }
+      #forestHistory .year.fh-label { font-size: 20px; }
+      #forestHistory .year.fh-label br { display: none; }
+      #forestHistory .fh-dot { top: calc(84px + .5em); }
+      #forestHistory .fh-dot::before {
+        width: 10px;
+        height: 10px;
+        box-shadow: 0 0 0 4px #f4f7f1, 0 0 0 8px rgba(74, 115, 85, .12);
+      }
+      #forestHistory .content-box { padding: 0; }
+      #forestHistory .content-box li {
+        font-size: 15.5px;
+        padding: 11px 0 11px 20px;
+      }
+      #forestHistory .fh-mo {
+        display: block;
+        min-width: 0;
+        margin: 0 0 2px;
+      }
+      #forestHistory .history-row > img,
+      #forestHistory .history-row > figure,
+      #forestHistory .history-row > .fh-gallery {
+        grid-column: auto;
+        margin-top: 16px;
+      }
+      #forestHistory .fh-gallery {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        gap: 8px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      #forestHistory.fh-x .content-box,
+      #forestHistory.fh-x .content-box li,
+      #forestHistory.fh-x .history-row > img,
+      #forestHistory.fh-x .history-row > figure,
+      #forestHistory.fh-x .history-row > .fh-gallery {
+        opacity: 1 !important;
+        transform: none !important;
+        transition: none !important;
+      }
+      #forestHistory.fh-x .year { opacity: 1 !important; }
+      #forestHistory img:hover { transform: none; }
+    }
+  </style>
+
+  <script>
+    (function () {
+      var root = document.getElementById('forestHistory');
+      if (!root || root.dataset.fhx) return;
+      root.dataset.fhx = '1';
+      if (!('IntersectionObserver' in window)) return;
+
+      root.classList.add('fh-x');
+      var rows = Array.prototype.slice.call(root.querySelectorAll('.history-row'));
+      if (!rows.length) return;
+
+      // 화면을 따라 움직이는 dot 1개 — 첫 연도 앞에 삽입 (높이 0, 레이아웃 영향 없음)
+      var firstRow = rows[0];
+      if (firstRow.parentNode && !root.querySelector('.fh-dot')) {
+        var dot = document.createElement('i');
+        dot.className = 'fh-dot';
+        dot.setAttribute('aria-hidden', 'true');
+        firstRow.parentNode.insertBefore(dot, firstRow);
+      }
+
+      rows.forEach(function (row) {
+        Array.prototype.forEach.call(row.querySelectorAll('li'), function (li, i) {
+          li.style.setProperty('--fh-i', i);
+        });
+        // 나중에 추가되는 이미지도 자동으로 lazy-load
+        Array.prototype.forEach.call(row.querySelectorAll('img'), function (img) {
+          if (!img.hasAttribute('loading')) img.setAttribute('loading', 'lazy');
+          if (!img.hasAttribute('decoding')) img.setAttribute('decoding', 'async');
+        });
+      });
+
+      // 내용 · 리스트 · 이미지 등장
+      var reveal = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (e.isIntersecting) {
+            e.target.classList.add('is-in');
+            reveal.unobserve(e.target);
+          }
+        });
+      }, { threshold: 0.12, rootMargin: '0px 0px -6% 0px' });
+
+      // 현재 보고 있는 연도 강조
+      var active = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          e.target.classList.toggle('is-active', e.isIntersecting);
+        });
+      }, { rootMargin: '-16% 0px -55% 0px' });
+
+      rows.forEach(function (row) {
+        reveal.observe(row);
+        active.observe(row);
+      });
+    })();
+  </script>
+</section>
+
+
+
+<!-- <section id="doosanNewsSection" aria-label="비즈니스혁신연구소 수상 내역">
+  <style>
+
+    #doosanNewsSection {
+      --bg: #ffffff;
+      --ink: #111111;
+      --muted2: #9aa0a6;
+      --max: 1280px;
+      --header-width: 320px;
+      --column-gap: 80px;
+      
+      font-family: "Pretendard", sans-serif;
+      color: var(--ink);
+      background: var(--bg);
+      padding: 80px 20px 120px; 
+      position: relative;
+    }
+
+    #doosanNewsSection * { box-sizing: border-box; }
+
+    #doosanNewsSection .dns-bg-arcs {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+      overflow: hidden;
+    }
+    #doosanNewsSection .dns-bg-arcs svg {
+      position: absolute;
+      right: -20%;
+      top: 10%;
+      width: 100%;
+      opacity: 0.3;
+    }
+
+    #doosanNewsSection .dns-wrap {
+      max-width: var(--max);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: var(--header-width) 1fr;
+      gap: var(--column-gap);
+      align-items: start; 
+      position: relative;
+      z-index: 1;
+    }
+
+    #doosanNewsSection .dns-intro {
+      position: -webkit-sticky;
+      position: sticky;
+      top: 60px;
+      height: auto;
+      will-change: transform;
+    }
+
+    #doosanNewsSection .dns-title {
+      margin: 0;
+      font-size: 40px;
+      font-weight: 800;
+      line-height: 1.2;
+      letter-spacing: -0.04em;
+    }
+    #doosanNewsSection .dns-title span { display: block; }
+    #doosanNewsSection .dns-title .thin { font-weight: 400; }
+
+    #doosanNewsSection .dns-link {
+      margin-top: 40px;
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      color: var(--ink);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 16px;
+    }
+
+    #doosanNewsSection .dns-cards {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+    }
+
+    #doosanNewsSection .dns-item {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    #doosanNewsSection .dns-item.pos-right-top { 
+      grid-column: 2; 
+      grid-row: 1;
+      margin-top: 0; 
+    } 
+
+    #doosanNewsSection .dns-item.pos-left { 
+      grid-column: 1; 
+      grid-row: 1 / span 2;
+      margin-top: 180px; 
+    } 
+
+    #doosanNewsSection .dns-item.pos-right-bottom { 
+      grid-column: 2; 
+      grid-row: 2;
+      margin-top: 40px; 
+    }
+
+    #doosanNewsSection .dns-figure { margin: 0; overflow: hidden; background: #f8f8f8; }
+    #doosanNewsSection .dns-media {
+      width: 100%;
+      display: block;
+      object-fit: cover;
+      aspect-ratio: 3/4;
+    }
+
+    #doosanNewsSection .dns-meta { font-size: 14px; color: var(--muted2); }
+    #doosanNewsSection .dns-head {
+      margin: 0;
+      font-size: 18px;
+      line-height: 1.4;
+      font-weight: 700;
+      word-break: keep-all;
+    }
+
+
+    @media (max-width: 1000px) {
+      #doosanNewsSection { padding-top: 40px; }
+
+      #doosanNewsSection .dns-wrap { display: block; }
+
+      #doosanNewsSection .dns-intro {
+        position: relative;
+        top: 0;
+        padding: 20px 0;
+        margin-bottom: 30px;
+      }
+
+      #doosanNewsSection .dns-title { font-size: 28px; }
+
+      #doosanNewsSection .dns-cards {
+        grid-template-columns: 1fr;
+        gap: 60px;
+      }
+
+      #doosanNewsSection .dns-item.pos-left,
+      #doosanNewsSection .dns-item.pos-right-top,
+      #doosanNewsSection .dns-item.pos-right-bottom {
+        margin-top: 0;
+        grid-column: auto;
+        grid-row: auto;
+        max-width: 400px;
+        margin:0 auto;
+      }
+
+      #doosanNewsSection .dns-head { font-size: 17px; }
+    }
+  </style>
+
+  <div class="dns-bg-arcs">
+    <svg viewBox="0 0 800 800" fill="none"><circle cx="600" cy="400" r="400" stroke="#eee" stroke-width="1"/></svg>
+  </div>
+
+  <div class="dns-wrap">
+    <header class="dns-intro">
+      <h2 class="dns-title">
+        <span class="thin">비즈니스혁신연구소</span>
+        <span>수상 내역</span>
+      </h2>
+      <a href="#" class="dns-link">
+        새로운 소식 
+        <svg width="24" height="10" viewBox="0 0 48 16" fill="none" stroke="currentColor" stroke-width="3">
+          <path d="M0 8h46M38 1l8 7-8 7"/>
+        </svg>
+      </a>
+    </header>
+
+    <div class="dns-cards">
+      <a href="#" class="dns-item pos-right-top">
+        <figure class="dns-figure"><img class="dns-media" src="./img/award1.jpg" alt="대통령 표창 수상"></figure>
+        <div class="dns-meta">1988. 2</div>
+        <h3 class="dns-head">확정일자 도입으로 대통령 표창 수상</h3>
+      </a>
+
+      <a href="#" class="dns-item pos-left">
+        <figure class="dns-figure"><img class="dns-media" src="https://healthumer.mycafe24.com/data/editor/2507/69b4d8887d9d595dc4c03c4cb3518b27_1751950880_0171.jpg" alt="수상 내역 정리"></figure>
+        <div class="dns-meta">2002. 9</div>
+        <h3 class="dns-head">수상 내역 정리</h3>
+      </a>
+
+      <a href="#" class="dns-item pos-right-bottom">
+        <figure class="dns-figure"><img class="dns-media" src="https://images.unsplash.com/photo-1560179707-f14e90ef3623?q=80&w=600" alt="SMR 계약"></figure>
+        <div class="dns-meta">2025. 12. 12</div>
+        <h3 class="dns-head">두산에너빌리티, 美 엑스-에너지와 SMR 16대 핵심소재 예약계약 체결</h3>
+      </a>
+    </div>
+  </div>
+</section> -->
+
+<div id="footer_template"></div>
+
+
+
+    </body>
+    <script src="./js/jquery-1.11.0.min.js"></script>
+<script src="./js/validation1.js"> </script>
+<script src="./js/main.js"> </script>
+<script src="./js/footer.js"></script>
+  </html>
