@@ -5,6 +5,7 @@
    - 이 파일 하나만 <script src="..."></script> 로 넣으면 동작합니다.
 
    [변경] 서브메뉴(드롭다운/아코디언) 제거 → 메인 메뉴 클릭 시 바로 페이지 이동
+   [변경] 메인 플로팅 버튼 = 회사소개서 / 퀵패널 항목 = 간편신청 (위치 교체)
    ========================================================================= */
 (function () {
 
@@ -271,7 +272,7 @@
 
   /* =======================================================================
      2. 간편신청 플로팅 템플릿 (Supabase 버전)
-        - 마크업 / 스타일은 원본 그대로
+        [변경] 메인 버튼 = 회사소개서 / 퀵패널 첫 항목 = 간편신청
      ======================================================================= */
   const FLOATING_TEMPLATE = `
 
@@ -280,15 +281,15 @@
   <div class="cf-floating" id="cfFloating">
     <!-- 퀵 패널 : 위아래(세로)로 펼쳐짐 -->
     <div class="cf-quick-panel" id="cfQuickPanel">
-      <a href="#reservationSection" class="cf-quick-link">
+      <!-- [위치 교체] 퀵패널 항목 = 간편신청 (모달 오픈) -->
+      <a href="#" class="cf-quick-link" id="cfQuickReserve">
         <span class="cf-quick-icon">
           <svg viewBox="0 0 24 24" fill="none">
-            <path d="M7 4.75h7.5L19.25 9.5V18A2.25 2.25 0 0 1 17 20.25H7A2.25 2.25 0 0 1 4.75 18V7A2.25 2.25 0 0 1 7 4.75Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
-            <path d="M14.5 4.75V9.5h4.75" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
-            <path d="M8.5 12.25h7M8.5 15.25h7M8.5 18.25h4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            <path d="M4.75 19.25h4.5l9.1-9.1-4.5-4.5-9.1 9.1v4.5Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/>
+            <path d="M12.9 6.6l4.5 4.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
           </svg>
         </span>
-        <span class="cf-quick-text">회사소개서</span>
+        <span class="cf-quick-text">간편신청</span>
       </a>
 
   <a href="tel:02- 6348-0851" class="cf-quick-link">
@@ -324,15 +325,16 @@
   <span class="cf-btn-label">QUICK</span>
 </button>
 
-<!-- 신청 버튼 -->
-<button type="button" class="cf-btn cf-btn-reserve" id="cfReserveBtn" aria-label="간편 신청">
+<!-- [위치 교체] 메인 버튼 = 회사소개서 -->
+<button type="button" class="cf-btn cf-btn-reserve" id="cfReserveBtn" aria-label="회사소개서">
   <span class="cf-btn-icon">
     <svg viewBox="0 0 24 24" fill="none">
-      <path d="M4.75 19.25h4.5l9.1-9.1-4.5-4.5-9.1 9.1v4.5Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/>
-      <path d="M12.9 6.6l4.5 4.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
+      <path d="M7 4.75h7.5L19.25 9.5V18A2.25 2.25 0 0 1 17 20.25H7A2.25 2.25 0 0 1 4.75 18V7A2.25 2.25 0 0 1 7 4.75Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+      <path d="M14.5 4.75V9.5h4.75" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+      <path d="M8.5 12.25h7M8.5 15.25h7M8.5 18.25h4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
     </svg>
   </span>
-  <span class="cf-btn-label">간편신청</span>
+  <span class="cf-btn-label">회사소개서</span>
 </button>
 
 <!-- TOP 버튼 -->
@@ -2017,13 +2019,15 @@
 
   /* =======================================================================
      5. 플로팅 퀵메뉴 / 간편신청(Supabase) 초기화
+        [변경] cfReserveBtn = 회사소개서 이동 / cfQuickReserve = 간편신청 모달
      ======================================================================= */
   function initCfFloating(root) {
     if (!root) return;
 
     const floating = root.querySelector('#cfFloating');
     const quickBtn = root.querySelector('#cfQuickBtn');
-    const reserveBtn = root.querySelector('#cfReserveBtn');
+    const reserveBtn = root.querySelector('#cfReserveBtn');       // 회사소개서(메인 버튼)
+    const quickReserve = root.querySelector('#cfQuickReserve');   // 간편신청(퀵패널)
     const topBtn = root.querySelector('#cfTopBtn');
 
     const modal = root.querySelector('#cfModal');
@@ -2051,6 +2055,9 @@
     const sourceInput = root.querySelector('#cfSource');
     const receptionLocationInput = root.querySelector('#cfReceptionLocation');
     const websiteInput = root.querySelector('#cfWebsite');
+
+    /* 회사소개서 버튼이 이동할 대상 (기존 회사소개서 링크와 동일) */
+    const COMPANY_PROFILE_HREF = '#reservationSection';
 
     let submitted = false;
 
@@ -2204,9 +2211,29 @@
       }
     });
 
+    /* [위치 교체] 메인 버튼 → 회사소개서 이동 */
     reserveBtn.addEventListener('click', function(){
-      openModal();
+      floating.classList.remove('open');
+
+      if(COMPANY_PROFILE_HREF.charAt(0) === '#'){
+        const target = document.querySelector(COMPANY_PROFILE_HREF);
+        if(target){
+          target.scrollIntoView({ behavior:'smooth', block:'start' });
+          return;
+        }
+      }
+
+      window.location.href = COMPANY_PROFILE_HREF;
     });
+
+    /* [위치 교체] 퀵패널 항목 → 간편신청 모달 오픈 */
+    if(quickReserve){
+      quickReserve.addEventListener('click', function(e){
+        e.preventDefault();
+        e.stopPropagation();
+        openModal();
+      });
+    }
 
     modalClose.addEventListener('click', closeModal);
     modalDim.addEventListener('click', closeModal);
