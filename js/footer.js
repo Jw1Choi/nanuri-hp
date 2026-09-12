@@ -427,7 +427,7 @@
           <span class="meta">사업자등록번호 : <b id="corpNo">110-230-129994</b></span>
 
           <span class="sep">·</span>
-          <span class="meta">대표 : <b id="corpCEO">홍길동</b></span>
+          <span class="meta">대표 : <b id="corpCEO">김동수</b></span>
 
           <span class="sep">·</span>
           <span class="meta">주소 : <b>서울시 마포구 동교로 72-1 한영빌딩 201호</b></span>
