@@ -1,0 +1,1194 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!-- 소유권 인증(각 도메인별 값으로 교체) -->
+  <meta name="naver-site-verification" content="" />
+  <meta name="google-site-verification" content="구글_인증코드_여기에" />
+
+  <!-- Canonical (대표 URL로 고정) -->
+  <link rel="canonical" href="https://nanuricoop.co.kr/gasa.html" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="./img/favicon.png" sizes="any">
+  <link rel="shortcut icon" href="./img/favicon.png" type="image/x-icon">
+  <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./img/favicon.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="./img/favicon.png">
+
+  <meta name="robots" content="index,follow" />
+  <meta name="subject" content="나누리사회적협동조합" />
+  <meta name="title" content="서울형가사서비스 | 나누리사회적협동조합" />
+  <meta name="author" content="나누리사회적협동조합">
+  <meta name="description" content="서울형가사서비스 — 서울시 거주 중위소득 180% 이하, 12세 이하 자녀가 있는 임산부·맞벌이·다자녀 가정에 연 70만원 가사서비스 바우처를 지원합니다. 나누리사회적협동조합에서 예약하세요." />
+
+  <meta name="keywords"
+    content="나누리사회적협동조합, 서울형가사서비스, 서울형 가사서비스, 가사서비스 바우처, 임산부 가사지원, 맞벌이 가사지원, 다자녀 가사지원, 탄생육아 몽땅정보통, 가사관리사, 청소 서비스" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:rich_attachment" content="true" />
+  <meta property="og:site_name" content="나누리사회적협동조합" />
+  <meta property="og:title" content="서울형가사서비스 | 나누리사회적협동조합" />
+  <meta property="og:description" content="임산부·맞벌이·다자녀 가정에 연 70만원 가사서비스 바우처 지원. 나누리사회적협동조합에서 예약하세요." />
+  <meta property="og:image" content="./video/na-01.png" />
+  <meta property="og:url" content="https://nanuricoop.co.kr/gasa.html" />
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="서울형가사서비스 | 나누리사회적협동조합" />
+  <meta name="twitter:description" content="임산부·맞벌이·다자녀 가정에 연 70만원 가사서비스 바우처 지원. 나누리사회적협동조합에서 예약하세요." />
+  <meta name="twitter:image" content="./video/na-01.png" />
+
+  <meta itemprop="name" content="서울형가사서비스 | 나누리사회적협동조합" />
+  <meta itemprop="description" content="임산부·맞벌이·다자녀 가정에 연 70만원 가사서비스 바우처 지원. 나누리사회적협동조합에서 예약하세요." />
+  <meta itemprop="image" content="./video/na-01.png" />
+
+  <title>서울형가사서비스 | 나누리사회적협동조합</title>
+
+  <link href="./css/reset.css" rel="stylesheet" type="text/css" />
+  <link href="./css/style.css" rel="stylesheet" type="text/css" />
+
+  <style>
+    /* ── RESET & LAYOUT ── */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0
+    }
+
+    body {
+      font-family: 'Pretendard', sans-serif;
+      background: #111;
+      color: #fff;
+      overflow-x: hidden
+    }
+
+    .container {
+      display: flex
+    }
+
+    #main {
+      flex: 1;
+      position: relative;
+      overflow: hidden
+    }
+
+    #sidebar {
+      display: none
+    }
+  </style>
+</head>
+
+<body>
+  <div id="menu_navi"></div>
+  <script src="./menu3-full.js"></script>
+
+  <!-- 메뉴(외부 로드) -->
+  <div id="menu"></div>
+
+  <style>
+    /* ───────────────────────────────────────────────
+       공통 · 서브 비주얼 (기존 디자인 유지)
+    ───────────────────────────────────────────────*/
+    .sub-visual__wrap {
+      position: relative;
+      z-index: 2;
+      height: 80vh;
+      width: 100%;
+      background-size: cover !important;
+      background-position: center top !important;
+      overflow: hidden;
+      perspective: 900px;
+      --reveal-dur: 900ms;
+    }
+
+    /* 이미지가 없을 때는 네이비 배경으로 대체 */
+    .sub-visual__wrap.visual-01 {
+      background: url(./img/gasa-visual.jpg) no-repeat center top, #1c2136;
+    }
+
+    .sub-visual__wrap[class*="visual"]::before {
+      z-index: 1;
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(110deg, rgba(18, 22, 34, .56)45%, rgba(28, 33, 54, .34)100%);
+      pointer-events: none;
+      transition: background .8s;
+    }
+
+    .sub-visual__wrap .reveal {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 50%;
+      background: #0b0d12;
+      z-index: 0;
+      transform: translateX(0);
+      will-change: transform;
+    }
+
+    .sub-visual__wrap .reveal.l { left: 0; }
+    .sub-visual__wrap .reveal.r { right: 0; }
+
+    .sub-visual__wrap.play .reveal.l {
+      animation: revealOutL var(--reveal-dur) cubic-bezier(.22, .8, .18, 1) forwards;
+    }
+
+    .sub-visual__wrap.play .reveal.r {
+      animation: revealOutR var(--reveal-dur) cubic-bezier(.22, .8, .18, 1) forwards;
+    }
+
+    @keyframes revealOutL { to { transform: translateX(-100%); } }
+    @keyframes revealOutR { to { transform: translateX(100%); } }
+
+    @media (prefers-reduced-motion:reduce) {
+      .sub-visual__wrap.play .reveal.l { animation: none; transform: translateX(-100%); }
+      .sub-visual__wrap.play .reveal.r { animation: none; transform: translateX(100%); }
+    }
+
+    /* ───── 브레드크럼 ───── */
+    .breadcrumb-nav {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%) translateY(-18px);
+      width: 100%;
+      top: 20%;
+      max-width: 1440px;
+      margin: 0 40px;
+      bottom: 210px;
+      z-index: 10;
+      font-family: 'Pretendard', 'Noto Sans KR', sans-serif;
+      opacity: 0;
+      transition: opacity .9s cubic-bezier(.22, .9, .39, 1.01),
+        transform 1.05s cubic-bezier(.22, .9, .39, 1.01);
+    }
+
+    .breadcrumb-nav.in {
+      opacity: 1;
+      transform: translateX(-50%) translateY(0);
+    }
+
+    .breadcrumb-nav ol {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      margin: 0;
+      padding: 0;
+      font-size: 1.04rem;
+      color: #fff;
+      opacity: .92;
+      list-style: none;
+    }
+
+    .breadcrumb-nav li { display: flex; align-items: center; }
+
+    .breadcrumb-nav li:not(:last-child)::after {
+      content: "›";
+      margin: 0 7px;
+      color: #fff;
+      opacity: .48;
+      font-size: .92em;
+      font-weight: 600;
+    }
+
+    .breadcrumb-nav a {
+      color: #fff;
+      opacity: .83;
+      text-decoration: none;
+      transition: opacity .17s;
+    }
+
+    .breadcrumb-nav a:hover,
+    .breadcrumb-nav a:focus { opacity: 1; text-decoration: underline; }
+
+    .breadcrumb-nav .current { color: #fff; font-weight: 700; opacity: 1; }
+
+    /* ───── 타이틀 · 설명 ───── */
+    .sub-visual__area {
+      position: absolute;
+      bottom: 110px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100%;
+      max-width: 1440px;
+      margin: 0 40px;
+      z-index: 2;
+    }
+
+    .sub-visual__title {
+      color: #fff;
+      text-align: left;
+      width: 100%;
+      filter: drop-shadow(0 8px 32px rgba(0, 0, 0, .11));
+    }
+
+    .sub-visual__title .title {
+      font-size: 56px;
+      font-weight: 700;
+      line-height: 1.28;
+      letter-spacing: -1px;
+      opacity: 0;
+      transform: translateY(60px) scale(.96) skewY(4deg) rotateX(15deg);
+      filter: blur(4px) brightness(1.4);
+      transition: all 1.1s cubic-bezier(.24, .8, .26, 1.01);
+      margin: 0;
+    }
+
+    .sub-visual__title .desc {
+      font-size: 26px;
+      margin-top: 26px;
+      opacity: 0;
+      transform: translateY(50px) scale(.97) skewY(2deg) rotateX(10deg);
+      filter: blur(7px) brightness(1.3);
+      min-height: 28px;
+      font-weight: 400;
+      letter-spacing: -.3px;
+      line-height: 1.4;
+      transition: all 1.25s cubic-bezier(.22, .78, .21, 1.02) .14s;
+      margin: 0;
+    }
+
+    .sub-visual__title.in .title,
+    .sub-visual__title.in .desc {
+      opacity: 1;
+      filter: blur(0) brightness(1);
+      transform: none;
+    }
+
+    @media(max-width:950px) {
+      .sub-visual__wrap { height: 440px; }
+      .sub-visual__area { bottom: 52px; margin: 0 16px; }
+      .breadcrumb-nav { margin: 0 16px; bottom: 112px; }
+      .sub-visual__title .title { font-size: 2rem; }
+      .sub-visual__title .desc { font-size: 1.02rem; }
+      .breadcrumb-nav ol { font-size: .92rem; }
+    }
+  </style>
+
+  <!-- ▣ 비주얼 영역 -->
+  <div class="sub-visual__wrap visual-01">
+    <div class="reveal l" aria-hidden="true"></div>
+    <div class="reveal r" aria-hidden="true"></div>
+
+    <nav class="breadcrumb-nav" aria-label="breadcrumb">
+      <ol>
+        <li><a href="./index.html">홈</a></li>
+        <li><a href="#">주요사업</a></li>
+        <li><span class="current">서울형가사서비스</span></li>
+      </ol>
+    </nav>
+
+    <div class="sub-visual__area">
+      <header class="sub-visual__title">
+        <p class="desc"><br>
+          나누리사회적협동조합
+        </p>
+        <h1 class="title">서울형가사서비스</h1>
+      </header>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const titleBox = document.querySelector('.sub-visual__title');
+      const breadcrumb = document.querySelector('.breadcrumb-nav');
+      const visual = document.querySelector('.sub-visual__wrap.visual-01');
+
+      visual.classList.add('play');
+      const dur = parseInt(getComputedStyle(visual).getPropertyValue('--reveal-dur')) || 900;
+
+      setTimeout(() => {
+        titleBox.classList.add('in');
+        breadcrumb.classList.add('in');
+        alignBreadcrumb();
+      }, dur + 40);
+
+      window.addEventListener('scroll', () => {
+        const scrolled = window.scrollY || window.pageYOffset;
+        if (visual) {
+          visual.style.backgroundPosition = `center ${Math.max(0, -scrolled * 0.15)}px`;
+        }
+      });
+
+      function alignBreadcrumb() {
+        const areaRect = document.querySelector('.sub-visual__area').getBoundingClientRect();
+        const wrapRect = visual.getBoundingClientRect();
+        const gap = 12;
+        breadcrumb.style.bottom = (wrapRect.bottom - areaRect.top + gap * -1) + 'px';
+      }
+      window.addEventListener('resize', alignBreadcrumb);
+    });
+  </script>
+
+  <!-- ═══════════════════════════════════════════════
+       서울형가사서비스 본문
+  ═══════════════════════════════════════════════ -->
+  <section id="gasaServiceSection" aria-label="서울형가사서비스 안내">
+    <style>
+      /* ===============================
+         Scope: #gasaServiceSection ONLY
+         =============================== */
+      #gasaServiceSection {
+        --bg: #ffffff;
+        --ink: #111111;
+        --muted: #6b7280;
+        --line: rgba(17, 17, 17, .10);
+        --soft: #f5f6f8;
+        --soft2: #f1f2f4;
+        --accent: #e11d2e;
+        --accent-soft: rgba(225, 29, 46, .06);
+        --navy: #1c2136;
+        --max: 1160px;
+
+        container-type: inline-size;
+        container-name: gasa;
+        font-family: Pretendard, "Noto Sans KR", system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+        color: var(--ink);
+        background: var(--bg);
+        padding: 34px 16px 72px;
+        -webkit-font-smoothing: antialiased;
+        text-rendering: optimizeLegibility;
+        word-break: keep-all;
+      }
+
+      #gasaServiceSection * { box-sizing: border-box; }
+      #gasaServiceSection a { color: inherit; }
+      #gasaServiceSection ul,
+      #gasaServiceSection ol { list-style: none; margin: 0; padding: 0; }
+
+      #gasaServiceSection .gs-wrap { max-width: var(--max); margin: 0 auto; }
+
+      #gasaServiceSection .gs-divider { height: 1px; background: var(--line); margin: 0 0 18px; }
+
+      /* ── Intro ── */
+      #gasaServiceSection .gs-intro {
+        display: grid;
+        grid-template-columns: 1.15fr .85fr;
+        gap: clamp(28px, 5cqi, 64px);
+        align-items: center;
+        padding: clamp(24px, 4cqi, 48px) 0 clamp(32px, 5cqi, 56px);
+      }
+
+      #gasaServiceSection .gs-intro h2 {
+        margin: 0 0 20px;
+        font-size: clamp(26px, 3.3cqi, 40px);
+        line-height: 1.3;
+        letter-spacing: -.03em;
+        font-weight: 800;
+      }
+
+      #gasaServiceSection .gs-lead {
+        font-size: clamp(15px, 1.45cqi, 17px);
+        line-height: 1.8;
+        color: #374151;
+        max-width: 36em;
+      }
+
+      #gasaServiceSection .gs-lead + .gs-lead { margin-top: 12px; }
+
+      #gasaServiceSection .gs-btns {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 28px;
+      }
+
+      #gasaServiceSection .gs-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 14px 28px;
+        border-radius: 40px;
+        font-size: 15px;
+        font-weight: 700;
+        text-decoration: none;
+        border: 2px solid var(--ink);
+        transition: background .25s, color .25s, border-color .25s;
+      }
+
+      #gasaServiceSection .gs-btn--primary {
+        background: var(--accent);
+        border-color: var(--accent);
+        color: #fff;
+      }
+
+      #gasaServiceSection .gs-btn--primary:hover { background: #c01626; border-color: #c01626; }
+      #gasaServiceSection .gs-btn--ghost { background: transparent; color: var(--ink); }
+      #gasaServiceSection .gs-btn--ghost:hover { background: var(--ink); color: #fff; }
+
+      #gasaServiceSection .gs-btn:focus-visible {
+        outline: 3px solid var(--accent);
+        outline-offset: 3px;
+      }
+
+      /* ── 바우처 카드 (페이지의 핵심 비주얼) ── */
+      #gasaServiceSection .gs-cardStage {
+        position: relative;
+        padding: 24px 12px 36px;
+      }
+
+      #gasaServiceSection .gs-cardStage::before {
+        content: '';
+        position: absolute;
+        inset: 18% 4% 6% 14%;
+        border: 1.5px dashed rgba(17, 17, 17, .18);
+        border-radius: 22px;
+        transform: rotate(5deg);
+      }
+
+      #gasaServiceSection .gs-card {
+        position: relative;
+        aspect-ratio: 1.586 / 1;
+        width: 100%;
+        max-width: 420px;
+        margin: 0 auto;
+        border-radius: 20px;
+        padding: clamp(20px, 2.6cqi, 30px);
+        color: #fff;
+        background:
+          radial-gradient(120% 90% at 100% 0%, rgba(225, 29, 46, .55) 0%, rgba(225, 29, 46, 0) 55%),
+          linear-gradient(150deg, #2a3152 0%, var(--navy) 60%, #141829 100%);
+        box-shadow: 0 30px 60px -20px rgba(28, 33, 54, .55), 0 8px 18px -8px rgba(28, 33, 54, .35);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        transform: rotate(-4deg);
+      }
+
+      #gasaServiceSection .gs-card__top {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        font-size: clamp(13px, 1.25cqi, 15px);
+        font-weight: 600;
+        opacity: .92;
+      }
+
+      #gasaServiceSection .gs-card__chip {
+        width: 44px;
+        height: 34px;
+        border-radius: 7px;
+        background: linear-gradient(135deg, #f3dca0, #c9a24f);
+        position: relative;
+        overflow: hidden;
+      }
+
+      #gasaServiceSection .gs-card__chip::after {
+        content: '';
+        position: absolute;
+        inset: 8px 0;
+        border-top: 1px solid rgba(0, 0, 0, .25);
+        border-bottom: 1px solid rgba(0, 0, 0, .25);
+      }
+
+      #gasaServiceSection .gs-card__amount {
+        display: flex;
+        align-items: baseline;
+        gap: 6px;
+        font-variant-numeric: tabular-nums;
+      }
+
+      #gasaServiceSection .gs-card__amount strong {
+        font-size: clamp(38px, 5.2cqi, 56px);
+        font-weight: 800;
+        letter-spacing: -.02em;
+        line-height: 1;
+      }
+
+      #gasaServiceSection .gs-card__amount span { font-size: 20px; font-weight: 600; }
+
+      #gasaServiceSection .gs-card__meta {
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+        font-size: 12.5px;
+        opacity: .78;
+      }
+
+      /* 카드 등장 모션: 화면에 들어올 때 한 번만 */
+      #gasaServiceSection .gs-card.is-ready {
+        opacity: 0;
+        transform: rotate(-14deg) translateY(40px);
+        transition: opacity .8s ease, transform 1.1s cubic-bezier(.2, .8, .2, 1.05);
+      }
+
+      #gasaServiceSection .gs-card.is-ready.is-in {
+        opacity: 1;
+        transform: rotate(-4deg) translateY(0);
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        #gasaServiceSection .gs-card.is-ready {
+          opacity: 1;
+          transform: rotate(-4deg);
+          transition: none;
+        }
+      }
+
+      /* ── 사진 ── */
+      #gasaServiceSection .gs-photo {
+        margin: 0;
+        border-radius: 14px;
+        overflow: hidden;
+        position: relative;
+        background: var(--img) center / cover no-repeat, linear-gradient(135deg, #e4e7ee, #cfd4de);
+      }
+
+      #gasaServiceSection .gs-photo--wide { aspect-ratio: 21 / 8; min-height: 220px; }
+
+      #gasaServiceSection .gs-photo figcaption {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        padding: 40px 24px 18px;
+        color: #fff;
+        font-size: 14px;
+        background: linear-gradient(to top, rgba(18, 22, 34, .7), rgba(18, 22, 34, 0));
+      }
+
+      /* ── 블록 헤더 ── */
+      #gasaServiceSection .gs-block { padding-top: clamp(48px, 7cqi, 88px); }
+
+      #gasaServiceSection .gs-head {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: baseline;
+        justify-content: space-between;
+        gap: 6px 16px;
+        padding-bottom: 14px;
+        margin-bottom: 22px;
+        border-bottom: 2px solid var(--ink);
+      }
+
+      #gasaServiceSection .gs-head h3 {
+        margin: 0;
+        font-size: clamp(21px, 2.3cqi, 27px);
+        font-weight: 800;
+        letter-spacing: -.02em;
+      }
+
+      #gasaServiceSection .gs-head h3::before {
+        content: '';
+        display: inline-block;
+        width: 5px;
+        height: .85em;
+        margin-right: 10px;
+        border-radius: 2px;
+        background: var(--accent);
+        vertical-align: -.06em;
+      }
+
+      #gasaServiceSection .gs-head p { color: var(--muted); font-size: 14px; }
+
+      /* ── 공통 조건 ── */
+      #gasaServiceSection .gs-common {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 10px 14px;
+        padding: 18px 20px;
+        margin-bottom: 18px;
+        border-radius: 12px;
+        background: var(--accent-soft);
+      }
+
+      #gasaServiceSection .gs-common strong { font-size: 15px; color: var(--accent); margin-right: 4px; }
+
+      #gasaServiceSection .gs-common li {
+        padding: 8px 14px;
+        border-radius: 999px;
+        background: #fff;
+        font-size: 14.5px;
+        font-weight: 600;
+        border: 1px solid rgba(225, 29, 46, .18);
+      }
+
+      /* ── 표 ── */
+      #gasaServiceSection .gs-table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 15.5px;
+        line-height: 1.65;
+      }
+
+      #gasaServiceSection .gs-table caption {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+        clip: rect(0 0 0 0);
+      }
+
+      #gasaServiceSection .gs-table th,
+      #gasaServiceSection .gs-table td {
+        padding: 18px 20px;
+        border-bottom: 1px solid var(--line);
+        text-align: left;
+        vertical-align: top;
+      }
+
+      #gasaServiceSection .gs-table thead th {
+        background: var(--soft);
+        font-size: 14px;
+        font-weight: 700;
+        color: #374151;
+        padding: 14px 20px;
+      }
+
+      #gasaServiceSection .gs-table tbody th {
+        width: 200px;
+        background: var(--soft);
+        font-weight: 700;
+        white-space: nowrap;
+      }
+
+      #gasaServiceSection .gs-table .gs-type {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      #gasaServiceSection .gs-table .gs-type i {
+        font-style: normal;
+        width: 36px;
+        height: 36px;
+        border-radius: 999px;
+        background: #fff;
+        display: grid;
+        place-items: center;
+        font-size: 18px;
+      }
+
+      #gasaServiceSection .gs-note {
+        display: block;
+        margin-top: 4px;
+        font-size: 13.5px;
+        color: var(--muted);
+      }
+
+      #gasaServiceSection .gs-em { color: var(--accent); font-weight: 700; }
+
+      #gasaServiceSection .gs-table a { font-weight: 600; text-underline-offset: 3px; }
+
+      /* ── 서비스 범위 ── */
+      #gasaServiceSection .gs-scope {
+        display: grid;
+        grid-template-columns: .9fr 1.1fr;
+        gap: clamp(20px, 3.4cqi, 40px);
+        align-items: stretch;
+      }
+
+      #gasaServiceSection .gs-scope .gs-photo { min-height: 360px; }
+
+      #gasaServiceSection .gs-scopeLists {
+        display: grid;
+        gap: 18px;
+      }
+
+      #gasaServiceSection .gs-scopeBox {
+        padding: 22px 22px 18px;
+        border-radius: 14px;
+        border: 1px solid var(--line);
+      }
+
+      #gasaServiceSection .gs-scopeBox h4 {
+        margin: 0 0 14px;
+        font-size: 17px;
+        font-weight: 800;
+      }
+
+      #gasaServiceSection .gs-scopeBox--yes { background: #fff; border-color: rgba(17, 17, 17, .16); }
+      #gasaServiceSection .gs-scopeBox--no { background: var(--soft); border-color: transparent; }
+
+      #gasaServiceSection .gs-yesList {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        gap: 10px;
+      }
+
+      #gasaServiceSection .gs-yesList li {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 12px 14px;
+        border-radius: 10px;
+        background: var(--soft);
+        font-size: 15px;
+        font-weight: 600;
+      }
+
+      #gasaServiceSection .gs-yesList li span { font-size: 20px; }
+
+      #gasaServiceSection .gs-noList {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 8px 18px;
+      }
+
+      #gasaServiceSection .gs-noList li {
+        position: relative;
+        padding-left: 22px;
+        font-size: 14.5px;
+        color: #4b5563;
+        line-height: 1.6;
+      }
+
+      #gasaServiceSection .gs-noList li::before {
+        content: '✕';
+        position: absolute;
+        left: 0;
+        top: 0;
+        font-size: 12px;
+        font-weight: 800;
+        color: var(--accent);
+      }
+
+      /* ── 이용 절차 ── */
+      #gasaServiceSection .gs-steps {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 14px;
+        counter-reset: step;
+      }
+
+      #gasaServiceSection .gs-steps li {
+        position: relative;
+        padding: 22px 18px 20px;
+        border-radius: 14px;
+        background: var(--soft);
+        counter-increment: step;
+      }
+
+      #gasaServiceSection .gs-steps li::before {
+        content: counter(step, decimal-leading-zero);
+        display: block;
+        margin-bottom: 14px;
+        font-size: 28px;
+        font-weight: 800;
+        line-height: 1;
+        color: var(--accent);
+        font-variant-numeric: tabular-nums;
+      }
+
+      #gasaServiceSection .gs-steps li:not(:last-child)::after {
+        content: '';
+        position: absolute;
+        top: 34px;
+        right: -11px;
+        width: 8px;
+        height: 8px;
+        border-top: 2px solid rgba(17, 17, 17, .35);
+        border-right: 2px solid rgba(17, 17, 17, .35);
+        transform: rotate(45deg);
+        z-index: 1;
+      }
+
+      #gasaServiceSection .gs-steps strong {
+        display: block;
+        font-size: 16.5px;
+        margin-bottom: 6px;
+      }
+
+      #gasaServiceSection .gs-steps p {
+        font-size: 14px;
+        line-height: 1.6;
+        color: #4b5563;
+      }
+
+      #gasaServiceSection .gs-steps li.is-us {
+        background: var(--navy);
+        color: #fff;
+      }
+
+      #gasaServiceSection .gs-steps li.is-us p { color: rgba(255, 255, 255, .78); }
+      #gasaServiceSection .gs-steps li.is-us::before { color: #ff6b77; }
+
+      /* ── 유의사항 ── */
+      #gasaServiceSection .gs-notice li {
+        position: relative;
+        padding: 14px 0 14px 26px;
+        border-bottom: 1px dashed var(--line);
+        font-size: 15px;
+        line-height: 1.7;
+        color: #374151;
+      }
+
+      #gasaServiceSection .gs-notice li::before {
+        content: '';
+        position: absolute;
+        left: 6px;
+        top: 24px;
+        width: 6px;
+        height: 6px;
+        border-radius: 999px;
+        background: var(--accent);
+      }
+
+      #gasaServiceSection .gs-notice b { color: var(--ink); }
+
+      /* ── 문의 ── */
+      #gasaServiceSection .gs-contact {
+        margin-top: clamp(48px, 7cqi, 88px);
+        padding: clamp(28px, 4.4cqi, 48px);
+        border-radius: 18px;
+        background:
+          radial-gradient(80% 140% at 100% 100%, rgba(225, 29, 46, .35) 0%, rgba(225, 29, 46, 0) 60%),
+          var(--navy);
+        color: #fff;
+        display: grid;
+        grid-template-columns: 1fr auto;
+        gap: 28px;
+        align-items: center;
+      }
+
+      #gasaServiceSection .gs-contact h3 {
+        margin: 0 0 10px;
+        font-size: clamp(21px, 2.5cqi, 28px);
+        font-weight: 800;
+        letter-spacing: -.02em;
+      }
+
+      #gasaServiceSection .gs-contact p { font-size: 15px; line-height: 1.7; color: rgba(255, 255, 255, .8); }
+
+      #gasaServiceSection .gs-contactTel {
+        display: block;
+        margin-top: 14px;
+        font-size: clamp(26px, 3.4cqi, 36px);
+        font-weight: 800;
+        letter-spacing: .01em;
+        text-decoration: none;
+        color: #fff;
+        font-variant-numeric: tabular-nums;
+      }
+
+      #gasaServiceSection .gs-contact .gs-btn--ghost { color: #fff; border-color: #fff; }
+      #gasaServiceSection .gs-contact .gs-btn--ghost:hover { background: #fff; color: var(--navy); }
+
+      #gasaServiceSection .gs-contact .gs-btns { margin-top: 0; flex-direction: column; }
+
+      #gasaServiceSection .gs-otherTel {
+        margin-top: 18px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px 20px;
+        font-size: 13.5px;
+        color: rgba(255, 255, 255, .7);
+      }
+
+      #gasaServiceSection .gs-otherTel a { text-decoration: none; font-weight: 600; color: #fff; }
+
+      #gasaServiceSection .gs-source {
+        margin-top: 16px;
+        font-size: 12.5px;
+        color: var(--muted);
+        line-height: 1.6;
+      }
+
+      /* ── 반응형 (컨테이너 기준) ── */
+      @container gasa (max-width: 960px) {
+        #gasaServiceSection .gs-steps { grid-template-columns: 1fr 1fr; }
+        #gasaServiceSection .gs-steps li:not(:last-child)::after { display: none; }
+      }
+
+      @container gasa (max-width: 860px) {
+        #gasaServiceSection .gs-intro { grid-template-columns: 1fr; }
+        #gasaServiceSection .gs-cardStage { max-width: 440px; width: 100%; margin: 0 auto; }
+        #gasaServiceSection .gs-scope { grid-template-columns: 1fr; }
+        #gasaServiceSection .gs-scope .gs-photo { min-height: 0; aspect-ratio: 16 / 9; }
+        #gasaServiceSection .gs-contact { grid-template-columns: 1fr; }
+        #gasaServiceSection .gs-contact .gs-btns { flex-direction: row; }
+      }
+
+      @container gasa (max-width: 640px) {
+        #gasaServiceSection .gs-photo--wide { aspect-ratio: 4 / 3; }
+
+        #gasaServiceSection .gs-table thead { display: none; }
+
+        #gasaServiceSection .gs-table,
+        #gasaServiceSection .gs-table tbody,
+        #gasaServiceSection .gs-table tr,
+        #gasaServiceSection .gs-table th,
+        #gasaServiceSection .gs-table td { display: block; width: 100%; }
+
+        #gasaServiceSection .gs-table tr { border-bottom: 1px solid var(--line); }
+
+        #gasaServiceSection .gs-table tbody th {
+          width: 100%;
+          border-bottom: 0;
+          padding: 14px 16px;
+        }
+
+        #gasaServiceSection .gs-table td {
+          border-bottom: 0;
+          padding: 14px 16px 18px;
+          font-size: 15px;
+        }
+
+        #gasaServiceSection .gs-noList { grid-template-columns: 1fr; }
+        #gasaServiceSection .gs-steps { grid-template-columns: 1fr; }
+        #gasaServiceSection .gs-btn { flex: 1 1 auto; justify-content: center; }
+        #gasaServiceSection .gs-contact .gs-btns { flex-direction: column; }
+      }
+    </style>
+
+    <div class="gs-wrap">
+      <div class="gs-divider"></div>
+
+      <!-- ① 소개 -->
+      <div class="gs-intro">
+        <div>
+          <h2>집안일의 무게를 덜고,<br>가족의 시간을 돌려드립니다</h2>
+          <p class="gs-lead">
+            서울형 가사서비스는 임산부, 맞벌이, 다자녀 가정의 가사 부담을 줄이고 일과 생활의 균형을 돕기 위해
+            서울시가 가사서비스 이용 비용을 바우처로 지원하는 사업입니다.
+          </p>
+          <p class="gs-lead">
+            나누리사회적협동조합은 서울형 가사서비스 제공기관으로, 교육을 이수한 가사관리사가 직접 가정을 방문해
+            청소, 설거지, 세탁 등 일상의 집안일을 도와드립니다.
+          </p>
+          <div class="gs-btns">
+            <a class="gs-btn gs-btn--primary" href="tel:02-6348-0851">전화로 예약하기</a>
+            <a class="gs-btn gs-btn--ghost" href="https://umppa.seoul.go.kr" target="_blank" rel="noopener">바우처 지원 신청하기</a>
+          </div>
+        </div>
+
+        <div class="gs-cardStage">
+          <div class="gs-card" role="img" aria-label="서울형 가사서비스 바우처, 1가정당 연 70만원">
+            <div class="gs-card__top">
+              <span>서울형 가사서비스<br>바우처</span>
+              <span class="gs-card__chip" aria-hidden="true"></span>
+            </div>
+            <div class="gs-card__amount"><strong>700,000</strong><span>원</span></div>
+            <div class="gs-card__meta">
+              <span>1가정당 연간 지원</span>
+              <span>결제 시 자동 차감</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 대표 이미지 : ./img/gasa-01.jpg 교체 -->
+      <figure class="gs-photo gs-photo--wide" style="--img:url('./img/gasa-01.jpg')">
+        <figcaption>나누리 가사관리사가 약속한 날, 약속한 범위의 집안일을 꼼꼼히 도와드립니다.</figcaption>
+      </figure>
+
+      <!-- ② 지원 대상 -->
+      <div class="gs-block">
+        <div class="gs-head">
+          <h3>지원 대상</h3>
+          <p>아래 공통 조건을 모두 충족하고, 세 가지 유형 중 하나에 해당하는 가정</p>
+        </div>
+
+        <div class="gs-common">
+          <strong>공통 조건</strong>
+          <ul style="display:flex;flex-wrap:wrap;gap:8px;">
+            <li>서울시 거주</li>
+            <li>기준 중위소득 180% 이하</li>
+            <li>12세 이하 자녀가 있는 가정</li>
+          </ul>
+        </div>
+
+        <table class="gs-table">
+          <caption>서울형 가사서비스 지원 대상 유형</caption>
+          <thead>
+            <tr>
+              <th scope="col">유형</th>
+              <th scope="col">대상 기준</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row"><span class="gs-type"><i aria-hidden="true">🤰</i>임산부 가정</span></th>
+              <td>임신 3개월부터 출산 후 1년 이내인 가정</td>
+            </tr>
+            <tr>
+              <th scope="row"><span class="gs-type"><i aria-hidden="true">👩‍👧</i>맞벌이 가정</span></th>
+              <td>12세 이하 자녀를 양육하는 맞벌이 가정</td>
+            </tr>
+            <tr>
+              <th scope="row"><span class="gs-type"><i aria-hidden="true">👨‍👩‍👧‍👦</i>다자녀 가정</span></th>
+              <td>
+                18세 이하 자녀가 2명 이상인 가정
+                <span class="gs-note">단, 12세 이하 자녀가 반드시 1명 이상 포함되어야 합니다.</span>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- ③ 지원 내용 -->
+      <div class="gs-block">
+        <div class="gs-head">
+          <h3>지원 내용</h3>
+          <p>2026년 기준</p>
+        </div>
+
+        <table class="gs-table">
+          <caption>서울형 가사서비스 지원 내용</caption>
+          <tbody>
+            <tr>
+              <th scope="row">지원 금액</th>
+              <td><span class="gs-em">1가정당 연 70만원</span><span class="gs-note">본인 명의 신용·체크카드에 바우처 형태로 지급됩니다.</span></td>
+            </tr>
+            <tr>
+              <th scope="row">신청 기간</th>
+              <td>2026. 3. 30.(월)부터 지원 예산 소진 시까지</td>
+            </tr>
+            <tr>
+              <th scope="row">사용 기간</th>
+              <td>바우처 배정일부터 지급 연도 11월 말일까지<span class="gs-note">기간이 지나면 남은 바우처는 사용할 수 없습니다.</span></td>
+            </tr>
+            <tr>
+              <th scope="row">신청 방법</th>
+              <td><a href="https://umppa.seoul.go.kr" target="_blank" rel="noopener">탄생육아 몽땅정보통(umppa.seoul.go.kr)</a>에서 온라인 신청</td>
+            </tr>
+            <tr>
+              <th scope="row">사용처</th>
+              <td>서울형 가사서비스 지정 제공기관(고용노동부 가사서비스 인증기관)<span class="gs-note">나누리사회적협동조합에서 예약 후 바로 이용하실 수 있습니다.</span></td>
+            </tr>
+            <tr>
+              <th scope="row">신청 가능 카드사</th>
+              <td>IBK기업은행, 새마을금고, 우체국</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- ④ 서비스 범위 -->
+      <div class="gs-block">
+        <div class="gs-head">
+          <h3>서비스 범위</h3>
+          <p>가사관리사가 가정에 방문해 제공하는 서비스</p>
+        </div>
+
+        <div class="gs-scope">
+          <!-- 서비스 이미지 : ./img/gasa-02.jpg 교체 -->
+          <figure class="gs-photo" style="--img:url('./img/gasa-02.jpg')" aria-hidden="true"></figure>
+
+          <div class="gs-scopeLists">
+            <div class="gs-scopeBox gs-scopeBox--yes">
+              <h4>도와드리는 일</h4>
+              <ul class="gs-yesList">
+                <li><span aria-hidden="true">🛋️</span>거실·방 청소</li>
+                <li><span aria-hidden="true">🍽️</span>주방 청소·설거지</li>
+                <li><span aria-hidden="true">🚿</span>화장실 청소</li>
+                <li><span aria-hidden="true">👕</span>세탁</li>
+                <li><span aria-hidden="true">🗑️</span>쓰레기 배출</li>
+              </ul>
+            </div>
+
+            <div class="gs-scopeBox gs-scopeBox--no">
+              <h4>제공하지 않는 일</h4>
+              <ul class="gs-noList">
+                <li>옷장 정리 등 정리수납</li>
+                <li>음식 조리</li>
+                <li>아이·어르신 돌봄</li>
+                <li>반려동물 관련 업무</li>
+                <li>입주·이사 청소</li>
+                <li>전문 자격이 필요한 작업</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ⑤ 이용 절차 -->
+      <div class="gs-block">
+        <div class="gs-head">
+          <h3>이용 절차</h3>
+          <p>바우처 신청부터 서비스 이용까지</p>
+        </div>
+
+        <ol class="gs-steps">
+          <li>
+            <strong>바우처 신청</strong>
+            <p>탄생육아 몽땅정보통에서 온라인으로 신청합니다.</p>
+          </li>
+          <li>
+            <strong>자격 확인·지급</strong>
+            <p>선정되면 알림톡(문자)으로 안내되고 카드에 바우처가 배정됩니다.</p>
+          </li>
+          <li class="is-us">
+            <strong>나누리 예약</strong>
+            <p>전화로 희망 일정과 서비스 범위를 상담하고 예약합니다.</p>
+          </li>
+          <li class="is-us">
+            <strong>방문 서비스</strong>
+            <p>가사관리사가 예약한 날 가정을 방문해 서비스를 제공합니다.</p>
+          </li>
+          <li>
+            <strong>카드 결제</strong>
+            <p>본인 명의 카드로 결제하면 바우처 잔액에서 자동으로 차감됩니다.</p>
+          </li>
+        </ol>
+      </div>
+
+      <!-- ⑥ 유의사항 -->
+      <div class="gs-block">
+        <div class="gs-head">
+          <h3>꼭 확인하세요</h3>
+        </div>
+
+        <ul class="gs-notice">
+          <li><b>본인 명의 신용·체크카드</b>로만 결제할 수 있습니다. 가족카드, 법인카드, 바우처·보조금 전용카드 등 일부 특수목적카드는 신청과 사용이 불가합니다.</li>
+          <li><b>할부 결제</b>, 일시불 결제 후 할부 전환, 2개 이상 바우처의 복합 결제는 할 수 없습니다.</li>
+          <li>결제 금액이 바우처 잔액보다 많으면 <b>초과분은 본인 부담</b>입니다. 신용카드는 결제일에 청구되고, 체크카드는 승인 시 계좌에서 인출됩니다.</li>
+          <li>잔액과 사용 내역은 카카오 알림톡(문자)과 페이북 앱의 <b>전체 &gt; 내 혜택 &gt; MY 바우처</b>에서 확인할 수 있습니다.</li>
+          <li>서울시가 지정한 가사서비스 제공기관 외에는 바우처를 사용할 수 없습니다.</li>
+        </ul>
+      </div>
+
+      <!-- ⑦ 예약·문의 -->
+      <div class="gs-contact">
+        <div>
+          <h3>예약과 이용 상담은 나누리에서 도와드립니다</h3>
+          <p>바우처를 받으셨다면 전화 한 통으로 방문 일정을 잡아드립니다.</p>
+          <a class="gs-contactTel" href="tel:02-6348-0851">02-6348-0851</a>
+          <div class="gs-otherTel">
+            <span>서울시 다산콜센터 <a href="tel:120">120</a></span>
+            <span>BC카드 정부지원금 콜센터 <a href="tel:1566-4800">1566-4800</a></span>
+          </div>
+        </div>
+        <div class="gs-btns">
+          <a class="gs-btn gs-btn--primary" href="tel:02-6348-0851">전화로 예약하기</a>
+          <a class="gs-btn gs-btn--ghost" href="https://umppa.seoul.go.kr" target="_blank" rel="noopener">바우처 지원 신청하기</a>
+        </div>
+      </div>
+
+      <p class="gs-source">※ 지원 기준과 기간은 서울시 사업 공고에 따라 달라질 수 있습니다. 최신 내용은 탄생육아 몽땅정보통에서 확인해 주세요.</p>
+    </div>
+
+    <script>
+      (function () {
+        const card = document.querySelector('#gasaServiceSection .gs-card');
+        if (!card || !('IntersectionObserver' in window)) return;
+        if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+        card.classList.add('is-ready');
+        const io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (e) {
+            if (e.isIntersecting) {
+              card.classList.add('is-in');
+              io.disconnect();
+            }
+          });
+        }, { threshold: 0.35 });
+        io.observe(card);
+      })();
+    </script>
+  </section>
+
+  <div id="footer_template"></div>
+
+  <script src="./js/jquery-1.11.0.min.js"></script>
+  <script src="./js/validation1.js"></script>
+  <script src="./js/main.js"></script>
+  <script src="./js/footer.js"></script>
+</body>
+
+</html>

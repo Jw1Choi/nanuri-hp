@@ -257,11 +257,12 @@
 
 <nav class="tp-nav" id="tpNav">
   <div class="tp-nav__item" data-menu="0"><a href="./about.html" class="tp-nav__link">나누리 소개</a></div>
- <!--  <div class="tp-nav__item" data-menu="1"><a href="./business.html" class="tp-nav__link">사업 & 실적</a></div>
-  <div class="tp-nav__item" data-menu="2"><a href="./homecare.html" class="tp-nav__link">안심 홈케어</a></div>
-  <div class="tp-nav__item" data-menu="3"><a href="./partnership.html" class="tp-nav__link">협력 기관</a></div>
+<div class="tp-nav__item" data-menu="1"><a href="./business.html" class="tp-nav__link">주요 사업</a></div> 
+  <div class="tp-nav__item" data-menu="1"><a href="./homecare.html" class="tp-nav__link">안심 홈케어</a></div>
+   <!--  <div class="tp-nav__item" data-menu="3">
+   <a href="./partnership.html" class="tp-nav__link">협력 기관</a></div>
   <div class="tp-nav__item" data-menu="4"><a href="./story.html" class="tp-nav__link">나누리 스토리</a></div> -->
-  <div class="tp-nav__item" data-menu="5"><a href="./contact.html" class="tp-nav__link">문의</a></div>
+  <div class="tp-nav__item" data-menu="2"><a href="./contact.html" class="tp-nav__link">문의</a></div>
 </nav>
 
 <div class="tp-lang">
@@ -285,10 +286,11 @@
         <a href="./vision.html" class="tp-dropdown__link">비전 & 미션</a>
         <a href="./history.html" class="tp-dropdown__link">사업연혁</a>
       </div>
-     <!-- <div class="tp-dropdown__col" data-col="1">
-        <a href="./business.html" class="tp-dropdown__link">통합 홈케어 사업</a>
-        <a href="./partner.html" class="tp-dropdown__link">인증 & 파트너</a>
-        <a href="./organization.html" class="tp-dropdown__link">조직도</a>
+     <div class="tp-dropdown__col" data-col="1">
+        <a href="./business.html" class="tp-dropdown__link">집수리 & 인테리어</a>
+        <a href="./partner.html" class="tp-dropdown__link">가사서비스</a>
+        <a href="./organization.html" class="tp-dropdown__link">청소 & 소독</a>
+        <a href="./organization.html" class="tp-dropdown__link">취업 자격증 교육</a>
       </div>
       <div class="tp-dropdown__col" data-col="2">
         <a href="./homecare.html" class="tp-dropdown__link">홈케어 패키지</a>
@@ -296,7 +298,14 @@
         <a href="./case.html" class="tp-dropdown__link">시공·정리 사례</a>
         <a href="./estimate.html" class="tp-dropdown__link">예약·견적 신청</a>
       </div>
-      <div class="tp-dropdown__col" data-col="3">
+     <!--
+        <div class="tp-dropdown__col" data-col="1">
+        <a href="./business.html" class="tp-dropdown__link">통합 홈케어 사업</a>
+        <a href="./partner.html" class="tp-dropdown__link">인증 & 파트너</a>
+        <a href="./organization.html" class="tp-dropdown__link">조직도</a>
+      </div>
+     
+       <div class="tp-dropdown__col" data-col="3">
         <a href="./b2g.html" class="tp-dropdown__link">공공기관 (B2G)</a>
         <a href="./b2b.html" class="tp-dropdown__link">기업 ESG (B2B)</a>
         <a href="./program.html" class="tp-dropdown__link">교육·출장 프로그램</a>
@@ -306,11 +315,11 @@
         <a href="./column.html" class="tp-dropdown__link">안심 칼럼</a>
         <a href="./news.html" class="tp-dropdown__link">활동 소식</a>
         <a href="./press.html" class="tp-dropdown__link">언론 보도</a>
-      </div> -->
-      <div class="tp-dropdown__col" data-col="2">
+      </div>
+      <div class="tp-dropdown__col" data-col="3">
         <a href="./contact.html" class="tp-dropdown__link">상담·견적 문의</a>
         <a href="./location.html" class="tp-dropdown__link">오시는 길</a>
-      </div>
+      </div> -->
     </div>
   </div>
 </header>
@@ -348,17 +357,17 @@
       </div>
     </div>
 
-<!-- <div class="tp-mobile-nav__item">
+ <div class="tp-mobile-nav__item">
   <button class="tp-mobile-nav__link" data-mobile="1" type="button">
-    <span>사업 & 실적</span>
+    <span>주요 사업</span>
     <svg class="tp-mobile-nav__arrow" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
       <path d="M6 9L12 15L18 9" fill="none" stroke="rgba(255,255,255,0.6)" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
     </svg>
   </button>
   <div class="tp-mobile-sub" data-mobile-sub="1">
-    <a href="./business.html" class="tp-mobile-sub__link">통합 홈케어 사업</a>
-    <a href="./partner.html" class="tp-mobile-sub__link">인증 & 파트너</a>
-    <a href="./organization.html" class="tp-mobile-sub__link">조직도</a>
+    <a href="./business.html" class="tp-mobile-sub__link">집수리 & 인테리어</a>
+    <a href="./partner.html" class="tp-mobile-sub__link">가사서비스</a>
+    <a href="./organization.html" class="tp-mobile-sub__link">청소 수납</a>
   </div>
 </div>
 
@@ -377,7 +386,7 @@
   </div>
 </div>
 
-<div class="tp-mobile-nav__item">
+<!-- <div class="tp-mobile-nav__item">
   <button class="tp-mobile-nav__link" data-mobile="3" type="button">
     <span>협력 기관</span>
     <svg class="tp-mobile-nav__arrow" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
