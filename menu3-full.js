@@ -257,8 +257,8 @@
 
 <nav class="tp-nav" id="tpNav">
   <div class="tp-nav__item" data-menu="0"><a href="./about.html" class="tp-nav__link">나누리 소개</a></div>
-<div class="tp-nav__item" data-menu="1"><a href="./business.html" class="tp-nav__link">주요 사업</a></div> 
-  <div class="tp-nav__item" data-menu="1"><a href="./homecare.html" class="tp-nav__link">안심 홈케어</a></div>
+<div class="tp-nav__item" data-menu="1"><a href="./gasa.html" class="tp-nav__link">주요 사업</a></div> 
+  <div class="tp-nav__item" data-menu="1"><a href="./homecare.html" class="tp-nav__link">신청하기</a></div>
    <!--  <div class="tp-nav__item" data-menu="3">
    <a href="./partnership.html" class="tp-nav__link">협력 기관</a></div>
   <div class="tp-nav__item" data-menu="4"><a href="./story.html" class="tp-nav__link">나누리 스토리</a></div> -->
@@ -287,8 +287,8 @@
         <a href="./history.html" class="tp-dropdown__link">사업연혁</a>
       </div>
      <div class="tp-dropdown__col" data-col="1">
-        <a href="./business.html" class="tp-dropdown__link">집수리 & 인테리어</a>
-        <a href="./partner.html" class="tp-dropdown__link">가사서비스</a>
+        <a href="./seoul-gasa.html" class="tp-dropdown__link">서울형가사서비스</a>
+        <a href="./gasa.html" class="tp-dropdown__link">일반가사특화서비스</a>
         <a href="./organization.html" class="tp-dropdown__link">청소 & 소독</a>
         <a href="./organization.html" class="tp-dropdown__link">취업 자격증 교육</a>
       </div>
@@ -300,7 +300,7 @@
       </div>
      <!--
         <div class="tp-dropdown__col" data-col="1">
-        <a href="./business.html" class="tp-dropdown__link">통합 홈케어 사업</a>
+        <a href="./gasa.html" class="tp-dropdown__link">통합 홈케어 사업</a>
         <a href="./partner.html" class="tp-dropdown__link">인증 & 파트너</a>
         <a href="./organization.html" class="tp-dropdown__link">조직도</a>
       </div>
@@ -365,15 +365,15 @@
     </svg>
   </button>
   <div class="tp-mobile-sub" data-mobile-sub="1">
-    <a href="./business.html" class="tp-mobile-sub__link">집수리 & 인테리어</a>
-    <a href="./partner.html" class="tp-mobile-sub__link">가사서비스</a>
+    <a href="./seoul-gasa.html" class="tp-mobile-sub__link">서울형가사서비스</a>
+    <a href="./gasa.html" class="tp-mobile-sub__link">일반가사특화서비스</a>
     <a href="./organization.html" class="tp-mobile-sub__link">청소 수납</a>
   </div>
 </div>
 
 <div class="tp-mobile-nav__item">
   <button class="tp-mobile-nav__link" data-mobile="2" type="button">
-    <span>안심 홈케어</span>
+    <span>신청하기</span>
     <svg class="tp-mobile-nav__arrow" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
       <path d="M6 9L12 15L18 9" fill="none" stroke="rgba(255,255,255,0.6)" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
     </svg>
