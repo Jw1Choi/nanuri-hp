@@ -258,11 +258,11 @@
 <nav class="tp-nav" id="tpNav">
   <div class="tp-nav__item" data-menu="0"><a href="./about.html" class="tp-nav__link">나누리 소개</a></div>
 <div class="tp-nav__item" data-menu="1"><a href="./seoul-gasa.html" class="tp-nav__link">주요 사업</a></div> 
-  <div class="tp-nav__item" data-menu="1"><a href="./housecare.html" class="tp-nav__link">온라인 신청</a></div>
+  <div class="tp-nav__item" data-menu="1"><a href="./online-program.html" class="tp-nav__link">온라인 신청</a></div>
    <!--  <div class="tp-nav__item" data-menu="3">
    <a href="./partnership.html" class="tp-nav__link">협력 기관</a></div>
   <div class="tp-nav__item" data-menu="4"><a href="./story.html" class="tp-nav__link">나누리 스토리</a></div> -->
-  <div class="tp-nav__item" data-menu="2"><a href="./contact.html" class="tp-nav__link">문의</a></div>
+  <div class="tp-nav__item" data-menu="2"><a href="./location.html" class="tp-nav__link">오시는 길</a></div>
 </nav>
 
 <div class="tp-lang">
