@@ -380,8 +380,8 @@
     </svg>
   </button>
   <div class="tp-mobile-sub" data-mobile-sub="2">
-    <a href="./seoul-gasa.html" class="tp-mobile-sub__link">서울형가사서비스</a>
-    <a href="./seoul-housecare.html" class="tp-mobile-sub__link">서울시안심집수리</a>
+    <a href="./35.html" class="tp-mobile-sub__link">서울형가사서비스</a>
+    <a href="./36.html" class="tp-mobile-sub__link">서울시안심집수리</a>
   </div>
 </div>
 
