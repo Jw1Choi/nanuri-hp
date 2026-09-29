@@ -1,0 +1,1222 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <meta name="naver-site-verification" content="" />
+  <meta name="google-site-verification" content="구글_인증코드_여기에" />
+
+  <link rel="canonical" href="https://nanuricoop.co.kr/housecare" />
+
+  <link rel="icon" href="./img/favicon.png" sizes="any">
+  <link rel="shortcut icon" href="./img/favicon.png" type="image/x-icon">
+  <link rel="apple-touch-icon" sizes="180x180" href="./img/favicon.png">
+
+  <meta name="robots" content="index,follow" />
+  <meta name="subject" content="나누리사회적협동조합" />
+  <meta name="title" content="집수리 · 인테리어 | 나누리사회적협동조합" />
+  <meta name="author" content="나누리사회적협동조합">
+  <meta name="description" content="봉사단체이자 서울시 안심 집수리 등록업체 나누리사회적협동조합. 누수·방수, 도배·장판, 욕실·주방 수리부터 리모델링까지 부풀리지 않은 정직한 금액으로 진행합니다." />
+  <meta name="keywords" content="집수리, 인테리어, 리모델링, 부분 수리, 누수 수리, 방수 공사, 도배 장판, 욕실 리모델링, 주방 리모델링, 싱크대 교체, 창호 교체, 타일 시공, 전기 설비, 마포구 집수리, 서울 인테리어, 나누리사회적협동조합" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="나누리사회적협동조합" />
+  <meta property="og:title" content="집수리 · 인테리어 | 나누리사회적협동조합" />
+  <meta property="og:description" content="봉사단체 · 서울시 안심 집수리 등록업체가 부풀리지 않은 정직한 금액으로 고쳐 드립니다." />
+  <meta property="og:image" content="https://nanuricoop.co.kr/img/r2.jpg" />
+  <meta property="og:url" content="https://nanuricoop.co.kr/housecare" />
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="집수리 · 인테리어 | 나누리사회적협동조합" />
+  <meta name="twitter:description" content="작은 수리부터 전체 리모델링까지, 전화 한 통으로 시작하세요." />
+  <meta name="twitter:image" content="https://nanuricoop.co.kr/img/r2.jpg" />
+
+  <title>집수리 · 인테리어 | 나누리사회적협동조합</title>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+  <link href="./css/reset.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <div id="menu_navi"></div>
+  <script src="./menu3-full copy.js"></script>
+
+
+<!-- ================================================================
+  1. 서브 히어로 + 주요사업 서브 메뉴
+================================================================= -->
+<section id="hcHero" aria-label="집수리 인테리어 소개">
+  <style>
+    #hcHero{
+      --logoBarH:84px;
+      --green-deep:#1f3b2a;
+      --green:#3f7a4d;
+      position:relative; overflow:hidden; color:#fff; background:#111;
+      font-family:Pretendard,"Noto Sans KR",system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
+      -webkit-font-smoothing:antialiased;
+    }
+    #hcHero *{box-sizing:border-box;}
+    #hcHero .stage{ position:relative; height:clamp(480px, 74vh, 700px); }
+    #hcHero .bg{
+      position:absolute; inset:0;
+      background:radial-gradient(120% 90% at 50% 20%, #2a2a28 0%, #141413 70%);
+    }
+    #hcHero .bg img{
+      width:100%; height:100%; object-fit:cover; object-position:center 45%;
+      display:block; filter:brightness(.6);
+      transform:scale(1.05); animation:hcHeroZoom 6s ease-out forwards;
+    }
+    @keyframes hcHeroZoom{ from{transform:scale(1.05);} to{transform:scale(1.14);} }
+    #hcHero .vignette{
+      position:absolute; inset:0; pointer-events:none;
+      background:
+        radial-gradient(120% 100% at 20% 60%, rgba(0,0,0,.45) 0%, rgba(0,0,0,.25) 45%, rgba(0,0,0,.08) 70%, rgba(0,0,0,0) 100%),
+        linear-gradient(to bottom, rgba(0,0,0,.08) 0%, rgba(0,0,0,.35) 100%);
+    }
+    #hcHero .content{
+      position:absolute; left:50%; top:50%;
+      transform:translate(-50%, calc(-50% - var(--logoBarH) / 2));
+      width:100%; max-width:min(880px, 88vw);
+      text-align:center; z-index:5;
+      display:flex; flex-direction:column; align-items:center;
+    }
+    #hcHero .eyebrow, #hcHero .title, #hcHero .sub, #hcHero .chips, #hcHero .call{
+      opacity:0; transform:translateY(30px);
+      animation:hcHeroUp 1s cubic-bezier(.22,1,.36,1) forwards;
+    }
+    #hcHero .title{ animation-delay:.12s; }
+    #hcHero .sub{ animation-delay:.26s; }
+    #hcHero .chips{ animation-delay:.4s; }
+    #hcHero .call{ animation-delay:.54s; }
+    @keyframes hcHeroUp{ to{opacity:1; transform:none;} }
+
+    #hcHero .eyebrow{
+      display:block; font-size:clamp(11px,1.1vw,13px); letter-spacing:.22em; text-transform:uppercase;
+      color:rgba(255,255,255,.78); font-weight:500; margin-bottom:16px;
+    }
+    #hcHero .title{
+      margin:0 0 20px; font-size:3.3rem; font-weight:800; line-height:1.3;
+      letter-spacing:-.02em; text-shadow:0 2px 26px rgba(0,0,0,.4);
+    }
+    #hcHero .sub{
+      margin:0; font-size:clamp(15px,1.35vw,17px); line-height:1.85;
+      color:rgba(255,255,255,.9); font-weight:500; text-shadow:0 1px 14px rgba(0,0,0,.5);
+    }
+    #hcHero .sub b{ color:#ffe0a8; font-weight:800; }
+    #hcHero .chips{ margin-top:26px; display:flex; flex-wrap:wrap; gap:10px; justify-content:center; }
+    #hcHero .chip{
+      display:inline-flex; align-items:center; gap:8px;
+      padding:9px 16px; border-radius:999px;
+      background:rgba(10,10,10,.34); border:1px solid rgba(255,255,255,.24);
+      backdrop-filter:saturate(140%) blur(10px); -webkit-backdrop-filter:saturate(140%) blur(10px);
+      font-size:14px; font-weight:700; letter-spacing:-.01em;
+    }
+    #hcHero .chip b{ color:#ffe0a8; font-weight:800; }
+    #hcHero .call{
+      margin-top:26px; display:inline-flex; align-items:center; gap:10px;
+      padding:14px 26px; border-radius:999px;
+      background:#fff; color:var(--green-deep); text-decoration:none;
+      font-size:16px; font-weight:900; letter-spacing:-.02em;
+      box-shadow:0 12px 30px rgba(0,0,0,.28);
+      transition:transform .3s ease, box-shadow .3s ease;
+    }
+    #hcHero .call:hover{ transform:translateY(-3px); box-shadow:0 16px 36px rgba(0,0,0,.34); }
+    #hcHero .call svg{ width:20px; height:20px; }
+
+    #hcHero .subnav{
+      position:absolute; left:0; right:0; bottom:0; height:var(--logoBarH); z-index:6;
+      display:flex; align-items:center;
+      background:rgba(255,255,255,.86);
+      border-top:1px solid rgba(0,0,0,.06); box-shadow:0 -8px 24px rgba(0,0,0,.12);
+    }
+    #hcHero .subnav ul{
+      list-style:none; margin:0 auto; padding:0 20px; width:100%; max-width:1200px;
+      display:flex; align-items:center; justify-content:center; gap:clamp(8px, 2vw, 18px);
+      overflow-x:auto; scrollbar-width:none; -webkit-overflow-scrolling:touch;
+    }
+    #hcHero .subnav ul::-webkit-scrollbar{ display:none; }
+    #hcHero .subnav a{
+      display:inline-flex; align-items:center; white-space:nowrap;
+      padding:10px 18px; border-radius:999px;
+      font-size:15px; font-weight:700; letter-spacing:-.02em;
+      color:#374151; text-decoration:none; transition:background .25s ease, color .25s ease;
+    }
+    #hcHero .subnav a:hover{ background:rgba(63,122,77,.1); color:var(--green-deep); }
+    #hcHero .subnav a.is-current{
+      background:linear-gradient(180deg,#075327 0%,#003f1f 100%);
+      color:#fff; box-shadow:0 8px 20px rgba(0,55,28,.22);
+    }
+
+    @media (max-width:768px){
+      #hcHero{ --logoBarH:62px; }
+      #hcHero .title{ font-size:2rem; }
+      #hcHero .sub br{ display:none; }
+      #hcHero .chip{ font-size:12.5px; padding:7px 12px; }
+      #hcHero .call{ font-size:15px; padding:12px 22px; }
+      #hcHero .subnav ul{ justify-content:flex-start; padding:0 14px; }
+      #hcHero .subnav a{ font-size:13.5px; padding:8px 14px; }
+    }
+    @media (prefers-reduced-motion: reduce){
+      #hcHero .bg img, #hcHero .eyebrow, #hcHero .title, #hcHero .sub, #hcHero .chips, #hcHero .call{
+        animation:none; opacity:1; transform:none;
+      }
+    }
+  </style>
+
+  <div class="stage">
+    <div class="bg" aria-hidden="true">
+      <img src="./img/r2.jpg" alt="" decoding="async" fetchpriority="high" onerror="this.style.display='none'">
+    </div>
+    <div class="vignette"></div>
+
+    <div class="content">
+      <span class="eyebrow">Home Repair &amp; Interior</span>
+      <h2 class="title">집수리 · 인테리어</h2>
+      <p class="sub">
+        봉사하는 마음으로 시작한 집수리, 이윤보다 이웃의 집이 먼저입니다.<br>
+        <b>부풀리지 않은 정직한 금액</b>으로, 꼭 필요한 공사만 진행합니다.
+      </p>
+      <div class="chips">
+        <span class="chip"><b>봉사단체</b> · 사회적협동조합</span>
+        <span class="chip">서울시 안심 집수리 <b>등록업체</b></span>
+        <span class="chip">부풀리지 않은 <b>정직한 견적</b></span>
+      </div>
+      <a class="call" href="tel:0263480851" aria-label="전화 상담 02-6348-0851">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2Z"/></svg>
+        전화 상담 02-6348-0851
+      </a>
+    </div>
+
+    <nav class="subnav" aria-label="주요사업 메뉴">
+      <ul>
+       <li><a href="https://www.nanuricoop.co.kr/seoul-gasa.html">서울형가사서비스</a></li>
+        <li><a href="https://www.nanuricoop.co.kr/gasa.html" class="is-current" aria-current="page">일반가사특화서비스</a></li>
+        <li><a href="https://www.nanuricoop.co.kr/seoul-housecare.html">서울시안심집수리</a></li>
+        <li><a href="https://www.nanuricoop.co.kr/housecare.html">일반 집수리/인테리어</a></li>
+      </ul>
+    </nav>
+  </div>
+</section>
+
+
+<!-- ================================================================
+  2. 이런 고민 있으신가요 (공감 카드)
+================================================================= -->
+<section id="hcPain" aria-label="집수리가 필요한 상황">
+  <style>
+    #hcPain{
+      --green-deep:#1f3b2a;
+      --green:#3f7a4d;
+      --mint:#3fb8a4;
+      font-family:Pretendard,"Noto Sans KR",system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
+      max-width:1200px; margin:0 auto; padding:40px 20px 80px; color:#111827;
+    }
+    #hcPain *{box-sizing:border-box;}
+    #hcPain .title{ text-align:center; font-weight:900; line-height:1.2; letter-spacing:-.3px; margin:0 auto 18px; }
+    #hcPain .title .l1{ display:block; font-size:50px; color:#111827; padding:50px 0 14px; }
+    #hcPain .title .l2{
+      display:inline-block; font-size:50px; color:#111827;
+      background:linear-gradient(transparent 64%, #ffe0a8 64% 100%); border-radius:2px; padding:0 .06em;
+    }
+    #hcPain .lead{ text-align:center; margin:0 auto 40px; max-width:640px; font-size:16px; line-height:1.75; color:#4b5563; word-break:keep-all; }
+
+    #hcPain .grid{ max-width:1000px; margin:0 auto; display:grid; grid-template-columns:repeat(3, minmax(0,1fr)); gap:14px; }
+    #hcPain .item{
+      padding:24px 22px; border-radius:20px; background:#fff; border:1px solid #e5e7eb;
+      box-shadow:0 8px 22px rgba(0,0,0,.05); transition:transform .35s ease, box-shadow .35s ease;
+    }
+    #hcPain .item:hover{ transform:translateY(-4px); box-shadow:0 14px 30px rgba(0,0,0,.08); }
+    #hcPain .item .em{ font-size:28px; line-height:1; margin-bottom:14px; display:block; }
+    #hcPain .item h3{ margin:0 0 8px; font-size:18px; font-weight:900; letter-spacing:-.03em; color:#1f2937; word-break:keep-all; }
+    #hcPain .item p{ margin:0 0 14px; font-size:14.5px; line-height:1.65; color:#4b5563; word-break:keep-all; }
+    #hcPain .item .tag{
+      display:inline-block; padding:4px 10px; border-radius:999px;
+      background:#e8f3ed; color:var(--green); font-size:12.5px; font-weight:800;
+    }
+
+    #hcPain .reveal{ opacity:1; transform:none; }
+    #hcPain.js-ready .reveal{ opacity:0; transform:translateY(24px); transition:opacity .8s ease, transform .8s ease; }
+    #hcPain.js-ready .reveal.on{ opacity:1; transform:none; }
+
+    @media (max-width:980px){
+      #hcPain .title .l1, #hcPain .title .l2{ font-size:44px; }
+      #hcPain .grid{ grid-template-columns:repeat(2, minmax(0,1fr)); }
+    }
+    @media (max-width:640px){
+      #hcPain{ padding:20px 16px 56px; }
+      #hcPain .title .l1{ font-size:30px; padding:26px 0 10px; }
+      #hcPain .title .l2{ font-size:30px; }
+      #hcPain .lead{ font-size:14.5px; margin-bottom:28px; }
+      #hcPain .grid{ grid-template-columns:1fr; gap:10px; }
+      #hcPain .item{ padding:20px 18px; }
+    }
+    @media (prefers-reduced-motion: reduce){
+      #hcPain.js-ready .reveal{ opacity:1; transform:none; transition:none; }
+    }
+  </style>
+
+  <h2 class="title">
+    <span class="l1">고칠 곳은 많은데</span>
+    <span class="l2">어디에 맡겨야 할지 막막하셨나요?</span>
+  </h2>
+  <p class="lead">작은 공사는 받아주는 곳이 없고, 큰 공사는 업체마다 견적이 제각각이라 믿기 어렵습니다. 나누리는 규모와 상관없이 현장을 직접 보고, 필요한 공사를 정직한 금액으로 정리해 드립니다.</p>
+
+  <div class="grid reveal">
+    <div class="item">
+      <span class="em" aria-hidden="true">💧</span>
+      <h3>천장·벽에서 물이 샙니다</h3>
+      <p>누수 원인을 먼저 찾고, 방수와 마감 보수까지 한 번에 진행합니다.</p>
+      <span class="tag">누수 · 방수</span>
+    </div>
+    <div class="item">
+      <span class="em" aria-hidden="true">🧱</span>
+      <h3>도배·장판이 낡고 곰팡이가 폈어요</h3>
+      <p>곰팡이 제거와 바탕 정리 후 도배·바닥재를 새로 시공합니다.</p>
+      <span class="tag">도배 · 바닥</span>
+    </div>
+    <div class="item">
+      <span class="em" aria-hidden="true">🚿</span>
+      <h3>욕실 타일이 깨지고 물이 안 빠져요</h3>
+      <p>타일 부분 보수부터 욕실 전체 리모델링까지 상태에 맞게 제안합니다.</p>
+      <span class="tag">욕실</span>
+    </div>
+    <div class="item">
+      <span class="em" aria-hidden="true">🍳</span>
+      <h3>주방이 오래돼 쓰기 불편합니다</h3>
+      <p>싱크대·상판 교체, 수납 개선 등 동선에 맞춘 주방 공사를 진행합니다.</p>
+      <span class="tag">주방</span>
+    </div>
+    <div class="item">
+      <span class="em" aria-hidden="true">🪟</span>
+      <h3>창문 틈으로 찬바람이 들어와요</h3>
+      <p>창호 교체와 단열 보강으로 결로를 줄이고 난방 효율을 높입니다.</p>
+      <span class="tag">창호 · 단열</span>
+    </div>
+    <div class="item">
+      <span class="em" aria-hidden="true">💡</span>
+      <h3>이사 전 집을 새롭게 바꾸고 싶어요</h3>
+      <p>도배·바닥·조명·욕실·주방을 묶어 입주 전 리모델링으로 진행합니다.</p>
+      <span class="tag">리모델링</span>
+    </div>
+  </div>
+
+  <script>
+  (function(){
+    var root = document.getElementById('hcPain');
+    if(!root) return;
+    try{
+      root.classList.add('js-ready');
+      var rv = root.querySelectorAll('.reveal');
+      if('IntersectionObserver' in window){
+        var io = new IntersectionObserver(function(es){
+          es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('on'); io.unobserve(e.target); } });
+        },{threshold:.1});
+        rv.forEach(function(el){ io.observe(el); });
+      }else{ rv.forEach(function(el){ el.classList.add('on'); }); }
+    }catch(e){ root.classList.remove('js-ready'); }
+  })();
+  </script>
+</section>
+
+
+<!-- ================================================================
+  2-1. 안심 가격 약속 (봉사단체 × 서울시 등록업체)
+================================================================= -->
+<section id="hcHonest" aria-label="나누리 정직한 가격 약속">
+  <style>
+    #hcHonest{
+      --green-deep:#1f3b2a;
+      --green:#3f7a4d;
+      --mint:#3fb8a4;
+      --gold:#ffe0a8;
+      font-family:Pretendard,"Noto Sans KR",system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
+      position:relative; overflow:hidden;
+      background:linear-gradient(160deg,#0d2a1a 0%,#1f3b2a 55%,#24503a 100%);
+      color:#fff; padding:100px 20px 110px;
+    }
+    #hcHonest *{box-sizing:border-box;}
+    #hcHonest::before{
+      content:""; position:absolute; right:-160px; top:-160px; width:480px; height:480px; border-radius:50%;
+      background:radial-gradient(circle, rgba(63,184,164,.22) 0%, rgba(63,184,164,0) 70%); pointer-events:none;
+    }
+    #hcHonest .wrap{ position:relative; max-width:1000px; margin:0 auto; }
+
+    #hcHonest .head{ text-align:center; margin-bottom:48px; }
+    #hcHonest .head .eyebrow{
+      display:block; font-size:13px; letter-spacing:.22em; text-transform:uppercase;
+      color:rgba(255,255,255,.7); font-weight:500; margin-bottom:16px;
+    }
+    #hcHonest .head h2{ margin:0 0 18px; font-size:46px; font-weight:900; line-height:1.3; letter-spacing:-.03em; word-break:keep-all; }
+    #hcHonest .head h2 em{
+      font-style:normal; color:var(--gold);
+      background:linear-gradient(transparent 70%, rgba(255,224,168,.28) 70%);
+    }
+    #hcHonest .head p{ margin:0 auto; max-width:660px; font-size:16px; line-height:1.8; color:rgba(255,255,255,.85); word-break:keep-all; }
+
+    /* 두 정체성 */
+    #hcHonest .identity{
+      display:grid; grid-template-columns:1fr auto 1fr auto 1fr; align-items:center; gap:14px;
+      margin-bottom:44px;
+    }
+    #hcHonest .id{
+      padding:22px 18px; border-radius:20px; text-align:center;
+      background:rgba(255,255,255,.08); border:1px solid rgba(255,255,255,.2);
+      backdrop-filter:blur(10px); -webkit-backdrop-filter:blur(10px);
+    }
+    #hcHonest .id small{ display:block; font-size:12px; font-weight:700; letter-spacing:.14em; color:rgba(255,255,255,.65); margin-bottom:6px; }
+    #hcHonest .id strong{ display:block; font-size:19px; font-weight:900; letter-spacing:-.02em; line-height:1.4; word-break:keep-all; }
+    #hcHonest .id.result{ background:#fff; border-color:#fff; color:var(--green-deep); box-shadow:0 14px 34px rgba(0,0,0,.25); }
+    #hcHonest .id.result small{ color:var(--green); }
+    #hcHonest .op{ font-size:26px; font-weight:900; color:var(--gold); }
+
+    /* 약속 카드 */
+    #hcHonest .promises{ display:grid; grid-template-columns:repeat(2, minmax(0,1fr)); gap:14px; }
+    #hcHonest .pr{
+      display:flex; gap:16px; align-items:flex-start;
+      padding:24px 22px; border-radius:20px;
+      background:rgba(255,255,255,.06); border:1px solid rgba(255,255,255,.16);
+      transition:background .3s ease, border-color .3s ease;
+    }
+    #hcHonest .pr:hover{ background:rgba(255,255,255,.1); border-color:rgba(255,224,168,.4); }
+    #hcHonest .pr .n{
+      flex:none; width:40px; height:40px; border-radius:12px; display:grid; place-items:center;
+      background:var(--gold); color:var(--green-deep); font-size:15px; font-weight:900;
+    }
+    #hcHonest .pr h3{ margin:0 0 6px; font-size:18px; font-weight:900; letter-spacing:-.02em; word-break:keep-all; }
+    #hcHonest .pr p{ margin:0; font-size:14.5px; line-height:1.7; color:rgba(255,255,255,.82); word-break:keep-all; }
+
+    #hcHonest .pledge{
+      margin-top:36px; text-align:center; font-size:17px; font-weight:700; line-height:1.7;
+      color:rgba(255,255,255,.92); word-break:keep-all;
+    }
+    #hcHonest .pledge b{ color:var(--gold); }
+
+    #hcHonest .reveal{ opacity:1; transform:none; }
+    #hcHonest.js-ready .reveal{ opacity:0; transform:translateY(24px); transition:opacity .8s ease, transform .8s ease; }
+    #hcHonest.js-ready .reveal.on{ opacity:1; transform:none; }
+
+    @media (max-width:820px){
+      #hcHonest{ padding:70px 16px 80px; }
+      #hcHonest .head{ margin-bottom:34px; }
+      #hcHonest .head h2{ font-size:28px; }
+      #hcHonest .head h2 br{ display:none; }
+      #hcHonest .head p{ font-size:14.5px; }
+      #hcHonest .identity{ grid-template-columns:1fr; gap:8px; margin-bottom:32px; }
+      #hcHonest .op{ text-align:center; font-size:20px; line-height:1; }
+      #hcHonest .id{ padding:16px; }
+      #hcHonest .id strong{ font-size:17px; }
+      #hcHonest .promises{ grid-template-columns:1fr; gap:10px; }
+      #hcHonest .pr{ padding:18px 16px; gap:12px; }
+      #hcHonest .pr h3{ font-size:16.5px; }
+      #hcHonest .pr p{ font-size:14px; }
+      #hcHonest .pledge{ font-size:15px; margin-top:28px; }
+    }
+    @media (prefers-reduced-motion: reduce){
+      #hcHonest.js-ready .reveal{ opacity:1; transform:none; transition:none; }
+    }
+  </style>
+
+  <div class="wrap">
+    <div class="head reveal">
+      <span class="eyebrow">Honest Price Promise</span>
+      <h2>안심이 되는 가격,<br><em>부풀리지 않은 정직한 금액</em></h2>
+      <p>나누리는 이웃의 주거를 돌보는 봉사단체이자, 서울시 안심 집수리 사업을 수행하는 등록업체입니다. 공공사업 기준으로 일해 온 그대로, 일반 집수리도 정직하게 견적 드립니다.</p>
+    </div>
+
+    <div class="identity reveal" aria-label="나누리의 두 가지 정체성">
+      <div class="id"><small>WHO WE ARE</small><strong>봉사단체 ·<br>사회적협동조합</strong></div>
+      <span class="op" aria-hidden="true">+</span>
+      <div class="id"><small>CERTIFIED</small><strong>서울시 안심 집수리<br>등록업체</strong></div>
+      <span class="op" aria-hidden="true">=</span>
+      <div class="id result"><small>NANURI</small><strong>믿고 맡기는<br>안심 가격</strong></div>
+    </div>
+
+    <div class="promises reveal">
+      <div class="pr">
+        <span class="n">01</span>
+        <div>
+          <h3>이윤보다 이웃이 먼저입니다</h3>
+          <p>봉사로 시작한 조합답게 남기는 것보다 고쳐 드리는 것을 먼저 생각합니다. 과한 마진을 붙이지 않습니다.</p>
+        </div>
+      </div>
+      <div class="pr">
+        <span class="n">02</span>
+        <div>
+          <h3>공공사업 기준으로 검증된 견적</h3>
+          <p>서울시 안심 집수리는 항목별 견적과 심의를 거쳐 진행됩니다. 그 기준에 맞춰 일해 온 방식 그대로 산정합니다.</p>
+        </div>
+      </div>
+      <div class="pr">
+        <span class="n">03</span>
+        <div>
+          <h3>필요 없는 공사는 권하지 않습니다</h3>
+          <p>원인을 먼저 찾아 지금 꼭 고쳐야 할 것만 말씀드립니다. 작은 수리로 해결되면 작은 수리로 끝냅니다.</p>
+        </div>
+      </div>
+      <div class="pr">
+        <span class="n">04</span>
+        <div>
+          <h3>항목별로 다 보여 드립니다</h3>
+          <p>자재비·인건비를 공사 항목별로 나눠 설명합니다. 견적에 없던 비용은 미리 말씀드리고 동의를 받은 뒤 진행합니다.</p>
+        </div>
+      </div>
+    </div>
+
+    <p class="pledge reveal">"이 금액이면 우리 부모님 댁도 맡기겠다" — <b>나누리가 견적을 낼 때 지키는 기준</b>입니다.</p>
+  </div>
+
+  <script>
+  (function(){
+    var root = document.getElementById('hcHonest');
+    if(!root) return;
+    try{
+      root.classList.add('js-ready');
+      var rv = root.querySelectorAll('.reveal');
+      if('IntersectionObserver' in window){
+        var io = new IntersectionObserver(function(es){
+          es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('on'); io.unobserve(e.target); } });
+        },{threshold:.12});
+        rv.forEach(function(el){ io.observe(el); });
+      }else{ rv.forEach(function(el){ el.classList.add('on'); }); }
+    }catch(e){ root.classList.remove('js-ready'); }
+  })();
+  </script>
+</section>
+
+
+<!-- ================================================================
+  3. 서비스 분야 (집수리 / 인테리어)
+================================================================= -->
+<section id="hcService" aria-label="집수리 인테리어 서비스 분야">
+  <style>
+    #hcService{
+      --green-deep:#1f3b2a;
+      --green:#3f7a4d;
+      --green-soft:#e8f3ed;
+      --mint:#3fb8a4;
+      --line:#e6eee8;
+      font-family:Pretendard,"Noto Sans KR",system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
+      background:#f5f3ef; color:#111827; padding:90px 20px 70px;
+    }
+    #hcService *{box-sizing:border-box;}
+    #hcService .wrap{ max-width:1000px; margin:0 auto; }
+    #hcService .title{ text-align:center; font-weight:900; line-height:1.2; letter-spacing:-.3px; margin:0 auto 44px; }
+    #hcService .title .l1{ display:block; font-size:50px; color:#111827; padding:0 0 14px; }
+    #hcService .title .l2{
+      display:inline-block; font-size:50px; color:var(--green-deep);
+      background:linear-gradient(transparent 64%, #cfe7d6 64% 100%); border-radius:2px; padding:0 .06em;
+    }
+
+    #hcService .panel{
+      background:#fff; border:1px solid #ebe7df; border-radius:26px;
+      padding:36px 34px 32px; margin-bottom:28px; box-shadow:0 14px 40px rgba(0,0,0,.06);
+    }
+    #hcService .panel-head{ display:flex; align-items:flex-end; justify-content:space-between; gap:16px; flex-wrap:wrap; }
+    #hcService .panel-head h3{ margin:0; font-size:26px; font-weight:900; letter-spacing:-.03em; color:#111827; }
+    #hcService .panel-head h3 small{ display:block; font-size:12.5px; font-weight:800; letter-spacing:.18em; color:var(--mint); margin-bottom:6px; text-transform:uppercase; }
+    #hcService .panel-head .bar{
+      display:block; width:48px; height:4px; border-radius:2px; margin:14px 0 16px;
+      background:linear-gradient(90deg, var(--green), var(--mint));
+    }
+    #hcService .panel-head p{ margin:0 0 22px; font-size:15px; line-height:1.7; color:#4b5563; word-break:keep-all; width:100%; }
+
+    #hcService .list{ display:grid; grid-template-columns:repeat(4, minmax(0,1fr)); gap:12px; }
+    #hcService .svc{
+      padding:20px 18px; border-radius:18px; background:#fbfcfb; border:1px solid var(--line);
+      transition:border-color .3s ease, background .3s ease;
+    }
+    #hcService .svc:hover{ border-color:#bfdcc8; background:#f4faf6; }
+    #hcService .svc .ic{
+      width:44px; height:44px; border-radius:13px; display:grid; place-items:center; margin-bottom:12px;
+      background:linear-gradient(135deg,#075327,#3f7a4d); color:#fff;
+    }
+    #hcService .svc .ic svg{ width:22px; height:22px; }
+    #hcService .svc h4{ margin:0 0 6px; font-size:16.5px; font-weight:900; color:var(--green-deep); letter-spacing:-.02em; }
+    #hcService .svc p{ margin:0; font-size:13.5px; line-height:1.6; color:#4b5563; word-break:keep-all; }
+
+    #hcService .interior{ display:grid; grid-template-columns:repeat(3, minmax(0,1fr)); gap:14px; }
+    #hcService .int{
+      position:relative; border-radius:20px; overflow:hidden; isolation:isolate;
+      min-height:220px; padding:24px 22px; color:#fff;
+      display:flex; flex-direction:column; justify-content:flex-end;
+    }
+    #hcService .int::before{
+      content:""; position:absolute; inset:0; z-index:-2;
+      background:var(--img) center/cover no-repeat, #2d4a38; transition:transform .55s ease;
+    }
+    #hcService .int::after{
+      content:""; position:absolute; inset:0; z-index:-1;
+      background:linear-gradient(to top, rgba(20,38,27,.92) 0%, rgba(20,38,27,.55) 55%, rgba(20,38,27,.2) 100%);
+    }
+    #hcService .int:hover::before{ transform:scale(1.05); }
+    #hcService .int span{ font-size:12px; font-weight:800; letter-spacing:.16em; color:#ffe0a8; margin-bottom:6px; }
+    #hcService .int h4{ margin:0 0 6px; font-size:20px; font-weight:900; letter-spacing:-.03em; }
+    #hcService .int p{ margin:0; font-size:14px; line-height:1.6; color:rgba(255,255,255,.88); word-break:keep-all; }
+
+    @media (max-width:980px){
+      #hcService .title .l1, #hcService .title .l2{ font-size:44px; }
+      #hcService .list{ grid-template-columns:repeat(2, minmax(0,1fr)); }
+    }
+    @media (max-width:720px){
+      #hcService{ padding:60px 16px 40px; }
+      #hcService .title{ margin-bottom:30px; }
+      #hcService .title .l1, #hcService .title .l2{ font-size:30px; }
+      #hcService .panel{ padding:26px 18px 22px; border-radius:22px; }
+      #hcService .panel-head h3{ font-size:21px; }
+      #hcService .panel-head p{ font-size:14px; }
+      #hcService .list{ gap:10px; }
+      #hcService .svc{ padding:16px 14px; }
+      #hcService .svc h4{ font-size:15px; }
+      #hcService .svc p{ font-size:12.5px; }
+      #hcService .interior{ grid-template-columns:1fr; gap:10px; }
+      #hcService .int{ min-height:170px; }
+    }
+  </style>
+
+  <div class="wrap">
+    <h2 class="title">
+      <span class="l1">작은 수리부터 리모델링까지</span>
+      <span class="l2">나누리 서비스 분야</span>
+    </h2>
+
+    <!-- 집수리 -->
+    <div class="panel">
+      <div class="panel-head">
+        <h3><small>Repair</small>부분 집수리</h3>
+        <span class="bar" aria-hidden="true"></span>
+        <p>생활에 불편을 주는 곳을 빠르게 고칩니다. 한 곳만 고쳐도 괜찮습니다.</p>
+      </div>
+
+      <div class="list">
+        <div class="svc">
+          <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3s6 6.5 6 11a6 6 0 0 1-12 0c0-4.5 6-11 6-11Z"/></svg></span>
+          <h4>누수 · 방수</h4>
+          <p>옥상·외벽·욕실 방수, 배관 누수 점검과 보수</p>
+        </div>
+        <div class="svc">
+          <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 10h18M9 4v16"/></svg></span>
+          <h4>도배 · 장판</h4>
+          <p>곰팡이 제거, 벽지·바닥재 교체와 부분 보수</p>
+        </div>
+        <div class="svc">
+          <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3h8v8H3zM13 3h8v8h-8zM3 13h8v8H3zM13 13h8v8h-8z"/></svg></span>
+          <h4>타일 · 줄눈</h4>
+          <p>깨진 타일 교체, 줄눈 재시공, 들뜬 타일 보수</p>
+        </div>
+        <div class="svc">
+          <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="16" height="18" rx="1.5"/><path d="M12 3v18M4 12h16"/></svg></span>
+          <h4>창호 · 문</h4>
+          <p>창호 교체, 방문·현관문 수리, 방충망·실리콘 보수</p>
+        </div>
+        <div class="svc">
+          <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 4 14h7l-1 8 9-12h-7Z"/></svg></span>
+          <h4>전기 · 조명</h4>
+          <p>콘센트·스위치 교체, 조명 교체와 배선 점검</p>
+        </div>
+        <div class="svc">
+          <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h16v3a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4Z"/><path d="M6 12V6a2 2 0 0 1 3.5-1.3"/></svg></span>
+          <h4>수전 · 위생기구</h4>
+          <p>수전·변기·세면대 교체, 배수 막힘 해결</p>
+        </div>
+        <div class="svc">
+          <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11.5 12 4l9 7.5"/><path d="M5 10v10h14V10"/></svg></span>
+          <h4>단열 · 결로</h4>
+          <p>벽체 단열 보강, 결로·곰팡이 원인 개선</p>
+        </div>
+        <div class="svc">
+          <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 4.5 6v5.5c0 4.6 3.2 8.4 7.5 9.5 4.3-1.1 7.5-4.9 7.5-9.5V6Z"/><path d="m9 12 2 2 4-4"/></svg></span>
+          <h4>안전 · 편의</h4>
+          <p>문턱 제거, 안전 손잡이, 미끄럼 방지 시공</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 인테리어 -->
+    <div class="panel">
+      <div class="panel-head">
+        <h3><small>Interior</small>인테리어 · 리모델링</h3>
+        <span class="bar" aria-hidden="true"></span>
+        <p>생활 방식에 맞춰 공간을 새로 구성합니다. 예산에 맞는 범위로 나눠서 진행할 수도 있습니다.</p>
+      </div>
+
+      <div class="interior">
+        <div class="int" style="--img:url('./img/r2.jpg')">
+          <span>BATHROOM</span>
+          <h4>욕실 리모델링</h4>
+          <p>방수부터 타일·도기·수납장까지 욕실 전체를 새롭게</p>
+        </div>
+        <div class="int" style="--img:url('./img/clean.jpg')">
+          <span>KITCHEN</span>
+          <h4>주방 리모델링</h4>
+          <p>싱크대·상판·수납을 동선에 맞춰 교체·재구성</p>
+        </div>
+        <div class="int" style="--img:url('./img/clean1.jpg')">
+          <span>WHOLE HOUSE</span>
+          <h4>전체 · 입주 전 리모델링</h4>
+          <p>도배·바닥·조명·욕실·주방을 한 번에 묶어 진행</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ================================================================
+  4. 전화상담 CTA + 진행 절차
+================================================================= -->
+<section id="hcCta" aria-label="집수리 인테리어 전화상담과 진행 절차">
+  <style>
+    #hcCta{
+      --maxW:1000px;
+      font-family:Pretendard,"Noto Sans KR",system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
+      background:#fff; padding:90px 18px 80px; color:#111827;
+    }
+    #hcCta *{box-sizing:border-box;}
+    #hcCta .wrap{ max-width:var(--maxW); margin:0 auto; }
+    #hcCta .head{ text-align:center; margin-bottom:36px; }
+    #hcCta .head h2{ margin:0 0 10px; font-size:40px; font-weight:900; letter-spacing:-.03em; }
+    #hcCta .head p{ margin:0; font-size:15.5px; color:#6b7280; }
+
+    #hcCta .flow{
+      list-style:none; margin:0 0 26px; padding:0;
+      display:grid; grid-template-columns:repeat(5, minmax(0,1fr)); gap:10px;
+    }
+    #hcCta .flow li{
+      position:relative; padding:20px 14px; border-radius:18px; text-align:center;
+      background:#f5f3ef; border:1px solid #ebe7df;
+    }
+    #hcCta .flow .n{
+      display:inline-grid; place-items:center; width:30px; height:30px; border-radius:50%;
+      background:#1f3b2a; color:#fff; font-size:13px; font-weight:900; margin-bottom:10px;
+    }
+    #hcCta .flow b{ display:block; font-size:16px; font-weight:900; color:#1f3b2a; letter-spacing:-.02em; margin-bottom:6px; }
+    #hcCta .flow p{ margin:0; font-size:13px; line-height:1.55; color:#4b5563; word-break:keep-all; }
+    #hcCta .flow li:not(:last-child)::after{
+      content:"›"; position:absolute; right:-11px; top:50%; transform:translateY(-50%);
+      width:20px; height:20px; border-radius:50%; background:#fff; border:1px solid #e6eee8;
+      display:grid; place-items:center; color:#3fb8a4; font-size:14px; font-weight:900; z-index:1; line-height:1;
+    }
+
+    #hcCta .cta{
+      position:relative; display:flex; align-items:center; gap:22px;
+      min-height:160px; padding:30px 34px;
+      border-radius:26px; overflow:hidden; isolation:isolate;
+      text-decoration:none; color:#fff;
+      box-shadow:0 14px 40px rgba(0,0,0,.18);
+      transition:transform .35s ease, box-shadow .35s ease;
+    }
+    #hcCta .cta::before{
+      content:""; position:absolute; inset:0; z-index:-2;
+      background:url('./img/r1.jpg') center/cover no-repeat; transition:transform .55s ease;
+    }
+    #hcCta .cta::after{
+      content:""; position:absolute; inset:0; z-index:-1;
+      background:linear-gradient(135deg, rgba(31,59,42,.95) 0%, rgba(7,83,39,.88) 55%, rgba(63,184,164,.8) 100%);
+    }
+    #hcCta .cta:hover{ transform:translateY(-4px); box-shadow:0 20px 48px rgba(0,0,0,.24); }
+    #hcCta .cta:hover::before{ transform:scale(1.04); }
+    #hcCta .ico{
+      width:72px; height:72px; flex:none; border-radius:20px; display:grid; place-items:center;
+      background:rgba(255,255,255,.16); border:1px solid rgba(255,255,255,.32);
+      backdrop-filter:blur(8px); -webkit-backdrop-filter:blur(8px);
+    }
+    #hcCta .ico svg{ width:34px; height:34px; }
+    #hcCta .txt{ flex:1; min-width:0; }
+    #hcCta .txt small{
+      display:block; font-size:12px; font-weight:700; letter-spacing:.18em;
+      text-transform:uppercase; color:rgba(255,255,255,.75); margin-bottom:6px;
+    }
+    #hcCta .txt strong{ display:block; font-size:26px; font-weight:900; letter-spacing:-.03em; line-height:1.25; }
+    #hcCta .txt .num{ display:block; margin-top:6px; font-size:34px; font-weight:900; color:#ffe0a8; }
+    #hcCta .txt span.d{ display:block; margin-top:4px; font-size:14.5px; font-weight:600; color:rgba(255,255,255,.88); }
+    #hcCta .txt em{
+      display:inline-block; margin-left:6px; padding:2px 8px; border-radius:999px;
+      background:rgba(255,255,255,.18); font-style:normal; font-size:11px; font-weight:700; vertical-align:middle;
+    }
+    #hcCta .go{
+      width:48px; height:48px; flex:none; border-radius:50%; display:grid; place-items:center;
+      background:#fff; color:#1f3b2a; font-size:24px; font-weight:900; transition:transform .3s ease;
+    }
+    #hcCta .cta:hover .go{ transform:translateX(4px); }
+
+    /* 서울시 지원 안내 배너 */
+    #hcCta .cross{
+      margin-top:16px; display:flex; align-items:center; gap:14px; flex-wrap:wrap;
+      padding:18px 22px; border-radius:18px; background:#fff8ea; border:1px solid #f3e2bf;
+      text-decoration:none; color:#111827; transition:background .3s ease;
+    }
+    #hcCta .cross:hover{ background:#fff3dc; }
+    #hcCta .cross i{
+      flex:none; width:36px; height:36px; border-radius:50%; display:grid; place-items:center;
+      background:#d9a441; color:#fff; font-style:normal; font-weight:900;
+    }
+    #hcCta .cross p{ flex:1; min-width:200px; margin:0; font-size:14.5px; line-height:1.6; color:#6b5a3a; word-break:keep-all; }
+    #hcCta .cross p b{ color:#111827; }
+    #hcCta .cross span{ flex:none; font-size:14px; font-weight:900; color:#1f3b2a; }
+
+    @media (max-width:900px){
+      #hcCta .flow{ grid-template-columns:1fr; gap:10px; }
+      #hcCta .flow li{ display:grid; grid-template-columns:30px 1fr; column-gap:12px; text-align:left; padding:16px; }
+      #hcCta .flow .n{ margin:0; grid-row:1 / 3; }
+      #hcCta .flow li:not(:last-child)::after{
+        content:"⌄"; right:auto; left:50%; top:auto; bottom:-15px; transform:translateX(-50%);
+      }
+    }
+    @media (max-width:820px){
+      #hcCta{ padding:60px 14px 60px; }
+      #hcCta .head h2{ font-size:28px; }
+      #hcCta .head p{ font-size:14px; }
+      #hcCta .cta{ min-height:130px; padding:22px 20px; border-radius:20px; gap:14px; }
+      #hcCta .ico{ width:52px; height:52px; border-radius:14px; }
+      #hcCta .ico svg{ width:26px; height:26px; }
+      #hcCta .txt strong{ font-size:19px; }
+      #hcCta .txt .num{ font-size:24px; }
+      #hcCta .txt span.d{ font-size:13px; }
+      #hcCta .go{ width:38px; height:38px; font-size:19px; }
+    }
+  </style>
+
+  <div class="wrap">
+    <div class="head">
+      <h2>전화 한 통으로 시작합니다</h2>
+      <p>상담부터 공사 후 점검까지, 나누리가 처음부터 끝까지 맡습니다.</p>
+    </div>
+
+    <ol class="flow">
+      <li><span class="n">1</span><b>전화 상담</b><p>고칠 곳과 원하시는 방향을 편하게 말씀해 주세요</p></li>
+      <li><span class="n">2</span><b>현장 방문</b><p>직접 방문해 상태를 점검하고 실측합니다</p></li>
+      <li><span class="n">3</span><b>견적 · 제안</b><p>항목별 견적과 공사 범위를 정리해 드립니다</p></li>
+      <li><span class="n">4</span><b>계약 · 시공</b><p>일정에 맞춰 시공하고 과정을 공유합니다</p></li>
+      <li><span class="n">5</span><b>마무리 점검</b><p>완료 후 함께 확인하고 사후 관리까지</p></li>
+    </ol>
+
+    <a class="cta" href="tel:0263480851" aria-label="집수리 인테리어 전화상담 02-6348-0851">
+      <span class="ico" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="7" y="2.5" width="10" height="19" rx="2.2"/><path d="M11 18.5h2"/><path d="M3.5 8.5a6 6 0 0 0 0 7M20.5 8.5a6 6 0 0 1 0 7"/>
+        </svg>
+      </span>
+      <span class="txt">
+        <small>Call Consulting</small>
+        <strong>우리 집 수리, 먼저 전화로 물어보세요</strong>
+        <span class="num">02-6348-0851</span>
+        <span class="d">작은 수리도 부담 없이 상담해 드립니다 <em>Mobile Only</em></span>
+      </span>
+      <span class="go" aria-hidden="true">›</span>
+    </a>
+
+    <a class="cross" href="https://www.nanuricoop.co.kr/seoul-housecare.html">
+      <i aria-hidden="true">!</i>
+      <p><b>노후 저층주택이라면 서울시 보조금 대상일 수도 있습니다.</b> 공사비의 50~80%, 최대 1,200만원까지 지원받는 안심 집수리도 함께 확인해 보세요.</p>
+      <span>서울시 안심 집수리 ›</span>
+    </a>
+  </div>
+</section>
+
+
+<!-- ================================================================
+  5. 나누리 집수리 · 인테리어 특징
+================================================================= -->
+<section id="hcFeature" aria-label="나누리사회적협동조합 집수리 인테리어 특징">
+  <style>
+    #hcFeature{
+      --green-deep:#1f3b2a;
+      --green:#3f7a4d;
+      --mint:#3fb8a4;
+      font-family:Pretendard,"Noto Sans KR",system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
+      background:#f5f3ef; padding:90px 20px 100px; color:#111827;
+    }
+    #hcFeature *{box-sizing:border-box;}
+    #hcFeature .wrap{ max-width:1000px; margin:0 auto; }
+    #hcFeature .title-wrap{ text-align:center; margin-bottom:54px; }
+    #hcFeature .title-wrap h3{ font-size:22px; font-weight:700; color:#111; line-height:1.5; margin:0 0 6px; }
+    #hcFeature .title-wrap h2{ font-size:34px; font-weight:900; color:var(--mint); letter-spacing:-.6px; line-height:1.3; margin:0; }
+
+    #hcFeature .tree{ position:relative; max-width:720px; margin:0 auto; }
+    #hcFeature .circles{
+      display:grid; grid-template-columns:repeat(3, 1fr); gap:clamp(14px, 4vw, 44px); position:relative; z-index:2;
+    }
+    #hcFeature .circle{
+      aspect-ratio:1/1; border-radius:50%;
+      display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center;
+      background:#fff; border:2px solid rgba(63,122,77,.25); box-shadow:0 14px 34px rgba(31,59,42,.1);
+      padding:10px; transition:transform .35s ease, border-color .35s ease, box-shadow .35s ease;
+    }
+    #hcFeature .circle:hover{ transform:translateY(-6px); border-color:var(--green); box-shadow:0 20px 40px rgba(31,59,42,.18); }
+    #hcFeature .circle .num{ font-size:12px; font-weight:800; letter-spacing:.16em; color:var(--mint); margin-bottom:8px; }
+    #hcFeature .circle strong{
+      font-size:clamp(15px, 2.1vw, 22px); font-weight:900; line-height:1.4; letter-spacing:-.03em;
+      color:var(--green-deep); word-break:keep-all;
+    }
+    #hcFeature .lines{
+      position:relative; height:70px; margin:0 auto;
+      width:calc(100% - (100% - 2 * clamp(14px, 4vw, 44px)) / 3);
+    }
+    #hcFeature .lines::before{
+      content:""; position:absolute; inset:0;
+      border:2px solid rgba(31,59,42,.35); border-top:none; border-radius:0 0 4px 4px;
+    }
+    #hcFeature .lines::after{
+      content:""; position:absolute; left:50%; top:0; bottom:0; width:2px;
+      background:rgba(31,59,42,.35); transform:translateX(-50%);
+    }
+    #hcFeature .root{ text-align:center; margin-top:-2px; }
+    #hcFeature .root span{
+      display:inline-block; padding:16px 40px; border-radius:14px;
+      background:linear-gradient(180deg,#075327 0%,#003f1f 100%); color:#fff;
+      font-size:24px; font-weight:900; letter-spacing:-.02em; box-shadow:0 14px 30px rgba(0,55,28,.3);
+    }
+
+    #hcFeature .points{ margin-top:70px; display:grid; grid-template-columns:repeat(3, minmax(0,1fr)); gap:18px; }
+    #hcFeature .point{ padding:26px 22px; border-radius:22px; background:#fff; border:1px solid #ebe7df; box-shadow:0 8px 22px rgba(0,0,0,.05); }
+    #hcFeature .point .tag{
+      display:inline-block; padding:4px 12px; border-radius:999px; margin-bottom:10px;
+      background:#e8f3ed; color:var(--green); font-size:12.5px; font-weight:800;
+    }
+    #hcFeature .point h4{ margin:0 0 8px; font-size:18px; font-weight:900; color:#1f2937; letter-spacing:-.02em; }
+    #hcFeature .point p{ margin:0; font-size:14.5px; line-height:1.7; color:#4b5563; word-break:keep-all; }
+
+    @media (max-width:768px){
+      #hcFeature{ padding:60px 16px 70px; }
+      #hcFeature .title-wrap{ margin-bottom:36px; }
+      #hcFeature .title-wrap h3{ font-size:18px; }
+      #hcFeature .title-wrap h2{ font-size:24px; }
+      #hcFeature .circle .num{ font-size:10px; margin-bottom:4px; }
+      #hcFeature .lines{ height:44px; }
+      #hcFeature .root span{ font-size:19px; padding:12px 28px; }
+      #hcFeature .points{ grid-template-columns:1fr; margin-top:48px; gap:12px; }
+      #hcFeature .point{ padding:20px 18px; }
+    }
+  </style>
+
+  <div class="wrap">
+    <div class="title-wrap">
+      <h3>나누리사회적협동조합</h3>
+      <h2>집수리 · 인테리어 특징</h2>
+    </div>
+
+    <div class="tree">
+      <div class="circles">
+        <div class="circle"><span class="num">01</span><strong>봉사단체<br>사회적<br>협동조합</strong></div>
+        <div class="circle"><span class="num">02</span><strong>서울시<br>안심집수리<br>등록업체</strong></div>
+        <div class="circle"><span class="num">03</span><strong>부풀리지<br>않은<br>정직한 금액</strong></div>
+      </div>
+      <div class="lines" aria-hidden="true"></div>
+      <div class="root"><span>안심 가격 나누리 집수리</span></div>
+    </div>
+
+    <div class="points">
+      <div class="point">
+        <span class="tag">봉사단체</span>
+        <h4>이웃의 집처럼 고칩니다</h4>
+        <p>어르신·취약가구의 주거를 돌봐 온 봉사단체로서, 생활하시는 분의 불편과 부담을 먼저 생각합니다.</p>
+      </div>
+      <div class="point">
+        <span class="tag">서울시 등록업체</span>
+        <h4>공공사업으로 검증된 시공</h4>
+        <p>서울시 안심 집수리 등록업체로 노후주택을 시공해 온 경험과 기준을 일반 공사에도 그대로 적용합니다.</p>
+      </div>
+      <div class="point">
+        <span class="tag">정직한 견적</span>
+        <h4>필요한 만큼, 적정한 금액</h4>
+        <p>현장을 직접 보고 꼭 필요한 공사만 항목별로 견적 드립니다. 과한 공사나 부풀린 금액은 제안하지 않습니다.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ================================================================
+  6. 자주 묻는 질문
+================================================================= -->
+<section id="hcFaq" aria-label="집수리 인테리어 자주 묻는 질문">
+  <style>
+    #hcFaq{
+      --green-deep:#1f3b2a;
+      --green:#3f7a4d;
+      font-family:Pretendard,"Noto Sans KR",system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
+      background:#fff; padding:90px 20px 100px; color:#111827;
+    }
+    #hcFaq *{box-sizing:border-box;}
+    #hcFaq .wrap{ max-width:820px; margin:0 auto; }
+    #hcFaq h2{ text-align:center; margin:0 0 12px; font-size:40px; font-weight:900; letter-spacing:-.03em; }
+    #hcFaq .lead{ text-align:center; margin:0 0 40px; font-size:15px; color:#6b7280; }
+    #hcFaq details{
+      background:#fff; border:1px solid #ebe7df; border-radius:18px; margin-bottom:10px; transition:box-shadow .3s ease;
+    }
+    #hcFaq details[open]{ box-shadow:0 10px 28px rgba(0,0,0,.06); border-color:#d6eadc; }
+    #hcFaq summary{
+      list-style:none; cursor:pointer; display:flex; align-items:center; gap:14px;
+      padding:20px 22px; font-size:16.5px; font-weight:800; letter-spacing:-.02em; color:#1f2937;
+    }
+    #hcFaq summary::-webkit-details-marker{ display:none; }
+    #hcFaq summary .q{
+      flex:none; width:30px; height:30px; border-radius:50%; display:grid; place-items:center;
+      background:var(--green-deep); color:#fff; font-size:13px; font-weight:900;
+    }
+    #hcFaq summary .t{ flex:1; }
+    #hcFaq summary .pm{ flex:none; position:relative; width:14px; height:14px; }
+    #hcFaq summary .pm::before, #hcFaq summary .pm::after{
+      content:""; position:absolute; left:0; top:6px; width:14px; height:2px; background:var(--green); border-radius:1px;
+      transition:transform .3s ease;
+    }
+    #hcFaq summary .pm::after{ transform:rotate(90deg); }
+    #hcFaq details[open] summary .pm::after{ transform:rotate(0); }
+    #hcFaq .a{ padding:0 22px 22px 66px; font-size:15px; line-height:1.75; color:#4b5563; word-break:keep-all; }
+    #hcFaq .a b{ color:var(--green-deep); }
+
+    @media (max-width:640px){
+      #hcFaq{ padding:60px 16px 70px; }
+      #hcFaq h2{ font-size:28px; }
+      #hcFaq .lead{ margin-bottom:28px; font-size:14px; }
+      #hcFaq summary{ padding:16px; font-size:15px; gap:10px; }
+      #hcFaq summary .q{ width:26px; height:26px; font-size:12px; }
+      #hcFaq .a{ padding:0 16px 18px 52px; font-size:14px; }
+    }
+  </style>
+
+  <div class="wrap">
+    <h2>자주 묻는 질문</h2>
+    <p class="lead">더 궁금한 점은 전화로 편하게 물어보세요.</p>
+
+    <details>
+      <summary><span class="q">Q</span><span class="t">작은 수리 하나만 맡겨도 되나요?</span><span class="pm" aria-hidden="true"></span></summary>
+      <div class="a">네, 가능합니다. 수전 교체나 타일 몇 장 보수 같은 <b>작은 공사도 상담해 드립니다.</b> 여러 곳을 함께 고치시면 일정과 비용을 더 효율적으로 맞출 수 있습니다.</div>
+    </details>
+    <details>
+      <summary><span class="q">Q</span><span class="t">견적은 어떻게 받을 수 있나요?</span><span class="pm" aria-hidden="true"></span></summary>
+      <div class="a">전화로 상황을 먼저 들은 뒤 <b>현장을 방문해 상태를 확인하고 실측</b>한 다음, 공사 항목별로 나눈 견적을 드립니다. 견적을 받아보신 뒤 결정하셔도 됩니다.</div>
+    </details>
+    <details>
+      <summary><span class="q">Q</span><span class="t">견적이 적정한지 어떻게 믿을 수 있나요?</span><span class="pm" aria-hidden="true"></span></summary>
+      <div class="a">나누리는 <b>봉사단체이자 서울시 안심 집수리 등록업체</b>입니다. 공공사업에서 항목별 견적과 심의를 거쳐 온 기준 그대로, 자재비·인건비를 공사 항목별로 나눠 설명해 드립니다. 궁금한 항목은 무엇이든 물어보셔도 됩니다.</div>
+    </details>
+    <details>
+      <summary><span class="q">Q</span><span class="t">공사 중에 비용이 더 붙지는 않나요?</span><span class="pm" aria-hidden="true"></span></summary>
+      <div class="a">현장 방문 후 견적을 드리기 때문에 대부분 견적대로 진행됩니다. 뜯어 보니 추가 보수가 필요한 경우처럼 불가피한 상황이 생기면 <b>반드시 먼저 설명드리고 동의를 받은 뒤</b> 진행합니다.</div>
+    </details>
+    <details>
+      <summary><span class="q">Q</span><span class="t">살면서 공사할 수 있나요?</span><span class="pm" aria-hidden="true"></span></summary>
+      <div class="a">부분 수리는 대부분 거주 중에도 진행할 수 있습니다. 욕실·주방 리모델링처럼 사용이 제한되는 공사는 <b>일정과 동선을 미리 협의</b>해 불편을 줄이도록 계획합니다.</div>
+    </details>
+    <details>
+      <summary><span class="q">Q</span><span class="t">예산이 정해져 있는데 맞춰서 할 수 있나요?</span><span class="pm" aria-hidden="true"></span></summary>
+      <div class="a">네. 예산을 말씀해 주시면 <b>우선순위가 높은 공사부터</b> 범위를 나눠 제안해 드립니다. 급한 곳을 먼저 하고 나머지는 나중에 진행하는 것도 가능합니다.</div>
+    </details>
+    <details>
+      <summary><span class="q">Q</span><span class="t">서울시 지원을 받을 수 있는지도 알려주시나요?</span><span class="pm" aria-hidden="true"></span></summary>
+      <div class="a">네. 노후 저층주택이라면 <b>서울시 안심 집수리 보조사업</b> 대상일 수 있습니다. 상담 시 지원 가능 여부를 함께 확인해 드리고, 대상이면 보조사업으로 진행하는 방법도 안내해 드립니다.</div>
+    </details>
+  </div>
+</section>
+
+
+<!-- ================================================================
+  7. 전화상담 안내 (글래스 카드 — inquirySection 톤)
+================================================================= -->
+<section id="hcApply" aria-label="집수리 인테리어 전화상담 안내">
+  <style>
+    #hcApply{
+      --green-deep:#1f3b2a;
+      --bg:url('./img/r2.jpg') center/cover no-repeat;
+      --brightness:0.45;
+      position:relative; overflow:hidden;
+      font-family:Pretendard,"Noto Sans KR",system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
+      color:#fff; padding:120px 20px; background-color:#1f3b2a;
+    }
+    #hcApply *{box-sizing:border-box;}
+    #hcApply::before{
+      content:""; position:absolute; top:0; left:0; width:100%;
+      height:var(--bgH, 100%); background:var(--bg); filter:brightness(var(--brightness));
+    }
+    #hcApply .inner{ position:relative; z-index:1; max-width:720px; margin:0 auto; }
+    #hcApply .head{ text-align:center; margin-bottom:40px; }
+    #hcApply .head span{
+      display:block; font-size:13px; letter-spacing:.22em; text-transform:uppercase;
+      color:rgba(255,255,255,.72); font-weight:500; margin-bottom:14px;
+    }
+    #hcApply .head h2{ font-size:2.5rem; font-weight:700; margin:0 0 14px; letter-spacing:-.02em; line-height:1.35; }
+    #hcApply .head p{ font-size:1rem; color:rgba(255,255,255,.85); margin:0; word-break:keep-all; }
+
+    #hcApply .card{
+      background:rgba(255,255,255,0.12);
+      backdrop-filter:blur(16px); -webkit-backdrop-filter:blur(16px);
+      border:1px solid rgba(255,255,255,0.3);
+      border-radius:28px; padding:40px 36px; box-shadow:0 18px 40px rgba(15,23,42,0.25);
+    }
+    #hcApply .rows{ list-style:none; margin:0 0 32px; padding:0; }
+    #hcApply .rows li{
+      display:grid; grid-template-columns:130px 1fr; gap:16px; align-items:start;
+      padding:18px 0; border-bottom:1px solid rgba(255,255,255,.2);
+    }
+    #hcApply .rows li:first-child{ padding-top:0; }
+    #hcApply .rows li:last-child{ border-bottom:none; padding-bottom:0; }
+    #hcApply .rows .k{
+      display:inline-flex; align-items:center; gap:8px;
+      font-size:15px; font-weight:800; color:#ffe0a8; letter-spacing:-.01em;
+    }
+    #hcApply .rows .k::before{
+      content:""; width:0; height:0;
+      border-top:5px solid transparent; border-bottom:5px solid transparent; border-left:8px solid #ffe0a8;
+    }
+    #hcApply .rows .v{ font-size:16.5px; font-weight:600; line-height:1.65; color:#fff; word-break:keep-all; }
+    #hcApply .rows .v b{ font-weight:900; background:linear-gradient(transparent 62%, rgba(255,224,168,.45) 62%); }
+
+    #hcApply .callbig{
+      display:flex; align-items:center; justify-content:center; gap:12px;
+      padding:20px 24px; border-radius:40px;
+      background:#fff; color:var(--green-deep); text-decoration:none;
+      font-size:1.35rem; font-weight:900; letter-spacing:-.02em; transition:all .35s ease;
+    }
+    #hcApply .callbig svg{ width:24px; height:24px; flex:none; }
+    #hcApply .callbig small{ font-size:.85rem; font-weight:700; color:#3f7a4d; }
+    #hcApply .callbig:hover{ transform:translateY(-3px); box-shadow:0 8px 20px rgba(0,0,0,0.25); }
+
+    #hcApply .contact{ margin-top:22px; text-align:center; font-size:14px; color:rgba(255,255,255,.8); line-height:1.8; }
+
+    #hcApply .reveal{ opacity:1; transform:none; }
+    #hcApply.js-ready .reveal{ opacity:0; transform:translateY(24px); transition:opacity .8s ease, transform .8s ease; }
+    #hcApply.js-ready .reveal.on{ opacity:1; transform:none; }
+
+    @media (max-width:768px){
+      #hcApply{ padding:90px 16px; }
+      #hcApply .head h2{ font-size:1.75rem; }
+      #hcApply .head h2 br{ display:none; }
+      #hcApply .card{ padding:30px 22px; border-radius:22px; }
+      #hcApply .rows li{ grid-template-columns:1fr; gap:6px; padding:16px 0; }
+      #hcApply .rows .v{ font-size:15.5px; }
+      #hcApply .callbig{ font-size:1.15rem; flex-wrap:wrap; }
+    }
+    @media (prefers-reduced-motion: reduce){
+      #hcApply.js-ready .reveal{ opacity:1; transform:none; transition:none; }
+    }
+  </style>
+
+  <div class="inner">
+    <div class="head reveal">
+      <span>Call Consulting</span>
+      <h2>부풀리지 않은 금액으로,<br>나누리가 정직하게 고쳐 드립니다</h2>
+      <p>봉사단체이자 서울시 안심 집수리 등록업체로서, 현장을 확인한 뒤 꼭 필요한 공사만 항목별로 견적 드립니다.</p>
+    </div>
+
+    <div class="card reveal">
+      <ul class="rows">
+        <li>
+          <span class="k">상담 분야</span>
+          <span class="v">누수·방수, 도배·장판, 타일, 창호, 전기·설비부터 <b>욕실·주방·전체 리모델링</b>까지</span>
+        </li>
+        <li>
+          <span class="k">알려주실 내용</span>
+          <span class="v">주소(동네), 주택 형태와 평수, 고치고 싶은 곳, 희망 일정과 예산</span>
+        </li>
+        <li>
+          <span class="k">진행 방법</span>
+          <span class="v">전화 상담 → 현장 방문 → <b>항목별 견적</b> → 계약·시공 → 마무리 점검</span>
+        </li>
+        <li>
+          <span class="k">가격 약속</span>
+          <span class="v">과한 마진 없이 <b>적정한 금액</b>으로, 견적에 없던 비용은 사전 동의 후에만 진행합니다</span>
+        </li>
+        <li>
+          <span class="k">미리 준비</span>
+          <span class="v">문제 부위 사진을 찍어 두시면 상담이 <b>더 빠르고 정확</b>해집니다</span>
+        </li>
+      </ul>
+
+      <a class="callbig" href="tel:0263480851" aria-label="전화 상담 02-6348-0851">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2Z"/></svg>
+        02-6348-0851 <small>집수리 · 인테리어 상담</small>
+      </a>
+
+      <p class="contact">
+        나누리사회적협동조합 · 서울시 마포구 월드컵로14길 42 B01<br>
+        팩스 0504-420-8021
+      </p>
+    </div>
+  </div>
+
+  <script>
+  (function(){
+    var root = document.getElementById('hcApply');
+    if(!root) return;
+    try{
+      root.classList.add('js-ready');
+      var rv = root.querySelectorAll('.reveal');
+      if('IntersectionObserver' in window){
+        var io = new IntersectionObserver(function(es){
+          es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('on'); io.unobserve(e.target); } });
+        },{threshold:.15});
+        rv.forEach(function(el){ io.observe(el); });
+      }else{ rv.forEach(function(el){ el.classList.add('on'); }); }
+    }catch(e){ root.classList.remove('js-ready'); }
+
+    var lastW = window.innerWidth;
+    function lockBg(){ root.style.setProperty('--bgH', (root.offsetHeight + 240) + 'px'); }
+    lockBg();
+    window.addEventListener('resize', function(){
+      if(window.innerWidth !== lastW){ lastW = window.innerWidth; lockBg(); }
+    }, { passive:true });
+  })();
+  </script>
+</section>
+
+
+<!-- ================================================================
+  8. 모바일 하단 고정 전화 버튼
+================================================================= -->
+<div id="hcCallBar">
+  <style>
+    #hcCallBar{ display:none; }
+    @media (max-width:768px){
+      #hcCallBar{
+        display:block; position:fixed; left:12px; right:12px; bottom:12px; z-index:900;
+        font-family:Pretendard,"Noto Sans KR",system-ui,-apple-system,sans-serif;
+        transform:translateY(140%); transition:transform .4s cubic-bezier(.22,1,.36,1);
+      }
+      #hcCallBar.on{ transform:none; }
+      #hcCallBar a{
+        display:flex; align-items:center; justify-content:center; gap:10px;
+        padding:15px 18px; border-radius:999px;
+        background:linear-gradient(180deg,#075327 0%,#003f1f 100%); color:#fff; text-decoration:none;
+        font-size:16px; font-weight:900; letter-spacing:-.02em;
+        box-shadow:0 12px 30px rgba(0,55,28,.35);
+      }
+      #hcCallBar svg{ width:20px; height:20px; }
+      #hcCallBar small{ font-size:12.5px; font-weight:700; color:#ffe0a8; }
+    }
+  </style>
+  <a href="tel:0263480851" aria-label="집수리 인테리어 전화상담 02-6348-0851">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2Z"/></svg>
+    집수리 · 인테리어 상담 <small>02-6348-0851</small>
+  </a>
+  <script>
+  (function(){
+    var bar = document.getElementById('hcCallBar');
+    var hero = document.getElementById('hcHero');
+    var apply = document.getElementById('hcApply');
+    if(!bar || !hero) return;
+    function update(){
+      var past = hero.getBoundingClientRect().bottom < 0;
+      var r = apply ? apply.getBoundingClientRect() : null;
+      var inApply = r && r.top < window.innerHeight && r.bottom > 0;
+      bar.classList.toggle('on', past && !inApply);
+    }
+    window.addEventListener('scroll', update, { passive:true });
+    update();
+  })();
+  </script>
+</div>
+
+
+  <div id="footer_template"></div>
+
+</body>
+<script src="./js/jquery-1.11.0.min.js"></script>
+<script src="./js/validation1.js"></script>
+<script src="./js/main.js"></script>
+<script src="./js/footer.js"></script>
+
+</html>

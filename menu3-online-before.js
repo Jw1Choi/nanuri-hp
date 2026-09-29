@@ -3,12 +3,35 @@
    - #menu_navi 요소에 상단 네비게이션을 자동 마운트
    - body 끝에 간편신청 플로팅 섹션을 자동 마운트 (Supabase 접수)
    - 이 파일 하나만 <script src="..."></script> 로 넣으면 동작합니다.
+
+   [변경] 서브메뉴(드롭다운/아코디언) 제거 → 메인 메뉴 클릭 시 바로 페이지 이동
+   [변경] 메인 플로팅 버튼 = 회사소개서 / 퀵패널 항목 = 간편신청 (위치 교체)
    ========================================================================= */
 (function () {
 
   /* =======================================================================
-     1. 상단 메뉴 템플릿
+     1. 상단 메뉴 템플릿 (단일 뎁스)
+        ▼ 메뉴 항목 수정은 아래 MENU_ITEMS 배열 한 곳만 고치면 됩니다.
      ======================================================================= */
+  const MENU_ITEMS = [
+    { label: '회사소개',     href: './about.html' },
+    { label: '대표 인사말',  href: './ceo.html' },
+    { label: '비전 &amp; 철학', href: './vision.html' },
+    { label: '사업 연혁',    href: './history.html' },
+    { label: '오시는 길',    href: './location.html' }
+  ];
+
+  const NAV_LINKS_HTML = MENU_ITEMS.map(function (item) {
+    return '<div class="tp-nav__item"><a href="' + item.href + '" class="tp-nav__link">' + item.label + '</a></div>';
+  }).join('\n  ');
+
+  const MOBILE_LINKS_HTML = MENU_ITEMS.map(function (item) {
+    return '<div class="tp-mobile-nav__item"><a href="' + item.href + '" class="tp-mobile-nav__link"><span>' + item.label + '</span>' +
+      '<svg class="tp-mobile-nav__arrow" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">' +
+      '<path d="M9 6L15 12L9 18" fill="none" stroke="rgba(255,255,255,0.6)" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>' +
+      '</svg></a></div>';
+  }).join('\n    ');
+
   const MENU_TEMPLATE = `
 
 <section id="nav-section">
@@ -35,19 +58,17 @@
 
 #nav-section .tp-nav__item {position: relative;height: 100%;display: flex;align-items: center;list-style: none;}
 
-#nav-section .tp-nav__link {display: flex;align-items: center;height: 100%;padding: 0 24px;font-size: 15.5px;font-weight: 500;color: #ffffff;text-decoration: none;letter-spacing: -0.02em;transition: color 0.35s cubic-bezier(0.25, 0.1, 0.25, 1),padding 0.45s cubic-bezier(0.33, 1, 0.68, 1);white-space: nowrap;position: relative;cursor: pointer;font-family: 'Noto Sans KR', sans-serif;background: none;border: none;}
+#nav-section .tp-nav__link {display: flex;align-items: center;height: 100%;padding: 0 24px;font-size: 15.5px;font-weight: 500;color: #ffffff;text-decoration: none;letter-spacing: -0.02em;transition: color 0.35s cubic-bezier(0.25, 0.1, 0.25, 1),opacity 0.3s ease;white-space: nowrap;position: relative;cursor: pointer;font-family: 'Noto Sans KR', sans-serif;background: none;border: none;}
 
 #nav-section .tp-header.top-transparent:not(.menu-open) .tp-nav__link {color: #ffffff;}
 
-#nav-section .tp-nav.has-active .tp-nav__link {padding: 0 38px;}
-
 #nav-section .tp-nav__link::after {content: '';position: absolute;bottom: 0;left: 50%;transform: translateX(-50%) scaleX(0);width: calc(100% - 48px);height: 2px;background: #ffffff;transition: transform 0.35s cubic-bezier(0.33, 1, 0.68, 1);transform-origin: center;}
 
-#nav-section .tp-nav__item.active .tp-nav__link {color: #ffffff;}
-
+/* 서브메뉴 없이 hover / 현재 페이지에서만 밑줄 표시 */
+#nav-section .tp-nav__item:hover .tp-nav__link::after,
 #nav-section .tp-nav__item.active .tp-nav__link::after {transform: translateX(-50%) scaleX(1);}
 
-#nav-section .tp-nav.has-active .tp-nav__item:not(.active) .tp-nav__link {color: rgba(255,255,255,0.45);}
+#nav-section .tp-nav__item.active .tp-nav__link {color: #ffffff;font-weight: 600;}
 
 #nav-section .tp-lang {display: flex;align-items: center;gap: 12px;margin-left: 40px;flex-shrink: 0;z-index: 10001;}
 
@@ -58,26 +79,6 @@
 #nav-section .tp-header.top-transparent:not(.menu-open) .tp-lang__btn {color: rgba(255,255,255,0.72);}
 
 #nav-section .tp-header.top-transparent:not(.menu-open) .tp-lang__btn.active,#nav-section .tp-header.top-transparent:not(.menu-open) .tp-lang__btn:hover {color: #ffffff;}
-
-#nav-section .tp-dropdown {position: absolute;top: 80px;left: 0;width: 100%;background: #025a00f0;backdrop-filter: blur(16px);-webkit-backdrop-filter: blur(16px);border-top: 1px solid rgba(255, 255, 255, 0.08);overflow: hidden;pointer-events: none;opacity: 0;transform: translateY(-8px);transition: opacity 0.4s cubic-bezier(0.25, 0.1, 0.25, 1),transform 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);}
-
-#nav-section .tp-dropdown.visible {opacity: 1;transform: translateY(0);pointer-events: auto;}
-
-#nav-section .tp-dropdown__inner {position: relative;max-width: 1400px;margin: 0 auto;padding: 28px 60px 36px;}
-
-#nav-section .tp-dropdown__col {position: absolute;top: 28px;display: flex;flex-direction: column;align-items: center;opacity: 0;transform: translateY(10px);transition: opacity 0.35s cubic-bezier(0.25, 0.1, 0.25, 1),transform 0.35s cubic-bezier(0.25, 0.1, 0.25, 1);}
-
-#nav-section .tp-dropdown.visible .tp-dropdown__col {opacity: 1;transform: translateY(0);}
-
-#nav-section .tp-dropdown.visible .tp-dropdown__col:nth-child(1) { transition-delay: 0.04s; }#nav-section .tp-dropdown.visible .tp-dropdown__col:nth-child(2) { transition-delay: 0.08s; }#nav-section .tp-dropdown.visible .tp-dropdown__col:nth-child(3) { transition-delay: 0.12s; }#nav-section .tp-dropdown.visible .tp-dropdown__col:nth-child(4) { transition-delay: 0.16s; }#nav-section .tp-dropdown.visible .tp-dropdown__col:nth-child(5) { transition-delay: 0.20s; }#nav-section .tp-dropdown.visible .tp-dropdown__col:nth-child(6) { transition-delay: 0.24s; }
-
-#nav-section .tp-dropdown__link {display: block;padding: 8px 12px;font-size: 14px;font-weight: 400;color: rgba(255,255,255,0.72);text-decoration: none;letter-spacing: -0.01em;transition: color 0.3s cubic-bezier(0.25, 0.1, 0.25, 1),transform 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);white-space: nowrap;text-align: center;border-radius: 4px;font-family: 'Noto Sans KR', sans-serif;background: none;border: none;line-height: 1.6;}
-
-#nav-section .tp-dropdown__link:hover {color: #ebf6a5;transform: scale(1.02);}
-
-#nav-section .tp-overlay {position: fixed;top: 0;left: 0;width: 100%;height: 100%;background: rgba(0, 0, 0, 0.45);opacity: 0;pointer-events: none;transition: opacity 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);z-index: 9998;}
-
-#nav-section .tp-overlay.visible {opacity: 1;pointer-events: auto;}
 
 #nav-section .tp-hamburger {display: none;flex-direction: column;justify-content: center;align-items: center;width: 44px;height: 44px;background: none;border: none;cursor: pointer;z-index: 10001;padding: 0;position: relative;}
 
@@ -111,7 +112,7 @@
 
 #nav-section .tp-mobile-nav {padding-top: 18px;}
 
-#nav-section .tp-mobile-nav__item {border-bottom: 1px solid rgba(255, 255, 255, 0.1);overflow: hidden;list-style: none;}
+#nav-section .tp-mobile-nav__item {border-bottom: 1px solid rgba(255, 255, 255, 0.1);list-style: none;}
 
 #nav-section .tp-mobile-nav__item:first-child {
     border-top: 1px solid rgba(255, 255, 255, 0.1);
@@ -156,10 +157,11 @@
     min-width: 20px;
     min-height: 20px;
     flex: 0 0 20px;
-    transition: transform 0.35s cubic-bezier(0.25, 0.1, 0.25, 1);
+    transition: transform 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
     display: block;
     margin-left: auto;
     pointer-events: none;
+    display:none;
   }
 
   #nav-section .tp-mobile-nav__arrow path {
@@ -169,38 +171,13 @@
     stroke-linejoin: round;
   }
 
-  #nav-section .tp-mobile-nav__link.active .tp-mobile-nav__arrow {
-    transform: rotate(180deg);
+  #nav-section .tp-mobile-nav__link:hover .tp-mobile-nav__arrow {
+    transform: translateX(3px);
   }
 
+  #nav-section .tp-mobile-nav__link:hover .tp-mobile-nav__arrow path,
   #nav-section .tp-mobile-nav__link.active .tp-mobile-nav__arrow path {
     stroke: #ebf6a5;
-  }
-
-  #nav-section .tp-mobile-sub {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.45s cubic-bezier(0.25, 0.1, 0.25, 1);
-  }
-
-  #nav-section .tp-mobile-sub.open {
-    max-height: 500px;
-  }
-
-  #nav-section .tp-mobile-sub__link {
-    display: block;
-    padding: 12px 0 12px 16px;
-    font-size: 15px;
-    font-weight: 400;
-    color: rgba(255,255,255,0.72);
-    text-decoration: none;
-    transition: color 0.3s ease;
-    font-family: 'Noto Sans KR', sans-serif;
-    line-height: 1.6;
-  }
-
-  #nav-section .tp-mobile-sub__link:hover {
-    color: #ebf6a5;
   }
 
   #nav-section .tp-mobile-lang {
@@ -228,14 +205,7 @@
     color: #ffffff;
   }
 
-/*  @media (max-width: 1200px) {
-    #nav-section .tp-header__inner { padding: 0 40px; }
-    #nav-section .tp-nav__link { padding: 0 16px; font-size: 14.5px; }
-    #nav-section .tp-nav.has-active .tp-nav__link { padding: 0 26px; }
-    #nav-section .tp-dropdown__inner { padding: 28px 40px 36px; }
-  } */
-
-@media (max-width: 1200px) {#nav-section .tp-nav { display: none; }#nav-section .tp-lang { display: none; }#nav-section .tp-hamburger { display: flex; }#nav-section .tp-mobile-menu { display: block; }#nav-section .tp-dropdown { display: none; }#nav-section .tp-overlay { display: none; }#nav-section .tp-header__inner {padding: 0 20px;height: 64px;}#nav-section .tp-logo img { width: 130px; height: auto; display: block; }}
+@media (max-width: 1200px) {#nav-section .tp-nav { display: none; }#nav-section .tp-lang { display: none; }#nav-section .tp-hamburger { display: flex; }#nav-section .tp-mobile-menu { display: block; }#nav-section .tp-header__inner {padding: 0 20px;height: 64px;}#nav-section .tp-logo img { width: 130px; height: auto; display: block; }}
 
 @media (max-width: 480px) {#nav-section .tp-mobile-menu {padding: 0 24px 36px;}
 
@@ -256,13 +226,7 @@
     </a>
 
 <nav class="tp-nav" id="tpNav">
-  <div class="tp-nav__item" data-menu="0"><a href="./about.html" class="tp-nav__link">나누리 소개</a></div>
-<div class="tp-nav__item" data-menu="1"><a href="./gasa.html" class="tp-nav__link">주요 사업</a></div> 
-  <div class="tp-nav__item" data-menu="1"><a href="./homecare.html" class="tp-nav__link">신청하기</a></div>
-   <!--  <div class="tp-nav__item" data-menu="3">
-   <a href="./partnership.html" class="tp-nav__link">협력 기관</a></div>
-  <div class="tp-nav__item" data-menu="4"><a href="./story.html" class="tp-nav__link">나누리 스토리</a></div> -->
-  <div class="tp-nav__item" data-menu="2"><a href="./contact.html" class="tp-nav__link">문의</a></div>
+  ${NAV_LINKS_HTML}
 </nav>
 
 <div class="tp-lang">
@@ -277,54 +241,7 @@
 </button>
 
   </div>
-
-  <div class="tp-dropdown" id="tpDropdown">
-    <div class="tp-dropdown__inner" id="tpDropdownInner">
-      <div class="tp-dropdown__col" data-col="0">
-        <a href="./about.html" class="tp-dropdown__link">나누리는</a>
-        <a href="./ceo.html" class="tp-dropdown__link">이사장 인사말</a>
-        <a href="./vision.html" class="tp-dropdown__link">비전 & 미션</a>
-        <a href="./history.html" class="tp-dropdown__link">사업연혁</a>
-      </div>
-     <div class="tp-dropdown__col" data-col="1">
-        <a href="./seoul-gasa.html" class="tp-dropdown__link">서울형가사서비스</a>
-        <a href="./gasa.html" class="tp-dropdown__link">일반가사특화서비스</a>
-        <a href="./organization.html" class="tp-dropdown__link">청소 & 소독</a>
-        <a href="./organization.html" class="tp-dropdown__link">취업 자격증 교육</a>
-      </div>
-      <div class="tp-dropdown__col" data-col="2">
-        <a href="./homecare.html" class="tp-dropdown__link">홈케어 패키지</a>
-        <a href="./howto.html" class="tp-dropdown__link">이용 방법</a>
-        <a href="./case.html" class="tp-dropdown__link">시공·정리 사례</a>
-        <a href="./estimate.html" class="tp-dropdown__link">예약·견적 신청</a>
-      </div>
-     <!--
-        <div class="tp-dropdown__col" data-col="1">
-        <a href="./gasa.html" class="tp-dropdown__link">통합 홈케어 사업</a>
-        <a href="./partner.html" class="tp-dropdown__link">인증 & 파트너</a>
-        <a href="./organization.html" class="tp-dropdown__link">조직도</a>
-      </div>
-     
-       <div class="tp-dropdown__col" data-col="3">
-        <a href="./b2g.html" class="tp-dropdown__link">공공기관 (B2G)</a>
-        <a href="./b2b.html" class="tp-dropdown__link">기업 ESG (B2B)</a>
-        <a href="./program.html" class="tp-dropdown__link">교육·출장 프로그램</a>
-        <a href="./proposal.html" class="tp-dropdown__link">협력 제안하기</a>
-      </div>
-      <div class="tp-dropdown__col" data-col="4">
-        <a href="./column.html" class="tp-dropdown__link">안심 칼럼</a>
-        <a href="./news.html" class="tp-dropdown__link">활동 소식</a>
-        <a href="./press.html" class="tp-dropdown__link">언론 보도</a>
-      </div>
-      <div class="tp-dropdown__col" data-col="3">
-        <a href="./contact.html" class="tp-dropdown__link">상담·견적 문의</a>
-        <a href="./location.html" class="tp-dropdown__link">오시는 길</a>
-      </div> -->
-    </div>
-  </div>
 </header>
-
-<div class="tp-overlay" id="tpOverlay"></div>
 
 <div class="tp-mobile-menu" id="tpMobileMenu">
   <div class="tp-mobile-header">
@@ -342,92 +259,7 @@
   </div>
 
   <div class="tp-mobile-nav">
-    <div class="tp-mobile-nav__item">
-      <button class="tp-mobile-nav__link" data-mobile="0" type="button">
-        <span>나누리 소개</span>
-        <svg class="tp-mobile-nav__arrow" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-          <path d="M6 9L12 15L18 9" fill="none" stroke="rgba(255,255,255,0.6)" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-      </button>
-      <div class="tp-mobile-sub" data-mobile-sub="0">
-        <a href="./about.html" class="tp-mobile-sub__link">나누리는</a>
-        <a href="./ceo.html" class="tp-mobile-sub__link">이사장 인사말</a>
-        <a href="./vision.html" class="tp-mobile-sub__link">비전 & 미션</a>
-        <a href="./history.html" class="tp-mobile-sub__link">사업 연혁</a>
-      </div>
-    </div>
-
- <div class="tp-mobile-nav__item">
-  <button class="tp-mobile-nav__link" data-mobile="1" type="button">
-    <span>주요 사업</span>
-    <svg class="tp-mobile-nav__arrow" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-      <path d="M6 9L12 15L18 9" fill="none" stroke="rgba(255,255,255,0.6)" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
-    </svg>
-  </button>
-  <div class="tp-mobile-sub" data-mobile-sub="1">
-    <a href="./seoul-gasa.html" class="tp-mobile-sub__link">서울형가사서비스</a>
-    <a href="./gasa.html" class="tp-mobile-sub__link">일반가사특화서비스</a>
-    <a href="./organization.html" class="tp-mobile-sub__link">청소 수납</a>
-  </div>
-</div>
-
-<div class="tp-mobile-nav__item">
-  <button class="tp-mobile-nav__link" data-mobile="2" type="button">
-    <span>신청하기</span>
-    <svg class="tp-mobile-nav__arrow" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-      <path d="M6 9L12 15L18 9" fill="none" stroke="rgba(255,255,255,0.6)" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
-    </svg>
-  </button>
-  <div class="tp-mobile-sub" data-mobile-sub="2">
-    <a href="./homecare.html" class="tp-mobile-sub__link">홈케어 패키지</a>
-    <a href="./howto.html" class="tp-mobile-sub__link">이용 방법</a>
-    <a href="./case.html" class="tp-mobile-sub__link">시공·정리 사례</a>
-    <a href="./estimate.html" class="tp-mobile-sub__link">예약·견적 신청</a>
-  </div>
-</div>
-
-<!-- <div class="tp-mobile-nav__item">
-  <button class="tp-mobile-nav__link" data-mobile="3" type="button">
-    <span>협력 기관</span>
-    <svg class="tp-mobile-nav__arrow" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-      <path d="M6 9L12 15L18 9" fill="none" stroke="rgba(255,255,255,0.6)" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
-    </svg>
-  </button>
-  <div class="tp-mobile-sub" data-mobile-sub="3">
-    <a href="./b2g.html" class="tp-mobile-sub__link">공공기관 (B2G)</a>
-    <a href="./b2b.html" class="tp-mobile-sub__link">기업 ESG (B2B)</a>
-    <a href="./program.html" class="tp-mobile-sub__link">교육·출장 프로그램</a>
-    <a href="./proposal.html" class="tp-mobile-sub__link">협력 제안하기</a>
-  </div>
-</div>
-
-<div class="tp-mobile-nav__item">
-  <button class="tp-mobile-nav__link" data-mobile="4" type="button">
-    <span>나누리 스토리</span>
-    <svg class="tp-mobile-nav__arrow" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-      <path d="M6 9L12 15L18 9" fill="none" stroke="rgba(255,255,255,0.6)" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
-    </svg>
-  </button>
-  <div class="tp-mobile-sub" data-mobile-sub="4">
-    <a href="./column.html" class="tp-mobile-sub__link">안심 칼럼</a>
-    <a href="./news.html" class="tp-mobile-sub__link">활동 소식</a>
-    <a href="./press.html" class="tp-mobile-sub__link">언론 보도</a>
-  </div>
-</div> -->
-
-<div class="tp-mobile-nav__item">
-  <button class="tp-mobile-nav__link" data-mobile="5" type="button">
-    <span>문의</span>
-    <svg class="tp-mobile-nav__arrow" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-      <path d="M6 9L12 15L18 9" fill="none" stroke="rgba(255,255,255,0.6)" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
-    </svg>
-  </button>
-  <div class="tp-mobile-sub" data-mobile-sub="5">
-    <a href="./contact.html" class="tp-mobile-sub__link">상담·견적 문의</a>
-    <a href="./location.html" class="tp-mobile-sub__link">오시는 길</a>
-  </div>
-</div>
-
+    ${MOBILE_LINKS_HTML}
   </div>
 
   <div class="tp-mobile-lang">
@@ -440,8 +272,7 @@
 
   /* =======================================================================
      2. 간편신청 플로팅 템플릿 (Supabase 버전)
-        - 마크업 / 스타일은 원본 그대로
-        - 원본의 <script> 두 블록은 아래 JS 로직으로 이관
+        [변경] 메인 버튼 = 회사소개서 / 퀵패널 첫 항목 = 간편신청
      ======================================================================= */
   const FLOATING_TEMPLATE = `
 
@@ -450,18 +281,18 @@
   <div class="cf-floating" id="cfFloating">
     <!-- 퀵 패널 : 위아래(세로)로 펼쳐짐 -->
     <div class="cf-quick-panel" id="cfQuickPanel">
-      <a href="#reservationSection" class="cf-quick-link">
+      <!-- [위치 교체] 퀵패널 항목 = 간편신청 (모달 오픈) -->
+      <a href="#" class="cf-quick-link" id="cfQuickReserve">
         <span class="cf-quick-icon">
           <svg viewBox="0 0 24 24" fill="none">
-            <path d="M7 4.75h7.5L19.25 9.5V18A2.25 2.25 0 0 1 17 20.25H7A2.25 2.25 0 0 1 4.75 18V7A2.25 2.25 0 0 1 7 4.75Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
-            <path d="M14.5 4.75V9.5h4.75" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
-            <path d="M8.5 12.25h7M8.5 15.25h7M8.5 18.25h4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            <path d="M4.75 19.25h4.5l9.1-9.1-4.5-4.5-9.1 9.1v4.5Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/>
+            <path d="M12.9 6.6l4.5 4.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
           </svg>
         </span>
-        <span class="cf-quick-text">회사소개서</span>
+        <span class="cf-quick-text">간편신청</span>
       </a>
 
-  <a href="/doctor-intro.html" class="cf-quick-link">
+  <a href="tel:02- 6348-0851" class="cf-quick-link">
     <span class="cf-quick-icon">
       <svg viewBox="0 0 24 24" fill="none">
         <path d="M6.7 5.75a2.2 2.2 0 0 1 3.1 0l1.36 1.36a2.2 2.2 0 0 1 0 3.11l-.72.72a13.3 13.3 0 0 0 2.62 2.62l.72-.72a2.2 2.2 0 0 1 3.11 0l1.36 1.36a2.2 2.2 0 0 1 0 3.1l-.68.68c-.77.77-1.92 1.08-2.98.8-2.36-.62-4.85-2.24-6.97-4.36-2.12-2.12-3.74-4.61-4.36-6.97-.28-1.06.03-2.21.8-2.98l.68-.68Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
@@ -470,7 +301,7 @@
     <span class="cf-quick-text">전화문의</span>
   </a>
 
-  <a href="/schedule.html" class="cf-quick-link">
+<!-- <a href="/schedule.html" class="cf-quick-link">
     <span class="cf-quick-icon">
       <svg viewBox="0 0 24 24" fill="none">
         <path d="M12 5.25c-4.28 0-7.75 2.7-7.75 6.03 0 2.04 1.31 3.84 3.31 4.93l-.68 2.54a.45.45 0 0 0 .64.52l3.13-1.62c.44.06.89.09 1.35.09 4.28 0 7.75-2.7 7.75-6.03s-3.47-6.46-7.75-6.46Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
@@ -478,8 +309,8 @@
       </svg>
     </span>
     <span class="cf-quick-text">카카오톡</span>
-  </a>
-</div>
+  </a>  -->
+</div> 
 
 <!-- 퀵메뉴 버튼 -->
 <button type="button" class="cf-btn cf-btn-quick" id="cfQuickBtn" aria-label="퀵메뉴">
@@ -494,15 +325,16 @@
   <span class="cf-btn-label">QUICK</span>
 </button>
 
-<!-- 신청 버튼 -->
-<button type="button" class="cf-btn cf-btn-reserve" id="cfReserveBtn" aria-label="간편 신청">
+<!-- [위치 교체] 메인 버튼 = 회사소개서 -->
+<button type="button" class="cf-btn cf-btn-reserve" id="cfReserveBtn" aria-label="회사소개서">
   <span class="cf-btn-icon">
     <svg viewBox="0 0 24 24" fill="none">
-      <path d="M4.75 19.25h4.5l9.1-9.1-4.5-4.5-9.1 9.1v4.5Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/>
-      <path d="M12.9 6.6l4.5 4.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
+      <path d="M7 4.75h7.5L19.25 9.5V18A2.25 2.25 0 0 1 17 20.25H7A2.25 2.25 0 0 1 4.75 18V7A2.25 2.25 0 0 1 7 4.75Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+      <path d="M14.5 4.75V9.5h4.75" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+      <path d="M8.5 12.25h7M8.5 15.25h7M8.5 18.25h4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
     </svg>
   </span>
-  <span class="cf-btn-label">간편신청</span>
+  <span class="cf-btn-label">회사소개서</span>
 </button>
 
 <!-- TOP 버튼 -->
@@ -609,10 +441,8 @@
       <div class="cf-select-wrap">
         <select id="cfCategory" name="category" required>
           <option value="">상담 분야를 선택해주세요</option>
-          <option value="브랜드 홈페이지">브랜드 홈페이지</option>
-          <option value="랜딩페이지">랜딩페이지</option>
-          <option value="브랜드 AI 영상">브랜드 AI 영상</option>
-          <option value="AI 추억 영상">AI 추억 영상</option>
+          <option value="개인 문의">개인 문의</option>
+          <option value="기업・단체 문의">기업・단체 문의</option>
           <option value="기타 문의">기타 문의</option>
         </select>
         <span class="cf-select-arrow">
@@ -1605,9 +1435,9 @@
         2) Publishable key(sb_publishable_...) 또는 legacy anon key
         ※ secret/service_role 키는 절대 브라우저 코드에 넣지 마세요.
      ======================================================================= */
-  const SUPABASE_URL = 'https://yiuioprceyuybwkgxmrm.supabase.co';
-  const SUPABASE_PUBLISHABLE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InlpdWlvcHJjZXl1eWJ3a2d4bXJtIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Nzg3NDM1MDIsImV4cCI6MjA5NDMxOTUwMn0.SkkBCH9avPMZu-LeBtdOh5zsppcRMvbnilj38CkHEZs';
-  const SUPABASE_TABLE = 'quick_applications';
+  const SUPABASE_URL = 'https://lektyonfdnpuzrjlygbd.supabase.co';
+  const SUPABASE_PUBLISHABLE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imxla3R5b25mZG5wdXpyamx5Z2JkIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODgxOTE1MDMsImV4cCI6MjEwMzc2NzUwM30.kjQ9S2Nhl502ouurKTCJ2MHYo6NfjoyPX-5kNpufFxI';
+  const SUPABASE_TABLE = 'applications';
 
   /* true면 화면에 Supabase의 code/message/details/hint를 표시합니다.
      원인 파악이 끝난 뒤 false로 변경하면 사용자에게는 간단한 코드만 표시됩니다. */
@@ -2004,174 +1834,200 @@
   };
 
   /* =======================================================================
-     4. 상단 메뉴 초기화 (원본 로직 그대로)
+     4. 상단 메뉴 초기화 (단일 뎁스 / 드롭다운 없음)
      ======================================================================= */
-  function initTpMenu(root) {if (!root) return;
-
-var header = root.querySelector('#tpHeader');var nav = root.querySelector('#tpNav');var dropdown = root.querySelector('#tpDropdown');var dropdownInner = root.querySelector('#tpDropdownInner');var overlay = root.querySelector('#tpOverlay');var hamburger = root.querySelector('#tpHamburger');var mobileMenu = root.querySelector('#tpMobileMenu');var mobileClose = root.querySelector('#tpMobileClose');var navItems = nav ? nav.querySelectorAll('.tp-nav__item') : [];var dropdownCols = dropdownInner ? dropdownInner.querySelectorAll('.tp-dropdown__col') : [];
-
-var activeMenu = null;var closeTimeout = null;var isDesktop = window.innerWidth > 768;var mobileOpen = false;var alignRAF = null;var ticking = false;var lastScrollY = window.scrollY || 0;var scrollDelta = 8;var headerRevealPoint = 10;
-
-function updateHeaderTopState() {var atTop = (window.scrollY || window.pageYOffset || 0) <= 10;
-
-if (atTop && !dropdown.classList.contains('visible') && !mobileOpen) {header.classList.add('top-transparent');header.classList.remove('scrolled');} else {header.classList.remove('top-transparent');}
-
-if (!atTop) {header.classList.add('scrolled');}}
-
-function alignDropdownColumns() {if (!isDesktop || !dropdownInner || !navItems.length) return;
-
-var innerRect = dropdownInner.getBoundingClientRect();
-
-navItems.forEach(function(item, i) {var col = dropdownCols[i];if (!col) return;
-
-var linkEl = item.querySelector('.tp-nav__link');
-if (!linkEl) return;
-
-var linkRect = linkEl.getBoundingClientRect();
-var linkCenterX = linkRect.left + linkRect.width / 2;
-
-var colWidth = col.scrollWidth;
-var leftPos = linkCenterX - innerRect.left - colWidth / 2;
-
-var maxLeft = innerRect.width - colWidth - 10;
-if (leftPos < 0) leftPos = 0;
-if (leftPos > maxLeft) leftPos = maxLeft;
-
-col.style.left = leftPos + 'px';
-
-});
-
-var maxH = 0;dropdownCols.forEach(function(col) {var h = col.scrollHeight;if (h > maxH) maxH = h;});dropdownInner.style.minHeight = (maxH + 56) + 'px';}
-
-function startContinuousAlign() {var startTime = performance.now();var duration = 480;
-
-function tick() {alignDropdownColumns();if (performance.now() - startTime < duration) {alignRAF = requestAnimationFrame(tick);} else {alignRAF = null;}}
-
-if (alignRAF) cancelAnimationFrame(alignRAF);alignRAF = requestAnimationFrame(tick);}
-
-function forceHeaderShow() {header.classList.remove('hide-on-scroll');}
-
-function openDropdown(index) {if (closeTimeout) {clearTimeout(closeTimeout);closeTimeout = null;}
-
-activeMenu = index;nav.classList.add('has-active');
-
-navItems.forEach(function(item, i) {item.classList.toggle('active', i === index);});
-
-dropdown.classList.add('visible');overlay.classList.add('visible');header.classList.add('menu-open');header.classList.remove('top-transparent');header.classList.add('scrolled');forceHeaderShow();
-
-startContinuousAlign();}
-
-function closeDropdown() {closeTimeout = setTimeout(function() {activeMenu = null;nav.classList.remove('has-active');navItems.forEach(function(item) { item.classList.remove('active'); });dropdown.classList.remove('visible');overlay.classList.remove('visible');header.classList.remove('menu-open');
-
-if (alignRAF) {
-  cancelAnimationFrame(alignRAF);
-  alignRAF = null;
-}
-
-updateHeaderTopState();
-
-}, 120);}
-
-if (navItems.length) {navItems.forEach(function(item, index) {item.addEventListener('mouseenter', function() {if (isDesktop) openDropdown(index);});
-
-item.addEventListener('mouseleave', function() {
-  if (isDesktop) closeDropdown();
-});
-
-});}
-
-if (dropdown) {dropdown.addEventListener('mouseenter', function() {if (closeTimeout) {clearTimeout(closeTimeout);closeTimeout = null;}});
-
-dropdown.addEventListener('mouseleave', function() {closeDropdown();});}
-
-if (overlay) {overlay.addEventListener('click', function() {if (closeTimeout) clearTimeout(closeTimeout);activeMenu = null;nav.classList.remove('has-active');navItems.forEach(function(item) { item.classList.remove('active'); });dropdown.classList.remove('visible');overlay.classList.remove('visible');header.classList.remove('menu-open');forceHeaderShow();updateHeaderTopState();});}
-
-root.querySelectorAll('.tp-nav__link, .tp-dropdown__link').forEach(function(link) {link.addEventListener('click', function(e) {var href = link.getAttribute('href');
-
-if (!href || href.trim() === '' || href === '#') {
-  e.preventDefault();
-}
-
-});});
-
-function handleHeaderScroll() {var currentScrollY = window.scrollY || 0;var diff = currentScrollY - lastScrollY;
-
-updateHeaderTopState();
-
-if (currentScrollY <= headerRevealPoint) {header.classList.remove('hide-on-scroll');lastScrollY = currentScrollY;return;}
-
-if (mobileOpen || dropdown.classList.contains('visible')) {header.classList.remove('hide-on-scroll');lastScrollY = currentScrollY;return;}
-
-if (Math.abs(diff) < scrollDelta) {return;}
-
-if (diff > 0) {header.classList.add('hide-on-scroll');} else {header.classList.remove('hide-on-scroll');}
-
-lastScrollY = currentScrollY;}
-
-window.addEventListener('scroll', function() {if (!ticking) {requestAnimationFrame(function() {handleHeaderScroll();ticking = false;});ticking = true;}}, { passive: true });
-
-function closeMobileMenu() {mobileOpen = false;hamburger.classList.remove('open');mobileMenu.classList.remove('open');document.body.style.overflow = '';forceHeaderShow();updateHeaderTopState();}
-
-function openMobileMenu() {mobileOpen = true;hamburger.classList.add('open');mobileMenu.classList.add('open');document.body.style.overflow = 'hidden';header.classList.remove('top-transparent');header.classList.add('scrolled');forceHeaderShow();}
-
-if (hamburger) {hamburger.addEventListener('click', function() {if (mobileOpen) {closeMobileMenu();} else {openMobileMenu();}});}
-
-if (mobileClose) {mobileClose.addEventListener('click', function() {closeMobileMenu();});}
-
-root.querySelectorAll('.tp-mobile-nav__link').forEach(function(link) {link.addEventListener('click', function() {var idx = link.getAttribute('data-mobile');var sub = root.querySelector('[data-mobile-sub="' + idx + '"]');var wasActive = link.classList.contains('active');
-
-root.querySelectorAll('.tp-mobile-nav__link').forEach(function(l) {
-  l.classList.remove('active');
-});
-
-root.querySelectorAll('.tp-mobile-sub').forEach(function(s) {
-  s.classList.remove('open');
-});
-
-if (!wasActive && sub) {
-  link.classList.add('active');
-  sub.classList.add('open');
-}
-
-});});
-
-root.querySelectorAll('.tp-mobile-sub__link').forEach(function(link) {link.addEventListener('click', function(e) {var href = link.getAttribute('href');
-
-if (!href || href.trim() === '' || href === '#') {
-  e.preventDefault();
-  return;
-}
-
-closeMobileMenu();
-
-});});
-
-root.querySelectorAll('.tp-lang__btn, .tp-mobile-lang__btn').forEach(function(btn) {btn.addEventListener('click', function() {var group = btn.closest('.tp-lang') || btn.closest('.tp-mobile-lang');if (!group) return;group.querySelectorAll('button').forEach(function(b) {b.classList.remove('active');});btn.classList.add('active');});});
-
-window.addEventListener('resize', function() {isDesktop = window.innerWidth > 768;
-
-if (isDesktop && mobileOpen) {closeMobileMenu();}
-
-if (isDesktop && dropdown.classList.contains('visible')) {alignDropdownColumns();}
-
-forceHeaderShow();lastScrollY = window.scrollY || 0;updateHeaderTopState();});
-
-if (dropdown) {var origTransition = dropdown.style.transition;dropdown.style.transition = 'none';dropdown.style.opacity = '0';dropdown.style.pointerEvents = 'none';dropdown.classList.add('visible');
-
-requestAnimationFrame(function() {alignDropdownColumns();dropdown.classList.remove('visible');requestAnimationFrame(function() {dropdown.style.transition = origTransition || '';dropdown.style.opacity = '';dropdown.style.pointerEvents = '';updateHeaderTopState();});});} else {updateHeaderTopState();}
-
-}
+  function initTpMenu(root) {
+    if (!root) return;
+
+    var header = root.querySelector('#tpHeader');
+    var nav = root.querySelector('#tpNav');
+    var hamburger = root.querySelector('#tpHamburger');
+    var mobileMenu = root.querySelector('#tpMobileMenu');
+    var mobileClose = root.querySelector('#tpMobileClose');
+    var navItems = nav ? nav.querySelectorAll('.tp-nav__item') : [];
+
+    var isDesktop = window.innerWidth > 1200;
+    var mobileOpen = false;
+    var ticking = false;
+    var lastScrollY = window.scrollY || 0;
+    var scrollDelta = 8;
+    var headerRevealPoint = 10;
+
+    /* 현재 페이지 파일명으로 활성 메뉴 표시 */
+    function getFileName(path) {
+      if (!path) return '';
+      var clean = path.split('?')[0].split('#')[0];
+      var file = clean.substring(clean.lastIndexOf('/') + 1);
+      return (file || 'index.html').toLowerCase();
+    }
+
+    function markActiveLinks() {
+      var current = getFileName(window.location.pathname);
+
+      root.querySelectorAll('.tp-nav__link').forEach(function (link) {
+        if (getFileName(link.getAttribute('href')) === current) {
+          link.parentElement.classList.add('active');
+        }
+      });
+
+      root.querySelectorAll('.tp-mobile-nav__link').forEach(function (link) {
+        if (getFileName(link.getAttribute('href')) === current) {
+          link.classList.add('active');
+        }
+      });
+    }
+
+    function updateHeaderTopState() {
+      var atTop = (window.scrollY || window.pageYOffset || 0) <= 10;
+
+      if (atTop && !mobileOpen) {
+        header.classList.add('top-transparent');
+        header.classList.remove('scrolled');
+      } else {
+        header.classList.remove('top-transparent');
+      }
+
+      if (!atTop) {
+        header.classList.add('scrolled');
+      }
+    }
+
+    function forceHeaderShow() {
+      header.classList.remove('hide-on-scroll');
+    }
+
+    /* href 가 비어 있는 링크만 이동을 막습니다 (그 외에는 즉시 이동) */
+    root.querySelectorAll('.tp-nav__link, .tp-mobile-nav__link').forEach(function (link) {
+      link.addEventListener('click', function (e) {
+        var href = link.getAttribute('href');
+        if (!href || href.trim() === '' || href === '#') {
+          e.preventDefault();
+          return;
+        }
+        if (mobileOpen) closeMobileMenu();
+      });
+    });
+
+    function handleHeaderScroll() {
+      var currentScrollY = window.scrollY || 0;
+      var diff = currentScrollY - lastScrollY;
+
+      updateHeaderTopState();
+
+      if (currentScrollY <= headerRevealPoint) {
+        header.classList.remove('hide-on-scroll');
+        lastScrollY = currentScrollY;
+        return;
+      }
+
+      if (mobileOpen) {
+        header.classList.remove('hide-on-scroll');
+        lastScrollY = currentScrollY;
+        return;
+      }
+
+      if (Math.abs(diff) < scrollDelta) {
+        return;
+      }
+
+      if (diff > 0) {
+        header.classList.add('hide-on-scroll');
+      } else {
+        header.classList.remove('hide-on-scroll');
+      }
+
+      lastScrollY = currentScrollY;
+    }
+
+    window.addEventListener('scroll', function () {
+      if (!ticking) {
+        requestAnimationFrame(function () {
+          handleHeaderScroll();
+          ticking = false;
+        });
+        ticking = true;
+      }
+    }, { passive: true });
+
+    function closeMobileMenu() {
+      mobileOpen = false;
+      hamburger.classList.remove('open');
+      mobileMenu.classList.remove('open');
+      document.body.style.overflow = '';
+      forceHeaderShow();
+      updateHeaderTopState();
+    }
+
+    function openMobileMenu() {
+      mobileOpen = true;
+      hamburger.classList.add('open');
+      mobileMenu.classList.add('open');
+      document.body.style.overflow = 'hidden';
+      header.classList.remove('top-transparent');
+      header.classList.add('scrolled');
+      forceHeaderShow();
+    }
+
+    if (hamburger) {
+      hamburger.addEventListener('click', function () {
+        if (mobileOpen) {
+          closeMobileMenu();
+        } else {
+          openMobileMenu();
+        }
+      });
+    }
+
+    if (mobileClose) {
+      mobileClose.addEventListener('click', function () {
+        closeMobileMenu();
+      });
+    }
+
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && mobileOpen) {
+        closeMobileMenu();
+      }
+    });
+
+    root.querySelectorAll('.tp-lang__btn, .tp-mobile-lang__btn').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var group = btn.closest('.tp-lang') || btn.closest('.tp-mobile-lang');
+        if (!group) return;
+        group.querySelectorAll('button').forEach(function (b) {
+          b.classList.remove('active');
+        });
+        btn.classList.add('active');
+      });
+    });
+
+    window.addEventListener('resize', function () {
+      isDesktop = window.innerWidth > 1200;
+
+      if (isDesktop && mobileOpen) {
+        closeMobileMenu();
+      }
+
+      forceHeaderShow();
+      lastScrollY = window.scrollY || 0;
+      updateHeaderTopState();
+    });
+
+    markActiveLinks();
+    updateHeaderTopState();
+  }
 
   /* =======================================================================
      5. 플로팅 퀵메뉴 / 간편신청(Supabase) 초기화
-        원본 인라인 스크립트 로직 그대로 — root 스코프로만 변경해 메뉴와 충돌 방지
+        [변경] cfReserveBtn = 회사소개서 이동 / cfQuickReserve = 간편신청 모달
      ======================================================================= */
   function initCfFloating(root) {
     if (!root) return;
 
     const floating = root.querySelector('#cfFloating');
     const quickBtn = root.querySelector('#cfQuickBtn');
-    const reserveBtn = root.querySelector('#cfReserveBtn');
+    const reserveBtn = root.querySelector('#cfReserveBtn');       // 회사소개서(메인 버튼)
+    const quickReserve = root.querySelector('#cfQuickReserve');   // 간편신청(퀵패널)
     const topBtn = root.querySelector('#cfTopBtn');
 
     const modal = root.querySelector('#cfModal');
@@ -2199,6 +2055,9 @@ requestAnimationFrame(function() {alignDropdownColumns();dropdown.classList.remo
     const sourceInput = root.querySelector('#cfSource');
     const receptionLocationInput = root.querySelector('#cfReceptionLocation');
     const websiteInput = root.querySelector('#cfWebsite');
+
+    /* 회사소개서 버튼이 이동할 대상 (기존 회사소개서 링크와 동일) */
+    const COMPANY_PROFILE_HREF = '#reservationSection';
 
     let submitted = false;
 
@@ -2352,9 +2211,29 @@ requestAnimationFrame(function() {alignDropdownColumns();dropdown.classList.remo
       }
     });
 
+    /* [위치 교체] 메인 버튼 → 회사소개서 이동 */
     reserveBtn.addEventListener('click', function(){
-      openModal();
+      floating.classList.remove('open');
+
+      if(COMPANY_PROFILE_HREF.charAt(0) === '#'){
+        const target = document.querySelector(COMPANY_PROFILE_HREF);
+        if(target){
+          target.scrollIntoView({ behavior:'smooth', block:'start' });
+          return;
+        }
+      }
+
+      window.location.href = COMPANY_PROFILE_HREF;
     });
+
+    /* [위치 교체] 퀵패널 항목 → 간편신청 모달 오픈 */
+    if(quickReserve){
+      quickReserve.addEventListener('click', function(e){
+        e.preventDefault();
+        e.stopPropagation();
+        openModal();
+      });
+    }
 
     modalClose.addEventListener('click', closeModal);
     modalDim.addEventListener('click', closeModal);
