@@ -6,8 +6,6 @@
 
   mount.innerHTML = `
 <section id="footerElite" aria-label="사이트 푸터" style="position:relative;">
-  <script src="https://kit.fontawesome.com/2d323a629b.js" crossorigin="anonymous"></script>
-
   <style>
     #footerElite{
       --bg:#033b1e;
@@ -31,7 +29,7 @@
 
     #footerElite .navGrid{
       display:flex;
-      align-items: stretch;
+      align-items:stretch;
       gap:3rem;
       border-bottom:1px solid var(--line);
       padding-bottom:2rem;
@@ -56,9 +54,9 @@
 
     #footerElite .menuRow{
       display:grid;
-      grid-template-columns:repeat(3,1fr);
+      grid-template-columns:repeat(4,1fr);
       flex:1 1 0;
-      gap:2rem 3rem;
+      gap:2rem 2.5rem;
       min-width:0;
     }
 
@@ -88,6 +86,7 @@
       color:var(--muted);
       text-decoration:none;
       font-size:.92rem;
+      word-break:keep-all;
       transition:color .22s ease;
     }
 
@@ -282,6 +281,20 @@
       color:#032d19;
     }
 
+    @media(max-width:1100px){
+      #footerElite .navGrid{
+        gap:2rem;
+      }
+
+      #footerElite .brandCol{
+        flex:0 0 220px;
+      }
+
+      #footerElite .menuRow{
+        gap:2rem 1.75rem;
+      }
+    }
+
     @media(max-width:900px){
       #footerElite .navGrid{
         flex-direction:column;
@@ -295,7 +308,7 @@
 
       #footerElite .menuRow{
         grid-template-columns:repeat(4,1fr);
-        gap:2rem 2.5rem;
+        gap:2rem 2rem;
       }
 
       #footerElite .footBar{
@@ -346,7 +359,7 @@
     <div class="navGrid">
       <div class="brandCol">
         <div class="logoRow">
-          <img src="./img/logo-w.png" alt="HTU GLOBAL HOLDINGS 로고" style="width:200px;">
+          <img src="./img/logo-w.png" alt="나누리사회적협동조합 로고" style="width:200px;">
         </div>
         <p class="slogan">
           복지의 사각지대, 고령화 시대의 주거・돌봄 문제를 해결합니다.
@@ -360,53 +373,32 @@
             <li><a href="./about.html">나누리는</a></li>
             <li><a href="./ceo.html">이사장 인사말</a></li>
             <li><a href="./vision.html">비전 &amp; 미션</a></li>
-            <li><a href="./history.html">사업 연혁</a></li>
-          </ul>
-        </div>
-
-      <!--  <div class="col">
-          <h4>사업 &amp; 실적</h4>
-          <ul>
-            <li><a href="./business.html">통합 홈케어 사업</a></li>
-            <li><a href="./history.html">사업 실적·연혁</a></li>
-            <li><a href="./partner.html">인증 &amp; 파트너</a></li>
-            <li><a href="./organization.html">조직도</a></li>
+            <li><a href="./history.html">사업연혁</a></li>
           </ul>
         </div>
 
         <div class="col">
-          <h4>안심 홈케어</h4>
+          <h4>주요 사업</h4>
           <ul>
-            <li><a href="./homecare.html">홈케어 패키지</a></li>
-            <li><a href="./howto.html">이용 방법</a></li>
-            <li><a href="./case.html">시공·정리 사례</a></li>
-            <li><a href="./estimate.html">예약·견적 신청</a></li>
+            <li><a href="./seoul-gasa.html">서울형가사서비스</a></li>
+            <li><a href="./gasa.html">일반가사특화서비스</a></li>
+            <li><a href="./seoul-housecare.html">서울시안심집수리</a></li>
+            <li><a href="./housecare.html">일반 집수리/인테리어</a></li>
+            <li><a href="./gasa-edu.html">가사관리사 교육</a></li>
           </ul>
         </div>
 
         <div class="col">
-          <h4>협력 기관</h4>
+          <h4>온라인 신청</h4>
           <ul>
-            <li><a href="./b2g.html">공공기관 (B2G)</a></li>
-            <li><a href="./b2b.html">기업 ESG (B2B)</a></li>
-            <li><a href="./program.html">교육·출장 프로그램</a></li>
-            <li><a href="./proposal.html">협력 제안하기</a></li>
+            <li><a href="./35.html">서울형가사서비스</a></li>
+            <li><a href="./36.html">서울시안심집수리</a></li>
           </ul>
         </div>
 
         <div class="col">
-          <h4>나누리 스토리</h4>
+          <h4>오시는 길</h4>
           <ul>
-            <li><a href="./column.html">안심 칼럼</a></li>
-            <li><a href="./news.html">활동 소식</a></li>
-            <li><a href="./press.html">언론 보도</a></li>
-          </ul>
-        </div> -->
-
-        <div class="col">
-          <h4>문의</h4>
-          <ul>
-            <li><a href="./contact.html">상담·견적 문의</a></li>
             <li><a href="./location.html">오시는 길</a></li>
           </ul>
         </div>
@@ -415,19 +407,14 @@
 
     <div class="footBar">
       <div class="addr">
-        <div class="corpLine"
-          data-corp="나누리사회적협동조합"
-          data-ceo=""
-          data-corpno=""
-          data-bizno="나누리사회적협동조합">
-
-          <span class="corpName" id="corpName">나누리사회적협동조합</span>
+        <div class="corpLine">
+          <span class="corpName">나누리사회적협동조합</span>
 
           <span class="sep">·</span>
-          <span class="meta">사업자등록번호 : <b id="corpNo">110-230-129994</b></span>
+          <span class="meta">사업자등록번호 : <b>110-230-129994</b></span>
 
           <span class="sep">·</span>
-          <span class="meta">대표 : <b id="corpCEO">김동수</b></span>
+          <span class="meta">대표 : <b>김동수</b></span>
 
           <span class="sep">·</span>
           <span class="meta">주소 : <b>서울시 마포구 동교로 72-1 한영빌딩 201호</b></span>
@@ -439,7 +426,7 @@
         </div>
       </div>
 
-     <!-- <div class="familyArea">
+      <!-- <div class="familyArea">
         <div class="familyDropdown" id="familyDropdown">
           <button type="button" class="familyBtn" id="familyBtn" aria-expanded="false" aria-controls="familyMenu">
             <span>패밀리 사이트</span>
@@ -459,28 +446,10 @@
           </div>
         </div>
       </div> -->
-
     </div>
   </div>
 </section>
 `;
-
-  const root = mount.querySelector('.corpLine');
-
-  if (root) {
-    const map = {
-      corpName: root.dataset.corp,
-      corpCEO: root.dataset.ceo,
-      corpNo: root.dataset.corpno,
-      bizNo: root.dataset.bizno
-    };
-
-    Object.entries(map).forEach(([id, value]) => {
-      if (!value) return;
-      const el = document.getElementById(id);
-      if (el) el.textContent = value;
-    });
-  }
 
   const dropdown = document.getElementById('familyDropdown');
   const btn = document.getElementById('familyBtn');
