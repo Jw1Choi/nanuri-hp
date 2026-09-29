@@ -291,6 +291,7 @@
         <a href="./gasa.html" class="tp-dropdown__link">일반가사특화서비스</a>
         <a href="./seoul-housecare.html" class="tp-dropdown__link">서울시안심집수리</a>
         <a href="./housecare.html" class="tp-dropdown__link">일반 집수리/인테리어</a>
+        <a href="./gasa-edu.html" class="tp-dropdown__link">가사관리사 교육</a>
       </div>
       <div class="tp-dropdown__col" data-col="2">
         <a href="./35.html" class="tp-dropdown__link">서울형가사서비스</a>
@@ -313,11 +314,11 @@
         <a href="./column.html" class="tp-dropdown__link">안심 칼럼</a>
         <a href="./news.html" class="tp-dropdown__link">활동 소식</a>
         <a href="./press.html" class="tp-dropdown__link">언론 보도</a>
-      </div>
-      <div class="tp-dropdown__col" data-col="3">
-        <a href="./contact.html" class="tp-dropdown__link">상담·견적 문의</a>
-        <a href="./location.html" class="tp-dropdown__link">오시는 길</a>
       </div> -->
+      <div class="tp-dropdown__col" data-col="3">
+        <!-- <a href="./contact.html" class="tp-dropdown__link">상담·견적 문의</a> -->
+        <a href="./location.html" class="tp-dropdown__link">오시는 길</a>
+      </div>
     </div>
   </div>
 </header>
@@ -367,6 +368,7 @@
     <a href="./gasa.html" class="tp-mobile-sub__link">일반가사특화서비스</a>
     <a href="./seoul-housecare.html" class="tp-mobile-sub__link">서울시안심집수리</a>
     <a href="./housecare.html" class="tp-mobile-sub__link">일반 집수리/인테리어</a>
+    <a href="./gasa-edu.html" class="tp-dropdown__link">가사관리사 교육</a>
   </div>
 </div>
 
