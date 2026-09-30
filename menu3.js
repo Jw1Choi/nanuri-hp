@@ -133,7 +133,7 @@
     <a href="./gasa.html" class="tp-mobile-sub__link">일반가사특화서비스</a>
     <a href="./seoul-housecare.html" class="tp-mobile-sub__link">서울시안심집수리</a>
     <a href="./housecare.html" class="tp-mobile-sub__link">일반 집수리/인테리어</a>
-    <a href="./gasa-edu.html" class="tp-dropdown__link">가사관리사 교육</a>
+    <a href="./gasa-edu.html" class="tp-mobile-sub__link">가사관리사 교육</a>
   </div>
 </div>
 
