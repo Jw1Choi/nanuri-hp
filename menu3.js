@@ -225,7 +225,7 @@
         <span class="cf-quick-text">회사소개서</span>
       </a>
 
-  <a href="/doctor-intro.html" class="cf-quick-link">
+  <a href="tel:02-6348-0851" class="cf-quick-link">
     <span class="cf-quick-icon">
       <svg viewBox="0 0 24 24" fill="none">
         <path d="M6.7 5.75a2.2 2.2 0 0 1 3.1 0l1.36 1.36a2.2 2.2 0 0 1 0 3.11l-.72.72a13.3 13.3 0 0 0 2.62 2.62l.72-.72a2.2 2.2 0 0 1 3.11 0l1.36 1.36a2.2 2.2 0 0 1 0 3.1l-.68.68c-.77.77-1.92 1.08-2.98.8-2.36-.62-4.85-2.24-6.97-4.36-2.12-2.12-3.74-4.61-4.36-6.97-.28-1.06.03-2.21.8-2.98l.68-.68Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
