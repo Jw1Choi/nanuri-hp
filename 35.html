@@ -477,9 +477,9 @@
       margin-top:14px;
       padding:14px 16px;
       border-radius:16px;
-      background:#fff7f7;
-      border:1px solid #fee2e2;
-      color:#991b1b;
+      background:#f8fbff;
+      border:1px solid #dbeafe;
+      color:var(--sb-text);
       font-size:14px;
       line-height:1.7;
       font-weight:800;
@@ -488,7 +488,47 @@
     }
 
     #seoulBenefitApplySection .sb-price-mini strong{
-      color:#991b1b;
+      color:var(--sb-blue);
+      font-weight:900;
+    }
+
+    #seoulBenefitApplySection .sb-pay-guide{
+      margin-top:12px;
+      padding:16px 18px;
+      border-radius:16px;
+      background:#fff7f7;
+      border:1px solid #fee2e2;
+    }
+
+    #seoulBenefitApplySection .sb-pay-title{
+      display:inline-flex;
+      align-items:center;
+      margin-bottom:10px;
+      padding:6px 12px;
+      border-radius:999px;
+      background:#fee2e2;
+      color:var(--sb-red);
+      font-size:13px;
+      font-weight:900;
+      letter-spacing:-0.02em;
+    }
+
+    #seoulBenefitApplySection .sb-pay-guide p{
+      margin:0;
+      color:#7f1d1d;
+      font-size:14px;
+      line-height:1.7;
+      font-weight:700;
+      letter-spacing:-0.02em;
+      word-break:keep-all;
+    }
+
+    #seoulBenefitApplySection .sb-pay-guide p + p{
+      margin-top:6px;
+    }
+
+    #seoulBenefitApplySection .sb-pay-guide b{
+      color:var(--sb-red);
       font-weight:900;
     }
 
@@ -576,7 +616,8 @@
       #seoulBenefitApplySection .sb-desc,
       #seoulBenefitApplySection .sb-panel-desc,
       #seoulBenefitApplySection .sb-price-note,
-      #seoulBenefitApplySection .sb-price-mini{
+      #seoulBenefitApplySection .sb-price-mini,
+      #seoulBenefitApplySection .sb-pay-guide p{
         font-size:15px;
       }
 
@@ -669,6 +710,15 @@
         <div class="sb-price-mini">
           특화서비스는 정리수납, 장난감 세척, 음식조리 등이 있으며 대부분
           <strong>1회 70,000원</strong> 또는 정리수납 <strong>1인 80,000원</strong> 기준으로 이용됩니다.
+        </div>
+
+        <div class="sb-pay-guide">
+          <strong class="sb-pay-title">바우처 결제 안내</strong>
+          <p>바우처 결제는 서비스 예약 확인 후 별도로 안내해 드립니다.</p>
+          <p>
+            나누리사회적협동조합에서 <b>결제선생 앱</b>을 통해 결제 링크를 발송해 드리며,
+            전달받으신 링크에서 <b>바우처 카드로 간편하게 결제</b>하실 수 있습니다.
+          </p>
         </div>
 
         <div class="sb-buttons">
