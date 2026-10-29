@@ -411,13 +411,13 @@
           <span class="corpName">나누리사회적협동조합</span>
 
           <span class="sep">·</span>
-          <span class="meta">사업자등록번호 : <b>110-230-129994</b></span>
+          <span class="meta">사업자등록번호 : <b>270151-0031555</b></span>
 
           <span class="sep">·</span>
           <span class="meta">대표 : <b>김은주</b></span>
 
           <span class="sep">·</span>
-          <span class="meta">주소 : <b>서울시 마포구 동교로 72-1 한영빌딩 201호</b></span>
+          <span class="meta">주소 : <b>서울시 마포구 동교로 72-1 201호 (합정동, 한영빌딩)</b></span>
         </div>
 
         <div class="copy">
