@@ -397,9 +397,10 @@
         </div>
 
         <div class="col">
-          <h4>오시는 길</h4>
+          <h4>소통공간</h4>
           <ul>
-            <li><a href="./location.html">오시는 길</a></li>
+            <li><a href="./notice.html">공지사항</a></li>
+            <li><a href="./gallary.html">갤러리</a></li>
           </ul>
         </div>
       </div>

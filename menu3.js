@@ -22,12 +22,12 @@
 
 <nav class="tp-nav" id="tpNav">
   <div class="tp-nav__item" data-menu="0"><a href="./about.html" class="tp-nav__link">나누리 소개</a></div>
-<div class="tp-nav__item" data-menu="1"><a href="./seoul-gasa.html" class="tp-nav__link">주요 사업</a></div> 
-  <div class="tp-nav__item" data-menu="1"><a href="./online-program.html" class="tp-nav__link">온라인 신청</a></div>
+  <div class="tp-nav__item" data-menu="1"><a href="./seoul-gasa.html" class="tp-nav__link">주요 사업</a></div>
+  <div class="tp-nav__item" data-menu="2"><a href="./online-program.html" class="tp-nav__link">온라인 신청</a></div>
    <!--  <div class="tp-nav__item" data-menu="3">
    <a href="./partnership.html" class="tp-nav__link">협력 기관</a></div>
   <div class="tp-nav__item" data-menu="4"><a href="./story.html" class="tp-nav__link">나누리 스토리</a></div> -->
-  <div class="tp-nav__item" data-menu="2"><a href="./location.html" class="tp-nav__link">오시는 길</a></div>
+  <div class="tp-nav__item" data-menu="3"><a href="./notice.html" class="tp-nav__link">소통공간</a></div>
 </nav>
 
 <div class="tp-lang">
@@ -81,8 +81,8 @@
         <a href="./press.html" class="tp-dropdown__link">언론 보도</a>
       </div> -->
       <div class="tp-dropdown__col" data-col="3">
-        <!-- <a href="./contact.html" class="tp-dropdown__link">상담·견적 문의</a> -->
-        <a href="./location.html" class="tp-dropdown__link">오시는 길</a>
+        <a href="./notice.html" class="tp-dropdown__link">공지사항</a>
+        <a href="./gallary.html" class="tp-dropdown__link">갤러리</a>
       </div>
     </div>
   </div>
@@ -181,14 +181,14 @@
 
 <div class="tp-mobile-nav__item">
   <button class="tp-mobile-nav__link" data-mobile="5" type="button">
-    <span>문의</span>
+    <span>소통공간</span>
     <svg class="tp-mobile-nav__arrow" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
       <path d="M6 9L12 15L18 9" fill="none" stroke="rgba(255,255,255,0.6)" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
     </svg>
   </button>
   <div class="tp-mobile-sub" data-mobile-sub="5">
-    <a href="./contact.html" class="tp-mobile-sub__link">상담·견적 문의</a>
-    <a href="./location.html" class="tp-mobile-sub__link">오시는 길</a>
+    <a href="./notice.html" class="tp-mobile-sub__link">공지사항</a>
+    <a href="./gallary.html" class="tp-mobile-sub__link">갤러리</a>
   </div>
 </div>
 
