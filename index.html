@@ -5556,6 +5556,27 @@ LONGER" data-img-src="./img/pos-8.jpg" data-pdf-url="https://drive.google.com/fi
       -webkit-tap-highlight-color: transparent;
     }
 
+    #newsSlideSection .head-all {
+      display: inline-flex;
+      align-items: center;
+      height: 40px;
+      padding: 0 16px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: rgba(255, 255, 255, .92);
+      color: rgba(11, 11, 11, .86);
+      font-size: 14px;
+      font-weight: 700;
+      text-decoration: none;
+      box-shadow: 0 10px 22px rgba(0, 0, 0, .06);
+      transition: transform .14s ease, border-color .14s ease;
+    }
+
+    #newsSlideSection .head-all:hover {
+      transform: translateY(-1px);
+      border-color: rgba(11, 11, 11, .16);
+    }
+
     #newsSlideSection .head-btn svg {
       width: 18px;
       height: 18px;
@@ -5825,6 +5846,7 @@ LONGER" data-img-src="./img/pos-8.jpg" data-pdf-url="https://drive.google.com/fi
         <h2>News &amp; Event</h2>
       </div>
       <div class="head-right" aria-label="뉴스 슬라이드 버튼">
+        <a class="head-all" href="./notice.html">전체 보기</a>
         <button type="button" class="head-btn prev" id="newsPrev" aria-label="이전 뉴스 페이지">
           <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
             <path d="M14.5 5.5L8 12l6.5 6.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"
@@ -6294,8 +6316,34 @@ LONGER" data-img-src="./img/pos-8.jpg" data-pdf-url="https://drive.google.com/fi
         }, 120);
       });
 
-      render();
-      startAuto();
+      /* ── 관리자 페이지 공지사항 자동 연동 ──────────────────────
+         ./data/notice.json 에서 「메인 News & Event 노출」을 켠 공지를
+         위 JSON 카드보다 앞에 붙입니다. 파일이 없으면 기존 카드만 보입니다. */
+      function loadNotices() {
+        if (!window.fetch) return Promise.resolve([]);
+        return fetch('./data/notice.json?v=' + Date.now(), { cache: 'no-store' })
+          .then(function (r) { return r.ok ? r.json() : null; })
+          .then(function (d) {
+            if (!d || !Array.isArray(d.items)) return [];
+            return d.items
+              .filter(function (n) { return n && !n.hidden && n.showOnMain; })
+              .map(function (n) {
+                return {
+                  title: n.title,
+                  excerpt: n.excerpt,
+                  img: n.img || '',
+                  link: n.link || ('./' + n.slug + '.html')
+                };
+              });
+          })
+          .catch(function () { return []; });
+      }
+
+      loadNotices().then(function (notices) {
+        if (notices.length) items = notices.concat(items);
+        render();
+        startAuto();
+      });
     })();
   </script>
 </section>

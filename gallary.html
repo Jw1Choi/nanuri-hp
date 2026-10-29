@@ -1,0 +1,396 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!-- 소유권 인증(각 도메인별 값으로 교체) -->
+  <meta name="naver-site-verification" content="" />
+  <meta name="google-site-verification" content="구글_인증코드_여기에" />
+
+  <!-- Canonical (대표 URL로 고정) -->
+  <link rel="canonical" href="https://nanuricoop.co.kr/gallary.html" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="./img/favicon.png" sizes="any">
+  <link rel="shortcut icon" href="./img/favicon.png" type="image/x-icon">
+  <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./img/favicon.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="./img/favicon.png">
+
+  <meta name="robots" content="index,follow" />
+  <meta name="subject" content="나누리사회적협동조합" />
+  <meta name="title" content="갤러리 | 나누리사회적협동조합" />
+  <meta name="author" content="나누리사회적협동조합">
+  <meta name="description" content="나누리사회적협동조합 갤러리 — 안심집수리, 가사서비스, 교육, 나눔 현장의 사진을 소개합니다." />
+  <meta name="keywords" content="나누리사회적협동조합, 나누리, 사회적협동조합, 집수리, 안심집수리, 가사서비스, 돌봄, 공지사항, 갤러리" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:rich_attachment" content="true" />
+  <meta property="og:site_name" content="나누리사회적협동조합" />
+  <meta property="og:title" content="갤러리 | 나누리사회적협동조합" />
+  <meta property="og:description" content="나누리사회적협동조합 갤러리 — 안심집수리, 가사서비스, 교육, 나눔 현장의 사진을 소개합니다." />
+  <meta property="og:image" content="https://nanuricoop.co.kr/video/na-01.png" />
+  <meta property="og:url" content="https://nanuricoop.co.kr/gallary.html" />
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="갤러리 | 나누리사회적협동조합" />
+  <meta name="twitter:description" content="나누리사회적협동조합 갤러리 — 안심집수리, 가사서비스, 교육, 나눔 현장의 사진을 소개합니다." />
+  <meta name="twitter:image" content="https://nanuricoop.co.kr/video/na-01.png" />
+
+  <meta itemprop="name" content="갤러리 | 나누리사회적협동조합" />
+  <meta itemprop="description" content="나누리사회적협동조합 갤러리 — 안심집수리, 가사서비스, 교육, 나눔 현장의 사진을 소개합니다." />
+  <meta itemprop="image" content="https://nanuricoop.co.kr/video/na-01.png" />
+
+  <title>갤러리 | 나누리사회적협동조합</title>
+
+  <link href="./css/reset.css" rel="stylesheet" type="text/css" />
+  <link href="./css/style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <div id="menu_navi"></div>
+  <script src="./menu3.js"></script>
+
+<section id="subVisual" aria-label="갤러리 비주얼" style="--sv-bg:url('./img/intro-1.jpg')">
+  <style>
+    /* ===============================
+       Scope: #subVisual ONLY — 서브 비주얼 (중앙에서 열리는 리빌 + 타이틀)
+       =============================== */
+    #subVisual{
+      --sv-bg:url('./img/location.jpg');
+      --reveal-dur:900ms;
+      position:relative;z-index:2;width:100%;height:70vh;min-height:460px;max-height:780px;
+      background:#0b0d12 var(--sv-bg) no-repeat center top/cover;overflow:hidden;perspective:900px;
+      font-family:Pretendard,"Noto Sans KR",sans-serif;color:#fff;
+    }
+    #subVisual *{box-sizing:border-box}
+    #subVisual::before{
+      content:'';position:absolute;inset:0;z-index:1;pointer-events:none;
+      background:linear-gradient(110deg,rgba(18,22,34,.56) 45%,rgba(28,33,54,.34) 100%);
+    }
+    #subVisual .sv-reveal{position:absolute;top:0;bottom:0;width:50%;background:#0b0d12;z-index:3;will-change:transform}
+    #subVisual .sv-reveal.l{left:0}
+    #subVisual .sv-reveal.r{right:0}
+    #subVisual.play .sv-reveal.l{animation:svOutL var(--reveal-dur) cubic-bezier(.22,.8,.18,1) forwards}
+    #subVisual.play .sv-reveal.r{animation:svOutR var(--reveal-dur) cubic-bezier(.22,.8,.18,1) forwards}
+    @keyframes svOutL{to{transform:translateX(-100%)}}
+    @keyframes svOutR{to{transform:translateX(100%)}}
+    #subVisual .sv-area{
+      position:absolute;left:50%;bottom:110px;transform:translateX(-50%);z-index:2;
+      width:calc(100% - 80px);max-width:1440px;
+    }
+    #subVisual .sv-crumb{
+      opacity:0;transform:translateY(-18px);margin-bottom:18px;
+      transition:opacity .9s cubic-bezier(.22,.9,.39,1.01),transform 1.05s cubic-bezier(.22,.9,.39,1.01);
+    }
+    #subVisual .sv-crumb ol{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin:0;padding:0;list-style:none;font-size:1.04rem;opacity:.92}
+    #subVisual .sv-crumb li{display:flex;align-items:center}
+    #subVisual .sv-crumb li:not(:last-child)::after{content:"›";margin:0 0 0 10px;opacity:.48;font-size:.92em;font-weight:600}
+    #subVisual .sv-crumb a{color:#fff;opacity:.83;text-decoration:none;transition:opacity .17s}
+    #subVisual .sv-crumb a:hover,#subVisual .sv-crumb a:focus{opacity:1;text-decoration:underline}
+    #subVisual .sv-crumb .current{font-weight:700}
+    #subVisual .sv-title-box{filter:drop-shadow(0 8px 32px rgba(0,0,0,.11))}
+    #subVisual .sv-desc{
+      margin:0;font-size:26px;font-weight:400;letter-spacing:-.3px;line-height:1.4;min-height:28px;
+      opacity:0;transform:translateY(50px) scale(.97) skewY(2deg) rotateX(10deg);filter:blur(7px) brightness(1.3);
+      transition:all 1.25s cubic-bezier(.22,.78,.21,1.02) .14s;
+    }
+    #subVisual .sv-title{
+      margin:14px 0 0;font-size:56px;font-weight:700;line-height:1.28;letter-spacing:-1px;color:#fff;
+      opacity:0;transform:translateY(60px) scale(.96) skewY(4deg) rotateX(15deg);filter:blur(4px) brightness(1.4);
+      transition:all 1.1s cubic-bezier(.24,.8,.26,1.01);
+    }
+    #subVisual.in .sv-crumb{opacity:1;transform:none}
+    #subVisual.in .sv-desc,#subVisual.in .sv-title{opacity:1;transform:none;filter:none}
+    @media (prefers-reduced-motion:reduce){
+      #subVisual .sv-reveal{display:none}
+      #subVisual .sv-crumb,#subVisual .sv-desc,#subVisual .sv-title{opacity:1;transform:none;filter:none;transition:none}
+    }
+    @media (max-width:950px){
+      #subVisual{height:440px;min-height:0}
+      #subVisual .sv-area{bottom:52px;width:calc(100% - 32px)}
+      #subVisual .sv-title{font-size:2rem}
+      #subVisual .sv-desc{font-size:1.02rem}
+      #subVisual .sv-crumb ol{font-size:.92rem}
+    }
+  </style>
+  <div class="sv-reveal l" aria-hidden="true"></div>
+  <div class="sv-reveal r" aria-hidden="true"></div>
+  <div class="sv-area">
+    <nav class="sv-crumb" aria-label="breadcrumb"><ol><li><a href="./index.html">홈</a></li><li><span class="current" aria-current="page">갤러리</span></li></ol></nav>
+    <header class="sv-title-box">
+      <p class="sv-desc">나누리사회적협동조합</p>
+      <h1 class="sv-title">갤러리</h1>
+    </header>
+  </div>
+
+  <script>
+    (function () {
+      var V = document.getElementById('subVisual');
+      if (!V) return;
+      var dur = parseInt(getComputedStyle(V).getPropertyValue('--reveal-dur'), 10) || 900;
+      requestAnimationFrame(function () { V.classList.add('play'); });
+      setTimeout(function () { V.classList.add('in'); }, dur + 40);
+      window.addEventListener('scroll', function () {
+        var y = window.scrollY || window.pageYOffset;
+        if (y < V.offsetHeight) V.style.backgroundPosition = 'center ' + Math.max(0, -y * 0.15) + 'px';
+      }, { passive: true });
+    })();
+  </script>
+</section>
+
+<section id="galleryBoard" aria-label="갤러리">
+  <style>
+    /* ===============================
+       Scope: #galleryBoard (갤러리) / #glLightbox (확대 보기)
+       - data/gallery.json 연동, 카테고리 탭 · 더 보기 · 라이트박스
+       - 라이트박스는 JS가 document.body 로 옮겨 다른 섹션과 겹치지 않게 합니다
+       =============================== */
+    #galleryBoard{
+      --gb-ink:#111827;--gb-muted:#6b7280;--gb-line:rgba(17,24,39,.1);--gb-soft:#f4f6f9;
+      --gb-accent:#0b4a8b;--gb-gap:clamp(8px,1.4cqi,16px);--gb-radius:16px;
+      font-family:Pretendard,"Noto Sans KR",system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
+      color:var(--gb-ink);background:#fff;padding:clamp(56px,8vw,96px) 20px clamp(80px,10vw,130px);
+      container-type:inline-size;-webkit-font-smoothing:antialiased;
+    }
+    #galleryBoard *{box-sizing:border-box}
+    #galleryBoard .gb-wrap{max-width:1200px;margin:0 auto}
+    #galleryBoard .gb-head{text-align:center;margin-bottom:clamp(26px,4cqi,40px)}
+    #galleryBoard .gb-eyebrow{margin:0 0 10px;font-size:13px;font-weight:800;letter-spacing:.18em;color:var(--gb-accent)}
+    #galleryBoard .gb-head h2{margin:0;font-size:clamp(28px,4.2cqi,42px);font-weight:800;letter-spacing:-.035em;line-height:1.2}
+    #galleryBoard .gb-head p{margin:12px 0 0;color:var(--gb-muted);font-size:15.5px;line-height:1.6}
+    #galleryBoard .gb-tabs{display:flex;justify-content:center;flex-wrap:wrap;gap:8px;margin-bottom:clamp(24px,3.4cqi,36px)}
+    #galleryBoard .gb-tab{display:inline-flex;align-items:center;gap:7px;height:44px;padding:0 20px;border-radius:999px;border:1px solid var(--gb-line);background:#fff;font:inherit;font-size:15px;font-weight:600;color:var(--gb-ink);cursor:pointer;transition:background .2s,border-color .2s,color .2s,transform .2s}
+    #galleryBoard .gb-tab:hover{border-color:var(--gb-ink);transform:translateY(-1px)}
+    #galleryBoard .gb-tab small{font-size:12.5px;font-weight:600;color:var(--gb-muted);font-variant-numeric:tabular-nums}
+    #galleryBoard .gb-tab[aria-selected="true"]{background:var(--gb-ink);border-color:var(--gb-ink);color:#fff}
+    #galleryBoard .gb-tab[aria-selected="true"] small{color:rgba(255,255,255,.65)}
+    #galleryBoard .gb-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:var(--gb-gap)}
+    #galleryBoard .gb-item{position:relative;display:block;width:100%;padding:0;border:0;border-radius:var(--gb-radius);overflow:hidden;background:var(--gb-soft);aspect-ratio:4/3;cursor:zoom-in;opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s cubic-bezier(.22,.8,.26,1)}
+    #galleryBoard .gb-item.is-in{opacity:1;transform:none}
+    #galleryBoard .gb-item img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .7s cubic-bezier(.22,.8,.26,1)}
+    #galleryBoard .gb-item:hover img,#galleryBoard .gb-item:focus-visible img{transform:scale(1.07)}
+    #galleryBoard .gb-item:focus-visible{outline:3px solid var(--gb-accent);outline-offset:3px}
+    #galleryBoard .gb-cap{position:absolute;inset:auto 0 0 0;padding:40px 16px 14px;text-align:left;color:#fff;background:linear-gradient(180deg,rgba(0,0,0,0),rgba(0,0,0,.62));opacity:0;transform:translateY(8px);transition:opacity .3s,transform .3s}
+    #galleryBoard .gb-item:hover .gb-cap,#galleryBoard .gb-item:focus-visible .gb-cap{opacity:1;transform:none}
+    #galleryBoard .gb-cap b{display:block;font-size:12px;font-weight:700;letter-spacing:.04em;opacity:.8;margin-bottom:3px}
+    #galleryBoard .gb-cap span{display:block;font-size:14.5px;font-weight:600;line-height:1.45;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+    #galleryBoard .gb-more{display:flex;justify-content:center;margin-top:clamp(30px,4cqi,46px)}
+    #galleryBoard .gb-more button{min-width:180px;height:52px;padding:0 28px;border-radius:999px;border:1px solid var(--gb-ink);background:#fff;font:inherit;font-size:15px;font-weight:700;color:var(--gb-ink);cursor:pointer;transition:background .2s,color .2s}
+    #galleryBoard .gb-more button:hover{background:var(--gb-ink);color:#fff}
+    #galleryBoard .gb-more button[hidden]{display:none}
+    #galleryBoard .gb-state{grid-column:1/-1;padding:80px 20px;text-align:center;color:var(--gb-muted);font-size:15px}
+    #galleryBoard .gb-skel{aspect-ratio:4/3;border-radius:var(--gb-radius);background:linear-gradient(90deg,#f1f3f6 0%,#f8f9fb 50%,#f1f3f6 100%);background-size:200% 100%;animation:gbSk 1.2s linear infinite}
+    @keyframes gbSk{to{background-position:-200% 0}}
+    @container (max-width:1000px){#galleryBoard .gb-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+    @container (max-width:640px){
+      #galleryBoard .gb-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+      #galleryBoard .gb-tabs{justify-content:flex-start;flex-wrap:nowrap;overflow-x:auto;margin-left:-20px;margin-right:-20px;padding:0 20px 4px;scrollbar-width:none}
+      #galleryBoard .gb-tabs::-webkit-scrollbar{display:none}
+      #galleryBoard .gb-tab{flex:0 0 auto;height:40px;padding:0 16px;font-size:14px}
+      #galleryBoard .gb-cap{opacity:1;transform:none;padding:28px 10px 9px}
+      #galleryBoard .gb-cap b{display:none}
+      #galleryBoard .gb-cap span{font-size:12.5px}
+    }
+    @media (prefers-reduced-motion:reduce){#galleryBoard .gb-item{opacity:1;transform:none;transition:none}}
+
+    /* ---------- 라이트박스 ---------- */
+    #glLightbox{position:fixed;inset:0;z-index:99999;display:none;font-family:Pretendard,"Noto Sans KR",system-ui,sans-serif;color:#fff}
+    #glLightbox.is-open{display:block}
+    #glLightbox *{box-sizing:border-box}
+    #glLightbox .lb-dim{position:absolute;inset:0;background:rgba(8,10,16,.92);backdrop-filter:blur(4px);animation:lbFade .25s ease}
+    #glLightbox .lb-stage{position:absolute;inset:64px 84px 104px;display:grid;place-items:center}
+    #glLightbox .lb-stage img{max-width:100%;max-height:100%;object-fit:contain;border-radius:8px;box-shadow:0 30px 80px rgba(0,0,0,.5);animation:lbZoom .35s cubic-bezier(.22,.8,.26,1)}
+    #glLightbox .lb-top{position:absolute;top:0;left:0;right:0;height:64px;display:flex;align-items:center;justify-content:space-between;padding:0 20px}
+    #glLightbox .lb-count{font-size:14px;opacity:.75;font-variant-numeric:tabular-nums}
+    #glLightbox .lb-btn{width:48px;height:48px;border-radius:999px;border:1px solid rgba(255,255,255,.22);background:rgba(255,255,255,.08);color:#fff;cursor:pointer;display:grid;place-items:center;transition:background .2s}
+    #glLightbox .lb-btn:hover{background:rgba(255,255,255,.2)}
+    #glLightbox .lb-btn svg{width:22px;height:22px}
+    #glLightbox .lb-prev,#glLightbox .lb-next{position:absolute;top:50%;transform:translateY(-50%)}
+    #glLightbox .lb-prev{left:18px}
+    #glLightbox .lb-next{right:18px}
+    #glLightbox .lb-bottom{position:absolute;left:0;right:0;bottom:0;min-height:104px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;padding:12px 24px 22px;text-align:center}
+    #glLightbox .lb-cat{font-size:12.5px;font-weight:700;letter-spacing:.06em;color:#9cc3f0}
+    #glLightbox .lb-cap{font-size:16px;line-height:1.55;max-width:760px}
+    @keyframes lbFade{from{opacity:0}}
+    @keyframes lbZoom{from{opacity:0;transform:scale(.96)}}
+    @media (max-width:640px){
+      #glLightbox .lb-stage{inset:56px 0 110px}
+      #glLightbox .lb-stage img{border-radius:0}
+      #glLightbox .lb-prev,#glLightbox .lb-next{top:auto;bottom:24px;transform:none;width:44px;height:44px}
+      #glLightbox .lb-bottom{padding:12px 70px 20px}
+      #glLightbox .lb-cap{font-size:14px}
+    }
+  </style>
+
+  <div class="gb-wrap">
+    <div class="gb-head">
+      <p class="gb-eyebrow">GALLERY</p>
+      <h2>나누리 갤러리</h2>
+      <p>현장과 교육, 나눔의 순간들을 사진으로 전해드립니다.</p>
+    </div>
+    <div class="gb-tabs" id="gbTabs" role="tablist" aria-label="갤러리 카테고리"></div>
+    <div class="gb-grid" id="gbGrid" role="tabpanel"><div class="gb-skel"></div><div class="gb-skel"></div><div class="gb-skel"></div><div class="gb-skel"></div></div>
+    <div class="gb-more"><button type="button" id="gbMore" hidden>더 보기</button></div>
+    <noscript><p class="gb-state">갤러리를 보려면 자바스크립트를 켜 주세요.</p></noscript>
+  </div>
+
+  <div id="glLightbox" role="dialog" aria-modal="true" aria-label="사진 크게 보기" aria-hidden="true">
+    <div class="lb-dim" data-close></div>
+    <div class="lb-top">
+      <span class="lb-count" id="lbCount"></span>
+      <button type="button" class="lb-btn" data-close aria-label="닫기"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
+    </div>
+    <div class="lb-stage"><img id="lbImg" alt=""></div>
+    <button type="button" class="lb-btn lb-prev" id="lbPrev" aria-label="이전 사진"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M14.5 5.5 8 12l6.5 6.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+    <button type="button" class="lb-btn lb-next" id="lbNext" aria-label="다음 사진"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M9.5 18.5 16 12 9.5 5.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+    <div class="lb-bottom"><span class="lb-cat" id="lbCat"></span><p class="lb-cap" id="lbCap"></p></div>
+  </div>
+
+  <script>
+    (function () {
+      var S = document.getElementById('galleryBoard');
+      if (!S) return;
+      var tabsEl = S.querySelector('#gbTabs');
+      var grid = S.querySelector('#gbGrid');
+      var moreBtn = S.querySelector('#gbMore');
+      var LB = S.querySelector('#glLightbox');
+      document.body.appendChild(LB);
+      var lbImg = LB.querySelector('#lbImg'), lbCap = LB.querySelector('#lbCap'), lbCat = LB.querySelector('#lbCat'), lbCount = LB.querySelector('#lbCount');
+
+      var STEP = 16, ALL = 'all';
+      var cats = [], items = [], list = [], cur = ALL, limit = STEP, idx = 0, lastFocus = null;
+
+      function esc(s) { return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]; }); }
+      function catName(id) { for (var i = 0; i < cats.length; i++) if (cats[i].id === id) return cats[i].name; return ''; }
+      function src(i) { return i.src || ('./' + i.path); }
+      function thumb(i) { return i.thumbSrc || (i.thumb ? './' + i.thumb : src(i)); }
+
+      var io = 'IntersectionObserver' in window ? new IntersectionObserver(function (es) {
+        es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('is-in'); io.unobserve(e.target); } });
+      }, { rootMargin: '0px 0px -40px 0px' }) : null;
+
+      function drawTabs() {
+        var counts = {};
+        items.forEach(function (i) { counts[i.cat] = (counts[i.cat] || 0) + 1; });
+        var tabs = [{ id: ALL, name: '전체', n: items.length }].concat(
+          cats.filter(function (c) { return counts[c.id]; }).map(function (c) { return { id: c.id, name: c.name, n: counts[c.id] }; })
+        );
+        tabsEl.innerHTML = tabs.map(function (t) {
+          return '<button type="button" class="gb-tab" role="tab" data-cat="' + esc(t.id) + '" aria-selected="' + (t.id === cur) + '">' + esc(t.name) + ' <small>' + t.n + '</small></button>';
+        }).join('');
+      }
+
+      function drawGrid(append) {
+        list = cur === ALL ? items : items.filter(function (i) { return i.cat === cur; });
+        var from = append ? grid.querySelectorAll('.gb-item').length : 0;
+        var slice = list.slice(from, limit);
+        if (!append) grid.innerHTML = '';
+        if (!list.length) {
+          grid.innerHTML = '<p class="gb-state">' + (items.length ? '이 카테고리에 사진이 없습니다.' : '아직 등록된 사진이 없습니다.') + '</p>';
+        }
+        slice.forEach(function (it, k) {
+          var b = document.createElement('button');
+          b.type = 'button';
+          b.className = 'gb-item';
+          b.setAttribute('data-i', String(from + k));
+          b.setAttribute('aria-label', (it.caption || catName(it.cat) || '사진') + ' 크게 보기');
+          b.style.transitionDelay = (k % STEP) * 0.035 + 's';
+          b.innerHTML = '<img src="' + esc(thumb(it)) + '" alt="' + esc(it.caption || catName(it.cat)) + '" loading="lazy" decoding="async">' +
+            '<span class="gb-cap"><b>' + esc(catName(it.cat)) + '</b>' + (it.caption ? '<span>' + esc(it.caption) + '</span>' : '') + '</span>';
+          grid.appendChild(b);
+          if (io) io.observe(b); else b.classList.add('is-in');
+        });
+        moreBtn.hidden = limit >= list.length;
+      }
+
+      function select(id) {
+        cur = id; limit = STEP;
+        Array.prototype.forEach.call(tabsEl.children, function (t) { t.setAttribute('aria-selected', String(t.getAttribute('data-cat') === id)); });
+        var h = id === ALL ? '' : '#cat=' + encodeURIComponent(id);
+        if (location.hash !== h) history.replaceState(null, '', location.pathname + location.search + h);
+        drawGrid(false);
+      }
+
+      /* 라이트박스 */
+      function show(i) {
+        if (!list.length) return;
+        idx = (i + list.length) % list.length;
+        var it = list[idx];
+        lbImg.src = src(it);
+        lbImg.alt = it.caption || catName(it.cat);
+        lbImg.style.animation = 'none'; void lbImg.offsetWidth; lbImg.style.animation = '';
+        lbCap.textContent = it.caption || '';
+        lbCat.textContent = catName(it.cat);
+        lbCount.textContent = (idx + 1) + ' / ' + list.length;
+        var nx = list[(idx + 1) % list.length];
+        if (nx) { var pre = new Image(); pre.src = src(nx); }
+      }
+      function open(i) {
+        lastFocus = document.activeElement;
+        LB.classList.add('is-open');
+        LB.setAttribute('aria-hidden', 'false');
+        document.documentElement.style.overflow = 'hidden';
+        show(i);
+        LB.querySelector('[data-close].lb-btn').focus();
+      }
+      function close() {
+        LB.classList.remove('is-open');
+        LB.setAttribute('aria-hidden', 'true');
+        document.documentElement.style.overflow = '';
+        lbImg.removeAttribute('src');
+        if (lastFocus && lastFocus.focus) lastFocus.focus();
+      }
+
+      tabsEl.addEventListener('click', function (e) {
+        var t = e.target.closest('.gb-tab');
+        if (t) select(t.getAttribute('data-cat'));
+      });
+      grid.addEventListener('click', function (e) {
+        var b = e.target.closest('.gb-item');
+        if (b) open(Number(b.getAttribute('data-i')));
+      });
+      moreBtn.addEventListener('click', function () { limit += STEP; drawGrid(true); });
+      LB.addEventListener('click', function (e) { if (e.target.closest('[data-close]')) close(); });
+      LB.querySelector('#lbPrev').addEventListener('click', function () { show(idx - 1); });
+      LB.querySelector('#lbNext').addEventListener('click', function () { show(idx + 1); });
+      document.addEventListener('keydown', function (e) {
+        if (!LB.classList.contains('is-open')) return;
+        if (e.key === 'Escape') close();
+        else if (e.key === 'ArrowLeft') show(idx - 1);
+        else if (e.key === 'ArrowRight') show(idx + 1);
+      });
+      var sx = 0;
+      LB.addEventListener('touchstart', function (e) { sx = e.touches[0].clientX; }, { passive: true });
+      LB.addEventListener('touchend', function (e) {
+        var d = e.changedTouches[0].clientX - sx;
+        if (Math.abs(d) > 50) show(idx + (d < 0 ? 1 : -1));
+      });
+
+      fetch('./data/gallery.json?v=' + Date.now(), { cache: 'no-store' })
+        .then(function (r) { if (r.status === 404) return {}; if (!r.ok) throw new Error(r.status); return r.json(); })
+        .then(function (d) {
+          cats = Array.isArray(d.categories) ? d.categories : [];
+          items = Array.isArray(d.items) ? d.items : [];
+          var m = location.hash.match(/^#cat=(.+)$/);
+          var want = m ? decodeURIComponent(m[1]) : ALL;
+          cur = want === ALL || items.some(function (i) { return i.cat === want; }) ? want : ALL;
+          drawTabs();
+          drawGrid(false);
+        })
+        .catch(function () { grid.innerHTML = '<p class="gb-state">갤러리를 불러오지 못했습니다. 잠시 후 다시 시도해 주세요.</p>'; });
+    })();
+  </script>
+</section>
+
+  <div id="footer_template"></div>
+</body>
+<script src="./js/jquery-1.11.0.min.js"></script>
+<script src="./js/validation1.js"></script>
+<script src="./js/main.js"></script>
+<script src="./js/footer.js"></script>
+
+</html>
