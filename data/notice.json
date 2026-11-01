@@ -1,7 +1,7 @@
 {
   "version": 1,
   "nextId": 4,
-  "updatedAt": "2026-11-01T01:36:36.548Z",
+  "updatedAt": "2026-11-01T01:39:09.994Z",
   "items": [
     {
       "id": 3,
@@ -22,24 +22,6 @@
       "link": "./notice-3.html"
     },
     {
-      "id": 2,
-      "slug": "notice-2",
-      "title": "나누리 사회적협동조합의 가사서비스 관련 상반기 보고",
-      "excerpt": "나누리 사회적 협동조합입니다. 본 조합은 고용노동부 인증 가사서비스 제공기관으로서 2026년 6월 30일 기준 상반기에 600가구에 대해 서울형 가사서비스를 완료했으며 이는 가사서비스 시장에서 매우 탁월한 성과입니다. 이 사업 실적을 사회적가치지표(SVI, Social Value Ind",
-      "date": "2026-11-01",
-      "thumb": null,
-      "pinned": false,
-      "showOnMain": true,
-      "hidden": false,
-      "externalLink": null,
-      "openExternal": false,
-      "author": "관리자",
-      "createdAt": "2026-11-01T01:35:26.350Z",
-      "updatedAt": "2026-11-01T01:35:26.350Z",
-      "img": "",
-      "link": "./notice-2.html"
-    },
-    {
       "id": 1,
       "slug": "notice-1",
       "title": "서울형 가사서비스 지원사업 참여 가사관리사 모집 공고",
@@ -56,6 +38,24 @@
       "updatedAt": "2026-11-01T01:34:50.663Z",
       "img": "./img/notice/202611/62a8d51f-0a10-4cf0-939b-511554ed8cdd.jpg",
       "link": "./notice-1.html"
+    },
+    {
+      "id": 2,
+      "slug": "notice-2",
+      "title": "나누리 사회적협동조합의 가사서비스 관련 상반기 보고",
+      "excerpt": "나누리 사회적 협동조합입니다. 본 조합은 고용노동부 인증 가사서비스 제공기관으로서 2026년 6월 30일 기준 상반기에 600가구에 대해 서울형 가사서비스를 완료했으며 이는 가사서비스 시장에서 매우 탁월한 성과입니다. 이 사업 실적을 사회적가치지표(SVI, Social Value Ind",
+      "date": "2026-07-21",
+      "thumb": null,
+      "pinned": false,
+      "showOnMain": true,
+      "hidden": false,
+      "externalLink": null,
+      "openExternal": false,
+      "author": "관리자",
+      "createdAt": "2026-11-01T01:35:26.350Z",
+      "updatedAt": "2026-11-01T01:39:09.994Z",
+      "img": "",
+      "link": "./notice-2.html"
     }
   ]
 }
