@@ -1,8 +1,26 @@
 {
   "version": 1,
-  "nextId": 3,
-  "updatedAt": "2026-11-01T01:35:26.350Z",
+  "nextId": 4,
+  "updatedAt": "2026-11-01T01:36:36.548Z",
   "items": [
+    {
+      "id": 3,
+      "slug": "notice-3",
+      "title": "나누리 사회적협동조합의 착한 나눔",
+      "excerpt": "나누리사회적협동조합에서 2026.7.10.(금) 초복을 맞이하여 뜻깊은 나눔을 실천했습니다! 독거어르신들을 살뜰히 보살펴주시는 \"마포서부복지기관\"에 백만 원 상당의 애터미 착한 삼계탕 100마리를 전달해 드렸습니다. 어르신들께서 무더운 여름을 건강하고 안전하게 보내시는 데 조금이나마 도",
+      "date": "2026-11-01",
+      "thumb": "img/notice/202611/f2f67a2a-2946-402d-aa5d-85df7ae65d3c.webp",
+      "pinned": false,
+      "showOnMain": true,
+      "hidden": false,
+      "externalLink": null,
+      "openExternal": false,
+      "author": "관리자",
+      "createdAt": "2026-11-01T01:36:36.548Z",
+      "updatedAt": "2026-11-01T01:36:36.548Z",
+      "img": "./img/notice/202611/f2f67a2a-2946-402d-aa5d-85df7ae65d3c.webp",
+      "link": "./notice-3.html"
+    },
     {
       "id": 2,
       "slug": "notice-2",
