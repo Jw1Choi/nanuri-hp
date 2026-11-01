@@ -146,7 +146,7 @@
   <style>
     /* ===============================
        Scope: #galleryBoard (갤러리) / #glLightbox (확대 보기)
-       - data/gallery.json 연동, 카테고리 탭 · 더 보기 · 라이트박스
+       - data/gallery.json 연동, 카테고리별 제목+사진 묶음 · 탭 · 더 보기 · 라이트박스
        - 라이트박스는 JS가 document.body 로 옮겨 다른 섹션과 겹치지 않게 합니다
        =============================== */
     #galleryBoard{
@@ -169,6 +169,16 @@
     #galleryBoard .gb-tab[aria-selected="true"]{background:var(--gb-ink);border-color:var(--gb-ink);color:#fff}
     #galleryBoard .gb-tab[aria-selected="true"] small{color:rgba(255,255,255,.65)}
     #galleryBoard .gb-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:var(--gb-gap)}
+    /* 카테고리별 묶음: 제목 → 사진 → 다음 카테고리 제목 → 사진 */
+    #galleryBoard .gb-list{display:grid;gap:clamp(56px,7cqi,88px)}
+    #galleryBoard .gb-sec{scroll-margin-top:110px}
+    #galleryBoard .gb-sec-head{display:flex;align-items:flex-end;gap:14px;padding-bottom:16px;margin-bottom:clamp(18px,2.4cqi,26px);border-bottom:2px solid var(--gb-ink)}
+    #galleryBoard .gb-sec-no{font-size:14px;font-weight:800;letter-spacing:.12em;color:var(--gb-accent);font-variant-numeric:tabular-nums;padding-bottom:6px}
+    #galleryBoard .gb-sec-head h3{margin:0;font-size:clamp(22px,3cqi,30px);font-weight:800;letter-spacing:-.03em;line-height:1.25}
+    #galleryBoard .gb-sec-count{margin-left:auto;padding-bottom:5px;font-size:14px;color:var(--gb-muted);font-variant-numeric:tabular-nums;white-space:nowrap}
+    #galleryBoard .gb-sec-more{display:flex;justify-content:center;margin-top:clamp(20px,3cqi,30px)}
+    #galleryBoard .gb-sec-more button{min-width:180px;height:48px;padding:0 26px;border-radius:999px;border:1px solid var(--gb-line);background:#fff;font:inherit;font-size:14.5px;font-weight:700;color:var(--gb-ink);cursor:pointer;transition:background .2s,color .2s,border-color .2s}
+    #galleryBoard .gb-sec-more button:hover{background:var(--gb-ink);border-color:var(--gb-ink);color:#fff}
     #galleryBoard .gb-item{position:relative;display:block;width:100%;padding:0;border:0;border-radius:var(--gb-radius);overflow:hidden;background:var(--gb-soft);aspect-ratio:4/3;cursor:zoom-in;opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s cubic-bezier(.22,.8,.26,1)}
     #galleryBoard .gb-item.is-in{opacity:1;transform:none}
     #galleryBoard .gb-item img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .7s cubic-bezier(.22,.8,.26,1)}
@@ -182,7 +192,7 @@
     #galleryBoard .gb-more button{min-width:180px;height:52px;padding:0 28px;border-radius:999px;border:1px solid var(--gb-ink);background:#fff;font:inherit;font-size:15px;font-weight:700;color:var(--gb-ink);cursor:pointer;transition:background .2s,color .2s}
     #galleryBoard .gb-more button:hover{background:var(--gb-ink);color:#fff}
     #galleryBoard .gb-more button[hidden]{display:none}
-    #galleryBoard .gb-state{grid-column:1/-1;padding:80px 20px;text-align:center;color:var(--gb-muted);font-size:15px}
+    #galleryBoard .gb-state{grid-column:1/-1;margin:0;padding:80px 20px;text-align:center;color:var(--gb-muted);font-size:15px}
     #galleryBoard .gb-skel{aspect-ratio:4/3;border-radius:var(--gb-radius);background:linear-gradient(90deg,#f1f3f6 0%,#f8f9fb 50%,#f1f3f6 100%);background-size:200% 100%;animation:gbSk 1.2s linear infinite}
     @keyframes gbSk{to{background-position:-200% 0}}
     @container (max-width:1000px){#galleryBoard .gb-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
@@ -194,6 +204,9 @@
       #galleryBoard .gb-cap{opacity:1;transform:none;padding:28px 10px 9px}
       #galleryBoard .gb-cap b{display:none}
       #galleryBoard .gb-cap span{font-size:12.5px}
+      #galleryBoard .gb-sec-head{gap:10px;padding-bottom:12px}
+      #galleryBoard .gb-sec-no{font-size:12.5px;padding-bottom:4px}
+      #galleryBoard .gb-sec-count{font-size:13px;padding-bottom:3px}
     }
     @media (prefers-reduced-motion:reduce){#galleryBoard .gb-item{opacity:1;transform:none;transition:none}}
 
@@ -233,8 +246,7 @@
       <p>현장과 교육, 나눔의 순간들을 사진으로 전해드립니다.</p>
     </div>
     <div class="gb-tabs" id="gbTabs" role="tablist" aria-label="갤러리 카테고리"></div>
-    <div class="gb-grid" id="gbGrid" role="tabpanel"><div class="gb-skel"></div><div class="gb-skel"></div><div class="gb-skel"></div><div class="gb-skel"></div></div>
-    <div class="gb-more"><button type="button" id="gbMore" hidden>더 보기</button></div>
+    <div class="gb-list" id="gbList" role="tabpanel"><div class="gb-grid"><div class="gb-skel"></div><div class="gb-skel"></div><div class="gb-skel"></div><div class="gb-skel"></div></div></div>
     <noscript><p class="gb-state">갤러리를 보려면 자바스크립트를 켜 주세요.</p></noscript>
   </div>
 
@@ -255,64 +267,104 @@
       var S = document.getElementById('galleryBoard');
       if (!S) return;
       var tabsEl = S.querySelector('#gbTabs');
-      var grid = S.querySelector('#gbGrid');
-      var moreBtn = S.querySelector('#gbMore');
+      var listEl = S.querySelector('#gbList');
       var LB = S.querySelector('#glLightbox');
       document.body.appendChild(LB);
       var lbImg = LB.querySelector('#lbImg'), lbCap = LB.querySelector('#lbCap'), lbCat = LB.querySelector('#lbCat'), lbCount = LB.querySelector('#lbCount');
 
-      var STEP = 16, ALL = 'all';
-      var cats = [], items = [], list = [], cur = ALL, limit = STEP, idx = 0, lastFocus = null;
+      /* 전체 보기에서는 카테고리마다 8장, 한 카테고리만 볼 때는 16장씩 보여주고 「더 보기」로 늘립니다 */
+      var STEP_ALL = 8, STEP_ONE = 16, ALL = 'all';
+      var cats = [], items = [], groups = [], list = [], cur = ALL, limits = {}, idx = 0, lastFocus = null;
 
       function esc(s) { return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]; }); }
-      function catName(id) { for (var i = 0; i < cats.length; i++) if (cats[i].id === id) return cats[i].name; return ''; }
+      function catName(id) { for (var i = 0; i < cats.length; i++) if (cats[i].id === id) return cats[i].name; return '기타'; }
       function src(i) { return i.src || ('./' + i.path); }
       function thumb(i) { return i.thumbSrc || (i.thumb ? './' + i.thumb : src(i)); }
+      function step() { return cur === ALL ? STEP_ALL : STEP_ONE; }
 
       var io = 'IntersectionObserver' in window ? new IntersectionObserver(function (es) {
         es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('is-in'); io.unobserve(e.target); } });
       }, { rootMargin: '0px 0px -40px 0px' }) : null;
 
+      /* 관리자에서 정한 카테고리 순서대로 묶습니다. 사진이 없는 카테고리는 건너뜁니다. */
+      function buildGroups() {
+        var map = {};
+        items.forEach(function (i) { (map[i.cat] = map[i.cat] || []).push(i); });
+        groups = cats.filter(function (c) { return map[c.id]; }).map(function (c) { return { id: c.id, name: c.name, items: map[c.id] }; });
+        var known = {};
+        cats.forEach(function (c) { known[c.id] = 1; });
+        var etc = items.filter(function (i) { return !known[i.cat]; });
+        if (etc.length) groups.push({ id: '__etc', name: '기타', items: etc });
+      }
+
       function drawTabs() {
-        var counts = {};
-        items.forEach(function (i) { counts[i.cat] = (counts[i.cat] || 0) + 1; });
         var tabs = [{ id: ALL, name: '전체', n: items.length }].concat(
-          cats.filter(function (c) { return counts[c.id]; }).map(function (c) { return { id: c.id, name: c.name, n: counts[c.id] }; })
+          groups.map(function (g) { return { id: g.id, name: g.name, n: g.items.length }; })
         );
         tabsEl.innerHTML = tabs.map(function (t) {
           return '<button type="button" class="gb-tab" role="tab" data-cat="' + esc(t.id) + '" aria-selected="' + (t.id === cur) + '">' + esc(t.name) + ' <small>' + t.n + '</small></button>';
         }).join('');
       }
 
-      function drawGrid(append) {
-        list = cur === ALL ? items : items.filter(function (i) { return i.cat === cur; });
-        var from = append ? grid.querySelectorAll('.gb-item').length : 0;
-        var slice = list.slice(from, limit);
+      function tile(it, k, gid) {
+        var b = document.createElement('button');
+        b.type = 'button';
+        b.className = 'gb-item';
+        b.setAttribute('data-g', gid);
+        b.setAttribute('data-i', String(k));
+        b.setAttribute('aria-label', (it.caption || catName(it.cat) || '사진') + ' 크게 보기');
+        b.style.transitionDelay = (k % 8) * 0.035 + 's';
+        b.innerHTML = '<img src="' + esc(thumb(it)) + '" alt="' + esc(it.caption || catName(it.cat)) + '" loading="lazy" decoding="async">' +
+          (it.caption ? '<span class="gb-cap"><span>' + esc(it.caption) + '</span></span>' : '');
+        if (io) io.observe(b); else b.classList.add('is-in');
+        return b;
+      }
+
+      function fillSection(sec, g, append) {
+        var grid = sec.querySelector('.gb-grid');
+        var more = sec.querySelector('.gb-sec-more button');
+        var lim = limits[g.id] || step();
+        var from = append ? grid.children.length : 0;
         if (!append) grid.innerHTML = '';
-        if (!list.length) {
-          grid.innerHTML = '<p class="gb-state">' + (items.length ? '이 카테고리에 사진이 없습니다.' : '아직 등록된 사진이 없습니다.') + '</p>';
+        g.items.slice(from, lim).forEach(function (it, k) { grid.appendChild(tile(it, from + k, g.id)); });
+        var rest = g.items.length - Math.min(lim, g.items.length);
+        more.hidden = rest <= 0;
+        more.textContent = '더 보기 (+' + rest + ')';
+      }
+
+      function drawList() {
+        listEl.innerHTML = '';
+        if (!groups.length) {
+          listEl.innerHTML = '<p class="gb-state">아직 등록된 사진이 없습니다.</p>';
+          return;
         }
-        slice.forEach(function (it, k) {
-          var b = document.createElement('button');
-          b.type = 'button';
-          b.className = 'gb-item';
-          b.setAttribute('data-i', String(from + k));
-          b.setAttribute('aria-label', (it.caption || catName(it.cat) || '사진') + ' 크게 보기');
-          b.style.transitionDelay = (k % STEP) * 0.035 + 's';
-          b.innerHTML = '<img src="' + esc(thumb(it)) + '" alt="' + esc(it.caption || catName(it.cat)) + '" loading="lazy" decoding="async">' +
-            '<span class="gb-cap"><b>' + esc(catName(it.cat)) + '</b>' + (it.caption ? '<span>' + esc(it.caption) + '</span>' : '') + '</span>';
-          grid.appendChild(b);
-          if (io) io.observe(b); else b.classList.add('is-in');
+        var shown = cur === ALL ? groups : groups.filter(function (g) { return g.id === cur; });
+        shown.forEach(function (g) {
+          var no = groups.indexOf(g) + 1;
+          var sec = document.createElement('section');
+          sec.className = 'gb-sec';
+          sec.id = 'gbSec-' + g.id;
+          sec.setAttribute('aria-label', g.name);
+          sec.innerHTML =
+            '<div class="gb-sec-head"><span class="gb-sec-no">' + (no < 10 ? '0' + no : no) + '</span>' +
+            '<h3>' + esc(g.name) + '</h3><span class="gb-sec-count">' + g.items.length + '장</span></div>' +
+            '<div class="gb-grid"></div>' +
+            '<div class="gb-sec-more"><button type="button" hidden></button></div>';
+          listEl.appendChild(sec);
+          fillSection(sec, g, false);
+          sec.querySelector('.gb-sec-more button').addEventListener('click', function () {
+            limits[g.id] = (limits[g.id] || step()) + step();
+            fillSection(sec, g, true);
+          });
         });
-        moreBtn.hidden = limit >= list.length;
       }
 
       function select(id) {
-        cur = id; limit = STEP;
+        cur = id; limits = {};
         Array.prototype.forEach.call(tabsEl.children, function (t) { t.setAttribute('aria-selected', String(t.getAttribute('data-cat') === id)); });
         var h = id === ALL ? '' : '#cat=' + encodeURIComponent(id);
         if (location.hash !== h) history.replaceState(null, '', location.pathname + location.search + h);
-        drawGrid(false);
+        drawList();
       }
 
       /* 라이트박스 */
@@ -349,11 +401,13 @@
         var t = e.target.closest('.gb-tab');
         if (t) select(t.getAttribute('data-cat'));
       });
-      grid.addEventListener('click', function (e) {
+      listEl.addEventListener('click', function (e) {
         var b = e.target.closest('.gb-item');
-        if (b) open(Number(b.getAttribute('data-i')));
+        if (!b) return;
+        var gid = b.getAttribute('data-g');
+        for (var i = 0; i < groups.length; i++) if (groups[i].id === gid) list = groups[i].items;
+        open(Number(b.getAttribute('data-i')));
       });
-      moreBtn.addEventListener('click', function () { limit += STEP; drawGrid(true); });
       LB.addEventListener('click', function (e) { if (e.target.closest('[data-close]')) close(); });
       LB.querySelector('#lbPrev').addEventListener('click', function () { show(idx - 1); });
       LB.querySelector('#lbNext').addEventListener('click', function () { show(idx + 1); });
@@ -377,11 +431,12 @@
           items = Array.isArray(d.items) ? d.items : [];
           var m = location.hash.match(/^#cat=(.+)$/);
           var want = m ? decodeURIComponent(m[1]) : ALL;
-          cur = want === ALL || items.some(function (i) { return i.cat === want; }) ? want : ALL;
+          buildGroups();
+          cur = want === ALL || groups.some(function (g) { return g.id === want; }) ? want : ALL;
           drawTabs();
-          drawGrid(false);
+          drawList();
         })
-        .catch(function () { grid.innerHTML = '<p class="gb-state">갤러리를 불러오지 못했습니다. 잠시 후 다시 시도해 주세요.</p>'; });
+        .catch(function () { listEl.innerHTML = '<p class="gb-state">갤러리를 불러오지 못했습니다. 잠시 후 다시 시도해 주세요.</p>'; });
     })();
   </script>
 </section>
