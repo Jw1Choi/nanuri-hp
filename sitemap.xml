@@ -37,6 +37,7 @@
   <!-- notice:start (관리자 페이지가 자동으로 관리하는 구간) -->
   <url><loc>https://nanuricoop.co.kr/notice.html</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://nanuricoop.co.kr/gallary.html</loc><changefreq>weekly</changefreq></url>
+  <url><loc>https://nanuricoop.co.kr/notice-2.html</loc><lastmod>2026-11-01</lastmod></url>
   <url><loc>https://nanuricoop.co.kr/notice-1.html</loc><lastmod>2026-11-01</lastmod></url>
   <!-- notice:end -->
 </urlset>
