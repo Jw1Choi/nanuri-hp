@@ -5699,6 +5699,40 @@ LONGER" data-img-src="./img/pos-8.jpg" data-pdf-url="https://drive.google.com/fi
       transition: transform .6s ease;
     }
 
+    #newsSlideSection .thumb .ph {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 20px 22px;
+      color: #fff;
+      background: linear-gradient(135deg, #0b4a8b 0%, #1c2136 100%);
+      transition: transform .6s ease;
+    }
+
+    #newsSlideSection .thumb .ph b {
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: .22em;
+      opacity: .7;
+    }
+
+    #newsSlideSection .thumb .ph span {
+      margin-top: 4px;
+      font-size: 22px;
+      font-weight: 800;
+      letter-spacing: -.02em;
+    }
+
+    #newsSlideSection .news-card:hover .thumb .ph {
+      transform: scale(1.04);
+    }
+
+    #newsSlideSection .thumb.is-ph:after {
+      display: none;
+    }
+
     #newsSlideSection .news-card:hover .thumb img {
       transform: scale(1.07);
     }
@@ -5991,10 +6025,20 @@ LONGER" data-img-src="./img/pos-8.jpg" data-pdf-url="https://drive.google.com/fi
         img.src = item.img || '';
         img.alt = item.title ? item.title : 'news thumbnail';
 
-        if (!item.img) {
-          const thumb = node.querySelector('.thumb');
-          if (thumb) thumb.style.display = 'none';
+        /* 썸네일이 없거나 이미지를 불러오지 못하면 기본 썸네일(NANURI NOTICE)을 보여줍니다 */
+        const thumb = node.querySelector('.thumb');
+        function showPlaceholder() {
+          if (!thumb || thumb.querySelector('.ph')) return;
+          img.remove();
+          const ph = document.createElement('div');
+          ph.className = 'ph';
+          ph.setAttribute('aria-hidden', 'true');
+          ph.innerHTML = '<b>NANURI</b><span>NOTICE</span>';
+          thumb.classList.add('is-ph');
+          thumb.appendChild(ph);
         }
+        if (!item.img) showPlaceholder();
+        else img.addEventListener('error', showPlaceholder, { once: true });
 
         return slide;
       }
