@@ -214,7 +214,7 @@
   <div class="cf-floating" id="cfFloating">
     <!-- 퀵 패널 : 위아래(세로)로 펼쳐짐 -->
     <div class="cf-quick-panel" id="cfQuickPanel">
-      <a href="#reservationSection" class="cf-quick-link">
+      <a href="https://drive.google.com/file/d/1N6bvCyIvZSIHTwDyIcachBlc2wIsOlyy/view?usp=sharing" class="cf-quick-link">
         <span class="cf-quick-icon">
           <svg viewBox="0 0 24 24" fill="none">
             <path d="M7 4.75h7.5L19.25 9.5V18A2.25 2.25 0 0 1 17 20.25H7A2.25 2.25 0 0 1 4.75 18V7A2.25 2.25 0 0 1 7 4.75Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
