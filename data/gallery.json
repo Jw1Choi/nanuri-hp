@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-01T23:19:00.429Z",
+  "updatedAt": "2026-11-01T23:38:33.300Z",
   "categories": [
     {
       "id": "c-ofxir9a4",
-      "name": "취업 교육 및 봉사활동"
+      "name": "취업 교육"
     },
     {
       "id": "c-4er1t10k",
@@ -17,6 +17,10 @@
     {
       "id": "c-kr6ua43n",
       "name": "통합돌봄 서비스"
+    },
+    {
+      "id": "c-zd5pwfla",
+      "name": "건물관리 청소 유지보수"
     }
   ],
   "items": [
