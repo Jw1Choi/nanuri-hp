@@ -1,0 +1,72 @@
+{
+  "version": 1,
+  "updatedAt": "2026-11-01T01:21:40.378Z",
+  "categories": [
+    {
+      "id": "c-ofxir9a4",
+      "name": "취업 교육 및 봉사활동"
+    },
+    {
+      "id": "c-4er1t10k",
+      "name": "가사서비스 & 정리 수납"
+    },
+    {
+      "id": "c-j7tg3qrp",
+      "name": "주거환경 개선사업"
+    },
+    {
+      "id": "c-kr6ua43n",
+      "name": "통합돌봄 서비스"
+    }
+  ],
+  "items": [
+    {
+      "id": "g-d86655mt",
+      "cat": "c-ofxir9a4",
+      "path": "img/gallery/202611/e0347136-6b3b-43df-9480-e3741bf933cf.jpg",
+      "thumb": "img/gallery/202611/65455160-fe1b-4a16-a803-05ea3d3c3041.jpg",
+      "w": 2400,
+      "h": 1340,
+      "caption": "",
+      "date": "2026-11-01",
+      "src": "./img/gallery/202611/e0347136-6b3b-43df-9480-e3741bf933cf.jpg",
+      "thumbSrc": "./img/gallery/202611/65455160-fe1b-4a16-a803-05ea3d3c3041.jpg"
+    },
+    {
+      "id": "g-cfycfe1i",
+      "cat": "c-4er1t10k",
+      "path": "img/gallery/202611/a3dcbcc1-7ef1-45b7-ad3c-313f7a86468c.webp",
+      "thumb": "img/gallery/202611/d6610202-fb91-4d7a-8be5-6ff23e5e50d2.webp",
+      "w": 2400,
+      "h": 1340,
+      "caption": "",
+      "date": "2026-11-01",
+      "src": "./img/gallery/202611/a3dcbcc1-7ef1-45b7-ad3c-313f7a86468c.webp",
+      "thumbSrc": "./img/gallery/202611/d6610202-fb91-4d7a-8be5-6ff23e5e50d2.webp"
+    },
+    {
+      "id": "g-ax1zw0p5",
+      "cat": "c-j7tg3qrp",
+      "path": "img/gallery/202611/9be482e5-6bb6-443d-9e15-cac17e5450db.jpg",
+      "thumb": "img/gallery/202611/20a7e11e-62d3-4f28-aeeb-2c5d76763c3e.jpg",
+      "w": 2400,
+      "h": 1340,
+      "caption": "",
+      "date": "2026-11-01",
+      "src": "./img/gallery/202611/9be482e5-6bb6-443d-9e15-cac17e5450db.jpg",
+      "thumbSrc": "./img/gallery/202611/20a7e11e-62d3-4f28-aeeb-2c5d76763c3e.jpg"
+    },
+    {
+      "id": "g-a9xvf95a",
+      "cat": "c-kr6ua43n",
+      "path": "img/gallery/202611/dec4f683-d891-4a94-97c2-fde813b6d943.jpg",
+      "thumb": "img/gallery/202611/7a4b75ad-ff7d-488c-ab0c-a816e2c6f23e.jpg",
+      "w": 2400,
+      "h": 1340,
+      "caption": "",
+      "date": "2026-11-01",
+      "src": "./img/gallery/202611/dec4f683-d891-4a94-97c2-fde813b6d943.jpg",
+      "thumbSrc": "./img/gallery/202611/7a4b75ad-ff7d-488c-ab0c-a816e2c6f23e.jpg"
+    }
+  ]
+}
