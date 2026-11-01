@@ -1,12 +1,12 @@
 {
   "version": 1,
   "nextId": 2,
-  "updatedAt": "2026-11-01T01:17:26.669Z",
+  "updatedAt": "2026-11-01T01:33:54.691Z",
   "items": [
     {
       "id": 1,
       "slug": "notice-1",
-      "title": "테스트",
+      "title": "서울형 가사서비스 지원사업 참여 가사관리사 모집 공고",
       "excerpt": "공지사항 테스트",
       "date": "2026-11-01",
       "thumb": "img/notice/202611/29f3af81-add7-4281-9ebe-14a9ee6fda45.webp",
@@ -17,7 +17,7 @@
       "openExternal": false,
       "author": "관리자",
       "createdAt": "2026-11-01T01:17:26.669Z",
-      "updatedAt": "2026-11-01T01:17:26.669Z",
+      "updatedAt": "2026-11-01T01:33:54.691Z",
       "img": "./img/notice/202611/29f3af81-add7-4281-9ebe-14a9ee6fda45.webp",
       "link": "./notice-1.html"
     }
