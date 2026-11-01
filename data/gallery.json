@@ -1,29 +1,217 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-01T23:38:33.300Z",
+  "updatedAt": "2026-11-01T23:42:19.067Z",
   "categories": [
+    {
+      "id": "c-3du1im2g",
+      "name": "봉사활동"
+    },
     {
       "id": "c-ofxir9a4",
       "name": "취업 교육"
-    },
-    {
-      "id": "c-4er1t10k",
-      "name": "가사서비스 & 정리 수납"
-    },
-    {
-      "id": "c-j7tg3qrp",
-      "name": "주거환경 개선사업"
     },
     {
       "id": "c-kr6ua43n",
       "name": "통합돌봄 서비스"
     },
     {
+      "id": "c-j7tg3qrp",
+      "name": "주거환경 개선사업"
+    },
+    {
+      "id": "c-4er1t10k",
+      "name": "가사서비스 & 정리 수납"
+    },
+    {
       "id": "c-zd5pwfla",
       "name": "건물관리 청소 유지보수"
+    },
+    {
+      "id": "c-z36yq1ag",
+      "name": "우리동네 가게 아트테리어"
     }
   ],
   "items": [
+    {
+      "id": "g-woserckh",
+      "cat": "c-z36yq1ag",
+      "path": "img/gallery/202611/81fcd627-6ca3-4b8b-9f34-6f623178e4fa.jpg",
+      "thumb": "img/gallery/202611/81fcd627-6ca3-4b8b-9f34-6f623178e4fa.jpg",
+      "w": 441,
+      "h": 331,
+      "caption": "",
+      "date": "2026-11-02",
+      "src": "./img/gallery/202611/81fcd627-6ca3-4b8b-9f34-6f623178e4fa.jpg",
+      "thumbSrc": "./img/gallery/202611/81fcd627-6ca3-4b8b-9f34-6f623178e4fa.jpg"
+    },
+    {
+      "id": "g-hdmmgit4",
+      "cat": "c-z36yq1ag",
+      "path": "img/gallery/202611/ea0f0a0a-8678-4b9d-97e0-39cd9a23fa78.jpg",
+      "thumb": "img/gallery/202611/ea0f0a0a-8678-4b9d-97e0-39cd9a23fa78.jpg",
+      "w": 477,
+      "h": 358,
+      "caption": "",
+      "date": "2026-11-02",
+      "src": "./img/gallery/202611/ea0f0a0a-8678-4b9d-97e0-39cd9a23fa78.jpg",
+      "thumbSrc": "./img/gallery/202611/ea0f0a0a-8678-4b9d-97e0-39cd9a23fa78.jpg"
+    },
+    {
+      "id": "g-a8oc8pk3",
+      "cat": "c-z36yq1ag",
+      "path": "img/gallery/202611/3a941ea2-94fb-443b-8576-6a62d64f83e8.jpg",
+      "thumb": "img/gallery/202611/3a941ea2-94fb-443b-8576-6a62d64f83e8.jpg",
+      "w": 491,
+      "h": 369,
+      "caption": "",
+      "date": "2026-11-02",
+      "src": "./img/gallery/202611/3a941ea2-94fb-443b-8576-6a62d64f83e8.jpg",
+      "thumbSrc": "./img/gallery/202611/3a941ea2-94fb-443b-8576-6a62d64f83e8.jpg"
+    },
+    {
+      "id": "g-fwv5pf2h",
+      "cat": "c-z36yq1ag",
+      "path": "img/gallery/202611/da6c8be0-cfbe-45d1-82a1-e67965db2689.jpg",
+      "thumb": "img/gallery/202611/da6c8be0-cfbe-45d1-82a1-e67965db2689.jpg",
+      "w": 460,
+      "h": 345,
+      "caption": "",
+      "date": "2026-11-02",
+      "src": "./img/gallery/202611/da6c8be0-cfbe-45d1-82a1-e67965db2689.jpg",
+      "thumbSrc": "./img/gallery/202611/da6c8be0-cfbe-45d1-82a1-e67965db2689.jpg"
+    },
+    {
+      "id": "g-lfst6tnn",
+      "cat": "c-z36yq1ag",
+      "path": "img/gallery/202611/e9dd8622-c86c-4ad9-a7a4-621f0d038073.jpg",
+      "thumb": "img/gallery/202611/e9dd8622-c86c-4ad9-a7a4-621f0d038073.jpg",
+      "w": 464,
+      "h": 348,
+      "caption": "",
+      "date": "2026-11-02",
+      "src": "./img/gallery/202611/e9dd8622-c86c-4ad9-a7a4-621f0d038073.jpg",
+      "thumbSrc": "./img/gallery/202611/e9dd8622-c86c-4ad9-a7a4-621f0d038073.jpg"
+    },
+    {
+      "id": "g-8o0x0frl",
+      "cat": "c-z36yq1ag",
+      "path": "img/gallery/202611/069d62b3-4952-4836-8fae-b253f302470d.jpg",
+      "thumb": "img/gallery/202611/069d62b3-4952-4836-8fae-b253f302470d.jpg",
+      "w": 473,
+      "h": 355,
+      "caption": "",
+      "date": "2026-11-02",
+      "src": "./img/gallery/202611/069d62b3-4952-4836-8fae-b253f302470d.jpg",
+      "thumbSrc": "./img/gallery/202611/069d62b3-4952-4836-8fae-b253f302470d.jpg"
+    },
+    {
+      "id": "g-rz9q5hr3",
+      "cat": "c-zd5pwfla",
+      "path": "img/gallery/202611/2b6910c4-d5ef-4cab-9fdb-29a9bd5002d7.jpg",
+      "thumb": "img/gallery/202611/4cd8b59d-7429-4390-b4a4-3a113563d4b3.jpg",
+      "w": 960,
+      "h": 720,
+      "caption": "",
+      "date": "2026-11-02",
+      "src": "./img/gallery/202611/2b6910c4-d5ef-4cab-9fdb-29a9bd5002d7.jpg",
+      "thumbSrc": "./img/gallery/202611/4cd8b59d-7429-4390-b4a4-3a113563d4b3.jpg"
+    },
+    {
+      "id": "g-8jafbz63",
+      "cat": "c-zd5pwfla",
+      "path": "img/gallery/202611/8ee04a36-c6cb-4c9b-b301-7b203e2b6f65.jpg",
+      "thumb": "img/gallery/202611/74a888d7-2682-4a8a-a60d-3b19798e46e0.jpg",
+      "w": 1280,
+      "h": 960,
+      "caption": "",
+      "date": "2026-11-02",
+      "src": "./img/gallery/202611/8ee04a36-c6cb-4c9b-b301-7b203e2b6f65.jpg",
+      "thumbSrc": "./img/gallery/202611/74a888d7-2682-4a8a-a60d-3b19798e46e0.jpg"
+    },
+    {
+      "id": "g-fz4d256j",
+      "cat": "c-zd5pwfla",
+      "path": "img/gallery/202611/58323145-dc90-4abf-ab8f-8bbb66d45472.jpg",
+      "thumb": "img/gallery/202611/83b94789-ca72-45e2-af7a-d24fe9ff4e51.jpg",
+      "w": 540,
+      "h": 960,
+      "caption": "",
+      "date": "2026-11-02",
+      "src": "./img/gallery/202611/58323145-dc90-4abf-ab8f-8bbb66d45472.jpg",
+      "thumbSrc": "./img/gallery/202611/83b94789-ca72-45e2-af7a-d24fe9ff4e51.jpg"
+    },
+    {
+      "id": "g-jd5of2nh",
+      "cat": "c-zd5pwfla",
+      "path": "img/gallery/202611/a40c8e71-7d81-4a4d-8107-b3db6468660c.jpg",
+      "thumb": "img/gallery/202611/011b9819-d308-4b3c-9202-9b189dfc2a86.jpg",
+      "w": 960,
+      "h": 507,
+      "caption": "",
+      "date": "2026-11-02",
+      "src": "./img/gallery/202611/a40c8e71-7d81-4a4d-8107-b3db6468660c.jpg",
+      "thumbSrc": "./img/gallery/202611/011b9819-d308-4b3c-9202-9b189dfc2a86.jpg"
+    },
+    {
+      "id": "g-60ch7801",
+      "cat": "c-zd5pwfla",
+      "path": "img/gallery/202611/bb013b9f-f32a-4aa0-9719-f5a29c4340c2.jpg",
+      "thumb": "img/gallery/202611/0dc7075b-bb69-4d5f-b568-29674bab6f2e.jpg",
+      "w": 960,
+      "h": 540,
+      "caption": "",
+      "date": "2026-11-02",
+      "src": "./img/gallery/202611/bb013b9f-f32a-4aa0-9719-f5a29c4340c2.jpg",
+      "thumbSrc": "./img/gallery/202611/0dc7075b-bb69-4d5f-b568-29674bab6f2e.jpg"
+    },
+    {
+      "id": "g-bf88cmuv",
+      "cat": "c-zd5pwfla",
+      "path": "img/gallery/202611/962e2185-0c64-412a-841e-60eab44f4e6c.jpg",
+      "thumb": "img/gallery/202611/1d64b203-5cfb-4b71-ba09-9cf258317db0.jpg",
+      "w": 540,
+      "h": 960,
+      "caption": "",
+      "date": "2026-11-02",
+      "src": "./img/gallery/202611/962e2185-0c64-412a-841e-60eab44f4e6c.jpg",
+      "thumbSrc": "./img/gallery/202611/1d64b203-5cfb-4b71-ba09-9cf258317db0.jpg"
+    },
+    {
+      "id": "g-hp48rstd",
+      "cat": "c-zd5pwfla",
+      "path": "img/gallery/202611/fdc2eea8-33b4-4f04-b313-fbd0951f7cef.jpg",
+      "thumb": "img/gallery/202611/d38082db-ebf6-4bcb-8d45-309320357ff7.jpg",
+      "w": 960,
+      "h": 540,
+      "caption": "",
+      "date": "2026-11-02",
+      "src": "./img/gallery/202611/fdc2eea8-33b4-4f04-b313-fbd0951f7cef.jpg",
+      "thumbSrc": "./img/gallery/202611/d38082db-ebf6-4bcb-8d45-309320357ff7.jpg"
+    },
+    {
+      "id": "g-wt71rqqe",
+      "cat": "c-zd5pwfla",
+      "path": "img/gallery/202611/b867008c-e92a-41ee-861e-92886df3bf84.jpg",
+      "thumb": "img/gallery/202611/7a23de2b-5f1d-4ef1-a38c-14a5886fe5bc.jpg",
+      "w": 960,
+      "h": 720,
+      "caption": "",
+      "date": "2026-11-02",
+      "src": "./img/gallery/202611/b867008c-e92a-41ee-861e-92886df3bf84.jpg",
+      "thumbSrc": "./img/gallery/202611/7a23de2b-5f1d-4ef1-a38c-14a5886fe5bc.jpg"
+    },
+    {
+      "id": "g-tvhr2p2v",
+      "cat": "c-zd5pwfla",
+      "path": "img/gallery/202611/1f1ca795-58e5-4d4d-aa22-5a9708b88d5a.jpg",
+      "thumb": "img/gallery/202611/4940a8fa-a441-4f5e-b5f2-2f52b7dc3a6f.jpg",
+      "w": 960,
+      "h": 720,
+      "caption": "",
+      "date": "2026-11-02",
+      "src": "./img/gallery/202611/1f1ca795-58e5-4d4d-aa22-5a9708b88d5a.jpg",
+      "thumbSrc": "./img/gallery/202611/4940a8fa-a441-4f5e-b5f2-2f52b7dc3a6f.jpg"
+    },
     {
       "id": "g-5g0sqf7i",
       "cat": "c-ofxir9a4",
