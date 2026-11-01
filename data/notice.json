@@ -1,0 +1,61 @@
+{
+  "version": 1,
+  "nextId": 4,
+  "updatedAt": "2026-11-01T01:39:09.994Z",
+  "items": [
+    {
+      "id": 3,
+      "slug": "notice-3",
+      "title": "나누리 사회적협동조합의 착한 나눔",
+      "excerpt": "나누리사회적협동조합에서 2026.7.10.(금) 초복을 맞이하여 뜻깊은 나눔을 실천했습니다! 독거어르신들을 살뜰히 보살펴주시는 \"마포서부복지기관\"에 백만 원 상당의 애터미 착한 삼계탕 100마리를 전달해 드렸습니다. 어르신들께서 무더운 여름을 건강하고 안전하게 보내시는 데 조금이나마 도",
+      "date": "2026-11-01",
+      "thumb": "img/notice/202611/f2f67a2a-2946-402d-aa5d-85df7ae65d3c.webp",
+      "pinned": false,
+      "showOnMain": true,
+      "hidden": false,
+      "externalLink": null,
+      "openExternal": false,
+      "author": "관리자",
+      "createdAt": "2026-11-01T01:36:36.548Z",
+      "updatedAt": "2026-11-01T01:36:36.548Z",
+      "img": "./img/notice/202611/f2f67a2a-2946-402d-aa5d-85df7ae65d3c.webp",
+      "link": "./notice-3.html"
+    },
+    {
+      "id": 1,
+      "slug": "notice-1",
+      "title": "서울형 가사서비스 지원사업 참여 가사관리사 모집 공고",
+      "excerpt": "서울형 가사서비스 지원사업 참여 가사관리사 모집 공고",
+      "date": "2026-11-01",
+      "thumb": "img/notice/202611/62a8d51f-0a10-4cf0-939b-511554ed8cdd.jpg",
+      "pinned": false,
+      "showOnMain": true,
+      "hidden": false,
+      "externalLink": null,
+      "openExternal": false,
+      "author": "관리자",
+      "createdAt": "2026-11-01T01:17:26.669Z",
+      "updatedAt": "2026-11-01T01:34:50.663Z",
+      "img": "./img/notice/202611/62a8d51f-0a10-4cf0-939b-511554ed8cdd.jpg",
+      "link": "./notice-1.html"
+    },
+    {
+      "id": 2,
+      "slug": "notice-2",
+      "title": "나누리 사회적협동조합의 가사서비스 관련 상반기 보고",
+      "excerpt": "나누리 사회적 협동조합입니다. 본 조합은 고용노동부 인증 가사서비스 제공기관으로서 2026년 6월 30일 기준 상반기에 600가구에 대해 서울형 가사서비스를 완료했으며 이는 가사서비스 시장에서 매우 탁월한 성과입니다. 이 사업 실적을 사회적가치지표(SVI, Social Value Ind",
+      "date": "2026-07-21",
+      "thumb": null,
+      "pinned": false,
+      "showOnMain": true,
+      "hidden": false,
+      "externalLink": null,
+      "openExternal": false,
+      "author": "관리자",
+      "createdAt": "2026-11-01T01:35:26.350Z",
+      "updatedAt": "2026-11-01T01:39:09.994Z",
+      "img": "",
+      "link": "./notice-2.html"
+    }
+  ]
+}
