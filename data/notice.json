@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "nextId": 14,
-  "updatedAt": "2026-11-02T01:39:45.662Z",
+  "nextId": 15,
+  "updatedAt": "2026-11-02T01:40:36.825Z",
   "items": [
     {
       "id": 1,
@@ -236,6 +236,24 @@
       "updatedAt": "2026-11-02T01:39:45.662Z",
       "img": "./img/notice/202611/be9f321e-a2c8-43aa-af63-bd47dcd7bc8b.webp",
       "link": "./notice-13.html"
+    },
+    {
+      "id": 14,
+      "slug": "notice-14",
+      "title": "공지사항 갤러리  2025년 제5회 독거어르신 낙상 예방 교육",
+      "excerpt": "나누리사회적협동조합입니다. 9월11일 제5회차 낙상예방 교육을 진행했습니다. 이번 제5회차 교육은 낙상예방 마지막 교육으로 많이 참여해 주셔서 감사합니다. 일상생활속 균형감각을 키우는 운동법에 대해서 복습하며, 구체적으로 실천할 수 있는 운동동작, 횟수, 시간대 등을 정해 각자 운동 일",
+      "date": "2025-09-11",
+      "thumb": "img/notice/202611/6254e196-7389-4837-ab63-c8d274a3cb55.webp",
+      "pinned": false,
+      "showOnMain": true,
+      "hidden": false,
+      "externalLink": null,
+      "openExternal": false,
+      "author": "관리자",
+      "createdAt": "2026-11-02T01:40:36.825Z",
+      "updatedAt": "2026-11-02T01:40:36.825Z",
+      "img": "./img/notice/202611/6254e196-7389-4837-ab63-c8d274a3cb55.webp",
+      "link": "./notice-14.html"
     }
   ]
 }
