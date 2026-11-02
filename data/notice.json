@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "nextId": 19,
-  "updatedAt": "2026-11-02T01:47:52.052Z",
+  "nextId": 20,
+  "updatedAt": "2026-11-02T01:49:52.279Z",
   "items": [
     {
       "id": 1,
@@ -326,6 +326,24 @@
       "updatedAt": "2026-11-02T01:47:52.052Z",
       "img": "./img/notice/202611/ce22be00-1d93-4152-af3f-2678c6806e23.webp",
       "link": "./notice-18.html"
+    },
+    {
+      "id": 19,
+      "slug": "notice-19",
+      "title": "나누리사회적협동조합 사무실 이전 & 마포나눔돌봄센터 사무실 이전 안내",
+      "excerpt": "“나눔이 피어나는 공간, 돌봄이 자라는 시작” 나누리사회적협동조합 (&마포나눔돌봄센터)은 7월 9일 사무실을 이전했으며, 7월 17일 많은 분들을 초대하여 사무실 개소식을 진행했습니다. 새로 이전 된 사무실 주소는 서울시 마포구 동교로 72‑1한영빌딩 201호 입니다. 성산초등학교 옆이",
+      "date": "2025-07-22",
+      "thumb": "img/notice/202611/ab70fbb8-bd9a-46f0-9306-6a26c81f5b60.webp",
+      "pinned": false,
+      "showOnMain": true,
+      "hidden": false,
+      "externalLink": null,
+      "openExternal": false,
+      "author": "관리자",
+      "createdAt": "2026-11-02T01:49:52.279Z",
+      "updatedAt": "2026-11-02T01:49:52.279Z",
+      "img": "./img/notice/202611/ab70fbb8-bd9a-46f0-9306-6a26c81f5b60.webp",
+      "link": "./notice-19.html"
     }
   ]
 }
