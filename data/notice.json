@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "nextId": 16,
-  "updatedAt": "2026-11-02T01:45:35.249Z",
+  "nextId": 17,
+  "updatedAt": "2026-11-02T01:46:17.459Z",
   "items": [
     {
       "id": 1,
@@ -272,6 +272,24 @@
       "updatedAt": "2026-11-02T01:45:35.249Z",
       "img": "./img/notice/202611/e260999b-bcb5-4e58-a72f-42ee31385d15.webp",
       "link": "./notice-15.html"
+    },
+    {
+      "id": 16,
+      "slug": "notice-16",
+      "title": "2025년 제3회 독거어르신 낙상 예방 교육",
+      "excerpt": "나누리사회적협동조합입니다. 8월27일 제3회차 낙상예방 교육을 진행했습니다. 더운 날씨에 참가해 주신 어르신들 시원한 음료와 다과, 신변 인사와 함께 가쁜 숨을 고르시고. 분위기 집중을 위해서 가벼운 체조로 시작합니다. 낙상의 주요 원인이 되는... 낙상 후 더 가속화 될 수 있는 중요",
+      "date": "2025-08-27",
+      "thumb": "img/notice/202611/e7921042-79a1-430a-862d-f8c3a8d9a22b.webp",
+      "pinned": false,
+      "showOnMain": true,
+      "hidden": false,
+      "externalLink": null,
+      "openExternal": false,
+      "author": "관리자",
+      "createdAt": "2026-11-02T01:46:17.459Z",
+      "updatedAt": "2026-11-02T01:46:17.459Z",
+      "img": "./img/notice/202611/e7921042-79a1-430a-862d-f8c3a8d9a22b.webp",
+      "link": "./notice-16.html"
     }
   ]
 }
