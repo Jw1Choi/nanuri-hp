@@ -54,7 +54,7 @@
   <div id="menu_navi"></div>
   <script src="./menu3.js"></script>
 
-<section id="subVisual" aria-label="갤러리 비주얼" style="--sv-bg:url('./img/intro-1.jpg')">
+<section id="subVisual" aria-label="갤러리 비주얼" style="--sv-bg:url('./img/clean.jpg')">
   <style>
     /* ===============================
        Scope: #subVisual ONLY — 서브 비주얼 (중앙에서 열리는 리빌 + 타이틀)
@@ -151,7 +151,8 @@
        =============================== */
     #galleryBoard{
       --gb-ink:#111827;--gb-muted:#6b7280;--gb-line:rgba(17,24,39,.1);--gb-soft:#f4f6f9;
-      --gb-accent:#0b4a8b;--gb-gap:clamp(8px,1.4cqi,16px);--gb-radius:16px;
+      --gb-accent:#0f6b3a;--gb-green:#0f6b3a;--gb-green-dark:#033b1e;--gb-green-soft:#eaf4ee;
+      --gb-gap:clamp(8px,1.4cqi,16px);--gb-radius:16px;
       font-family:Pretendard,"Noto Sans KR",system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
       color:var(--gb-ink);background:#fff;padding:clamp(56px,8vw,96px) 20px clamp(80px,10vw,130px);
       container-type:inline-size;-webkit-font-smoothing:antialiased;
@@ -168,10 +169,10 @@
     #galleryBoard .gb-tab{display:flex;align-items:center;justify-content:space-between;gap:10px;min-width:0;height:58px;padding:0 18px;border-top:0;border-left:0;font:inherit;font-size:15px;font-weight:600;color:var(--gb-ink);text-align:left;cursor:pointer;transition:background .2s,color .2s}
     #galleryBoard .gb-tab span{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
     #galleryBoard .gb-tab small{flex:0 0 auto;font-size:13px;font-weight:600;color:var(--gb-muted);font-variant-numeric:tabular-nums}
-    #galleryBoard .gb-tab:hover{background:var(--gb-soft)}
+    #galleryBoard .gb-tab:hover{background:var(--gb-green-soft);color:var(--gb-green-dark)}
     #galleryBoard .gb-tab:focus-visible{outline:2px solid var(--gb-accent);outline-offset:-2px}
-    #galleryBoard .gb-tab[aria-selected="true"]{background:var(--gb-ink);color:#fff}
-    #galleryBoard .gb-tab[aria-selected="true"] small{color:rgba(255,255,255,.6)}
+    #galleryBoard .gb-tab[aria-selected="true"]{background:var(--gb-green);color:#fff}
+    #galleryBoard .gb-tab[aria-selected="true"] small{color:rgba(255,255,255,.7)}
     #galleryBoard .gb-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:var(--gb-gap)}
     /* 카테고리별 묶음: 제목 → 사진 → 다음 카테고리 제목 → 사진 */
     #galleryBoard .gb-list{display:grid;gap:clamp(56px,7cqi,88px)}
@@ -181,8 +182,8 @@
     #galleryBoard .gb-sec-head h3{margin:0;font-size:clamp(22px,3cqi,30px);font-weight:800;letter-spacing:-.03em;line-height:1.25}
     #galleryBoard .gb-sec-count{margin-left:auto;padding-bottom:5px;font-size:14px;color:var(--gb-muted);font-variant-numeric:tabular-nums;white-space:nowrap}
     #galleryBoard .gb-sec-more{display:flex;justify-content:center;margin-top:clamp(20px,3cqi,30px)}
-    #galleryBoard .gb-sec-more button{min-width:180px;height:48px;padding:0 26px;border-radius:999px;border:1px solid var(--gb-line);background:#fff;font:inherit;font-size:14.5px;font-weight:700;color:var(--gb-ink);cursor:pointer;transition:background .2s,color .2s,border-color .2s}
-    #galleryBoard .gb-sec-more button:hover{background:var(--gb-ink);border-color:var(--gb-ink);color:#fff}
+    #galleryBoard .gb-sec-more button{min-width:180px;height:48px;padding:0 26px;border-radius:999px;border:1px solid var(--gb-green);background:#fff;font:inherit;font-size:14.5px;font-weight:700;color:var(--gb-green);cursor:pointer;transition:background .2s,color .2s,border-color .2s}
+    #galleryBoard .gb-sec-more button:hover{background:var(--gb-green);border-color:var(--gb-green);color:#fff}
     #galleryBoard .gb-item{position:relative;display:block;width:100%;padding:0;border:0;border-radius:var(--gb-radius);overflow:hidden;background:var(--gb-soft);aspect-ratio:4/3;cursor:zoom-in;opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s cubic-bezier(.22,.8,.26,1)}
     #galleryBoard .gb-item.is-in{opacity:1;transform:none}
     #galleryBoard .gb-item img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .7s cubic-bezier(.22,.8,.26,1)}
@@ -193,8 +194,8 @@
     #galleryBoard .gb-cap b{display:block;font-size:12px;font-weight:700;letter-spacing:.04em;opacity:.8;margin-bottom:3px}
     #galleryBoard .gb-cap span{display:block;font-size:14.5px;font-weight:600;line-height:1.45;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
     #galleryBoard .gb-more{display:flex;justify-content:center;margin-top:clamp(30px,4cqi,46px)}
-    #galleryBoard .gb-more button{min-width:180px;height:52px;padding:0 28px;border-radius:999px;border:1px solid var(--gb-ink);background:#fff;font:inherit;font-size:15px;font-weight:700;color:var(--gb-ink);cursor:pointer;transition:background .2s,color .2s}
-    #galleryBoard .gb-more button:hover{background:var(--gb-ink);color:#fff}
+    #galleryBoard .gb-more button{min-width:180px;height:52px;padding:0 28px;border-radius:999px;border:1px solid var(--gb-green);background:#fff;font:inherit;font-size:15px;font-weight:700;color:var(--gb-green);cursor:pointer;transition:background .2s,color .2s}
+    #galleryBoard .gb-more button:hover{background:var(--gb-green);color:#fff}
     #galleryBoard .gb-more button[hidden]{display:none}
     #galleryBoard .gb-state{grid-column:1/-1;margin:0;padding:80px 20px;text-align:center;color:var(--gb-muted);font-size:15px}
     #galleryBoard .gb-skel{aspect-ratio:4/3;border-radius:var(--gb-radius);background:linear-gradient(90deg,#f1f3f6 0%,#f8f9fb 50%,#f1f3f6 100%);background-size:200% 100%;animation:gbSk 1.2s linear infinite}
@@ -207,6 +208,7 @@
       #galleryBoard .gb-tab-pad{display:none}
       #galleryBoard .gb-tab{flex:0 0 auto;height:40px;padding:0 14px;gap:6px;border:1px solid var(--gb-line);border-radius:999px;font-size:14px;scroll-snap-align:start}
       #galleryBoard .gb-tab small{font-size:12px}
+      #galleryBoard .gb-tab[aria-selected="true"]{border-color:var(--gb-green)}
       #galleryBoard .gb-cap{opacity:1;transform:none;padding:28px 10px 9px}
       #galleryBoard .gb-cap b{display:none}
       #galleryBoard .gb-cap span{font-size:12.5px}
@@ -226,13 +228,13 @@
     #glLightbox .lb-top{position:absolute;top:0;left:0;right:0;height:64px;display:flex;align-items:center;justify-content:space-between;padding:0 20px}
     #glLightbox .lb-count{font-size:14px;opacity:.75;font-variant-numeric:tabular-nums}
     #glLightbox .lb-btn{width:48px;height:48px;border-radius:999px;border:1px solid rgba(255,255,255,.22);background:rgba(255,255,255,.08);color:#fff;cursor:pointer;display:grid;place-items:center;transition:background .2s}
-    #glLightbox .lb-btn:hover{background:rgba(255,255,255,.2)}
+    #glLightbox .lb-btn:hover{background:#0f6b3a;border-color:#0f6b3a}
     #glLightbox .lb-btn svg{width:22px;height:22px}
     #glLightbox .lb-prev,#glLightbox .lb-next{position:absolute;top:50%;transform:translateY(-50%)}
     #glLightbox .lb-prev{left:18px}
     #glLightbox .lb-next{right:18px}
     #glLightbox .lb-bottom{position:absolute;left:0;right:0;bottom:0;min-height:104px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;padding:12px 24px 22px;text-align:center}
-    #glLightbox .lb-cat{font-size:12.5px;font-weight:700;letter-spacing:.06em;color:#9cc3f0}
+    #glLightbox .lb-cat{font-size:12.5px;font-weight:700;letter-spacing:.06em;color:#9fd6b0}
     #glLightbox .lb-cap{font-size:16px;line-height:1.55;max-width:760px}
     @keyframes lbFade{from{opacity:0}}
     @keyframes lbZoom{from{opacity:0;transform:scale(.96)}}
