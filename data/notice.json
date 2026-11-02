@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "nextId": 23,
-  "updatedAt": "2026-11-02T01:55:19.330Z",
+  "nextId": 24,
+  "updatedAt": "2026-11-02T01:57:41.393Z",
   "items": [
     {
       "id": 1,
@@ -398,6 +398,24 @@
       "updatedAt": "2026-11-02T01:55:19.330Z",
       "img": "./img/notice/202611/e154ab0a-da30-4340-a82f-ec54c09908f0.webp",
       "link": "./notice-22.html"
+    },
+    {
+      "id": 23,
+      "slug": "notice-23",
+      "title": "2025년 제2회 독거어르신 치매 예방 교육",
+      "excerpt": "나누리 사협은 2025년 제2회 독거어르신 치매 예방 교육을 역시 다양한 도구의 활용과 신나는 게임속에서 짜임새있는 진행을 했습니다. 비오는 날 참석해주신 많은 분들께 감사드립니다.",
+      "date": "2025-06-25",
+      "thumb": "img/notice/202611/aafe7057-93ec-4be7-b09d-1fca870a86f9.webp",
+      "pinned": false,
+      "showOnMain": true,
+      "hidden": false,
+      "externalLink": null,
+      "openExternal": false,
+      "author": "관리자",
+      "createdAt": "2026-11-02T01:57:41.393Z",
+      "updatedAt": "2026-11-02T01:57:41.393Z",
+      "img": "./img/notice/202611/aafe7057-93ec-4be7-b09d-1fca870a86f9.webp",
+      "link": "./notice-23.html"
     }
   ]
 }
