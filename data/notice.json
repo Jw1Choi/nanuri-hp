@@ -1,26 +1,8 @@
 {
   "version": 1,
   "nextId": 21,
-  "updatedAt": "2026-11-02T01:52:19.870Z",
+  "updatedAt": "2026-11-02T01:52:46.784Z",
   "items": [
-    {
-      "id": 20,
-      "slug": "notice-20",
-      "title": "2025년 제5회 독거어르신 치매예방 교육",
-      "excerpt": "나누리 사협은 2025년 제5회 독거어르신 치매 예방 교육을 진행을 했습니다. 몸풀기 체조와 짝꿍과 함께하는 인지 및 순박력 체조로 시작하여, 문양이 그려진 사각 나무 비석에 색을 입힌 후 팀을 나누어 발등, 가슴, 머리, 겨드랑이등 다양한 신체 일부를 이용하여 상대방의 비석을 무너뜨리",
-      "date": "2026-11-02",
-      "thumb": "img/notice/202611/16a8a5db-7f24-4dce-aa85-9aae5ebf490d.webp",
-      "pinned": false,
-      "showOnMain": true,
-      "hidden": false,
-      "externalLink": null,
-      "openExternal": false,
-      "author": "관리자",
-      "createdAt": "2026-11-02T01:52:19.870Z",
-      "updatedAt": "2026-11-02T01:52:19.870Z",
-      "img": "./img/notice/202611/16a8a5db-7f24-4dce-aa85-9aae5ebf490d.webp",
-      "link": "./notice-20.html"
-    },
     {
       "id": 1,
       "slug": "notice-1",
@@ -362,6 +344,24 @@
       "updatedAt": "2026-11-02T01:49:52.279Z",
       "img": "./img/notice/202611/ab70fbb8-bd9a-46f0-9306-6a26c81f5b60.webp",
       "link": "./notice-19.html"
+    },
+    {
+      "id": 20,
+      "slug": "notice-20",
+      "title": "2025년 제5회 독거어르신 치매예방 교육",
+      "excerpt": "나누리 사협은 2025년 제5회 독거어르신 치매 예방 교육을 진행을 했습니다. 몸풀기 체조와 짝꿍과 함께하는 인지 및 순박력 체조로 시작하여, 문양이 그려진 사각 나무 비석에 색을 입힌 후 팀을 나누어 발등, 가슴, 머리, 겨드랑이등 다양한 신체 일부를 이용하여 상대방의 비석을 무너뜨리",
+      "date": "2025-07-17",
+      "thumb": "img/notice/202611/16a8a5db-7f24-4dce-aa85-9aae5ebf490d.webp",
+      "pinned": false,
+      "showOnMain": true,
+      "hidden": false,
+      "externalLink": null,
+      "openExternal": false,
+      "author": "관리자",
+      "createdAt": "2026-11-02T01:52:19.870Z",
+      "updatedAt": "2026-11-02T01:52:46.784Z",
+      "img": "./img/notice/202611/16a8a5db-7f24-4dce-aa85-9aae5ebf490d.webp",
+      "link": "./notice-20.html"
     }
   ]
 }
