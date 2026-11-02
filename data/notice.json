@@ -1,7 +1,7 @@
 {
   "version": 1,
   "nextId": 4,
-  "updatedAt": "2026-11-01T01:39:09.994Z",
+  "updatedAt": "2026-11-02T01:11:48.834Z",
   "items": [
     {
       "id": 3,
@@ -22,24 +22,6 @@
       "link": "./notice-3.html"
     },
     {
-      "id": 1,
-      "slug": "notice-1",
-      "title": "서울형 가사서비스 지원사업 참여 가사관리사 모집 공고",
-      "excerpt": "서울형 가사서비스 지원사업 참여 가사관리사 모집 공고",
-      "date": "2026-11-01",
-      "thumb": "img/notice/202611/62a8d51f-0a10-4cf0-939b-511554ed8cdd.jpg",
-      "pinned": false,
-      "showOnMain": true,
-      "hidden": false,
-      "externalLink": null,
-      "openExternal": false,
-      "author": "관리자",
-      "createdAt": "2026-11-01T01:17:26.669Z",
-      "updatedAt": "2026-11-01T01:34:50.663Z",
-      "img": "./img/notice/202611/62a8d51f-0a10-4cf0-939b-511554ed8cdd.jpg",
-      "link": "./notice-1.html"
-    },
-    {
       "id": 2,
       "slug": "notice-2",
       "title": "나누리 사회적협동조합의 가사서비스 관련 상반기 보고",
@@ -56,6 +38,24 @@
       "updatedAt": "2026-11-01T01:39:09.994Z",
       "img": "",
       "link": "./notice-2.html"
+    },
+    {
+      "id": 1,
+      "slug": "notice-1",
+      "title": "서울형 가사서비스 지원사업 참여 가사관리사 모집 공고",
+      "excerpt": "서울형 가사서비스 지원사업 참여 가사관리사 모집 공고",
+      "date": "2026-07-21",
+      "thumb": "img/notice/202611/62a8d51f-0a10-4cf0-939b-511554ed8cdd.jpg",
+      "pinned": false,
+      "showOnMain": true,
+      "hidden": false,
+      "externalLink": null,
+      "openExternal": false,
+      "author": "관리자",
+      "createdAt": "2026-11-01T01:17:26.669Z",
+      "updatedAt": "2026-11-02T01:11:48.834Z",
+      "img": "./img/notice/202611/62a8d51f-0a10-4cf0-939b-511554ed8cdd.jpg",
+      "link": "./notice-1.html"
     }
   ]
 }
