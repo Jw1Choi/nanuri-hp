@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "nextId": 5,
-  "updatedAt": "2026-11-02T01:25:56.422Z",
+  "nextId": 6,
+  "updatedAt": "2026-11-02T01:26:33.995Z",
   "items": [
     {
       "id": 1,
@@ -74,6 +74,24 @@
       "updatedAt": "2026-11-02T01:25:56.422Z",
       "img": "./img/notice/202611/82a32430-e0a8-43f8-a669-dbd4accc1dd3.webp",
       "link": "./notice-4.html"
+    },
+    {
+      "id": 5,
+      "slug": "notice-5",
+      "title": "나누리 사회적협동조합의 2026년 1/4분기 성과",
+      "excerpt": "나누리 사회적협동조합입니다. 2026년은 나누리 사회적협동조합의 발전적 도약을 위해 다양한 활동을 계획하고 있으며 현재 가시적인 성과도 내고 있습니다. 2026년 서울형 가사서비스 제공기관으로 선정되었고 마포형 돌봄 통합 특화서비스(가사지원 서비스, 이동지원 서비스) 제공기관으로도 선정",
+      "date": "2026-05-12",
+      "thumb": null,
+      "pinned": false,
+      "showOnMain": true,
+      "hidden": false,
+      "externalLink": null,
+      "openExternal": false,
+      "author": "관리자",
+      "createdAt": "2026-11-02T01:26:33.995Z",
+      "updatedAt": "2026-11-02T01:26:33.995Z",
+      "img": "",
+      "link": "./notice-5.html"
     }
   ]
 }
