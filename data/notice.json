@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "nextId": 21,
-  "updatedAt": "2026-11-02T01:53:02.659Z",
+  "nextId": 22,
+  "updatedAt": "2026-11-02T01:54:18.113Z",
   "items": [
     {
       "id": 1,
@@ -362,6 +362,24 @@
       "updatedAt": "2026-11-02T01:53:02.659Z",
       "img": "./img/notice/202611/16a8a5db-7f24-4dce-aa85-9aae5ebf490d.webp",
       "link": "./notice-20.html"
+    },
+    {
+      "id": 21,
+      "slug": "notice-21",
+      "title": "2025년 제4회 독거어르신 치매 예방 교육",
+      "excerpt": "나누리 사협은 2025년 제4회 독거어르신 치매 예방 교육을 다양한 도구의 활용과 신나는 게임속에서 진행을 했습니다. 수업 중 인지향상을 위한 색칠하기에서는 인생의 한 순간을 연상케하는 카드를 선택해서 색을 입히고 완성된 카드를 통해 그 시절의 사연을 이야기 하며 눈물 지으며, 공감받는",
+      "date": "2025-07-15",
+      "thumb": "img/notice/202611/8e50f818-b0c2-4f51-9c3e-31b2fce5a951.webp",
+      "pinned": false,
+      "showOnMain": true,
+      "hidden": false,
+      "externalLink": null,
+      "openExternal": false,
+      "author": "관리자",
+      "createdAt": "2026-11-02T01:54:18.113Z",
+      "updatedAt": "2026-11-02T01:54:18.113Z",
+      "img": "./img/notice/202611/8e50f818-b0c2-4f51-9c3e-31b2fce5a951.webp",
+      "link": "./notice-21.html"
     }
   ]
 }
