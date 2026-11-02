@@ -1,7 +1,7 @@
 {
   "version": 1,
   "nextId": 21,
-  "updatedAt": "2026-11-02T01:52:46.784Z",
+  "updatedAt": "2026-11-02T01:53:02.659Z",
   "items": [
     {
       "id": 1,
@@ -359,7 +359,7 @@
       "openExternal": false,
       "author": "관리자",
       "createdAt": "2026-11-02T01:52:19.870Z",
-      "updatedAt": "2026-11-02T01:52:46.784Z",
+      "updatedAt": "2026-11-02T01:53:02.659Z",
       "img": "./img/notice/202611/16a8a5db-7f24-4dce-aa85-9aae5ebf490d.webp",
       "link": "./notice-20.html"
     }
