@@ -1,26 +1,8 @@
 {
   "version": 1,
   "nextId": 16,
-  "updatedAt": "2026-11-02T01:41:30.785Z",
+  "updatedAt": "2026-11-02T01:45:35.249Z",
   "items": [
-    {
-      "id": 15,
-      "slug": "notice-15",
-      "title": "2025년 제4회 독거어르신 낙상 예방 교육",
-      "excerpt": "나누리사회적협동조합입니다. 9월3일 제4회차 낙상예방 교육을 진행했습니다. 1. 첫 수업에 슬로우 조깅에 대해서 말씀하셨는데 지근, 지구력을 높이는 대표적인 운동으로써 비만층, 대사증후군, 고령층에 운동습관을 잡은 좋은 운동으로 다시 한번 강조하셨습니다. 2. 노인주거공간(집안)의 낙상",
-      "date": "2026-11-02",
-      "thumb": "img/notice/202611/e260999b-bcb5-4e58-a72f-42ee31385d15.webp",
-      "pinned": false,
-      "showOnMain": true,
-      "hidden": false,
-      "externalLink": null,
-      "openExternal": false,
-      "author": "관리자",
-      "createdAt": "2026-11-02T01:41:30.785Z",
-      "updatedAt": "2026-11-02T01:41:30.785Z",
-      "img": "./img/notice/202611/e260999b-bcb5-4e58-a72f-42ee31385d15.webp",
-      "link": "./notice-15.html"
-    },
     {
       "id": 1,
       "slug": "notice-1",
@@ -272,6 +254,24 @@
       "updatedAt": "2026-11-02T01:40:36.825Z",
       "img": "./img/notice/202611/6254e196-7389-4837-ab63-c8d274a3cb55.webp",
       "link": "./notice-14.html"
+    },
+    {
+      "id": 15,
+      "slug": "notice-15",
+      "title": "2025년 제4회 독거어르신 낙상 예방 교육",
+      "excerpt": "나누리사회적협동조합입니다. 9월3일 제4회차 낙상예방 교육을 진행했습니다. 1. 첫 수업에 슬로우 조깅에 대해서 말씀하셨는데 지근, 지구력을 높이는 대표적인 운동으로써 비만층, 대사증후군, 고령층에 운동습관을 잡은 좋은 운동으로 다시 한번 강조하셨습니다. 2. 노인주거공간(집안)의 낙상",
+      "date": "2025-09-03",
+      "thumb": "img/notice/202611/e260999b-bcb5-4e58-a72f-42ee31385d15.webp",
+      "pinned": false,
+      "showOnMain": true,
+      "hidden": false,
+      "externalLink": null,
+      "openExternal": false,
+      "author": "관리자",
+      "createdAt": "2026-11-02T01:41:30.785Z",
+      "updatedAt": "2026-11-02T01:45:35.249Z",
+      "img": "./img/notice/202611/e260999b-bcb5-4e58-a72f-42ee31385d15.webp",
+      "link": "./notice-15.html"
     }
   ]
 }
