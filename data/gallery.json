@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-01T23:51:14.046Z",
+  "updatedAt": "2026-11-02T00:59:23.138Z",
   "categories": [
     {
       "id": "c-3du1im2g",
@@ -882,7 +882,7 @@
     },
     {
       "id": "g-jd5of2nh",
-      "cat": "c-zd5pwfla",
+      "cat": "c-ofxir9a4",
       "path": "img/gallery/202611/a40c8e71-7d81-4a4d-8107-b3db6468660c.jpg",
       "thumb": "img/gallery/202611/011b9819-d308-4b3c-9202-9b189dfc2a86.jpg",
       "w": 960,
@@ -894,7 +894,7 @@
     },
     {
       "id": "g-60ch7801",
-      "cat": "c-zd5pwfla",
+      "cat": "c-fx3f8dkw",
       "path": "img/gallery/202611/bb013b9f-f32a-4aa0-9719-f5a29c4340c2.jpg",
       "thumb": "img/gallery/202611/0dc7075b-bb69-4d5f-b568-29674bab6f2e.jpg",
       "w": 960,
@@ -930,7 +930,7 @@
     },
     {
       "id": "g-wt71rqqe",
-      "cat": "c-zd5pwfla",
+      "cat": "c-3du1im2g",
       "path": "img/gallery/202611/b867008c-e92a-41ee-861e-92886df3bf84.jpg",
       "thumb": "img/gallery/202611/7a23de2b-5f1d-4ef1-a38c-14a5886fe5bc.jpg",
       "w": 960,
@@ -942,7 +942,7 @@
     },
     {
       "id": "g-tvhr2p2v",
-      "cat": "c-zd5pwfla",
+      "cat": "c-3du1im2g",
       "path": "img/gallery/202611/1f1ca795-58e5-4d4d-aa22-5a9708b88d5a.jpg",
       "thumb": "img/gallery/202611/4940a8fa-a441-4f5e-b5f2-2f52b7dc3a6f.jpg",
       "w": 960,
