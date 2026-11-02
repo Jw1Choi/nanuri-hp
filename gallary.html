@@ -174,6 +174,15 @@
     #galleryBoard .gb-tab[aria-selected="true"]{background:var(--gb-green);color:#fff}
     #galleryBoard .gb-tab[aria-selected="true"] small{color:rgba(255,255,255,.7)}
     #galleryBoard .gb-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:var(--gb-gap)}
+    /* 모바일 카테고리 선택 버튼 (화면 폭 640px 이하에서만 보임) */
+    #galleryBoard .gb-picker{display:none;position:sticky;top:0;z-index:20;margin:0 -20px 28px;padding:10px 20px;background:rgba(255,255,255,.94);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+    #galleryBoard .gb-picker.is-stuck{box-shadow:0 6px 18px rgba(17,24,39,.08)}
+    #galleryBoard .gb-pick-btn{display:flex;align-items:center;gap:10px;width:100%;height:54px;padding:0 16px 0 18px;border:1.5px solid var(--gb-green);border-radius:14px;background:#fff;font:inherit;color:var(--gb-ink);cursor:pointer;text-align:left;-webkit-tap-highlight-color:transparent}
+    #galleryBoard .gb-pick-btn:active{background:var(--gb-green-soft)}
+    #galleryBoard .gb-pick-label{flex:0 0 auto;font-size:12px;font-weight:700;letter-spacing:.06em;color:var(--gb-green)}
+    #galleryBoard .gb-pick-name{flex:1;min-width:0;font-size:16px;font-weight:700;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+    #galleryBoard .gb-pick-count{flex:0 0 auto;font-size:13px;color:var(--gb-muted);font-variant-numeric:tabular-nums}
+    #galleryBoard .gb-pick-btn svg{flex:0 0 auto;width:20px;height:20px;color:var(--gb-green)}
     /* 카테고리별 묶음: 제목 → 사진 → 다음 카테고리 제목 → 사진 */
     #galleryBoard .gb-list{display:grid;gap:clamp(56px,7cqi,88px)}
     #galleryBoard .gb-sec{scroll-margin-top:110px}
@@ -203,12 +212,8 @@
     @container (max-width:1000px){#galleryBoard .gb-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
     @container (max-width:640px){
       #galleryBoard .gb-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
-      #galleryBoard .gb-tabs{display:flex;gap:6px;overflow-x:auto;border:0;border-radius:0;margin-left:-20px;margin-right:-20px;padding:0 20px 2px;scrollbar-width:none;scroll-snap-type:x proximity}
-      #galleryBoard .gb-tabs::-webkit-scrollbar{display:none}
-      #galleryBoard .gb-tab-pad{display:none}
-      #galleryBoard .gb-tab{flex:0 0 auto;height:40px;padding:0 14px;gap:6px;border:1px solid var(--gb-line);border-radius:999px;font-size:14px;scroll-snap-align:start}
-      #galleryBoard .gb-tab small{font-size:12px}
-      #galleryBoard .gb-tab[aria-selected="true"]{border-color:var(--gb-green)}
+      #galleryBoard .gb-tabs{display:none}
+      #galleryBoard .gb-picker{display:block}
       #galleryBoard .gb-cap{opacity:1;transform:none;padding:28px 10px 9px}
       #galleryBoard .gb-cap b{display:none}
       #galleryBoard .gb-cap span{font-size:12.5px}
@@ -217,6 +222,30 @@
       #galleryBoard .gb-sec-count{font-size:13px;padding-bottom:3px}
     }
     @media (prefers-reduced-motion:reduce){#galleryBoard .gb-item{opacity:1;transform:none;transition:none}}
+
+    /* ---------- 모바일 카테고리 바텀시트 ---------- */
+    #gbSheet{position:fixed;inset:0;z-index:99998;display:none;font-family:Pretendard,"Noto Sans KR",system-ui,sans-serif}
+    #gbSheet.is-open{display:block}
+    #gbSheet *{box-sizing:border-box}
+    #gbSheet .sh-dim{position:absolute;inset:0;background:rgba(10,14,12,.5);animation:shFade .25s ease}
+    #gbSheet .sh-panel{position:absolute;left:0;right:0;bottom:0;max-height:78vh;display:flex;flex-direction:column;background:#fff;border-radius:22px 22px 0 0;box-shadow:0 -12px 40px rgba(0,0,0,.18);animation:shUp .32s cubic-bezier(.22,.8,.26,1);padding-bottom:env(safe-area-inset-bottom)}
+    #gbSheet .sh-grab{width:42px;height:4px;border-radius:999px;background:#d6dad6;margin:10px auto 0}
+    #gbSheet .sh-head{display:flex;align-items:center;justify-content:space-between;padding:14px 20px 12px;border-bottom:1px solid rgba(17,24,39,.08)}
+    #gbSheet .sh-head strong{font-size:17px;font-weight:800;color:#111827;letter-spacing:-.02em}
+    #gbSheet .sh-close{width:38px;height:38px;border:0;border-radius:50%;background:#f3f5f3;color:#111827;display:grid;place-items:center;cursor:pointer}
+    #gbSheet .sh-close svg{width:18px;height:18px}
+    #gbSheet .sh-list{list-style:none;margin:0;padding:8px 12px 16px;overflow-y:auto;-webkit-overflow-scrolling:touch;overscroll-behavior:contain}
+    #gbSheet .sh-item{display:flex;align-items:center;gap:12px;width:100%;min-height:56px;padding:0 14px;border:0;border-radius:12px;background:transparent;font:inherit;font-size:16px;font-weight:600;color:#111827;text-align:left;cursor:pointer;-webkit-tap-highlight-color:transparent}
+    #gbSheet .sh-item:active{background:#f3f5f3}
+    #gbSheet .sh-item span{flex:1;min-width:0}
+    #gbSheet .sh-item small{font-size:13px;font-weight:600;color:#6b7280;font-variant-numeric:tabular-nums;min-width:28px;text-align:right}
+    #gbSheet .sh-item i{flex:0 0 auto;width:22px;height:22px;border-radius:50%;border:1.5px solid #cfd5cf;display:grid;place-items:center}
+    #gbSheet .sh-item[aria-checked="true"]{background:#eaf4ee;color:#033b1e}
+    #gbSheet .sh-item[aria-checked="true"] i{background:#0f6b3a;border-color:#0f6b3a}
+    #gbSheet .sh-item[aria-checked="true"] i::after{content:"";width:9px;height:5px;border-left:2px solid #fff;border-bottom:2px solid #fff;transform:translateY(-1px) rotate(-45deg)}
+    @keyframes shFade{from{opacity:0}}
+    @keyframes shUp{from{transform:translateY(100%)}}
+    @media (prefers-reduced-motion:reduce){#gbSheet .sh-panel,#gbSheet .sh-dim{animation:none}}
 
     /* ---------- 라이트박스 ---------- */
     #glLightbox{position:fixed;inset:0;z-index:99999;display:none;font-family:Pretendard,"Noto Sans KR",system-ui,sans-serif;color:#fff}
@@ -254,8 +283,28 @@
       <p>현장과 교육, 나눔의 순간들을 사진으로 전해드립니다.</p>
     </div>
     <div class="gb-tabs" id="gbTabs" role="tablist" aria-label="갤러리 카테고리"></div>
+    <div class="gb-picker" id="gbPicker">
+      <button type="button" class="gb-pick-btn" id="gbPickBtn" aria-haspopup="dialog" aria-controls="gbSheet">
+        <span class="gb-pick-label">카테고리</span>
+        <span class="gb-pick-name" id="gbPickName">전체</span>
+        <span class="gb-pick-count" id="gbPickCount"></span>
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+    </div>
     <div class="gb-list" id="gbList" role="tabpanel"><div class="gb-grid"><div class="gb-skel"></div><div class="gb-skel"></div><div class="gb-skel"></div><div class="gb-skel"></div></div></div>
     <noscript><p class="gb-state">갤러리를 보려면 자바스크립트를 켜 주세요.</p></noscript>
+  </div>
+
+  <div id="gbSheet" role="dialog" aria-modal="true" aria-label="카테고리 선택" aria-hidden="true">
+    <div class="sh-dim" data-sheet-close></div>
+    <div class="sh-panel">
+      <div class="sh-grab" aria-hidden="true"></div>
+      <div class="sh-head">
+        <strong>카테고리 선택</strong>
+        <button type="button" class="sh-close" data-sheet-close aria-label="닫기"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
+      </div>
+      <ul class="sh-list" id="gbSheetList" role="radiogroup" aria-label="카테고리"></ul>
+    </div>
   </div>
 
   <div id="glLightbox" role="dialog" aria-modal="true" aria-label="사진 크게 보기" aria-hidden="true">
@@ -278,6 +327,13 @@
       var listEl = S.querySelector('#gbList');
       var LB = S.querySelector('#glLightbox');
       document.body.appendChild(LB);
+      var picker = S.querySelector('#gbPicker');
+      var pickBtn = S.querySelector('#gbPickBtn');
+      var pickName = S.querySelector('#gbPickName');
+      var pickCount = S.querySelector('#gbPickCount');
+      var SH = S.querySelector('#gbSheet');
+      document.body.appendChild(SH);
+      var shList = SH.querySelector('#gbSheetList');
       var lbImg = LB.querySelector('#lbImg'), lbCap = LB.querySelector('#lbCap'), lbCat = LB.querySelector('#lbCat'), lbCount = LB.querySelector('#lbCount');
 
       /* 전체 보기에서는 카테고리마다 8장, 한 카테고리만 볼 때는 16장씩 보여주고 「더 보기」로 늘립니다 */
@@ -313,7 +369,62 @@
           return '<button type="button" class="gb-tab" role="tab" data-cat="' + esc(t.id) + '" aria-selected="' + (t.id === cur) + '" title="' + esc(t.name) + '"><span>' + esc(t.name) + '</span><small>' + t.n + '</small></button>';
         }).join('');
         layoutTabs();
+        shList.innerHTML = tabs.map(function (t) {
+          return '<li><button type="button" class="sh-item" role="radio" data-cat="' + esc(t.id) + '" aria-checked="' + (t.id === cur) + '"><i aria-hidden="true"></i><span>' + esc(t.name) + '</span><small>' + t.n + '</small></button></li>';
+        }).join('');
+        syncPicker();
       }
+
+      /* 모바일 선택 버튼에 현재 카테고리 표시 */
+      function syncPicker() {
+        var b = shList.querySelector('[data-cat="' + (window.CSS && CSS.escape ? CSS.escape(cur) : cur) + '"]');
+        pickName.textContent = b ? b.querySelector('span').textContent : '전체';
+        pickCount.textContent = b ? b.querySelector('small').textContent + '장' : '';
+        Array.prototype.forEach.call(shList.querySelectorAll('.sh-item'), function (x) {
+          x.setAttribute('aria-checked', String(x.getAttribute('data-cat') === cur));
+        });
+      }
+
+      /* 바텀시트 열기·닫기 */
+      var sheetFocus = null;
+      function openSheet() {
+        sheetFocus = document.activeElement;
+        SH.classList.add('is-open');
+        SH.setAttribute('aria-hidden', 'false');
+        pickBtn.setAttribute('aria-expanded', 'true');
+        document.documentElement.style.overflow = 'hidden';
+        var on = shList.querySelector('[aria-checked="true"]') || shList.querySelector('.sh-item');
+        if (on) { on.scrollIntoView({ block: 'nearest' }); on.focus(); }
+      }
+      function closeSheet() {
+        if (!SH.classList.contains('is-open')) return;
+        SH.classList.remove('is-open');
+        SH.setAttribute('aria-hidden', 'true');
+        pickBtn.setAttribute('aria-expanded', 'false');
+        document.documentElement.style.overflow = '';
+        if (sheetFocus && sheetFocus.focus) sheetFocus.focus();
+      }
+      pickBtn.addEventListener('click', openSheet);
+      SH.addEventListener('click', function (e) {
+        if (e.target.closest('[data-sheet-close]')) return closeSheet();
+        var it = e.target.closest('.sh-item');
+        if (!it) return;
+        select(it.getAttribute('data-cat'));
+        closeSheet();
+        var top = picker.getBoundingClientRect().top + window.pageYOffset - 4;
+        if (window.pageYOffset > top) window.scrollTo({ top: top, behavior: 'smooth' });
+      });
+      document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeSheet(); });
+      /* 시트를 아래로 끌어 닫기 */
+      var sy = 0, panel = SH.querySelector('.sh-panel');
+      panel.addEventListener('touchstart', function (e) { sy = e.touches[0].clientY; }, { passive: true });
+      panel.addEventListener('touchend', function (e) {
+        if (e.changedTouches[0].clientY - sy > 70 && shList.scrollTop <= 0) closeSheet();
+      });
+      /* 선택 버튼이 화면 위에 붙으면 그림자 */
+      window.addEventListener('scroll', function () {
+        picker.classList.toggle('is-stuck', picker.getBoundingClientRect().top <= 0.5);
+      }, { passive: true });
 
       /* 화면 폭에 맞춰 한 줄 칸 수를 정하고, 마지막 줄 빈칸을 채워 표 모양을 맞춥니다 */
       function layoutTabs() {
@@ -392,6 +503,7 @@
       function select(id) {
         cur = id; limits = {};
         Array.prototype.forEach.call(tabsEl.querySelectorAll('.gb-tab'), function (t) { t.setAttribute('aria-selected', String(t.getAttribute('data-cat') === id)); });
+        syncPicker();
         var h = id === ALL ? '' : '#cat=' + encodeURIComponent(id);
         if (location.hash !== h) history.replaceState(null, '', location.pathname + location.search + h);
         drawList();
