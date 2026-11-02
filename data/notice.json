@@ -1,26 +1,8 @@
 {
   "version": 1,
   "nextId": 10,
-  "updatedAt": "2026-11-02T01:30:48.193Z",
+  "updatedAt": "2026-11-02T01:31:17.566Z",
   "items": [
-    {
-      "id": 9,
-      "slug": "notice-9",
-      "title": "2025년 송년회 초대장",
-      "excerpt": "나누리 사협입니다. 나누리사회적협동조합과 마포나눔봉사회가 2025년 송년회를 개최합니다. 저물어 가는 2025년 많은 분들과 함께 잘 견디고 보낸 우리 모두의 위로와 2026년 병오년을 맞는 서로의 기운을 붇돋아 주는 뜻깊은 시간을 갖고자 합니다. 일시 : 12월 23일(화) 시간 : ",
-      "date": "2026-11-02",
-      "thumb": "img/notice/202611/73a7f847-9365-4601-a331-66bd88c3b735.png",
-      "pinned": false,
-      "showOnMain": true,
-      "hidden": false,
-      "externalLink": null,
-      "openExternal": false,
-      "author": "관리자",
-      "createdAt": "2026-11-02T01:30:48.193Z",
-      "updatedAt": "2026-11-02T01:30:48.193Z",
-      "img": "./img/notice/202611/73a7f847-9365-4601-a331-66bd88c3b735.png",
-      "link": "./notice-9.html"
-    },
     {
       "id": 1,
       "slug": "notice-1",
@@ -164,6 +146,24 @@
       "updatedAt": "2026-11-02T01:26:33.995Z",
       "img": "",
       "link": "./notice-5.html"
+    },
+    {
+      "id": 9,
+      "slug": "notice-9",
+      "title": "2025년 송년회 초대장",
+      "excerpt": "나누리 사협입니다. 나누리사회적협동조합과 마포나눔봉사회가 2025년 송년회를 개최합니다. 저물어 가는 2025년 많은 분들과 함께 잘 견디고 보낸 우리 모두의 위로와 2026년 병오년을 맞는 서로의 기운을 붇돋아 주는 뜻깊은 시간을 갖고자 합니다. 일시 : 12월 23일(화) 시간 :",
+      "date": "2025-12-09",
+      "thumb": "img/notice/202611/73a7f847-9365-4601-a331-66bd88c3b735.png",
+      "pinned": false,
+      "showOnMain": true,
+      "hidden": false,
+      "externalLink": null,
+      "openExternal": false,
+      "author": "관리자",
+      "createdAt": "2026-11-02T01:30:48.193Z",
+      "updatedAt": "2026-11-02T01:31:17.566Z",
+      "img": "./img/notice/202611/73a7f847-9365-4601-a331-66bd88c3b735.png",
+      "link": "./notice-9.html"
     }
   ]
 }
