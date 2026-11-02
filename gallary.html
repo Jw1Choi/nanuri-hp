@@ -54,13 +54,13 @@
   <div id="menu_navi"></div>
   <script src="./menu3.js"></script>
 
-<section id="subVisual" aria-label="갤러리 비주얼" style="--sv-bg:url('./img/clean.jpg')">
+<section id="subVisual" aria-label="갤러리 비주얼" style="--sv-bg:url('./img/intro-1.jpg')">
   <style>
     /* ===============================
        Scope: #subVisual ONLY — 서브 비주얼 (중앙에서 열리는 리빌 + 타이틀)
        =============================== */
     #subVisual{
-      --sv-bg:url('./img/gallery/202611/3f9e5ce6-1018-4bc2-9453-90e8e8955c37.jpg');
+      --sv-bg:url('./img/location.jpg');
       --reveal-dur:900ms;
       position:relative;z-index:2;width:100%;height:70vh;min-height:460px;max-height:780px;
       background:#0b0d12 var(--sv-bg) no-repeat center top/cover;overflow:hidden;perspective:900px;
@@ -162,12 +162,16 @@
     #galleryBoard .gb-eyebrow{margin:0 0 10px;font-size:13px;font-weight:800;letter-spacing:.18em;color:var(--gb-accent)}
     #galleryBoard .gb-head h2{margin:0;font-size:clamp(28px,4.2cqi,42px);font-weight:800;letter-spacing:-.035em;line-height:1.2}
     #galleryBoard .gb-head p{margin:12px 0 0;color:var(--gb-muted);font-size:15.5px;line-height:1.6}
-    #galleryBoard .gb-tabs{display:flex;justify-content:center;flex-wrap:wrap;gap:8px;margin-bottom:clamp(24px,3.4cqi,36px)}
-    #galleryBoard .gb-tab{display:inline-flex;align-items:center;gap:7px;height:44px;padding:0 20px;border-radius:999px;border:1px solid var(--gb-line);background:#fff;font:inherit;font-size:15px;font-weight:600;color:var(--gb-ink);cursor:pointer;transition:background .2s,border-color .2s,color .2s,transform .2s}
-    #galleryBoard .gb-tab:hover{border-color:var(--gb-ink);transform:translateY(-1px)}
-    #galleryBoard .gb-tab small{font-size:12.5px;font-weight:600;color:var(--gb-muted);font-variant-numeric:tabular-nums}
-    #galleryBoard .gb-tab[aria-selected="true"]{background:var(--gb-ink);border-color:var(--gb-ink);color:#fff}
-    #galleryBoard .gb-tab[aria-selected="true"] small{color:rgba(255,255,255,.65)}
+    /* 카테고리 탭: 같은 너비의 칸으로 정렬 (줄 수와 상관없이 표처럼 맞춰집니다) */
+    #galleryBoard .gb-tabs{--cols:5;display:grid;grid-template-columns:repeat(var(--cols),minmax(0,1fr));border-top:1px solid var(--gb-line);border-left:1px solid var(--gb-line);border-radius:14px;overflow:hidden;margin-bottom:clamp(36px,5cqi,56px)}
+    #galleryBoard .gb-tab,#galleryBoard .gb-tab-pad{border-right:1px solid var(--gb-line);border-bottom:1px solid var(--gb-line);background:#fff}
+    #galleryBoard .gb-tab{display:flex;align-items:center;justify-content:space-between;gap:10px;min-width:0;height:58px;padding:0 18px;border-top:0;border-left:0;font:inherit;font-size:15px;font-weight:600;color:var(--gb-ink);text-align:left;cursor:pointer;transition:background .2s,color .2s}
+    #galleryBoard .gb-tab span{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+    #galleryBoard .gb-tab small{flex:0 0 auto;font-size:13px;font-weight:600;color:var(--gb-muted);font-variant-numeric:tabular-nums}
+    #galleryBoard .gb-tab:hover{background:var(--gb-soft)}
+    #galleryBoard .gb-tab:focus-visible{outline:2px solid var(--gb-accent);outline-offset:-2px}
+    #galleryBoard .gb-tab[aria-selected="true"]{background:var(--gb-ink);color:#fff}
+    #galleryBoard .gb-tab[aria-selected="true"] small{color:rgba(255,255,255,.6)}
     #galleryBoard .gb-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:var(--gb-gap)}
     /* 카테고리별 묶음: 제목 → 사진 → 다음 카테고리 제목 → 사진 */
     #galleryBoard .gb-list{display:grid;gap:clamp(56px,7cqi,88px)}
@@ -198,9 +202,11 @@
     @container (max-width:1000px){#galleryBoard .gb-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
     @container (max-width:640px){
       #galleryBoard .gb-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
-      #galleryBoard .gb-tabs{justify-content:flex-start;flex-wrap:nowrap;overflow-x:auto;margin-left:-20px;margin-right:-20px;padding:0 20px 4px;scrollbar-width:none}
+      #galleryBoard .gb-tabs{display:flex;gap:6px;overflow-x:auto;border:0;border-radius:0;margin-left:-20px;margin-right:-20px;padding:0 20px 2px;scrollbar-width:none;scroll-snap-type:x proximity}
       #galleryBoard .gb-tabs::-webkit-scrollbar{display:none}
-      #galleryBoard .gb-tab{flex:0 0 auto;height:40px;padding:0 16px;font-size:14px}
+      #galleryBoard .gb-tab-pad{display:none}
+      #galleryBoard .gb-tab{flex:0 0 auto;height:40px;padding:0 14px;gap:6px;border:1px solid var(--gb-line);border-radius:999px;font-size:14px;scroll-snap-align:start}
+      #galleryBoard .gb-tab small{font-size:12px}
       #galleryBoard .gb-cap{opacity:1;transform:none;padding:28px 10px 9px}
       #galleryBoard .gb-cap b{display:none}
       #galleryBoard .gb-cap span{font-size:12.5px}
@@ -302,9 +308,31 @@
           groups.map(function (g) { return { id: g.id, name: g.name, n: g.items.length }; })
         );
         tabsEl.innerHTML = tabs.map(function (t) {
-          return '<button type="button" class="gb-tab" role="tab" data-cat="' + esc(t.id) + '" aria-selected="' + (t.id === cur) + '">' + esc(t.name) + ' <small>' + t.n + '</small></button>';
+          return '<button type="button" class="gb-tab" role="tab" data-cat="' + esc(t.id) + '" aria-selected="' + (t.id === cur) + '" title="' + esc(t.name) + '"><span>' + esc(t.name) + '</span><small>' + t.n + '</small></button>';
         }).join('');
+        layoutTabs();
       }
+
+      /* 화면 폭에 맞춰 한 줄 칸 수를 정하고, 마지막 줄 빈칸을 채워 표 모양을 맞춥니다 */
+      function layoutTabs() {
+        Array.prototype.slice.call(tabsEl.querySelectorAll('.gb-tab-pad')).forEach(function (n) { n.remove(); });
+        var n = tabsEl.querySelectorAll('.gb-tab').length;
+        if (!n) return;
+        var w = tabsEl.parentNode.clientWidth;
+        var max = w > 1000 ? 5 : w > 640 ? 3 : 0;
+        if (!max) return;                       /* 모바일은 가로 스크롤 */
+        var rows = Math.ceil(n / max);
+        var cols = Math.ceil(n / rows);         /* 줄마다 칸 수가 고르게 */
+        tabsEl.style.setProperty('--cols', cols);
+        for (var k = n; k < rows * cols; k++) {
+          var pad = document.createElement('span');
+          pad.className = 'gb-tab-pad';
+          pad.setAttribute('aria-hidden', 'true');
+          tabsEl.appendChild(pad);
+        }
+      }
+      var rt;
+      window.addEventListener('resize', function () { clearTimeout(rt); rt = setTimeout(layoutTabs, 120); });
 
       function tile(it, k, gid) {
         var b = document.createElement('button');
@@ -361,7 +389,7 @@
 
       function select(id) {
         cur = id; limits = {};
-        Array.prototype.forEach.call(tabsEl.children, function (t) { t.setAttribute('aria-selected', String(t.getAttribute('data-cat') === id)); });
+        Array.prototype.forEach.call(tabsEl.querySelectorAll('.gb-tab'), function (t) { t.setAttribute('aria-selected', String(t.getAttribute('data-cat') === id)); });
         var h = id === ALL ? '' : '#cat=' + encodeURIComponent(id);
         if (location.hash !== h) history.replaceState(null, '', location.pathname + location.search + h);
         drawList();
