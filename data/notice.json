@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "nextId": 7,
-  "updatedAt": "2026-11-02T01:27:23.942Z",
+  "nextId": 8,
+  "updatedAt": "2026-11-02T01:28:07.743Z",
   "items": [
     {
       "id": 1,
@@ -74,6 +74,24 @@
       "updatedAt": "2026-11-02T01:25:56.422Z",
       "img": "./img/notice/202611/82a32430-e0a8-43f8-a669-dbd4accc1dd3.webp",
       "link": "./notice-4.html"
+    },
+    {
+      "id": 7,
+      "slug": "notice-7",
+      "title": "2026년 상반기 가사관리사 교육 실시",
+      "excerpt": "나누리 사회적협동조합니다. 2026년 3월 24일(화)에 2026년 상반기 가사관리사 보수 교육을 실시했습니다. 가사서비스종합지원센터의 직무교육 연수강사님께서 20분을 대상으로 가사관리의 기본 원칙, 가사관리의 실제, 고객 응대, 근로자 권익보호에 관한 내용을 강의해주셨습니다. 만족도 ",
+      "date": "2026-05-12",
+      "thumb": "img/notice/202611/d92c5833-eaf8-4715-93ce-c4af92b702fc.webp",
+      "pinned": false,
+      "showOnMain": true,
+      "hidden": false,
+      "externalLink": null,
+      "openExternal": false,
+      "author": "관리자",
+      "createdAt": "2026-11-02T01:28:07.743Z",
+      "updatedAt": "2026-11-02T01:28:07.743Z",
+      "img": "./img/notice/202611/d92c5833-eaf8-4715-93ce-c4af92b702fc.webp",
+      "link": "./notice-7.html"
     },
     {
       "id": 6,
