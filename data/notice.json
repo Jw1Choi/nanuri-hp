@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "nextId": 10,
-  "updatedAt": "2026-11-02T01:31:17.566Z",
+  "nextId": 11,
+  "updatedAt": "2026-11-02T01:32:04.323Z",
   "items": [
     {
       "id": 1,
@@ -164,6 +164,24 @@
       "updatedAt": "2026-11-02T01:31:17.566Z",
       "img": "./img/notice/202611/73a7f847-9365-4601-a331-66bd88c3b735.png",
       "link": "./notice-9.html"
+    },
+    {
+      "id": 10,
+      "slug": "notice-10",
+      "title": "[4차 교육] 2025년 하반기 가사관리사 정리수납 보수교육",
+      "excerpt": "나누리 사회적협동조합입니다. 11월20일 제 4차 교육과 자격증 시험이 진행되었습니다. 옷장과 냉장고 정리를 지나서 집안의 곳~곳~ 이란 말이 생각나게 하는 다용도실 정리 /욕실정리 / 신발장 정리 / 거실 / 잡동사니 정리 / 책정리 등의 수업이였습니다. 드디어, 떨리는 자격시험 시간",
+      "date": "2025-11-21",
+      "thumb": "img/notice/202611/62132710-85e2-456e-af1c-3a9a73f8a7f4.webp",
+      "pinned": false,
+      "showOnMain": true,
+      "hidden": false,
+      "externalLink": null,
+      "openExternal": false,
+      "author": "관리자",
+      "createdAt": "2026-11-02T01:32:04.323Z",
+      "updatedAt": "2026-11-02T01:32:04.323Z",
+      "img": "./img/notice/202611/62132710-85e2-456e-af1c-3a9a73f8a7f4.webp",
+      "link": "./notice-10.html"
     }
   ]
 }
