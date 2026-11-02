@@ -1,26 +1,8 @@
 {
   "version": 1,
   "nextId": 13,
-  "updatedAt": "2026-11-02T01:38:23.795Z",
+  "updatedAt": "2026-11-02T01:38:53.860Z",
   "items": [
-    {
-      "id": 11,
-      "slug": "notice-11",
-      "title": "[3차 교육] 2025년 하반기 가사관리사 정리수납 보수교육",
-      "excerpt": "나누리 사회적협동조합입니다. 11월18일 제 3차는 드디어, 주방과 냉장고 정리에 대한 교육이 진행되었습니다. 사용 편의성과 공간 효율성을 극대화해야하는 주방과 냉장고의 특성상, 교육 준비물이나 소품이 많아 접고 자르기 바빴던 교육이였습니다. 깨알같은 아이디어로 경제적인 수납용품을 만들",
-      "date": "2026-11-02",
-      "thumb": "img/notice/202611/d4764caf-b788-4311-842d-532f5c6b9a07.webp",
-      "pinned": false,
-      "showOnMain": true,
-      "hidden": false,
-      "externalLink": null,
-      "openExternal": false,
-      "author": "관리자",
-      "createdAt": "2026-11-02T01:37:44.965Z",
-      "updatedAt": "2026-11-02T01:37:44.965Z",
-      "img": "./img/notice/202611/d4764caf-b788-4311-842d-532f5c6b9a07.webp",
-      "link": "./notice-11.html"
-    },
     {
       "id": 1,
       "slug": "notice-1",
@@ -200,6 +182,24 @@
       "updatedAt": "2026-11-02T01:32:04.323Z",
       "img": "./img/notice/202611/62132710-85e2-456e-af1c-3a9a73f8a7f4.webp",
       "link": "./notice-10.html"
+    },
+    {
+      "id": 11,
+      "slug": "notice-11",
+      "title": "[3차 교육] 2025년 하반기 가사관리사 정리수납 보수교육",
+      "excerpt": "나누리 사회적협동조합입니다. 11월18일 제 3차는 드디어, 주방과 냉장고 정리에 대한 교육이 진행되었습니다. 사용 편의성과 공간 효율성을 극대화해야하는 주방과 냉장고의 특성상, 교육 준비물이나 소품이 많아 접고 자르기 바빴던 교육이였습니다. 깨알같은 아이디어로 경제적인 수납용품을 만들",
+      "date": "2025-11-19",
+      "thumb": "img/notice/202611/d4764caf-b788-4311-842d-532f5c6b9a07.webp",
+      "pinned": false,
+      "showOnMain": true,
+      "hidden": false,
+      "externalLink": null,
+      "openExternal": false,
+      "author": "관리자",
+      "createdAt": "2026-11-02T01:37:44.965Z",
+      "updatedAt": "2026-11-02T01:38:53.860Z",
+      "img": "./img/notice/202611/d4764caf-b788-4311-842d-532f5c6b9a07.webp",
+      "link": "./notice-11.html"
     },
     {
       "id": 12,
