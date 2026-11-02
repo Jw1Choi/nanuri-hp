@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "nextId": 4,
-  "updatedAt": "2026-11-02T01:12:54.284Z",
+  "nextId": 5,
+  "updatedAt": "2026-11-02T01:25:56.422Z",
   "items": [
     {
       "id": 1,
@@ -56,6 +56,24 @@
       "updatedAt": "2026-11-02T01:12:54.284Z",
       "img": "",
       "link": "./notice-2.html"
+    },
+    {
+      "id": 4,
+      "slug": "notice-4",
+      "title": "2026 정리수납전문가2급 교육 실시",
+      "excerpt": "나누리 사회적협동조합니다. 정리수납전문가2급 자격증 취득을 위한 교육을 중부여성발전센터에서 5회에 걸쳐 실시하였습니다. \"행복을 부르는 공간 마법, 정리수납 전문가 2급 양성과정\"이라는 강의명으로 6월 9일(화), 6월 11일(목), 6월 16일(화), 6월 18일(목), 6월 23일 ",
+      "date": "2026-07-01",
+      "thumb": "img/notice/202611/82a32430-e0a8-43f8-a669-dbd4accc1dd3.webp",
+      "pinned": false,
+      "showOnMain": true,
+      "hidden": false,
+      "externalLink": null,
+      "openExternal": false,
+      "author": "관리자",
+      "createdAt": "2026-11-02T01:25:56.422Z",
+      "updatedAt": "2026-11-02T01:25:56.422Z",
+      "img": "./img/notice/202611/82a32430-e0a8-43f8-a669-dbd4accc1dd3.webp",
+      "link": "./notice-4.html"
     }
   ]
 }
