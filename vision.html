@@ -69,6 +69,288 @@
     <!-- 메뉴(외부 로드) -->
     <div id="menu"></div>
 
+<section id="nnVisionPro" aria-label="나누리사회적협동조합 비전과 미션">
+  <style>
+    #nnVisionPro{
+      --green:#0b5c33;
+      --green-deep:#0f2a1c;
+      --leaf:#5f8f4a;
+      --gold:#c9a86a;
+      --ink:#14181c;
+      --body:#4a5158;
+      --ivory:#fbfaf5;
+      --orange:#ee8f55;
+      position:relative;
+      overflow:hidden;
+      isolation:isolate;
+      font-family:Pretendard,"Noto Sans KR",system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
+      color:var(--ink);
+      background:var(--ivory);
+      padding:clamp(150px,15vw,210px) 20px clamp(110px,12vw,170px);
+      -webkit-font-smoothing:antialiased;
+    }
+    #nnVisionPro *{box-sizing:border-box;}
+
+    /* ── 배경: 천천히 움직이는 빛 + 종이 질감 ── */
+    #nnVisionPro .bg{position:absolute;inset:0;z-index:-1;pointer-events:none;overflow:hidden;}
+    #nnVisionPro .bg i{position:absolute;border-radius:50%;filter:blur(70px);opacity:.55;}
+    #nnVisionPro .bg .o1{width:520px;height:520px;left:-140px;top:-120px;background:radial-gradient(circle,#cfe3c6 0%,transparent 70%);animation:nvpFloat1 18s ease-in-out infinite alternate;}
+    #nnVisionPro .bg .o2{width:600px;height:600px;right:-180px;top:28%;background:radial-gradient(circle,#fbe0cb 0%,transparent 70%);animation:nvpFloat2 22s ease-in-out infinite alternate;}
+    #nnVisionPro .bg .o3{width:480px;height:480px;left:24%;bottom:-220px;background:radial-gradient(circle,#d7e7f2 0%,transparent 70%);animation:nvpFloat1 20s ease-in-out infinite alternate-reverse;}
+    #nnVisionPro .bg::after{
+      content:"";position:absolute;inset:0;opacity:.35;mix-blend-mode:multiply;
+      background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)' opacity='.12'/%3E%3C/svg%3E");
+    }
+    @keyframes nvpFloat1{to{transform:translate(60px,40px) scale(1.08);}}
+    @keyframes nvpFloat2{to{transform:translate(-70px,-30px) scale(1.1);}}
+
+    #nnVisionPro .wrap{max-width:960px;margin:0 auto;position:relative;}
+
+    /* ── 제목 ── */
+    #nnVisionPro .head{text-align:center;margin-bottom:clamp(56px,7vw,88px);}
+    #nnVisionPro .eyebrow{
+      display:inline-flex;align-items:center;gap:14px;
+      font-size:12px;font-weight:700;letter-spacing:.42em;text-indent:.42em;color:var(--leaf);
+    }
+    #nnVisionPro .eyebrow::before,#nnVisionPro .eyebrow::after{content:"";width:36px;height:1px;background:linear-gradient(90deg,transparent,var(--gold));}
+    #nnVisionPro .eyebrow::after{transform:scaleX(-1);}
+    #nnVisionPro .head h2{
+      margin:18px 0 0;font-size:clamp(30px,4.6vw,54px);font-weight:800;letter-spacing:-.04em;line-height:1.2;color:var(--green-deep);
+    }
+    #nnVisionPro .head h2 .mask{display:inline-block;overflow:hidden;vertical-align:bottom;padding-bottom:.06em;}
+    #nnVisionPro .head h2 .mask > span{display:inline-block;}
+    #nnVisionPro .head .rule{display:block;width:64px;height:2px;margin:26px auto 0;background:linear-gradient(90deg,var(--green),var(--gold));transform-origin:center;}
+
+    /* ── MISSION ── */
+    #nnVisionPro .mission{text-align:center;}
+    #nnVisionPro .pill-mission{
+      position:relative;display:inline-flex;align-items:center;gap:12px;overflow:hidden;
+      padding:.62em 2em;border-radius:999px;
+      background:linear-gradient(135deg,#0d6a3b 0%,#4c8a35 100%);
+      color:#fff;font-size:clamp(17px,2vw,21px);font-weight:700;letter-spacing:.26em;text-indent:.26em;
+      box-shadow:0 18px 40px -16px rgba(11,92,51,.55),inset 0 1px 0 rgba(255,255,255,.25);
+    }
+    #nnVisionPro .pill-mission::before{
+      content:"";position:absolute;inset:-1px;border-radius:inherit;padding:1px;
+      background:linear-gradient(135deg,rgba(255,255,255,.55),rgba(201,168,106,.6),rgba(255,255,255,.1));
+      -webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;
+    }
+    #nnVisionPro .pill-mission::after{
+      content:"";position:absolute;top:0;bottom:0;width:40%;left:-60%;
+      background:linear-gradient(100deg,transparent,rgba(255,255,255,.45),transparent);
+      animation:nvpShine 4.8s ease-in-out infinite 1.6s;
+    }
+    @keyframes nvpShine{0%{left:-60%;}35%,100%{left:130%;}}
+    #nnVisionPro .mission p{
+      margin:28px auto 0;max-width:820px;
+      font-size:clamp(17px,2vw,23px);line-height:1.8;font-weight:500;color:var(--ink);
+      letter-spacing:-.025em;word-break:keep-all;
+    }
+
+    /* ── VISION 화살표 ── */
+    #nnVisionPro .vision{position:relative;margin-top:clamp(40px,5vw,60px);padding-top:clamp(120px,13vw,138px);text-align:center;}
+    #nnVisionPro .arrow{
+      position:absolute;left:50%;top:0;transform:translateX(-50%);
+      width:min(400px,52%);height:clamp(320px,35vw,350px);z-index:0;pointer-events:none;
+    }
+    #nnVisionPro .arrow .shape{
+      position:absolute;inset:0;overflow:hidden;
+      clip-path:polygon(50% 0,100% 31%,79% 31%,79% 100%,21% 100%,21% 31%,0 31%);
+      background:linear-gradient(180deg,#f4a06b 0%,#f8bf99 28%,#fcdcc6 55%,rgba(253,236,224,.5) 80%,rgba(255,255,255,0) 100%);
+    }
+    /* 위로 흐르는 빛 */
+    #nnVisionPro .arrow .shape::before{
+      content:"";position:absolute;left:0;right:0;height:45%;top:100%;
+      background:linear-gradient(180deg,transparent,rgba(255,255,255,.55),transparent);
+      animation:nvpRise 4.2s cubic-bezier(.45,0,.25,1) infinite;
+    }
+    @keyframes nvpRise{0%{top:100%;}100%{top:-50%;}}
+    /* 떠오르는 입자 */
+    #nnVisionPro .arrow .dot{position:absolute;bottom:-10px;width:5px;height:5px;border-radius:50%;background:#fff;opacity:0;box-shadow:0 0 8px rgba(255,255,255,.9);animation:nvpDot 6s linear infinite;}
+    #nnVisionPro .arrow .dot:nth-child(1){left:32%;animation-delay:0s;}
+    #nnVisionPro .arrow .dot:nth-child(2){left:46%;animation-delay:1.4s;width:4px;height:4px;}
+    #nnVisionPro .arrow .dot:nth-child(3){left:58%;animation-delay:2.6s;}
+    #nnVisionPro .arrow .dot:nth-child(4){left:68%;animation-delay:3.8s;width:3px;height:3px;}
+    #nnVisionPro .arrow .dot:nth-child(5){left:40%;animation-delay:4.8s;width:3px;height:3px;}
+    @keyframes nvpDot{0%{transform:translateY(0);opacity:0;}15%{opacity:.9;}80%{opacity:.6;}100%{transform:translateY(-330px);opacity:0;}}
+    /* 윤곽선 그리기 */
+    #nnVisionPro .arrow svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible;}
+    #nnVisionPro .arrow svg path{fill:none;stroke:url(#nvpStroke);stroke-width:1.4;vector-effect:non-scaling-stroke;}
+
+    #nnVisionPro .vision-label{
+      position:absolute;left:50%;top:clamp(76px,8.4vw,86px);transform:translateX(-50%);z-index:1;margin:0;
+      font-size:clamp(22px,2.8vw,30px);font-weight:800;letter-spacing:.24em;text-indent:.24em;
+      background:linear-gradient(180deg,#d9682b 0%,#f09a62 100%);-webkit-background-clip:text;background-clip:text;color:transparent;
+      filter:drop-shadow(0 2px 6px rgba(255,255,255,.7));
+    }
+    #nnVisionPro .vision > p{
+      position:relative;z-index:1;margin:0 auto;max-width:880px;
+      font-size:clamp(17px,2vw,23px);line-height:1.6;font-weight:600;color:var(--ink);
+      letter-spacing:-.025em;word-break:keep-all;
+      text-shadow:0 1px 12px rgba(255,255,255,.9);
+    }
+
+    /* ── 4대 가치 ── */
+    #nnVisionPro .values{
+      position:relative;z-index:1;margin-top:clamp(40px,5vw,56px);
+      display:grid;grid-template-columns:repeat(4,minmax(0,1fr));
+    }
+    #nnVisionPro .val{text-align:center;position:relative;}
+    #nnVisionPro .val .pill{
+      position:relative;display:flex;align-items:center;justify-content:center;
+      height:clamp(56px,6.6vw,68px);margin:0 -14px;border-radius:999px;
+      font-size:clamp(18px,2.2vw,24px);font-weight:800;letter-spacing:.14em;text-indent:.14em;color:#13212d;
+      background:var(--c);
+      box-shadow:0 14px 30px -18px rgba(20,40,60,.55),inset 0 1px 0 rgba(255,255,255,.55),inset 0 -8px 16px -10px rgba(0,0,0,.12);
+      backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);
+      transition:transform .45s cubic-bezier(.22,1,.36,1),box-shadow .45s ease;
+    }
+    #nnVisionPro .val .pill::after{
+      content:"";position:absolute;left:10%;right:10%;top:3px;height:48%;border-radius:999px;
+      background:linear-gradient(180deg,rgba(255,255,255,.32),rgba(255,255,255,0));pointer-events:none;
+    }
+    #nnVisionPro .val:nth-child(1) .pill{--c:linear-gradient(135deg,rgba(150,205,240,.95),rgba(110,180,230,.92));z-index:1;margin-left:0;}
+    #nnVisionPro .val:nth-child(2) .pill{--c:linear-gradient(135deg,rgba(214,224,236,.95),rgba(186,202,220,.92));z-index:2;}
+    #nnVisionPro .val:nth-child(3) .pill{--c:linear-gradient(135deg,rgba(205,232,248,.95),rgba(170,214,240,.92));z-index:3;}
+    #nnVisionPro .val:nth-child(4) .pill{--c:linear-gradient(135deg,rgba(140,184,214,.95),rgba(104,156,194,.92));z-index:4;margin-right:0;}
+    #nnVisionPro .val:hover .pill{transform:translateY(-6px);box-shadow:0 24px 40px -18px rgba(20,40,60,.6),inset 0 1px 0 rgba(255,255,255,.6);z-index:6;}
+    #nnVisionPro .val p{
+      margin:22px 8px 0;
+      font-size:clamp(13.5px,1.45vw,16px);line-height:1.75;color:var(--body);font-weight:500;
+      word-break:keep-all;letter-spacing:-.02em;
+    }
+    #nnVisionPro .val p::before{content:"";display:block;width:1px;height:18px;margin:0 auto 12px;background:linear-gradient(180deg,var(--gold),transparent);}
+
+    /* ── 등장 모션 ── */
+    #nnVisionPro.js-ready .rv{opacity:0;transform:translateY(26px);transition:opacity 1s ease,transform 1.1s cubic-bezier(.22,1,.36,1);}
+    #nnVisionPro.js-ready .rv.on{opacity:1;transform:none;}
+    #nnVisionPro.js-ready .head h2 .mask > span{transform:translateY(105%);transition:transform 1.1s cubic-bezier(.22,1,.36,1);}
+    #nnVisionPro.js-ready .head.on h2 .mask > span{transform:none;}
+    #nnVisionPro.js-ready .head .rule{transform:scaleX(0);transition:transform 1.2s cubic-bezier(.22,1,.36,1) .5s;}
+    #nnVisionPro.js-ready .head.on .rule{transform:scaleX(1);}
+    #nnVisionPro.js-ready .w{display:inline-block;opacity:0;filter:blur(6px);transform:translateY(10px);
+      transition:opacity .7s ease,filter .7s ease,transform .7s cubic-bezier(.22,1,.36,1);transition-delay:calc(var(--i)*45ms + .2s);}
+    #nnVisionPro.js-ready .on .w{opacity:1;filter:none;transform:none;}
+    #nnVisionPro.js-ready .arrow .shape{clip-path:polygon(50% 100%,50% 100%,50% 100%,50% 100%,50% 100%,50% 100%,50% 100%);opacity:0;
+      transition:clip-path 1.4s cubic-bezier(.65,0,.35,1),opacity .6s ease;}
+    #nnVisionPro.js-ready .vision.on .arrow .shape{clip-path:polygon(50% 0,100% 31%,79% 31%,79% 100%,21% 100%,21% 31%,0 31%);opacity:1;}
+    #nnVisionPro.js-ready .arrow svg path{stroke-dasharray:1;stroke-dashoffset:1;transition:stroke-dashoffset 2.2s cubic-bezier(.65,0,.35,1) .3s;}
+    #nnVisionPro.js-ready .vision.on .arrow svg path{stroke-dashoffset:0;}
+    #nnVisionPro.js-ready .vision-label{opacity:0;letter-spacing:.6em;transition:opacity 1s ease .9s,letter-spacing 1.4s cubic-bezier(.22,1,.36,1) .9s;}
+    #nnVisionPro.js-ready .vision.on .vision-label{opacity:1;letter-spacing:.24em;}
+    #nnVisionPro.js-ready .val{opacity:0;transition:opacity .9s ease,transform 1.1s cubic-bezier(.22,1,.36,1);}
+    #nnVisionPro.js-ready .val:nth-child(1){transform:translateX(-60px);}
+    #nnVisionPro.js-ready .val:nth-child(2){transform:translateX(-22px);}
+    #nnVisionPro.js-ready .val:nth-child(3){transform:translateX(22px);}
+    #nnVisionPro.js-ready .val:nth-child(4){transform:translateX(60px);}
+    #nnVisionPro.js-ready .values.on .val{opacity:1;transform:none;}
+    #nnVisionPro.js-ready .val p{opacity:0;transform:translateY(12px);transition:opacity .8s ease,transform .8s cubic-bezier(.22,1,.36,1);}
+    #nnVisionPro.js-ready .values.on .val p{opacity:1;transform:none;}
+    #nnVisionPro.js-ready .values.on .val:nth-child(1) p{transition-delay:.45s;}
+    #nnVisionPro.js-ready .values.on .val:nth-child(2) p{transition-delay:.55s;}
+    #nnVisionPro.js-ready .values.on .val:nth-child(3) p{transition-delay:.65s;}
+    #nnVisionPro.js-ready .values.on .val:nth-child(4) p{transition-delay:.75s;}
+
+    @media (max-width:768px){
+      #nnVisionPro .mission p br,#nnVisionPro .vision > p br{display:none;}
+      #nnVisionPro .arrow{width:80%;}
+      #nnVisionPro .values{grid-template-columns:repeat(2,minmax(0,1fr));row-gap:30px;column-gap:10px;}
+      #nnVisionPro .val .pill{margin:0;}
+      #nnVisionPro.js-ready .val:nth-child(n){transform:translateY(18px);}
+    }
+    @media (prefers-reduced-motion:reduce){
+      #nnVisionPro *,#nnVisionPro *::before,#nnVisionPro *::after{animation:none !important;transition:none !important;}
+      #nnVisionPro.js-ready .rv,#nnVisionPro.js-ready .w,#nnVisionPro.js-ready .val,#nnVisionPro.js-ready .val p,#nnVisionPro.js-ready .vision-label{opacity:1 !important;transform:none !important;filter:none !important;}
+      #nnVisionPro.js-ready .vision-label{transform:translateX(-50%) !important;}
+      #nnVisionPro.js-ready .head h2 .mask > span,#nnVisionPro.js-ready .head .rule{transform:none !important;}
+      #nnVisionPro.js-ready .arrow .shape{clip-path:polygon(50% 0,100% 31%,79% 31%,79% 100%,21% 100%,21% 31%,0 31%) !important;opacity:1 !important;}
+      #nnVisionPro.js-ready .arrow svg path{stroke-dashoffset:0 !important;}
+    }
+  </style>
+
+  <div class="bg" aria-hidden="true"><i class="o1"></i><i class="o2"></i><i class="o3"></i></div>
+
+  <div class="wrap">
+    <div class="head">
+      <span class="eyebrow">VISION &amp; MISSION</span>
+      <h2><span class="mask"><span>나누리사회적협동조합 비전</span></span></h2>
+      <span class="rule" aria-hidden="true"></span>
+    </div>
+
+    <div class="mission rv">
+      <span class="pill-mission">MISSION</span>
+      <p class="split">취약계층의 지원 및 일자리 창출과 교육 등을 통해<br>
+        구성원 복리 증진과 지역 경제의 활성화 도모 및 지역 사회 발전을 목적으로 한다.</p>
+    </div>
+
+    <div class="vision">
+      <div class="arrow" aria-hidden="true">
+        <div class="shape"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
+        <svg viewBox="0 0 400 350" preserveAspectRatio="none">
+          <defs>
+            <linearGradient id="nvpStroke" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#e57a3c" stop-opacity=".9"/>
+              <stop offset=".6" stop-color="#f3a877" stop-opacity=".45"/>
+              <stop offset="1" stop-color="#f3a877" stop-opacity="0"/>
+            </linearGradient>
+          </defs>
+          <path pathLength="1" d="M84 350 L84 108.5 L0 108.5 L200 0 L400 108.5 L316 108.5 L316 350"/>
+        </svg>
+      </div>
+      <h3 class="vision-label">VISION</h3>
+      <p class="split">고통 받는 이웃의 인권을 존중하며 그들에게 희망을 주고 자립적 삶을 돕는다.</p>
+
+      <div class="values">
+        <div class="val">
+          <span class="pill">나 눔</span>
+          <p>독거어르신<br>가구의 집을 고치며<br>실질적인 나눔을 실천</p>
+        </div>
+        <div class="val">
+          <span class="pill">봉 사</span>
+          <p>서류가 아닌<br>현장에서<br>지역 취약계층을 돕는다</p>
+        </div>
+        <div class="val">
+          <span class="pill">CSR</span>
+          <p>시니어 인턴십과<br>청년 일자리 사업으로<br>지속적 자립을 만듭니다.</p>
+        </div>
+        <div class="val">
+          <span class="pill">ESG</span>
+          <p>한 번의 지원에<br>그치지 않고<br>지역 안에서 계속<br>순환하는 구조를 지향</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+  (function(){
+    var root=document.getElementById('nnVisionPro');
+    if(!root) return;
+    try{
+      /* 문장을 단어 단위로 나눠 순차 등장 (줄바꿈 유지) */
+      root.querySelectorAll('.split').forEach(function(p){
+        var i=0, out=[];
+        p.innerHTML.split(/<br\s*\/?>/i).forEach(function(line,li){
+          if(li) out.push('<br>');
+          line.trim().split(/\s+/).forEach(function(w,wi){
+            if(!w) return;
+            out.push((wi||li?' ':'')+'<span class="w" style="--i:'+(i++)+'">'+w+'</span>');
+          });
+        });
+        p.innerHTML=out.join('');
+      });
+      root.classList.add('js-ready');
+      var els=root.querySelectorAll('.head, .rv, .vision, .values, .vision > p');
+      if('IntersectionObserver' in window){
+        var io=new IntersectionObserver(function(es){
+          es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('on'); io.unobserve(e.target); } });
+        },{threshold:.2});
+        els.forEach(function(el){ io.observe(el); });
+      }else{ els.forEach(function(el){ el.classList.add('on'); }); }
+    }catch(e){ root.classList.remove('js-ready'); }
+  })();
+  </script>
+</section>
+
 <section id="section-benefits" aria-label="Benefits Section">
   <style>
     /* ===== SECTION SCOPE RESET ===== */

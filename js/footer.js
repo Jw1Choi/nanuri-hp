@@ -384,6 +384,8 @@
             <li><a href="./gasa.html">일반가사특화서비스</a></li>
             <li><a href="./seoul-housecare.html">서울시안심집수리</a></li>
             <li><a href="./housecare.html">일반 집수리/인테리어</a></li>
+            <li><a href="./care-repair.html">정리수납·생활집수리</a></li>
+            <li><a href="./mapo-care.html">마포형 통합돌봄</a></li>
             <li><a href="./gasa-edu.html">가사관리사 교육</a></li>
           </ul>
         </div>
@@ -412,13 +414,23 @@
           <span class="corpName">나누리사회적협동조합</span>
 
           <span class="sep">·</span>
-          <span class="meta">사업자등록번호 : <b>270151-0031555</b></span>
-
-          <span class="sep">·</span>
           <span class="meta">대표 : <b>김은주</b></span>
 
           <span class="sep">·</span>
-          <span class="meta">주소 : <b>서울시 마포구 동교로 72-1 201호 (합정동, 한영빌딩)</b></span>
+          <span class="meta">사업자등록번호 : <b>239-82-00211</b></span>
+
+          <span class="sep">·</span>
+          <span class="meta">주소 : <b>서울특별시 마포구 동교로 72-1 한영빌딩 201호</b></span>
+        </div>
+
+        <div class="corpLine">
+          <span class="meta">전화 : <b><a href="tel:0263480851" style="color:#d7dde6;font-size:inherit;">02-6348-0851</a></b></span>
+
+          <span class="sep">·</span>
+          <span class="meta">팩스 : <b>0504-420-8021</b></span>
+
+          <span class="sep">·</span>
+          <span class="meta">이메일 : <b><a href="mailto:nnrcoop@naver.com" style="color:#d7dde6;font-size:inherit;">nnrcoop@naver.com</a></b></span>
         </div>
 
         <div class="copy">

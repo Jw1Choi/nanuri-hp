@@ -56,6 +56,8 @@
         <a href="./gasa.html" class="tp-dropdown__link">일반가사특화서비스</a>
         <a href="./seoul-housecare.html" class="tp-dropdown__link">서울시안심집수리</a>
         <a href="./housecare.html" class="tp-dropdown__link">일반 집수리/인테리어</a>
+        <a href="./care-repair.html" class="tp-dropdown__link">정리수납·생활집수리</a>
+        <a href="./mapo-care.html" class="tp-dropdown__link">마포형 통합돌봄</a>
         <a href="./gasa-edu.html" class="tp-dropdown__link">가사관리사 교육</a>
       </div>
       <div class="tp-dropdown__col" data-col="2">
@@ -133,6 +135,8 @@
     <a href="./gasa.html" class="tp-mobile-sub__link">일반가사특화서비스</a>
     <a href="./seoul-housecare.html" class="tp-mobile-sub__link">서울시안심집수리</a>
     <a href="./housecare.html" class="tp-mobile-sub__link">일반 집수리/인테리어</a>
+    <a href="./care-repair.html" class="tp-mobile-sub__link">정리수납·생활집수리</a>
+    <a href="./mapo-care.html" class="tp-mobile-sub__link">마포형 통합돌봄</a>
     <a href="./gasa-edu.html" class="tp-mobile-sub__link">가사관리사 교육</a>
   </div>
 </div>
@@ -373,10 +377,12 @@
       <div class="cf-select-wrap">
         <select id="cfCategory" name="category" required>
           <option value="">상담 분야를 선택해주세요</option>
-          <option value="브랜드 홈페이지">브랜드 홈페이지</option>
-          <option value="랜딩페이지">랜딩페이지</option>
-          <option value="브랜드 AI 영상">브랜드 AI 영상</option>
-          <option value="AI 추억 영상">AI 추억 영상</option>
+          <option value="서울형 가사서비스">서울형 가사서비스</option>
+          <option value="일반 가사 · 정리수납">일반 가사 · 정리수납</option>
+          <option value="서울시 안심집수리">서울시 안심집수리</option>
+          <option value="일반 집수리 · 인테리어">일반 집수리 · 인테리어</option>
+          <option value="마포형 통합돌봄">마포형 통합돌봄</option>
+          <option value="가사관리사 교육 · 채용">가사관리사 교육 · 채용</option>
           <option value="기타 문의">기타 문의</option>
         </select>
         <span class="cf-select-arrow">
