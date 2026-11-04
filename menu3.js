@@ -218,36 +218,26 @@
   <div class="cf-floating" id="cfFloating">
     <!-- 퀵 패널 : 위아래(세로)로 펼쳐짐 -->
     <div class="cf-quick-panel" id="cfQuickPanel">
-      <a href="https://drive.google.com/file/d/1N6bvCyIvZSIHTwDyIcachBlc2wIsOlyy/view?usp=sharing" class="cf-quick-link">
+      <!-- 간편신청 : 퀵 패널 안으로 이동 (id 유지 → 기존 팝업 스크립트 그대로 동작) -->
+      <button type="button" class="cf-quick-link" id="cfReserveBtn" aria-label="간편 신청">
         <span class="cf-quick-icon">
           <svg viewBox="0 0 24 24" fill="none">
-            <path d="M7 4.75h7.5L19.25 9.5V18A2.25 2.25 0 0 1 17 20.25H7A2.25 2.25 0 0 1 4.75 18V7A2.25 2.25 0 0 1 7 4.75Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
-            <path d="M14.5 4.75V9.5h4.75" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
-            <path d="M8.5 12.25h7M8.5 15.25h7M8.5 18.25h4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            <path d="M4.75 19.25h4.5l9.1-9.1-4.5-4.5-9.1 9.1v4.5Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+            <path d="M12.9 6.6l4.5 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
           </svg>
         </span>
-        <span class="cf-quick-text">회사소개서</span>
+        <span class="cf-quick-text">간편신청</span>
+      </button>
+
+      <a href="tel:02-6348-0851" class="cf-quick-link">
+        <span class="cf-quick-icon">
+          <svg viewBox="0 0 24 24" fill="none">
+            <path d="M6.7 5.75a2.2 2.2 0 0 1 3.1 0l1.36 1.36a2.2 2.2 0 0 1 0 3.11l-.72.72a13.3 13.3 0 0 0 2.62 2.62l.72-.72a2.2 2.2 0 0 1 3.11 0l1.36 1.36a2.2 2.2 0 0 1 0 3.1l-.68.68c-.77.77-1.92 1.08-2.98.8-2.36-.62-4.85-2.24-6.97-4.36-2.12-2.12-3.74-4.61-4.36-6.97-.28-1.06.03-2.21.8-2.98l.68-.68Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+          </svg>
+        </span>
+        <span class="cf-quick-text">전화문의</span>
       </a>
-
-  <a href="tel:02-6348-0851" class="cf-quick-link">
-    <span class="cf-quick-icon">
-      <svg viewBox="0 0 24 24" fill="none">
-        <path d="M6.7 5.75a2.2 2.2 0 0 1 3.1 0l1.36 1.36a2.2 2.2 0 0 1 0 3.11l-.72.72a13.3 13.3 0 0 0 2.62 2.62l.72-.72a2.2 2.2 0 0 1 3.11 0l1.36 1.36a2.2 2.2 0 0 1 0 3.1l-.68.68c-.77.77-1.92 1.08-2.98.8-2.36-.62-4.85-2.24-6.97-4.36-2.12-2.12-3.74-4.61-4.36-6.97-.28-1.06.03-2.21.8-2.98l.68-.68Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
-      </svg>
-    </span>
-    <span class="cf-quick-text">전화문의</span>
-  </a>
-
-  <a href="/schedule.html" class="cf-quick-link">
-    <span class="cf-quick-icon">
-      <svg viewBox="0 0 24 24" fill="none">
-        <path d="M12 5.25c-4.28 0-7.75 2.7-7.75 6.03 0 2.04 1.31 3.84 3.31 4.93l-.68 2.54a.45.45 0 0 0 .64.52l3.13-1.62c.44.06.89.09 1.35.09 4.28 0 7.75-2.7 7.75-6.03s-3.47-6.46-7.75-6.46Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
-        <path d="M8.6 11.3h6.8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-      </svg>
-    </span>
-    <span class="cf-quick-text">카카오톡</span>
-  </a>
-</div>
+    </div>
 
 <!-- 퀵메뉴 버튼 -->
 <button type="button" class="cf-btn cf-btn-quick" id="cfQuickBtn" aria-label="퀵메뉴">
@@ -262,16 +252,17 @@
   <span class="cf-btn-label">QUICK</span>
 </button>
 
-<!-- 신청 버튼 -->
-<button type="button" class="cf-btn cf-btn-reserve" id="cfReserveBtn" aria-label="간편 신청">
+<!-- 회사소개서 버튼 (기존 간편신청 자리) -->
+<a class="cf-btn cf-btn-reserve" id="cfBrochureBtn" href="https://drive.google.com/file/d/1N6bvCyIvZSIHTwDyIcachBlc2wIsOlyy/view?usp=sharing" target="_blank" rel="noopener noreferrer" aria-label="회사소개서 보기 (새 창)">
   <span class="cf-btn-icon">
     <svg viewBox="0 0 24 24" fill="none">
-      <path d="M4.75 19.25h4.5l9.1-9.1-4.5-4.5-9.1 9.1v4.5Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/>
-      <path d="M12.9 6.6l4.5 4.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
+      <path d="M7 4.75h7.5L19.25 9.5V18A2.25 2.25 0 0 1 17 20.25H7A2.25 2.25 0 0 1 4.75 18V7A2.25 2.25 0 0 1 7 4.75Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+      <path d="M14.5 4.75V9.5h4.75" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+      <path d="M8.5 12.25h7M8.5 15.25h7M8.5 18.25h4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
     </svg>
   </span>
-  <span class="cf-btn-label">간편신청</span>
-</button>
+  <span class="cf-btn-label">회사소개서</span>
+</a>
 
 <!-- TOP 버튼 -->
 <button type="button" class="cf-btn cf-btn-top" id="cfTopBtn" aria-label="맨 위로 이동">
@@ -680,6 +671,16 @@
         background .22s ease,
         transform .22s ease;
     }
+
+    /* button·a 로 바뀐 항목의 기본 스타일 보정 */
+    #chanelFloatingSection button.cf-quick-link{
+      border:0;
+      font:inherit;
+      cursor:pointer;
+      -webkit-appearance:none;
+      appearance:none;
+    }
+    #chanelFloatingSection a.cf-btn{ text-decoration:none; }
 
     #chanelFloatingSection .cf-quick-link:hover{
       background:rgba(255,255,255,.06);
