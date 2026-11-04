@@ -6,6 +6,76 @@
    ========================================================================= */
 (function () {
 
+
+  /* =======================================================================
+     0. 메뉴 데이터 (관리자 > 메뉴 구성 → ./data/site-menu.json)
+        - 파일이 없거나 읽지 못하면 아래 기본 메뉴를 씁니다.
+        - 마지막으로 받은 메뉴는 브라우저에 저장해 두었다가 다음 방문 때 바로 그립니다.
+        - footer.js 와 같은 데이터를 함께 씁니다 (window.__nnrSiteMenu)
+     ======================================================================= */
+  var TP_DEFAULT_MENU = {"version":1,"updatedAt":"","groups":[{"id": "g-about", "label": "나누리 소개", "href": "./about.html", "header": true, "footer": true, "items": [{"id": "m-about", "label": "나누리는", "href": "./about.html", "newTab": false, "header": true, "footer": true}, {"id": "m-ceo", "label": "이사장 인사말", "href": "./ceo.html", "newTab": false, "header": true, "footer": true}, {"id": "m-vision", "label": "비전 & 미션", "href": "./vision.html", "newTab": false, "header": true, "footer": true}, {"id": "m-history", "label": "사업연혁", "href": "./history.html", "newTab": false, "header": true, "footer": true}]}, {"id": "g-biz", "label": "주요 사업", "href": "./seoul-gasa.html", "header": true, "footer": true, "items": [{"id": "m-seoul-gasa", "label": "서울형가사서비스", "href": "./seoul-gasa.html", "newTab": false, "header": true, "footer": true}, {"id": "m-gasa", "label": "일반가사특화서비스", "href": "./gasa.html", "newTab": false, "header": true, "footer": true}, {"id": "m-seoul-housecare", "label": "서울시안심집수리", "href": "./seoul-housecare.html", "newTab": false, "header": true, "footer": true}, {"id": "m-housecare", "label": "일반 집수리/인테리어", "href": "./housecare.html", "newTab": false, "header": true, "footer": true}, {"id": "m-care-repair", "label": "정리수납·생활집수리", "href": "./care-repair.html", "newTab": false, "header": true, "footer": true}, {"id": "m-mapo-care", "label": "마포형 통합돌봄", "href": "./mapo-care.html", "newTab": false, "header": true, "footer": true}, {"id": "m-gasa-edu", "label": "가사관리사 교육", "href": "./gasa-edu.html", "newTab": false, "header": true, "footer": true}]}, {"id": "g-apply", "label": "온라인 신청", "href": "./online-program.html", "header": true, "footer": true, "items": [{"id": "m-apply-gasa", "label": "서울형가사서비스", "href": "./35.html", "newTab": false, "header": true, "footer": true}, {"id": "m-apply-housecare", "label": "서울시안심집수리", "href": "./36.html", "newTab": false, "header": true, "footer": true}]}, {"id": "g-comm", "label": "소통공간", "href": "./notice.html", "header": true, "footer": true, "items": [{"id": "m-notice", "label": "공지사항", "href": "./notice.html", "newTab": false, "header": true, "footer": true}, {"id": "m-gallery", "label": "갤러리", "href": "./gallary.html", "newTab": false, "header": true, "footer": true}]}]};
+
+  function nnrSiteMenu() {
+    if (window.__nnrSiteMenu) return window.__nnrSiteMenu;
+    var KEY = 'nnr.siteMenu.v1';
+    function valid(d) { return !!(d && Array.isArray(d.groups) && d.groups.length); }
+    var cached = null;
+    try { cached = JSON.parse(localStorage.getItem(KEY) || 'null'); } catch (e) {}
+    if (!valid(cached)) cached = null;
+    var fresh = (window.fetch
+      ? fetch('./data/site-menu.json?v=' + Math.floor(Date.now() / 60000), { cache: 'no-store' })
+          .then(function (r) { return r.ok ? r.json() : null; })
+          .then(function (d) {
+            if (!valid(d)) return null;
+            try { localStorage.setItem(KEY, JSON.stringify(d)); } catch (e) {}
+            return d;
+          })
+          .catch(function () { return null; })
+      : Promise.resolve(null));
+    window.__nnrSiteMenu = { cached: cached, fresh: fresh, fallback: TP_DEFAULT_MENU };
+    return window.__nnrSiteMenu;
+  }
+
+  function tpEsc(v) {
+    return String(v == null ? '' : v).replace(/[&<>"']/g, function (c) {
+      return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c];
+    });
+  }
+  function tpHref(v) {
+    var h = String(v || '').trim();
+    return /^(\.\/|\/(?!\/)|https?:\/\/|tel:|mailto:|#)[^\s"'<>`\\]*$/i.test(h) ? h : '#';
+  }
+  function tpTarget(m) { return m && m.newTab ? ' target="_blank" rel="noopener noreferrer"' : ''; }
+
+  var TP_ARROW = '<svg class="tp-mobile-nav__arrow" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M6 9L12 15L18 9" fill="none" stroke="rgba(255,255,255,0.6)" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+
+  /** 메뉴 데이터 → 상단 · 드롭다운 · 모바일 마크업 */
+  function buildMenuParts(menu) {
+    var groups = (menu && menu.groups ? menu.groups : TP_DEFAULT_MENU.groups).filter(function (g) { return g && g.header !== false; });
+    var nav = '', drop = '', mobile = '';
+    groups.forEach(function (g, i) {
+      var items = (g.items || []).filter(function (m) { return m && m.header !== false; });
+      nav += '  <div class="tp-nav__item" data-menu="' + i + '"><a href="' + tpEsc(tpHref(g.href)) + '" class="tp-nav__link">' + tpEsc(g.label) + '</a></div>\n';
+      drop += '      <div class="tp-dropdown__col" data-col="' + i + '">\n' + items.map(function (m) {
+        return '        <a href="' + tpEsc(tpHref(m.href)) + '" class="tp-dropdown__link"' + tpTarget(m) + '>' + tpEsc(m.label) + '</a>\n';
+      }).join('') + '      </div>\n';
+      var subs = items.length ? items : [{ label: g.label, href: g.href }];
+      mobile += '<div class="tp-mobile-nav__item">\n'
+        + '  <button class="tp-mobile-nav__link" data-mobile="' + i + '" type="button"><span>' + tpEsc(g.label) + '</span>' + TP_ARROW + '</button>\n'
+        + '  <div class="tp-mobile-sub" data-mobile-sub="' + i + '">\n' + subs.map(function (m) {
+          return '    <a href="' + tpEsc(tpHref(m.href)) + '" class="tp-mobile-sub__link"' + tpTarget(m) + '>' + tpEsc(m.label) + '</a>\n';
+        }).join('') + '  </div>\n</div>\n';
+    });
+    return { nav: nav, drop: drop, mobile: mobile };
+  }
+
+  function buildMenuTemplate(menu) {
+    var p = buildMenuParts(menu);
+    return MENU_TEMPLATE.replace('__TP_NAV__', function () { return p.nav; })
+      .replace('__TP_DROP__', function () { return p.drop; })
+      .replace('__TP_MOBILE__', function () { return p.mobile; });
+  }
+
   /* =======================================================================
      1. 상단 메뉴 템플릿
      ======================================================================= */
@@ -21,13 +91,7 @@
     </a>
 
 <nav class="tp-nav" id="tpNav">
-  <div class="tp-nav__item" data-menu="0"><a href="./about.html" class="tp-nav__link">나누리 소개</a></div>
-  <div class="tp-nav__item" data-menu="1"><a href="./seoul-gasa.html" class="tp-nav__link">주요 사업</a></div>
-  <div class="tp-nav__item" data-menu="2"><a href="./online-program.html" class="tp-nav__link">온라인 신청</a></div>
-   <!--  <div class="tp-nav__item" data-menu="3">
-   <a href="./partnership.html" class="tp-nav__link">협력 기관</a></div>
-  <div class="tp-nav__item" data-menu="4"><a href="./story.html" class="tp-nav__link">나누리 스토리</a></div> -->
-  <div class="tp-nav__item" data-menu="3"><a href="./notice.html" class="tp-nav__link">소통공간</a></div>
+__TP_NAV__
 </nav>
 
 <div class="tp-lang">
@@ -45,47 +109,7 @@
 
   <div class="tp-dropdown" id="tpDropdown">
     <div class="tp-dropdown__inner" id="tpDropdownInner">
-      <div class="tp-dropdown__col" data-col="0">
-        <a href="./about.html" class="tp-dropdown__link">나누리는</a>
-        <a href="./ceo.html" class="tp-dropdown__link">이사장 인사말</a>
-        <a href="./vision.html" class="tp-dropdown__link">비전 & 미션</a>
-        <a href="./history.html" class="tp-dropdown__link">사업연혁</a>
-      </div>
-     <div class="tp-dropdown__col" data-col="1">
-        <a href="./seoul-gasa.html" class="tp-dropdown__link">서울형가사서비스</a>
-        <a href="./gasa.html" class="tp-dropdown__link">일반가사특화서비스</a>
-        <a href="./seoul-housecare.html" class="tp-dropdown__link">서울시안심집수리</a>
-        <a href="./housecare.html" class="tp-dropdown__link">일반 집수리/인테리어</a>
-        <a href="./care-repair.html" class="tp-dropdown__link">정리수납·생활집수리</a>
-        <a href="./mapo-care.html" class="tp-dropdown__link">마포형 통합돌봄</a>
-        <a href="./gasa-edu.html" class="tp-dropdown__link">가사관리사 교육</a>
-      </div>
-      <div class="tp-dropdown__col" data-col="2">
-        <a href="./35.html" class="tp-dropdown__link">서울형가사서비스</a>
-        <a href="./36.html" class="tp-dropdown__link">서울시안심집수리</a>
-      </div>
-     <!--
-        <div class="tp-dropdown__col" data-col="1">
-        <a href="./gasa.html" class="tp-dropdown__link">통합 홈케어 사업</a>
-        <a href="./partner.html" class="tp-dropdown__link">인증 & 파트너</a>
-        <a href="./organization.html" class="tp-dropdown__link">조직도</a>
-      </div>
-     
-       <div class="tp-dropdown__col" data-col="3">
-        <a href="./b2g.html" class="tp-dropdown__link">공공기관 (B2G)</a>
-        <a href="./b2b.html" class="tp-dropdown__link">기업 ESG (B2B)</a>
-        <a href="./program.html" class="tp-dropdown__link">교육·출장 프로그램</a>
-        <a href="./proposal.html" class="tp-dropdown__link">협력 제안하기</a>
-      </div>
-      <div class="tp-dropdown__col" data-col="4">
-        <a href="./column.html" class="tp-dropdown__link">안심 칼럼</a>
-        <a href="./news.html" class="tp-dropdown__link">활동 소식</a>
-        <a href="./press.html" class="tp-dropdown__link">언론 보도</a>
-      </div> -->
-      <div class="tp-dropdown__col" data-col="3">
-        <a href="./notice.html" class="tp-dropdown__link">공지사항</a>
-        <a href="./gallary.html" class="tp-dropdown__link">갤러리</a>
-      </div>
+__TP_DROP__
     </div>
   </div>
 </header>
@@ -108,94 +132,7 @@
   </div>
 
   <div class="tp-mobile-nav">
-    <div class="tp-mobile-nav__item">
-      <button class="tp-mobile-nav__link" data-mobile="0" type="button">
-        <span>나누리 소개</span>
-        <svg class="tp-mobile-nav__arrow" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-          <path d="M6 9L12 15L18 9" fill="none" stroke="rgba(255,255,255,0.6)" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-      </button>
-      <div class="tp-mobile-sub" data-mobile-sub="0">
-        <a href="./about.html" class="tp-mobile-sub__link">나누리는</a>
-        <a href="./ceo.html" class="tp-mobile-sub__link">이사장 인사말</a>
-        <a href="./vision.html" class="tp-mobile-sub__link">비전 & 미션</a>
-        <a href="./history.html" class="tp-mobile-sub__link">사업 연혁</a>
-      </div>
-    </div>
-
- <div class="tp-mobile-nav__item">
-  <button class="tp-mobile-nav__link" data-mobile="1" type="button">
-    <span>주요 사업</span>
-    <svg class="tp-mobile-nav__arrow" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-      <path d="M6 9L12 15L18 9" fill="none" stroke="rgba(255,255,255,0.6)" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
-    </svg>
-  </button>
-  <div class="tp-mobile-sub" data-mobile-sub="1">
-    <a href="./seoul-gasa.html" class="tp-mobile-sub__link">서울형가사서비스</a>
-    <a href="./gasa.html" class="tp-mobile-sub__link">일반가사특화서비스</a>
-    <a href="./seoul-housecare.html" class="tp-mobile-sub__link">서울시안심집수리</a>
-    <a href="./housecare.html" class="tp-mobile-sub__link">일반 집수리/인테리어</a>
-    <a href="./care-repair.html" class="tp-mobile-sub__link">정리수납·생활집수리</a>
-    <a href="./mapo-care.html" class="tp-mobile-sub__link">마포형 통합돌봄</a>
-    <a href="./gasa-edu.html" class="tp-mobile-sub__link">가사관리사 교육</a>
-  </div>
-</div>
-
-<div class="tp-mobile-nav__item">
-  <button class="tp-mobile-nav__link" data-mobile="2" type="button">
-    <span>온라인 신청</span>
-    <svg class="tp-mobile-nav__arrow" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-      <path d="M6 9L12 15L18 9" fill="none" stroke="rgba(255,255,255,0.6)" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
-    </svg>
-  </button>
-  <div class="tp-mobile-sub" data-mobile-sub="2">
-    <a href="./35.html" class="tp-mobile-sub__link">서울형가사서비스</a>
-    <a href="./36.html" class="tp-mobile-sub__link">서울시안심집수리</a>
-  </div>
-</div>
-
-<!-- <div class="tp-mobile-nav__item">
-  <button class="tp-mobile-nav__link" data-mobile="3" type="button">
-    <span>협력 기관</span>
-    <svg class="tp-mobile-nav__arrow" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-      <path d="M6 9L12 15L18 9" fill="none" stroke="rgba(255,255,255,0.6)" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
-    </svg>
-  </button>
-  <div class="tp-mobile-sub" data-mobile-sub="3">
-    <a href="./b2g.html" class="tp-mobile-sub__link">공공기관 (B2G)</a>
-    <a href="./b2b.html" class="tp-mobile-sub__link">기업 ESG (B2B)</a>
-    <a href="./program.html" class="tp-mobile-sub__link">교육·출장 프로그램</a>
-    <a href="./proposal.html" class="tp-mobile-sub__link">협력 제안하기</a>
-  </div>
-</div>
-
-<div class="tp-mobile-nav__item">
-  <button class="tp-mobile-nav__link" data-mobile="4" type="button">
-    <span>나누리 스토리</span>
-    <svg class="tp-mobile-nav__arrow" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-      <path d="M6 9L12 15L18 9" fill="none" stroke="rgba(255,255,255,0.6)" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
-    </svg>
-  </button>
-  <div class="tp-mobile-sub" data-mobile-sub="4">
-    <a href="./column.html" class="tp-mobile-sub__link">안심 칼럼</a>
-    <a href="./news.html" class="tp-mobile-sub__link">활동 소식</a>
-    <a href="./press.html" class="tp-mobile-sub__link">언론 보도</a>
-  </div>
-</div> -->
-
-<div class="tp-mobile-nav__item">
-  <button class="tp-mobile-nav__link" data-mobile="5" type="button">
-    <span>소통공간</span>
-    <svg class="tp-mobile-nav__arrow" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-      <path d="M6 9L12 15L18 9" fill="none" stroke="rgba(255,255,255,0.6)" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
-    </svg>
-  </button>
-  <div class="tp-mobile-sub" data-mobile-sub="5">
-    <a href="./notice.html" class="tp-mobile-sub__link">공지사항</a>
-    <a href="./gallary.html" class="tp-mobile-sub__link">갤러리</a>
-  </div>
-</div>
-
+__TP_MOBILE__
   </div>
 
   <div class="tp-mobile-lang">
@@ -1779,7 +1716,7 @@
      ======================================================================= */
   function initTpMenu(root) {if (!root) return;
 
-var header = root.querySelector('#tpHeader');var nav = root.querySelector('#tpNav');var dropdown = root.querySelector('#tpDropdown');var dropdownInner = root.querySelector('#tpDropdownInner');var overlay = root.querySelector('#tpOverlay');var hamburger = root.querySelector('#tpHamburger');var mobileMenu = root.querySelector('#tpMobileMenu');var mobileClose = root.querySelector('#tpMobileClose');var navItems = nav ? nav.querySelectorAll('.tp-nav__item') : [];var dropdownCols = dropdownInner ? dropdownInner.querySelectorAll('.tp-dropdown__col') : [];
+var header = root.querySelector('#tpHeader');var nav = root.querySelector('#tpNav');var dropdown = root.querySelector('#tpDropdown');var dropdownInner = root.querySelector('#tpDropdownInner');var overlay = root.querySelector('#tpOverlay');var hamburger = root.querySelector('#tpHamburger');var mobileMenu = root.querySelector('#tpMobileMenu');var mobileClose = root.querySelector('#tpMobileClose');var navItems = [];var dropdownCols = [];var mobileNav = root.querySelector('.tp-mobile-nav');
 
 var activeMenu = null;var closeTimeout = null;var isDesktop = window.innerWidth > 768;var mobileOpen = false;var alignRAF = null;var ticking = false;var lastScrollY = window.scrollY || 0;var scrollDelta = 8;var headerRevealPoint = 10;
 
@@ -1843,6 +1780,9 @@ updateHeaderTopState();
 
 }, 120);}
 
+/* 메뉴 항목(상단 · 드롭다운 · 모바일) 바인딩 — 관리자 메뉴 데이터로 다시 그린 뒤에도 호출합니다 */
+function bindMenuItems() {navItems = nav ? nav.querySelectorAll('.tp-nav__item') : [];dropdownCols = dropdownInner ? dropdownInner.querySelectorAll('.tp-dropdown__col') : [];
+
 if (navItems.length) {navItems.forEach(function(item, index) {item.addEventListener('mouseenter', function() {if (isDesktop) openDropdown(index);});
 
 item.addEventListener('mouseleave', function() {
@@ -1851,19 +1791,60 @@ item.addEventListener('mouseleave', function() {
 
 });}
 
-if (dropdown) {dropdown.addEventListener('mouseenter', function() {if (closeTimeout) {clearTimeout(closeTimeout);closeTimeout = null;}});
-
-dropdown.addEventListener('mouseleave', function() {closeDropdown();});}
-
-if (overlay) {overlay.addEventListener('click', function() {if (closeTimeout) clearTimeout(closeTimeout);activeMenu = null;nav.classList.remove('has-active');navItems.forEach(function(item) { item.classList.remove('active'); });dropdown.classList.remove('visible');overlay.classList.remove('visible');header.classList.remove('menu-open');forceHeaderShow();updateHeaderTopState();});}
-
-root.querySelectorAll('.tp-nav__link, .tp-dropdown__link').forEach(function(link) {link.addEventListener('click', function(e) {var href = link.getAttribute('href');
+root.querySelectorAll('#tpNav .tp-nav__link, #tpDropdownInner .tp-dropdown__link').forEach(function(link) {link.addEventListener('click', function(e) {var href = link.getAttribute('href');
 
 if (!href || href.trim() === '' || href === '#') {
   e.preventDefault();
 }
 
 });});
+
+mobileNav.querySelectorAll('.tp-mobile-nav__link').forEach(function(link) {link.addEventListener('click', function() {var idx = link.getAttribute('data-mobile');var sub = root.querySelector('[data-mobile-sub="' + idx + '"]');var wasActive = link.classList.contains('active');
+
+root.querySelectorAll('.tp-mobile-nav__link').forEach(function(l) {
+  l.classList.remove('active');
+});
+
+root.querySelectorAll('.tp-mobile-sub').forEach(function(s) {
+  s.classList.remove('open');
+});
+
+if (!wasActive && sub) {
+  link.classList.add('active');
+  sub.classList.add('open');
+}
+
+});});
+
+mobileNav.querySelectorAll('.tp-mobile-sub__link').forEach(function(link) {link.addEventListener('click', function(e) {var href = link.getAttribute('href');
+
+if (!href || href.trim() === '' || href === '#') {
+  e.preventDefault();
+  return;
+}
+
+closeMobileMenu();
+
+});});
+}
+
+bindMenuItems();
+
+/* 메뉴 데이터가 바뀌면 header 는 그대로 두고 안쪽 항목만 교체합니다 */
+root._tpRebuild = function(parts) {if (!parts) return;
+  if (dropdown && dropdown.classList.contains('visible')) {activeMenu = null;nav.classList.remove('has-active');dropdown.classList.remove('visible');overlay.classList.remove('visible');header.classList.remove('menu-open');}
+  if (nav) nav.innerHTML = parts.nav;
+  if (dropdownInner) dropdownInner.innerHTML = parts.drop;
+  if (mobileNav) mobileNav.innerHTML = parts.mobile;
+  bindMenuItems();
+  if (dropdown) {dropdown.style.opacity = '0';dropdown.style.pointerEvents = 'none';dropdown.classList.add('visible');alignDropdownColumns();dropdown.classList.remove('visible');requestAnimationFrame(function() {dropdown.style.opacity = '';dropdown.style.pointerEvents = '';updateHeaderTopState();});}
+};
+
+if (dropdown) {dropdown.addEventListener('mouseenter', function() {if (closeTimeout) {clearTimeout(closeTimeout);closeTimeout = null;}});
+
+dropdown.addEventListener('mouseleave', function() {closeDropdown();});}
+
+if (overlay) {overlay.addEventListener('click', function() {if (closeTimeout) clearTimeout(closeTimeout);activeMenu = null;nav.classList.remove('has-active');navItems.forEach(function(item) { item.classList.remove('active'); });dropdown.classList.remove('visible');overlay.classList.remove('visible');header.classList.remove('menu-open');forceHeaderShow();updateHeaderTopState();});}
 
 function handleHeaderScroll() {var currentScrollY = window.scrollY || 0;var diff = currentScrollY - lastScrollY;
 
@@ -1888,34 +1869,6 @@ function openMobileMenu() {mobileOpen = true;hamburger.classList.add('open');mob
 if (hamburger) {hamburger.addEventListener('click', function() {if (mobileOpen) {closeMobileMenu();} else {openMobileMenu();}});}
 
 if (mobileClose) {mobileClose.addEventListener('click', function() {closeMobileMenu();});}
-
-root.querySelectorAll('.tp-mobile-nav__link').forEach(function(link) {link.addEventListener('click', function() {var idx = link.getAttribute('data-mobile');var sub = root.querySelector('[data-mobile-sub="' + idx + '"]');var wasActive = link.classList.contains('active');
-
-root.querySelectorAll('.tp-mobile-nav__link').forEach(function(l) {
-  l.classList.remove('active');
-});
-
-root.querySelectorAll('.tp-mobile-sub').forEach(function(s) {
-  s.classList.remove('open');
-});
-
-if (!wasActive && sub) {
-  link.classList.add('active');
-  sub.classList.add('open');
-}
-
-});});
-
-root.querySelectorAll('.tp-mobile-sub__link').forEach(function(link) {link.addEventListener('click', function(e) {var href = link.getAttribute('href');
-
-if (!href || href.trim() === '' || href === '#') {
-  e.preventDefault();
-  return;
-}
-
-closeMobileMenu();
-
-});});
 
 root.querySelectorAll('.tp-lang__btn, .tp-mobile-lang__btn').forEach(function(btn) {btn.addEventListener('click', function() {var group = btn.closest('.tp-lang') || btn.closest('.tp-mobile-lang');if (!group) return;group.querySelectorAll('button').forEach(function(b) {b.classList.remove('active');});btn.classList.add('active');});});
 
@@ -2352,10 +2305,20 @@ requestAnimationFrame(function() {alignDropdownColumns();dropdown.classList.remo
     if (mount._tpMenuMounted) return;
 
     mount._tpMenuMounted = true;
-    mount.innerHTML = MENU_TEMPLATE;
+
+    /* 저장된 메뉴(없으면 기본 메뉴)로 바로 그리고, 최신 메뉴가 다르면 안쪽 항목만 교체 */
+    var src = nnrSiteMenu();
+    var first = src.cached || src.fallback;
+    mount.innerHTML = buildMenuTemplate(first);
 
     var root = mount.querySelector('#nav-section');
     initTpMenu(root);
+
+    src.fresh.then(function (d) {
+      if (!d || !root || typeof root._tpRebuild !== 'function') return;
+      if (JSON.stringify(d.groups) === JSON.stringify(first.groups)) return;
+      root._tpRebuild(buildMenuParts(d));
+    });
   }
 
   /* 플로팅 섹션은 별도 div 를 body 끝에 자동 생성해서 마운트

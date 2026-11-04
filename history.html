@@ -471,6 +471,9 @@
       <p>SINCE 2018</p>
     </div>
 
+    <!-- 연혁 목록: 관리자 > 사업 연혁(./data/history.json)으로 다시 그려집니다.
+         아래 내용은 데이터를 읽지 못할 때 보이는 기본값입니다. -->
+    <div class="fh-list" id="fhList">
     <!-- =============== 연혁 시작 (2018 → 2026 · 팜플렛 연혁 기준) ===============
          항목 구조: <li><span class="fh-mo">월</span><span class="fh-org" data-org="seoul|gu|gov|rotary|civil">기관</span>
                     <span class="fh-txt">내용 <em>근거</em> <span class="fh-amt">…금액칩…</span></span></li>
@@ -584,6 +587,7 @@
           <li><span class="fh-mo">10월</span><span class="fh-org" data-org="seoul">서울시</span><span class="fh-txt">사회적기업 인증</span></li>
         </ul>
       </div>
+    </div>
     </div>
 
   </div>
@@ -998,53 +1002,123 @@
       var root = document.getElementById('forestHistory');
       if (!root || root.dataset.fhx) return;
       root.dataset.fhx = '1';
-      if (!('IntersectionObserver' in window)) return;
+      var list = root.querySelector('#fhList');
+      if (!list) return;
+      var revealIO = null, activeIO = null;
 
-      root.classList.add('fh-x');
-      var rows = Array.prototype.slice.call(root.querySelectorAll('.history-row'));
-      if (!rows.length) return;
+      /* ── 스크롤 등장 · 현재 연도 강조 · 따라다니는 dot (다시 그린 뒤에도 호출) ── */
+      function setup() {
+        if (!('IntersectionObserver' in window)) return;
+        root.classList.add('fh-x');
+        if (revealIO) revealIO.disconnect();
+        if (activeIO) activeIO.disconnect();
 
-      // 화면을 따라 움직이는 dot 1개 — 첫 연도 앞에 삽입 (높이 0, 레이아웃 영향 없음)
-      var firstRow = rows[0];
-      if (firstRow.parentNode && !root.querySelector('.fh-dot')) {
+        var rows = Array.prototype.slice.call(list.querySelectorAll('.history-row'));
+        var oldDot = root.querySelector('.fh-dot');
+        if (oldDot) oldDot.parentNode.removeChild(oldDot);
+        if (!rows.length) return;
+
         var dot = document.createElement('i');
         dot.className = 'fh-dot';
         dot.setAttribute('aria-hidden', 'true');
-        firstRow.parentNode.insertBefore(dot, firstRow);
+        list.insertBefore(dot, rows[0]);
+
+        rows.forEach(function (row) {
+          Array.prototype.forEach.call(row.querySelectorAll('li'), function (li, i) {
+            li.style.setProperty('--fh-i', i);
+          });
+          Array.prototype.forEach.call(row.querySelectorAll('img'), function (img) {
+            if (!img.hasAttribute('loading')) img.setAttribute('loading', 'lazy');
+            if (!img.hasAttribute('decoding')) img.setAttribute('decoding', 'async');
+          });
+        });
+
+        revealIO = new IntersectionObserver(function (entries) {
+          entries.forEach(function (e) {
+            if (e.isIntersecting) {
+              e.target.classList.add('is-in');
+              revealIO.unobserve(e.target);
+            }
+          });
+        }, { threshold: 0.12, rootMargin: '0px 0px -6% 0px' });
+
+        activeIO = new IntersectionObserver(function (entries) {
+          entries.forEach(function (e) {
+            e.target.classList.toggle('is-active', e.isIntersecting);
+          });
+        }, { rootMargin: '-16% 0px -55% 0px' });
+
+        rows.forEach(function (row) {
+          revealIO.observe(row);
+          activeIO.observe(row);
+        });
       }
 
-      rows.forEach(function (row) {
-        Array.prototype.forEach.call(row.querySelectorAll('li'), function (li, i) {
-          li.style.setProperty('--fh-i', i);
+      /* ── 관리자 데이터 → 연혁 마크업 ── */
+      function esc(v) {
+        return String(v == null ? '' : v).replace(/[&<>"']/g, function (c) {
+          return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c];
         });
-        // 나중에 추가되는 이미지도 자동으로 lazy-load
-        Array.prototype.forEach.call(row.querySelectorAll('img'), function (img) {
-          if (!img.hasAttribute('loading')) img.setAttribute('loading', 'lazy');
-          if (!img.hasAttribute('decoding')) img.setAttribute('decoding', 'async');
-        });
-      });
+      }
 
-      // 내용 · 리스트 · 이미지 등장
-      var reveal = new IntersectionObserver(function (entries) {
-        entries.forEach(function (e) {
-          if (e.isIntersecting) {
-            e.target.classList.add('is-in');
-            reveal.unobserve(e.target);
-          }
-        });
-      }, { threshold: 0.12, rootMargin: '0px 0px -6% 0px' });
+      function sortItems(items) {
+        return items
+          .map(function (it, i) { return { it: it, i: i }; })
+          .sort(function (x, y) {
+            return String(x.it.year).localeCompare(String(y.it.year)) ||
+              String(x.it.month || '00').localeCompare(String(y.it.month || '00')) ||
+              x.i - y.i;
+          })
+          .map(function (x) { return x.it; });
+      }
 
-      // 현재 보고 있는 연도 강조
-      var active = new IntersectionObserver(function (entries) {
-        entries.forEach(function (e) {
-          e.target.classList.toggle('is-active', e.isIntersecting);
-        });
-      }, { rootMargin: '-16% 0px -55% 0px' });
+      function itemHtml(it) {
+        var org = it.org
+          ? '<span class="fh-org">' + esc(it.org) + '</span>'
+          : '<span class="fh-org is-empty" aria-hidden="true"></span>';
+        var mo = it.month ? esc(it.month) + '월' : '';
+        var note = it.note ? ' <em>' + esc(it.note) + '</em>' : '';
+        var amt = '';
+        var a = it.amount;
+        if (a && a.value) {
+          amt = '<span class="fh-amt">' +
+            (a.label ? '<i>' + esc(a.label) + '</i>' : '') +
+            '<b>' + esc(a.value) + '</b><span class="u">' + esc(a.unit || '') + '</span>' +
+            (a.sub ? '<small>' + esc(a.sub) + '</small>' : '') +
+            '</span>';
+        }
+        return '          <li><span class="fh-mo">' + mo + '</span>' + org +
+          '<span class="fh-txt">' + esc(it.text) + note + amt + '</span></li>\n';
+      }
 
-      rows.forEach(function (row) {
-        reveal.observe(row);
-        active.observe(row);
-      });
+      function render(items) {
+        var byYear = [];
+        sortItems(items).forEach(function (it) {
+          if (!it || !it.year || !it.text) return;
+          var last = byYear[byYear.length - 1];
+          if (!last || last.year !== String(it.year)) byYear.push(last = { year: String(it.year), items: [] });
+          last.items.push(it);
+        });
+        if (!byYear.length) return false;
+
+        list.innerHTML = byYear.map(function (y) {
+          return '\n    <div class="history-row">\n      <div class="year">' + esc(y.year) + '</div>\n' +
+            '      <div class="content-box">\n        <ul>\n' + y.items.map(itemHtml).join('') +
+            '        </ul>\n      </div>\n    </div>\n';
+        }).join('');
+        return true;
+      }
+
+      setup();
+
+      if (window.fetch) {
+        fetch('./data/history.json?v=' + Math.floor(Date.now() / 60000), { cache: 'no-store' })
+          .then(function (r) { return r.ok ? r.json() : null; })
+          .then(function (d) {
+            if (d && Array.isArray(d.items) && render(d.items)) setup();
+          })
+          .catch(function () {});
+      }
     })();
   </script>
 

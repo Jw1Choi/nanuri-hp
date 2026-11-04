@@ -4,7 +4,75 @@
 
   if (document.getElementById('footerElite')) return;
 
-  mount.innerHTML = `
+  /* ─────────────────────────────────────────────────────────────
+     푸터 메뉴 = 관리자 > 메뉴 구성 (./data/site-menu.json)
+     - 그룹·항목 중 「푸터」 체크된 것만 보입니다.
+     - menu3.js 가 먼저 불러온 데이터(window.__nnrSiteMenu)를 같이 씁니다.
+     - 파일을 읽지 못하면 아래 기본 메뉴를 그대로 보여줍니다.
+     ───────────────────────────────────────────────────────────── */
+  const FOOTER_DEFAULT_MENU = {"version":1,"updatedAt":"","groups":[{"id": "g-about", "label": "나누리 소개", "href": "./about.html", "header": true, "footer": true, "items": [{"id": "m-about", "label": "나누리는", "href": "./about.html", "newTab": false, "header": true, "footer": true}, {"id": "m-ceo", "label": "이사장 인사말", "href": "./ceo.html", "newTab": false, "header": true, "footer": true}, {"id": "m-vision", "label": "비전 & 미션", "href": "./vision.html", "newTab": false, "header": true, "footer": true}, {"id": "m-history", "label": "사업연혁", "href": "./history.html", "newTab": false, "header": true, "footer": true}]}, {"id": "g-biz", "label": "주요 사업", "href": "./seoul-gasa.html", "header": true, "footer": true, "items": [{"id": "m-seoul-gasa", "label": "서울형가사서비스", "href": "./seoul-gasa.html", "newTab": false, "header": true, "footer": true}, {"id": "m-gasa", "label": "일반가사특화서비스", "href": "./gasa.html", "newTab": false, "header": true, "footer": true}, {"id": "m-seoul-housecare", "label": "서울시안심집수리", "href": "./seoul-housecare.html", "newTab": false, "header": true, "footer": true}, {"id": "m-housecare", "label": "일반 집수리/인테리어", "href": "./housecare.html", "newTab": false, "header": true, "footer": true}, {"id": "m-care-repair", "label": "정리수납·생활집수리", "href": "./care-repair.html", "newTab": false, "header": true, "footer": true}, {"id": "m-mapo-care", "label": "마포형 통합돌봄", "href": "./mapo-care.html", "newTab": false, "header": true, "footer": true}, {"id": "m-gasa-edu", "label": "가사관리사 교육", "href": "./gasa-edu.html", "newTab": false, "header": true, "footer": true}]}, {"id": "g-apply", "label": "온라인 신청", "href": "./online-program.html", "header": true, "footer": true, "items": [{"id": "m-apply-gasa", "label": "서울형가사서비스", "href": "./35.html", "newTab": false, "header": true, "footer": true}, {"id": "m-apply-housecare", "label": "서울시안심집수리", "href": "./36.html", "newTab": false, "header": true, "footer": true}]}, {"id": "g-comm", "label": "소통공간", "href": "./notice.html", "header": true, "footer": true, "items": [{"id": "m-notice", "label": "공지사항", "href": "./notice.html", "newTab": false, "header": true, "footer": true}, {"id": "m-gallery", "label": "갤러리", "href": "./gallary.html", "newTab": false, "header": true, "footer": true}]}]};
+
+  function siteMenu() {
+    if (window.__nnrSiteMenu) return window.__nnrSiteMenu;
+    const KEY = 'nnr.siteMenu.v1';
+    const valid = (d) => !!(d && Array.isArray(d.groups) && d.groups.length);
+    let cached = null;
+    try { cached = JSON.parse(localStorage.getItem(KEY) || 'null'); } catch (e) {}
+    if (!valid(cached)) cached = null;
+    const fresh = window.fetch
+      ? fetch('./data/site-menu.json?v=' + Math.floor(Date.now() / 60000), { cache: 'no-store' })
+          .then((r) => (r.ok ? r.json() : null))
+          .then((d) => {
+            if (!valid(d)) return null;
+            try { localStorage.setItem(KEY, JSON.stringify(d)); } catch (e) {}
+            return d;
+          })
+          .catch(() => null)
+      : Promise.resolve(null);
+    window.__nnrSiteMenu = { cached, fresh, fallback: FOOTER_DEFAULT_MENU };
+    return window.__nnrSiteMenu;
+  }
+
+  const esc = (v) => String(v == null ? '' : v).replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+  const safeHref = (v) => {
+    const h = String(v || '').trim();
+    return /^(\.\/|\/(?!\/)|https?:\/\/|tel:|mailto:|#)[^\s"'<>`\\]*$/i.test(h) ? h : '#';
+  };
+
+  function footerColumns(menu) {
+    const groups = ((menu && menu.groups) || FOOTER_DEFAULT_MENU.groups)
+      .filter((g) => g && g.footer !== false)
+      .map((g) => ({ g, items: (g.items || []).filter((m) => m && m.footer !== false) }))
+      .filter((x) => x.items.length);
+    const html = groups.map(({ g, items }) => `
+        <div class="col">
+          <h4>${esc(g.label)}</h4>
+          <ul>
+${items.map((m) => `            <li><a href="${esc(safeHref(m.href))}"${m.newTab ? ' target="_blank" rel="noopener noreferrer"' : ''}>${esc(m.label)}</a></li>`).join('\n')}
+          </ul>
+        </div>`).join('\n');
+    return { html, count: Math.max(1, Math.min(groups.length, 6)) };
+  }
+
+  const src = siteMenu();
+  const first = src.cached || src.fallback;
+
+  function buildFooterHtml(tpl) {
+    const c = footerColumns(first);
+    return tpl.replace('__FOOTER_MENU__', () => c.html)
+      .replace('id="footerMenuRow">', () => `id="footerMenuRow" style="--fcols:${c.count}">`);
+  }
+
+  src.fresh.then((d) => {
+    if (!d || JSON.stringify(d.groups) === JSON.stringify(first.groups)) return;
+    const row = document.getElementById('footerMenuRow');
+    if (!row) return;
+    const c = footerColumns(d);
+    row.innerHTML = c.html;
+    row.style.setProperty('--fcols', String(c.count));
+  });
+
+  mount.innerHTML = buildFooterHtml(`
 <section id="footerElite" aria-label="사이트 푸터" style="position:relative;">
   <style>
     #footerElite{
@@ -54,7 +122,7 @@
 
     #footerElite .menuRow{
       display:grid;
-      grid-template-columns:repeat(4,1fr);
+      grid-template-columns:repeat(var(--fcols,4),1fr);
       flex:1 1 0;
       gap:2rem 2.5rem;
       min-width:0;
@@ -307,7 +375,7 @@
       }
 
       #footerElite .menuRow{
-        grid-template-columns:repeat(4,1fr);
+        grid-template-columns:repeat(var(--fcols,4),1fr);
         gap:2rem 2rem;
       }
 
@@ -366,46 +434,7 @@
         </p>
       </div>
 
-      <div class="menuRow">
-        <div class="col">
-          <h4>나누리 소개</h4>
-          <ul>
-            <li><a href="./about.html">나누리는</a></li>
-            <li><a href="./ceo.html">이사장 인사말</a></li>
-            <li><a href="./vision.html">비전 &amp; 미션</a></li>
-            <li><a href="./history.html">사업연혁</a></li>
-          </ul>
-        </div>
-
-        <div class="col">
-          <h4>주요 사업</h4>
-          <ul>
-            <li><a href="./seoul-gasa.html">서울형가사서비스</a></li>
-            <li><a href="./gasa.html">일반가사특화서비스</a></li>
-            <li><a href="./seoul-housecare.html">서울시안심집수리</a></li>
-            <li><a href="./housecare.html">일반 집수리/인테리어</a></li>
-            <li><a href="./care-repair.html">정리수납·생활집수리</a></li>
-            <li><a href="./mapo-care.html">마포형 통합돌봄</a></li>
-            <li><a href="./gasa-edu.html">가사관리사 교육</a></li>
-          </ul>
-        </div>
-
-        <div class="col">
-          <h4>온라인 신청</h4>
-          <ul>
-            <li><a href="./35.html">서울형가사서비스</a></li>
-            <li><a href="./36.html">서울시안심집수리</a></li>
-          </ul>
-        </div>
-
-        <div class="col">
-          <h4>소통공간</h4>
-          <ul>
-            <li><a href="./notice.html">공지사항</a></li>
-            <li><a href="./gallary.html">갤러리</a></li>
-          </ul>
-        </div>
-      </div>
+      <div class="menuRow" id="footerMenuRow">__FOOTER_MENU__</div>
     </div>
 
     <div class="footBar">
@@ -461,7 +490,7 @@
     </div>
   </div>
 </section>
-`;
+`);
 
   const dropdown = document.getElementById('familyDropdown');
   const btn = document.getElementById('familyBtn');
