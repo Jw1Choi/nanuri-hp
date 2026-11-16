@@ -1,8 +1,26 @@
 {
   "version": 1,
-  "nextId": 30,
-  "updatedAt": "2026-11-16T00:59:22.369Z",
+  "nextId": 31,
+  "updatedAt": "2026-11-16T01:17:37.788Z",
   "items": [
+    {
+      "id": 30,
+      "slug": "notice-30",
+      "title": "나누리 사회적협동조합 조합원 역량강화 워크숍",
+      "excerpt": "나누리 사회적협동조합에서는 조합원 역량강화를 위한 주거∙마음 돌봄 워크숍을 실시했습니다. 1. 주 제 : 2026 나누리 사회적협동조합 주거∙마음 돌봄 워크숍 2. 일 시 : 2026년 11월 7일(토) 8:00~19:00 3. 장 소 : 인천광역시 강화군 일대 4. 대 상 : 조합원 ",
+      "date": "2026-11-16",
+      "thumb": null,
+      "pinned": false,
+      "showOnMain": true,
+      "hidden": false,
+      "externalLink": null,
+      "openExternal": false,
+      "author": "관리자",
+      "createdAt": "2026-11-16T01:17:37.788Z",
+      "updatedAt": "2026-11-16T01:17:37.788Z",
+      "img": "",
+      "link": "./notice-30.html"
+    },
     {
       "id": 29,
       "slug": "notice-29",
