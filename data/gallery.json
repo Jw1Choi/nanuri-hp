@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-16T02:02:03.413Z",
+  "updatedAt": "2026-11-16T02:02:49.981Z",
   "categories": [
     {
       "id": "c-3du1im2g",
@@ -40,6 +40,18 @@
     }
   ],
   "items": [
+    {
+      "id": "g-pcbbqvhu",
+      "cat": "c-ofxir9a4",
+      "path": "img/gallery/202611/bfb286e7-3d53-496b-a157-47589a45e01a.jpg",
+      "thumb": "img/gallery/202611/467423f5-381b-4340-86cd-3e77163325eb.jpg",
+      "w": 2400,
+      "h": 1800,
+      "caption": "중장년 생활케어 집수리 기초기술 양성교육 안전손잡이 설치 실습(2026년 9월 28일)",
+      "date": "2026-11-16",
+      "src": "./img/gallery/202611/bfb286e7-3d53-496b-a157-47589a45e01a.jpg",
+      "thumbSrc": "./img/gallery/202611/467423f5-381b-4340-86cd-3e77163325eb.jpg"
+    },
     {
       "id": "g-ldk7mwa2",
       "cat": "c-ofxir9a4",
