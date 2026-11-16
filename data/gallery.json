@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-02T02:36:09.796Z",
+  "updatedAt": "2026-11-16T01:54:38.213Z",
   "categories": [
     {
       "id": "c-3du1im2g",
@@ -40,6 +40,18 @@
     }
   ],
   "items": [
+    {
+      "id": "g-bvc2uo44",
+      "cat": "c-ofxir9a4",
+      "path": "img/gallery/202611/ed5df14f-cea9-4637-add6-c149a91cc5e5.jpg",
+      "thumb": "img/gallery/202611/bc34ea6c-dbf1-462f-bb47-354c350753b3.jpg",
+      "w": 2400,
+      "h": 1800,
+      "caption": "중장년 생활케어 집수리 기초기술 양성교육(2026년 9월 14일)",
+      "date": "2026-11-16",
+      "src": "./img/gallery/202611/ed5df14f-cea9-4637-add6-c149a91cc5e5.jpg",
+      "thumbSrc": "./img/gallery/202611/bc34ea6c-dbf1-462f-bb47-354c350753b3.jpg"
+    },
     {
       "id": "g-vtnvge6q",
       "cat": "c-4er1t10k",
