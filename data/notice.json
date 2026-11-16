@@ -1,8 +1,26 @@
 {
   "version": 1,
-  "nextId": 29,
-  "updatedAt": "2026-11-02T02:08:13.900Z",
+  "nextId": 30,
+  "updatedAt": "2026-11-16T00:55:45.581Z",
   "items": [
+    {
+      "id": 29,
+      "slug": "notice-29",
+      "title": "중장년 생활케어 집수리 기초기술 양성교육(무료) 실시",
+      "excerpt": "나누리 사회적협동조합에서는 사회적기업 창업지원사업의 지원금 일부로 주거와 관련한 생활케어 집수리 기초기술교육을 실시했습니다. 1. 교육일정: 2026.9.14.~9.30.(매주 월, 수요일 총 6회) 2. 교육시간: 오후 2시~4시(일 2시간) 3. 교육장소: 은평구 역촌동 대진빌딩 3",
+      "date": "2026-11-16",
+      "thumb": null,
+      "pinned": false,
+      "showOnMain": true,
+      "hidden": false,
+      "externalLink": null,
+      "openExternal": false,
+      "author": "관리자",
+      "createdAt": "2026-11-16T00:55:45.581Z",
+      "updatedAt": "2026-11-16T00:55:45.581Z",
+      "img": "",
+      "link": "./notice-29.html"
+    },
     {
       "id": 1,
       "slug": "notice-1",
