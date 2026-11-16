@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-16T02:02:49.981Z",
+  "updatedAt": "2026-11-16T02:03:55.792Z",
   "categories": [
     {
       "id": "c-3du1im2g",
@@ -40,6 +40,18 @@
     }
   ],
   "items": [
+    {
+      "id": "g-uiywqn7j",
+      "cat": "c-ofxir9a4",
+      "path": "img/gallery/202611/ee394274-8836-4b0e-b9c3-1f1fb0eb4e1c.jpg",
+      "thumb": "img/gallery/202611/388e842f-2ae4-480f-a805-03f3f930e374.jpg",
+      "w": 2400,
+      "h": 1800,
+      "caption": "중장년 생활케어 집수리 기초기술 양성교육 공기청정기 및 제습기 분해청소실습(2026년 9월 30일)",
+      "date": "2026-11-16",
+      "src": "./img/gallery/202611/ee394274-8836-4b0e-b9c3-1f1fb0eb4e1c.jpg",
+      "thumbSrc": "./img/gallery/202611/388e842f-2ae4-480f-a805-03f3f930e374.jpg"
+    },
     {
       "id": "g-pcbbqvhu",
       "cat": "c-ofxir9a4",
