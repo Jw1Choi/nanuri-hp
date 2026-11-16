@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-16T01:58:17.794Z",
+  "updatedAt": "2026-11-16T01:58:45.364Z",
   "categories": [
     {
       "id": "c-3du1im2g",
@@ -40,6 +40,18 @@
     }
   ],
   "items": [
+    {
+      "id": "g-859t6fh9",
+      "cat": "c-ofxir9a4",
+      "path": "img/gallery/202611/3710c761-0f0a-42ad-b48b-523bb5a750ad.jpg",
+      "thumb": "img/gallery/202611/a55d5e05-e231-4995-bd36-289079e8280d.jpg",
+      "w": 2400,
+      "h": 1800,
+      "caption": "중장년 생활케어 집수리 기초기술 양성교육 매트리스 청소 및 전문 장비 실습(2026년 9월 21일)",
+      "date": "2026-11-16",
+      "src": "./img/gallery/202611/3710c761-0f0a-42ad-b48b-523bb5a750ad.jpg",
+      "thumbSrc": "./img/gallery/202611/a55d5e05-e231-4995-bd36-289079e8280d.jpg"
+    },
     {
       "id": "g-hbmoc06i",
       "cat": "c-ofxir9a4",
