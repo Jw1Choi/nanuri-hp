@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-16T02:04:51.432Z",
+  "updatedAt": "2026-11-16T02:06:49.290Z",
   "categories": [
     {
       "id": "c-3du1im2g",
@@ -40,6 +40,18 @@
     }
   ],
   "items": [
+    {
+      "id": "g-iu5b78ck",
+      "cat": "c-ofxir9a4",
+      "path": "img/gallery/202611/35e5cd6d-729b-460d-a305-386a41a0ac44.jpg",
+      "thumb": "img/gallery/202611/9fa3e1f6-2036-45f6-8160-84e40f64e6c4.jpg",
+      "w": 2400,
+      "h": 1800,
+      "caption": "중장년 생활케어 정리수납 집수리 심화기술 양성교육(2026년 11월)",
+      "date": "2026-11-16",
+      "src": "./img/gallery/202611/35e5cd6d-729b-460d-a305-386a41a0ac44.jpg",
+      "thumbSrc": "./img/gallery/202611/9fa3e1f6-2036-45f6-8160-84e40f64e6c4.jpg"
+    },
     {
       "id": "g-flncjtr7",
       "cat": "c-ofxir9a4",
