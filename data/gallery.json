@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-16T01:56:38.773Z",
+  "updatedAt": "2026-11-16T01:57:02.230Z",
   "categories": [
     {
       "id": "c-3du1im2g",
@@ -40,6 +40,18 @@
     }
   ],
   "items": [
+    {
+      "id": "g-wtq1ft6i",
+      "cat": "c-ofxir9a4",
+      "path": "img/gallery/202611/d46a37a4-ce47-4497-844e-a394282f13cb.jpg",
+      "thumb": "img/gallery/202611/a61e8ed0-7742-4eb4-827c-178f162a97ba.jpg",
+      "w": 2400,
+      "h": 1800,
+      "caption": "중장년 생활케어 집수리 기초기술 양성교육 방충망 교체(2026년 9월 16일)",
+      "date": "2026-11-16",
+      "src": "./img/gallery/202611/d46a37a4-ce47-4497-844e-a394282f13cb.jpg",
+      "thumbSrc": "./img/gallery/202611/a61e8ed0-7742-4eb4-827c-178f162a97ba.jpg"
+    },
     {
       "id": "g-xazkhvpu",
       "cat": "c-ofxir9a4",
