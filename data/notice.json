@@ -1,8 +1,26 @@
 {
   "version": 1,
-  "nextId": 31,
-  "updatedAt": "2026-11-16T01:37:53.281Z",
+  "nextId": 32,
+  "updatedAt": "2026-11-16T01:48:42.188Z",
   "items": [
+    {
+      "id": 31,
+      "slug": "notice-31",
+      "title": "중장년 생활케어, 정리수납,  집수리 심화기술 양성교육",
+      "excerpt": "나누리 사회적협동조합에서는 사회적기업 창업지원사업 지원금의 일부로 중장년 생활케어, 정리수납, 집수리 심화기술 양성교육을 실시하고 있습니다. 1. 교육기간: 2026.11.9.(월)~11.30.(월) 매주 월, 수, 금요일 2. 교육시간: 오전 9:30~오후 12:30(1회 3시간) 3",
+      "date": "2026-11-16",
+      "thumb": "img/notice/202611/afce305c-8d11-4f52-87f7-43894b5522d7.webp",
+      "pinned": false,
+      "showOnMain": true,
+      "hidden": false,
+      "externalLink": null,
+      "openExternal": false,
+      "author": "관리자",
+      "createdAt": "2026-11-16T01:48:42.188Z",
+      "updatedAt": "2026-11-16T01:48:42.188Z",
+      "img": "./img/notice/202611/afce305c-8d11-4f52-87f7-43894b5522d7.webp",
+      "link": "./notice-31.html"
+    },
     {
       "id": 30,
       "slug": "notice-30",
