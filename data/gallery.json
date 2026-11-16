@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-16T02:07:29.972Z",
+  "updatedAt": "2026-11-16T02:08:00.634Z",
   "categories": [
     {
       "id": "c-3du1im2g",
@@ -40,6 +40,18 @@
     }
   ],
   "items": [
+    {
+      "id": "g-qf4xbbda",
+      "cat": "c-ofxir9a4",
+      "path": "img/gallery/202611/7f469298-734d-4374-8c69-fc42c6147796.jpg",
+      "thumb": "img/gallery/202611/f5e39655-aded-42c2-849d-95676fcb836f.jpg",
+      "w": 2400,
+      "h": 1800,
+      "caption": "중장년 생활케어 정리수납 집수리 심화기술 양성교육 에어컨 분해청소 실습(2026년 11월 11일))",
+      "date": "2026-11-16",
+      "src": "./img/gallery/202611/7f469298-734d-4374-8c69-fc42c6147796.jpg",
+      "thumbSrc": "./img/gallery/202611/f5e39655-aded-42c2-849d-95676fcb836f.jpg"
+    },
     {
       "id": "g-zihmglr6",
       "cat": "c-ofxir9a4",
