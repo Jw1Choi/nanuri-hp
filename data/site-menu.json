@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "",
+  "updatedAt": "2026-11-17T00:59:36.903Z",
   "groups": [
     {
       "id": "g-about",
@@ -84,7 +84,7 @@
         },
         {
           "id": "m-care-repair",
-          "label": "정리수납·생활집수리",
+          "label": "한 번에 서비스",
           "href": "./care-repair.html",
           "newTab": false,
           "header": true,
