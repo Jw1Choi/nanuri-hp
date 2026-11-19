@@ -1,8 +1,26 @@
 {
   "version": 1,
-  "nextId": 32,
-  "updatedAt": "2026-11-19T00:40:49.140Z",
+  "nextId": 33,
+  "updatedAt": "2026-11-19T00:47:26.280Z",
   "items": [
+    {
+      "id": 32,
+      "slug": "notice-32",
+      "title": "중장년 생활케어 심화기술 양성교육, 에어컨 분해청소 실습 진행",
+      "excerpt": "나누리사회적협동조합은 2026년 11월 9일, 11일, 13일, 16일 총 4회에 걸쳐 에어컨 분해청소 실습 교육을 진행했습니다. 이번 교육은 중장년 참여자들이 생활공간 관리에 필요한 기술을 익히고, 관련 분야의 현장 업무에 대한 이해를 높일 수 있도록 마련했습니다. 참여자들은 강사의 ",
+      "date": "2026-11-17",
+      "thumb": "img/notice/202611/32405b16-739e-4041-9657-97c347f50098.webp",
+      "pinned": false,
+      "showOnMain": true,
+      "hidden": false,
+      "externalLink": null,
+      "openExternal": false,
+      "author": "관리자",
+      "createdAt": "2026-11-19T00:47:26.280Z",
+      "updatedAt": "2026-11-19T00:47:26.280Z",
+      "img": "./img/notice/202611/32405b16-739e-4041-9657-97c347f50098.webp",
+      "link": "./notice-32.html"
+    },
     {
       "id": 31,
       "slug": "notice-31",
