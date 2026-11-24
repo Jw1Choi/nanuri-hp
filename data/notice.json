@@ -1,8 +1,26 @@
 {
   "version": 1,
-  "nextId": 33,
-  "updatedAt": "2026-11-19T01:15:21.998Z",
+  "nextId": 34,
+  "updatedAt": "2026-11-24T05:09:41.593Z",
   "items": [
+    {
+      "id": 33,
+      "slug": "notice-33",
+      "title": "중장년 생활케어 심화기술 양성교육, 후드/환풍구 분해,청소 실습 진행",
+      "excerpt": "나누리사회적협동조합은 2026년 11월 18, 20일 총 2회에 걸쳐 후드/환풍구 분해,청소 실습 교육을 진행했습니다. 이번 교육은 중장년 참여자들이 생활공간 관리에 필요한 기술을 익히고, 관련 분야의 현장 업무에 대한 이해를 높일 수 있도록 마련했습니다. 참여자들은 강사의 설명과 시범",
+      "date": "2026-11-20",
+      "thumb": "img/notice/202611/e94e6c57-5423-430c-8aa2-ce4b00161b71.jpg",
+      "pinned": false,
+      "showOnMain": true,
+      "hidden": false,
+      "externalLink": null,
+      "openExternal": false,
+      "author": "관리자",
+      "createdAt": "2026-11-24T05:09:41.593Z",
+      "updatedAt": "2026-11-24T05:09:41.593Z",
+      "img": "./img/notice/202611/e94e6c57-5423-430c-8aa2-ce4b00161b71.jpg",
+      "link": "./notice-33.html"
+    },
     {
       "id": 32,
       "slug": "notice-32",
