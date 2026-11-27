@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-27T07:55:53.409Z",
+  "updatedAt": "2026-11-27T07:57:47.028Z",
   "categories": [
     {
       "id": "c-3du1im2g",
@@ -40,6 +40,66 @@
     }
   ],
   "items": [
+    {
+      "id": "g-jnjovfbm",
+      "cat": "c-ofxir9a4",
+      "path": "img/gallery/202611/3d3f8238-6cbf-4037-935c-e22b50b4f1f7.jpg",
+      "thumb": "img/gallery/202611/d3b17bb8-dc03-4fc8-b06f-76494936d557.jpg",
+      "w": 2400,
+      "h": 1800,
+      "caption": "중장년 생활케어 정리수납 집수리 심화기술 양성교육 LED/스위치 교체 실습(2026년 11월 27일))",
+      "date": "2026-11-27",
+      "src": "./img/gallery/202611/3d3f8238-6cbf-4037-935c-e22b50b4f1f7.jpg",
+      "thumbSrc": "./img/gallery/202611/d3b17bb8-dc03-4fc8-b06f-76494936d557.jpg"
+    },
+    {
+      "id": "g-n8wsund0",
+      "cat": "c-ofxir9a4",
+      "path": "img/gallery/202611/3855bffb-36b6-4e3b-9bfa-966ed959139d.jpg",
+      "thumb": "img/gallery/202611/03115e99-bcf6-474c-b462-0e5cb5e8e552.jpg",
+      "w": 2400,
+      "h": 1800,
+      "caption": "중장년 생활케어 정리수납 집수리 심화기술 양성교육 LED/스위치 교체 실습(2026년 11월 27일))",
+      "date": "2026-11-27",
+      "src": "./img/gallery/202611/3855bffb-36b6-4e3b-9bfa-966ed959139d.jpg",
+      "thumbSrc": "./img/gallery/202611/03115e99-bcf6-474c-b462-0e5cb5e8e552.jpg"
+    },
+    {
+      "id": "g-osnsr3lm",
+      "cat": "c-ofxir9a4",
+      "path": "img/gallery/202611/9cf5521f-1cb1-49a7-bcf7-dd4f03ccec5a.jpg",
+      "thumb": "img/gallery/202611/11fc0d22-2fa8-4803-bf37-87ca703b2afe.jpg",
+      "w": 2400,
+      "h": 1800,
+      "caption": "중장년 생활케어 정리수납 집수리 심화기술 양성교육 LED/스위치 교체 실습(2026년 11월 27일))",
+      "date": "2026-11-27",
+      "src": "./img/gallery/202611/9cf5521f-1cb1-49a7-bcf7-dd4f03ccec5a.jpg",
+      "thumbSrc": "./img/gallery/202611/11fc0d22-2fa8-4803-bf37-87ca703b2afe.jpg"
+    },
+    {
+      "id": "g-8dl0xt1q",
+      "cat": "c-ofxir9a4",
+      "path": "img/gallery/202611/e5f93daa-c37a-4993-a5f0-365ec8075c9e.jpg",
+      "thumb": "img/gallery/202611/200d9bf0-a6f4-4062-b9b3-62ac2546d8f4.jpg",
+      "w": 2400,
+      "h": 1800,
+      "caption": "중장년 생활케어 정리수납 집수리 심화기술 양성교육 LED/스위치 교체 실습(2026년 11월 27일))",
+      "date": "2026-11-27",
+      "src": "./img/gallery/202611/e5f93daa-c37a-4993-a5f0-365ec8075c9e.jpg",
+      "thumbSrc": "./img/gallery/202611/200d9bf0-a6f4-4062-b9b3-62ac2546d8f4.jpg"
+    },
+    {
+      "id": "g-a7y8soha",
+      "cat": "c-ofxir9a4",
+      "path": "img/gallery/202611/0a8ca11c-d42d-482f-ad6f-1e4d78cf2fa4.jpg",
+      "thumb": "img/gallery/202611/59ca85fd-34b8-4823-b694-8ce2228e3f0c.jpg",
+      "w": 2400,
+      "h": 1800,
+      "caption": "중장년 생활케어 정리수납 집수리 심화기술 양성교육 LED/스위치 교체 실습(2026년 11월 27일))",
+      "date": "2026-11-27",
+      "src": "./img/gallery/202611/0a8ca11c-d42d-482f-ad6f-1e4d78cf2fa4.jpg",
+      "thumbSrc": "./img/gallery/202611/59ca85fd-34b8-4823-b694-8ce2228e3f0c.jpg"
+    },
     {
       "id": "g-z5c861uq",
       "cat": "c-ofxir9a4",
