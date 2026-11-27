@@ -1,8 +1,26 @@
 {
   "version": 1,
-  "nextId": 35,
-  "updatedAt": "2026-11-24T05:18:42.456Z",
+  "nextId": 36,
+  "updatedAt": "2026-11-27T07:30:31.164Z",
   "items": [
+    {
+      "id": 35,
+      "slug": "notice-35",
+      "title": "중장년 생활케어 심화기술 양성교육, 공기청정기/제습기 분해 청소 실습 진행",
+      "excerpt": "나누리사회적협동조합은 2026년 11월 25일 총1회에 매트리스/소파 청소 실습 교육을 진행했습니다. 이번 교육은 중장년 참여자들이 생활공간 관리에 필요한 기술을 익히고, 관련 분야의 현장 업무에 대한 이해를 높일 수 있도록 마련했습니다. 참여자들은 강사의 설명과 시범을 통해 공기청정기",
+      "date": "2026-11-27",
+      "thumb": "img/notice/202611/3114d3a7-cb67-452c-ad63-29bc7bf3fdca.jpg",
+      "pinned": false,
+      "showOnMain": true,
+      "hidden": false,
+      "externalLink": null,
+      "openExternal": false,
+      "author": "관리자",
+      "createdAt": "2026-11-27T07:30:31.164Z",
+      "updatedAt": "2026-11-27T07:30:31.164Z",
+      "img": "./img/notice/202611/3114d3a7-cb67-452c-ad63-29bc7bf3fdca.jpg",
+      "link": "./notice-35.html"
+    },
     {
       "id": 34,
       "slug": "notice-34",
