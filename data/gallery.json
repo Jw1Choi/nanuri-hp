@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-27T07:53:17.648Z",
+  "updatedAt": "2026-11-27T07:53:58.129Z",
   "categories": [
     {
       "id": "c-3du1im2g",
@@ -40,6 +40,42 @@
     }
   ],
   "items": [
+    {
+      "id": "g-vezabqrl",
+      "cat": "c-ofxir9a4",
+      "path": "img/gallery/202611/23c03b66-f85d-43b7-b4a0-53834052639d.jpg",
+      "thumb": "img/gallery/202611/528280da-cb76-4207-9d29-a6b60e0e9f36.jpg",
+      "w": 2400,
+      "h": 1800,
+      "caption": "중장년 생활케어 정리수납 집수리 심화기술 양성교육 매트리스/소파 청소 실습(2026년 11월 23일))",
+      "date": "2026-11-27",
+      "src": "./img/gallery/202611/23c03b66-f85d-43b7-b4a0-53834052639d.jpg",
+      "thumbSrc": "./img/gallery/202611/528280da-cb76-4207-9d29-a6b60e0e9f36.jpg"
+    },
+    {
+      "id": "g-lwml5mmv",
+      "cat": "c-ofxir9a4",
+      "path": "img/gallery/202611/b62b9ae5-8e39-4882-ab56-22fc9e1a4c8d.jpg",
+      "thumb": "img/gallery/202611/cb6531a1-f447-44c7-971d-4c177fdebb17.jpg",
+      "w": 2400,
+      "h": 1800,
+      "caption": "중장년 생활케어 정리수납 집수리 심화기술 양성교육 매트리스/소파 청소 실습(2026년 11월 23일))",
+      "date": "2026-11-27",
+      "src": "./img/gallery/202611/b62b9ae5-8e39-4882-ab56-22fc9e1a4c8d.jpg",
+      "thumbSrc": "./img/gallery/202611/cb6531a1-f447-44c7-971d-4c177fdebb17.jpg"
+    },
+    {
+      "id": "g-6tvdd1df",
+      "cat": "c-ofxir9a4",
+      "path": "img/gallery/202611/d8df4bc4-440b-4826-885e-00e81b5c1da6.jpg",
+      "thumb": "img/gallery/202611/f0a3b792-17be-425c-b737-327e7beffe7f.jpg",
+      "w": 2400,
+      "h": 1800,
+      "caption": "중장년 생활케어 정리수납 집수리 심화기술 양성교육 매트리스/소파 청소 실습(2026년 11월 23일))",
+      "date": "2026-11-27",
+      "src": "./img/gallery/202611/d8df4bc4-440b-4826-885e-00e81b5c1da6.jpg",
+      "thumbSrc": "./img/gallery/202611/f0a3b792-17be-425c-b737-327e7beffe7f.jpg"
+    },
     {
       "id": "g-km7n8unf",
       "cat": "c-ofxir9a4",
