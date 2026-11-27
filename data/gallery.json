@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-27T07:51:31.525Z",
+  "updatedAt": "2026-11-27T07:53:17.648Z",
   "categories": [
     {
       "id": "c-3du1im2g",
@@ -41,13 +41,49 @@
   ],
   "items": [
     {
+      "id": "g-km7n8unf",
+      "cat": "c-ofxir9a4",
+      "path": "img/gallery/202611/ca8c4654-ac90-4cf9-95e9-ab413ae2c0a1.jpg",
+      "thumb": "img/gallery/202611/d165e089-a8fc-4ec2-ac8a-b596077eccb4.jpg",
+      "w": 2400,
+      "h": 1800,
+      "caption": "중장년 생활케어 정리수납 집수리 심화기술 양성교육 후드/환풍기 분해청소 실습(2026년 11월 20일))",
+      "date": "2026-11-27",
+      "src": "./img/gallery/202611/ca8c4654-ac90-4cf9-95e9-ab413ae2c0a1.jpg",
+      "thumbSrc": "./img/gallery/202611/d165e089-a8fc-4ec2-ac8a-b596077eccb4.jpg"
+    },
+    {
+      "id": "g-qomtf73b",
+      "cat": "c-ofxir9a4",
+      "path": "img/gallery/202611/55d0199e-e1f1-4f6e-a755-56d69bb47cba.jpg",
+      "thumb": "img/gallery/202611/02a86a7b-c2a4-42ef-ba03-bca89585be5f.jpg",
+      "w": 2400,
+      "h": 1800,
+      "caption": "중장년 생활케어 정리수납 집수리 심화기술 양성교육 후드/환풍기 분해청소 실습(2026년 11월 20일))",
+      "date": "2026-11-27",
+      "src": "./img/gallery/202611/55d0199e-e1f1-4f6e-a755-56d69bb47cba.jpg",
+      "thumbSrc": "./img/gallery/202611/02a86a7b-c2a4-42ef-ba03-bca89585be5f.jpg"
+    },
+    {
+      "id": "g-0p3t5nmj",
+      "cat": "c-ofxir9a4",
+      "path": "img/gallery/202611/f3c11a38-4359-4dbc-9293-0c1d08f8bcc8.jpg",
+      "thumb": "img/gallery/202611/0b95c5be-fcbc-4cbc-8747-0fa33df4dd00.jpg",
+      "w": 2400,
+      "h": 1800,
+      "caption": "중장년 생활케어 정리수납 집수리 심화기술 양성교육 후드/환풍기 분해청소 실습(2026년 11월 20일))",
+      "date": "2026-11-27",
+      "src": "./img/gallery/202611/f3c11a38-4359-4dbc-9293-0c1d08f8bcc8.jpg",
+      "thumbSrc": "./img/gallery/202611/0b95c5be-fcbc-4cbc-8747-0fa33df4dd00.jpg"
+    },
+    {
       "id": "g-iij88sc9",
       "cat": "c-ofxir9a4",
       "path": "img/gallery/202611/41f14d44-ffff-45e3-8525-30fb1e581f4f.jpg",
       "thumb": "img/gallery/202611/adf7ade8-c1b8-4d43-acfe-4e3864bdc53e.jpg",
       "w": 1800,
       "h": 2400,
-      "caption": "",
+      "caption": "중장년 생활케어 정리수납 집수리 심화기술 양성교육 후드/환풍기 분해청소 실습(2026년 11월 20일))",
       "date": "2026-11-27",
       "src": "./img/gallery/202611/41f14d44-ffff-45e3-8525-30fb1e581f4f.jpg",
       "thumbSrc": "./img/gallery/202611/adf7ade8-c1b8-4d43-acfe-4e3864bdc53e.jpg"
