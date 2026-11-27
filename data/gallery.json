@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-19T00:35:12.728Z",
+  "updatedAt": "2026-11-27T07:51:31.525Z",
   "categories": [
     {
       "id": "c-3du1im2g",
@@ -40,6 +40,18 @@
     }
   ],
   "items": [
+    {
+      "id": "g-iij88sc9",
+      "cat": "c-ofxir9a4",
+      "path": "img/gallery/202611/41f14d44-ffff-45e3-8525-30fb1e581f4f.jpg",
+      "thumb": "img/gallery/202611/adf7ade8-c1b8-4d43-acfe-4e3864bdc53e.jpg",
+      "w": 1800,
+      "h": 2400,
+      "caption": "",
+      "date": "2026-11-27",
+      "src": "./img/gallery/202611/41f14d44-ffff-45e3-8525-30fb1e581f4f.jpg",
+      "thumbSrc": "./img/gallery/202611/adf7ade8-c1b8-4d43-acfe-4e3864bdc53e.jpg"
+    },
     {
       "id": "g-kk3ct8no",
       "cat": "c-ofxir9a4",
