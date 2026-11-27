@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-27T07:53:58.129Z",
+  "updatedAt": "2026-11-27T07:55:53.409Z",
   "categories": [
     {
       "id": "c-3du1im2g",
@@ -40,6 +40,78 @@
     }
   ],
   "items": [
+    {
+      "id": "g-z5c861uq",
+      "cat": "c-ofxir9a4",
+      "path": "img/gallery/202611/79b34973-01b0-4d32-8670-cd87bffa7462.jpg",
+      "thumb": "img/gallery/202611/e9cfcf9f-d2b1-4261-801d-c39d083bda5e.jpg",
+      "w": 2400,
+      "h": 1800,
+      "caption": "중장년 생활케어 정리수납 집수리 심화기술 양성교육 공기청정기/제습기 분해 청소 실습(2026년 11월 25일))",
+      "date": "2026-11-27",
+      "src": "./img/gallery/202611/79b34973-01b0-4d32-8670-cd87bffa7462.jpg",
+      "thumbSrc": "./img/gallery/202611/e9cfcf9f-d2b1-4261-801d-c39d083bda5e.jpg"
+    },
+    {
+      "id": "g-dw9g3l3l",
+      "cat": "c-ofxir9a4",
+      "path": "img/gallery/202611/6c52fedf-3574-44cd-b244-0b22db82c2c5.jpg",
+      "thumb": "img/gallery/202611/7c6956f3-5e5e-4e15-8843-abb2b52470b9.jpg",
+      "w": 2400,
+      "h": 1800,
+      "caption": "중장년 생활케어 정리수납 집수리 심화기술 양성교육 공기청정기/제습기 분해 청소 실습(2026년 11월 25일))",
+      "date": "2026-11-27",
+      "src": "./img/gallery/202611/6c52fedf-3574-44cd-b244-0b22db82c2c5.jpg",
+      "thumbSrc": "./img/gallery/202611/7c6956f3-5e5e-4e15-8843-abb2b52470b9.jpg"
+    },
+    {
+      "id": "g-gxbqvrny",
+      "cat": "c-ofxir9a4",
+      "path": "img/gallery/202611/1fe97184-9afe-48cf-bb50-4a628a433c3d.jpg",
+      "thumb": "img/gallery/202611/5872ec5d-1865-4bc5-8b38-bc559be7fa62.jpg",
+      "w": 2400,
+      "h": 1800,
+      "caption": "중장년 생활케어 정리수납 집수리 심화기술 양성교육 공기청정기/제습기 분해 청소 실습(2026년 11월 25일))",
+      "date": "2026-11-27",
+      "src": "./img/gallery/202611/1fe97184-9afe-48cf-bb50-4a628a433c3d.jpg",
+      "thumbSrc": "./img/gallery/202611/5872ec5d-1865-4bc5-8b38-bc559be7fa62.jpg"
+    },
+    {
+      "id": "g-lhgivg4d",
+      "cat": "c-ofxir9a4",
+      "path": "img/gallery/202611/3a21791e-2d12-4df0-b36a-088894429b36.jpg",
+      "thumb": "img/gallery/202611/da143724-582b-49bc-a6db-000599fcc058.jpg",
+      "w": 2400,
+      "h": 1800,
+      "caption": "중장년 생활케어 정리수납 집수리 심화기술 양성교육 공기청정기/제습기 분해 청소 실습(2026년 11월 25일))",
+      "date": "2026-11-27",
+      "src": "./img/gallery/202611/3a21791e-2d12-4df0-b36a-088894429b36.jpg",
+      "thumbSrc": "./img/gallery/202611/da143724-582b-49bc-a6db-000599fcc058.jpg"
+    },
+    {
+      "id": "g-cg6pyysk",
+      "cat": "c-ofxir9a4",
+      "path": "img/gallery/202611/d5f46861-aa92-49d9-aec8-2ec308a4441d.jpg",
+      "thumb": "img/gallery/202611/fc1cd717-7df2-491b-830e-4d6beba96b26.jpg",
+      "w": 2400,
+      "h": 1800,
+      "caption": "중장년 생활케어 정리수납 집수리 심화기술 양성교육 공기청정기/제습기 분해 청소 실습(2026년 11월 25일))",
+      "date": "2026-11-27",
+      "src": "./img/gallery/202611/d5f46861-aa92-49d9-aec8-2ec308a4441d.jpg",
+      "thumbSrc": "./img/gallery/202611/fc1cd717-7df2-491b-830e-4d6beba96b26.jpg"
+    },
+    {
+      "id": "g-2co1p71z",
+      "cat": "c-ofxir9a4",
+      "path": "img/gallery/202611/5cba16e2-3fcc-46ea-b3c3-d2adad1b227a.jpg",
+      "thumb": "img/gallery/202611/9fbb437e-10cc-4f34-84d5-f45880f03204.jpg",
+      "w": 2400,
+      "h": 1800,
+      "caption": "중장년 생활케어 정리수납 집수리 심화기술 양성교육 공기청정기/제습기 분해 청소 실습(2026년 11월 25일))",
+      "date": "2026-11-27",
+      "src": "./img/gallery/202611/5cba16e2-3fcc-46ea-b3c3-d2adad1b227a.jpg",
+      "thumbSrc": "./img/gallery/202611/9fbb437e-10cc-4f34-84d5-f45880f03204.jpg"
+    },
     {
       "id": "g-vezabqrl",
       "cat": "c-ofxir9a4",
